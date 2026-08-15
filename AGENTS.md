@@ -30,6 +30,7 @@ Do not clone Typical-Whack / Joe module names, `VAR_` prefixes, or the 11-module
 - Groups default to `expanded: false`
 - Sounds: `tier3.wav`, `tier4.wav`, `uniques.wav`, `clues.wav` in `~/.runelite/loot-filters/sounds`
 - Alch icon: `~/.runelite/loot-filters/icons/alch.png`
+- Filterscape headers: `src/group_icons.json` + `src/sprites.json`. Skills use named `SKILL_*` from RuneLite `SpriteID` (197–221). Rooms use the signature drop. Never Joe's 42xx skill-tab archives or `1531` GE pin.
 
 ## Commands
 
@@ -47,3 +48,4 @@ Rebuild after editing `src/` or after changing the Joe seed path.
 - Copy `VAR_` / Nismo `NLF_` / Cuzco names back in
 - Split aisle back into "category styles" + "individual styles"
 - Put heat before aisle (expensive food would stay a chip)
+- Use Joe's 42xx / 56xx sprite archives for headers

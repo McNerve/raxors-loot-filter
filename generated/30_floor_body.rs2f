@@ -11,15 +11,16 @@ expanded: false
 name: Value-Based
 icon:
   type: itemId
-  itemId: 1004
+  itemId: 995
 expanded: false
 */
 /*@ define:group
 ---
 name: Ownership
 icon:
-  type: itemId
-  itemId: 10593
+  type: sprite
+  spriteId: 206
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
@@ -34,8 +35,9 @@ expanded: false
 ---
 name: Remains
 icon:
-  type: itemId
-  itemId: 536
+  type: sprite
+  spriteId: 201
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
@@ -43,7 +45,7 @@ expanded: false
 name: Food
 icon:
   type: sprite
-  spriteId: 3288
+  spriteId: 212
   spriteIndex: 0
 expanded: false
 */
@@ -52,7 +54,7 @@ expanded: false
 name: Potions
 icon:
   type: sprite
-  spriteId: 3231
+  spriteId: 205
   spriteIndex: 0
 expanded: false
 */
@@ -61,7 +63,7 @@ expanded: false
 name: Ammo
 icon:
   type: sprite
-  spriteId: 4239
+  spriteId: 200
   spriteIndex: 0
 expanded: false
 */
@@ -69,8 +71,9 @@ expanded: false
 ---
 name: Gems
 icon:
-  type: itemId
-  itemId: 1615
+  type: sprite
+  spriteId: 207
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
@@ -78,7 +81,7 @@ expanded: false
 name: Runes
 icon:
   type: sprite
-  spriteId: 4241
+  spriteId: 215
   spriteIndex: 0
 expanded: false
 */
@@ -86,8 +89,9 @@ expanded: false
 ---
 name: Herbs
 icon:
-  type: itemId
-  itemId: 257
+  type: sprite
+  spriteId: 205
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
@@ -95,7 +99,7 @@ expanded: false
 name: Fishing
 icon:
   type: sprite
-  spriteId: 4250
+  spriteId: 211
   spriteIndex: 0
 expanded: false
 */
@@ -103,57 +107,62 @@ expanded: false
 ---
 name: Ores
 icon:
-  type: itemId
-  itemId: 451
+  type: sprite
+  spriteId: 209
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Bars
 icon:
-  type: itemId
-  itemId: 2363
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Logs
 icon:
-  type: itemId
-  itemId: 1515
+  type: sprite
+  spriteId: 214
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Farming seeds
 icon:
-  type: itemId
-  itemId: 5295
+  type: sprite
+  spriteId: 217
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Herblore secondaries
 icon:
-  type: itemId
-  itemId: 223
+  type: sprite
+  spriteId: 205
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Currency
 icon:
-  type: sprite
-  spriteId: 1531
-  spriteIndex: 0
+  type: itemId
+  itemId: 995
 expanded: false
 */
 /*@ define:group
 ---
 name: Metal Equipment
 icon:
-  type: itemId
-  itemId: 21895
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
 

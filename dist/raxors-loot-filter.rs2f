@@ -109,9 +109,10 @@ apply (tradeable:false && !name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) {
 name: Prices
 icon:
   type: itemId
-  itemId: 1004
+  itemId: 995
 expanded: false
 */
+
 
 /*@ define:input:identity
 type: boolean
@@ -166,6 +167,7 @@ icon:
 expanded: false
 */
 
+
 /*@ define:input:identity
 type: number
 label: Hide icons below this value
@@ -193,13 +195,14 @@ apply (name:RAX_ICON_ALWAYS) {
 name: Aisle icon policy
 icon:
   type: sprite
-  spriteId: 3288
+  spriteId: 207
   spriteIndex: 0
-expanded: false
 description: |
   One switch, one style. Changes the icon on every aisle chip.
   Turn it off if you want per-item icons from the Aisle module to win.
+expanded: false
 */
+
 
 /*@ define:input:identity
 type: boolean
@@ -272,22 +275,26 @@ icon:
   itemId: 995
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Value-Based
 icon:
   type: itemId
-  itemId: 1004
+  itemId: 995
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Ownership
 icon:
-  type: itemId
-  itemId: 10593
+  type: sprite
+  spriteId: 206
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Clue Scrolls
@@ -296,132 +303,156 @@ icon:
   itemId: 19835
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Remains
 icon:
-  type: itemId
-  itemId: 536
+  type: sprite
+  spriteId: 201
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Food
 icon:
   type: sprite
-  spriteId: 3288
+  spriteId: 212
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Potions
 icon:
   type: sprite
-  spriteId: 3231
+  spriteId: 205
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Ammo
 icon:
   type: sprite
-  spriteId: 4239
+  spriteId: 200
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Gems
 icon:
-  type: itemId
-  itemId: 1615
+  type: sprite
+  spriteId: 207
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Runes
 icon:
   type: sprite
-  spriteId: 4241
+  spriteId: 215
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Herbs
 icon:
-  type: itemId
-  itemId: 257
+  type: sprite
+  spriteId: 205
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Fishing
 icon:
   type: sprite
-  spriteId: 4250
+  spriteId: 211
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Ores
 icon:
-  type: itemId
-  itemId: 451
+  type: sprite
+  spriteId: 209
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Bars
 icon:
-  type: itemId
-  itemId: 2363
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Logs
 icon:
-  type: itemId
-  itemId: 1515
+  type: sprite
+  spriteId: 214
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Farming seeds
 icon:
-  type: itemId
-  itemId: 5295
+  type: sprite
+  spriteId: 217
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Herblore secondaries
 icon:
-  type: itemId
-  itemId: 223
+  type: sprite
+  spriteId: 205
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Currency
 icon:
-  type: sprite
-  spriteId: 1531
-  spriteIndex: 0
+  type: itemId
+  itemId: 995
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Metal Equipment
 icon:
-  type: itemId
-  itemId: 21895
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
+
 
 /*@ define:input:floor
 type: stringlist
@@ -4205,142 +4236,147 @@ description: |
 ---
 name: Chambers of Xeric
 icon:
-  type: sprite
-  spriteId: 4328
-  spriteIndex: 0
+  type: itemId
+  itemId: 20997
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Tombs of Amascut
 icon:
-  type: sprite
-  spriteId: 4297
-  spriteIndex: 0
+  type: itemId
+  itemId: 26219
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Yama
 icon:
   type: itemId
-  itemId: 20023
+  itemId: 30750
 expanded: false
 */
+
 /*@ define:group
 ---
 name: "Callisto / Artio"
 icon:
-  type: sprite
-  spriteId: 5622
-  spriteIndex: 0
+  type: itemId
+  itemId: 13178
 expanded: false
 */
+
 /*@ define:group
 ---
 name: "Venenatis / Spindel"
 icon:
-  type: sprite
-  spriteId: 5624
-  spriteIndex: 0
+  type: itemId
+  itemId: 13177
 expanded: false
 */
+
 /*@ define:group
 ---
 name: "Vet'ion / Calvar'ion"
 icon:
-  type: sprite
-  spriteId: 5623
-  spriteIndex: 0
+  type: itemId
+  itemId: 13179
 expanded: false
 */
+
 /*@ define:group
 ---
 name: God Wars Dungeon
 icon:
   type: itemId
-  itemId: 11798
+  itemId: 11804
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Commander Zilyana
 icon:
-  type: sprite
-  spriteId: 4284
-  spriteIndex: 0
+  type: itemId
+  itemId: 11806
 expanded: false
 */
+
 /*@ define:group
 ---
 name: General Graardor
 icon:
-  type: sprite
-  spriteId: 4322
-  spriteIndex: 0
+  type: itemId
+  itemId: 11808
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Kree'arra
 icon:
-  type: sprite
-  spriteId: 4325
-  spriteIndex: 0
+  type: itemId
+  itemId: 11802
 expanded: false
 */
+
 /*@ define:group
 ---
 name: K'ril Tsutsaroth
 icon:
-  type: sprite
-  spriteId: 4323
-  spriteIndex: 0
+  type: itemId
+  itemId: 11816
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Nex
 icon:
-  type: sprite
-  spriteId: 4331
-  spriteIndex: 0
+  type: itemId
+  itemId: 26370
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Wilderness Slayer
 icon:
-  type: itemId
-  itemId: 23494
+  type: sprite
+  spriteId: 216
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Smoke Devils
 icon:
-  type: sprite
-  spriteId: 4277
-  spriteIndex: 0
+  type: itemId
+  itemId: 12002
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Ancient Guthixian Temple (Tormented Demons)
 icon:
   type: itemId
-  itemId: 29577
+  itemId: 29580
 expanded: false
 */
+
 /*@ define:group
 ---
 name: The Gauntlet
 icon:
-  type: sprite
-  spriteId: 4318
-  spriteIndex: 0
+  type: itemId
+  itemId: 23971
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Last Man Standing
@@ -4349,6 +4385,7 @@ icon:
   itemId: 24520
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Bounty Hunter
@@ -4357,6 +4394,7 @@ icon:
   itemId: 27904
 expanded: false
 */
+
 
 /*@ define:input:where
 type: enumlist
@@ -6275,136 +6313,151 @@ description: |
 ---
 name: Currency
 icon:
-  type: sprite
-  spriteId: 1531
-  spriteIndex: 0
+  type: itemId
+  itemId: 995
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Food
 icon:
   type: sprite
-  spriteId: 3288
+  spriteId: 212
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Potions
 icon:
   type: sprite
-  spriteId: 3231
+  spriteId: 205
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Prayer
 icon:
   type: sprite
-  spriteId: 4240
+  spriteId: 201
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Ammo
 icon:
   type: sprite
-  spriteId: 4239
+  spriteId: 200
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Runes
 icon:
   type: sprite
-  spriteId: 4241
+  spriteId: 215
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Mining
 icon:
   type: sprite
-  spriteId: 4248
+  spriteId: 209
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Smithing
 icon:
   type: sprite
-  spriteId: 4249
+  spriteId: 210
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Herblore
 icon:
   type: sprite
-  spriteId: 4244
+  spriteId: 205
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Woodcutting
 icon:
   type: sprite
-  spriteId: 4253
+  spriteId: 214
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Fishing
 icon:
   type: sprite
-  spriteId: 4250
+  spriteId: 211
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Farming
 icon:
   type: sprite
-  spriteId: 4256
+  spriteId: 217
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Fletching
 icon:
   type: sprite
-  spriteId: 4247
+  spriteId: 208
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Construction
 icon:
   type: sprite
-  spriteId: 4258
+  spriteId: 221
   spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Metal Equipment
 icon:
-  type: itemId
-  itemId: 21895
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Misc
@@ -6413,6 +6466,7 @@ icon:
   itemId: 1050
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Clue Scrolls
@@ -6421,23 +6475,26 @@ icon:
   itemId: 19835
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Slayer
 icon:
-  type: itemId
-  itemId: 4155
+  type: sprite
+  spriteId: 216
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Chambers of Xeric
 icon:
-  type: sprite
-  spriteId: 4328
-  spriteIndex: 0
+  type: itemId
+  itemId: 20997
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Theatre of Blood
@@ -6446,31 +6503,35 @@ icon:
   itemId: 22486
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Tombs of Amascut
 icon:
-  type: sprite
-  spriteId: 4297
-  spriteIndex: 0
+  type: itemId
+  itemId: 26219
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Tormented Demons Drop
 icon:
   type: itemId
-  itemId: 29577
+  itemId: 29580
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Fish
 icon:
-  type: itemId
-  itemId: 13441
+  type: sprite
+  spriteId: 212
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Potato
@@ -6479,6 +6540,7 @@ icon:
   itemId: 7060
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Pie
@@ -6487,6 +6549,7 @@ icon:
   itemId: 7218
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Pizza
@@ -6495,79 +6558,96 @@ icon:
   itemId: 2289
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Logs
 icon:
-  type: itemId
-  itemId: 1515
+  type: sprite
+  spriteId: 214
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Ores
 icon:
-  type: itemId
-  itemId: 451
+  type: sprite
+  spriteId: 209
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Bars
 icon:
-  type: itemId
-  itemId: 2363
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Gems
 icon:
-  type: itemId
-  itemId: 1615
+  type: sprite
+  spriteId: 207
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Herbs
 icon:
-  type: itemId
-  itemId: 257
+  type: sprite
+  spriteId: 205
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Raw Fish
 icon:
-  type: itemId
-  itemId: 383
+  type: sprite
+  spriteId: 211
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Fishing Bait
 icon:
-  type: itemId
-  itemId: 313
+  type: sprite
+  spriteId: 211
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Fishing Equipment
 icon:
-  type: itemId
-  itemId: 307
+  type: sprite
+  spriteId: 211
+  spriteIndex: 0
 expanded: false
 */
+
 /*@ define:group
 ---
 name: Gauntlet
 icon:
-  type: sprite
-  spriteId: 4318
-  spriteIndex: 0
+  type: itemId
+  itemId: 23971
 expanded: false
 */
+
 
 /*@ define:input:aisle
 type: style
@@ -12444,6 +12524,7 @@ icon:
 expanded: false
 */
 
+
 /*@ define:input:heat
 type: number
 label: Ember starts at
@@ -12479,6 +12560,7 @@ icon:
   itemId: 6920
 expanded: false
 */
+
 
 /*@ define:input:heat
 type: number
@@ -12516,6 +12598,7 @@ icon:
 expanded: false
 */
 
+
 /*@ define:input:heat
 type: number
 label: Blaze starts at
@@ -12552,6 +12635,7 @@ icon:
 expanded: false
 */
 
+
 /*@ define:input:heat
 type: number
 label: Inferno starts at
@@ -12582,10 +12666,15 @@ apply (value:>=RAX_HEAT_4_VALUE || name:RAX_HEAT_4_PIN) {
 /*@ define:group
 ---
 name: Locks
-expanded: false
+icon:
+  type: sprite
+  spriteId: 199
+  spriteIndex: 0
 description: |
   Stop later modules from restyling a heat band. Off by default — Always (uniques / alchs) should still win.
+expanded: false
 */
+
 
 /*@ define:input:heat
 type: boolean
@@ -12636,9 +12725,10 @@ description: |
 name: Uniques
 icon:
   type: itemId
-  itemId: 12922
+  itemId: 20997
 expanded: false
 */
+
 
 /*@ define:input:always
 type: style
@@ -12688,10 +12778,12 @@ rule (RAX_UNIQUE_LOCK && name:RAX_UNIQUES_LIST) {}
 ---
 name: Alchs
 icon:
-  type: itemId
-  itemId: 1079
+  type: sprite
+  spriteId: 41
+  spriteIndex: 0
 expanded: false
 */
+
 
 /*@ define:input:always
 type: boolean
@@ -12741,6 +12833,7 @@ icon:
   itemId: 1249
 expanded: false
 */
+
 
 /*@ define:input:always
 type: style
@@ -12855,6 +12948,7 @@ icon:
 expanded: false
 */
 
+
 /*@ define:input:kits
 type: boolean
 label: Backpack reminder
@@ -12878,10 +12972,11 @@ apply ((name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST
 name: Silence
 icon:
   type: sprite
-  spriteId: 2929
+  spriteId: 129
   spriteIndex: 0
 expanded: false
 */
+
 
 /*@ define:input:kits
 type: boolean

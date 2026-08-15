@@ -5,9 +5,8 @@
 ---
 name: Currency
 icon:
-  type: sprite
-  spriteId: 1531
-  spriteIndex: 0
+  type: itemId
+  itemId: 995
 expanded: false
 */
 /*@ define:group
@@ -15,7 +14,7 @@ expanded: false
 name: Food
 icon:
   type: sprite
-  spriteId: 3288
+  spriteId: 212
   spriteIndex: 0
 expanded: false
 */
@@ -24,7 +23,7 @@ expanded: false
 name: Potions
 icon:
   type: sprite
-  spriteId: 3231
+  spriteId: 205
   spriteIndex: 0
 expanded: false
 */
@@ -33,7 +32,7 @@ expanded: false
 name: Prayer
 icon:
   type: sprite
-  spriteId: 4240
+  spriteId: 201
   spriteIndex: 0
 expanded: false
 */
@@ -42,7 +41,7 @@ expanded: false
 name: Ammo
 icon:
   type: sprite
-  spriteId: 4239
+  spriteId: 200
   spriteIndex: 0
 expanded: false
 */
@@ -51,7 +50,7 @@ expanded: false
 name: Runes
 icon:
   type: sprite
-  spriteId: 4241
+  spriteId: 215
   spriteIndex: 0
 expanded: false
 */
@@ -60,7 +59,7 @@ expanded: false
 name: Mining
 icon:
   type: sprite
-  spriteId: 4248
+  spriteId: 209
   spriteIndex: 0
 expanded: false
 */
@@ -69,7 +68,7 @@ expanded: false
 name: Smithing
 icon:
   type: sprite
-  spriteId: 4249
+  spriteId: 210
   spriteIndex: 0
 expanded: false
 */
@@ -78,7 +77,7 @@ expanded: false
 name: Herblore
 icon:
   type: sprite
-  spriteId: 4244
+  spriteId: 205
   spriteIndex: 0
 expanded: false
 */
@@ -87,7 +86,7 @@ expanded: false
 name: Woodcutting
 icon:
   type: sprite
-  spriteId: 4253
+  spriteId: 214
   spriteIndex: 0
 expanded: false
 */
@@ -96,7 +95,7 @@ expanded: false
 name: Fishing
 icon:
   type: sprite
-  spriteId: 4250
+  spriteId: 211
   spriteIndex: 0
 expanded: false
 */
@@ -105,7 +104,7 @@ expanded: false
 name: Farming
 icon:
   type: sprite
-  spriteId: 4256
+  spriteId: 217
   spriteIndex: 0
 expanded: false
 */
@@ -114,7 +113,7 @@ expanded: false
 name: Fletching
 icon:
   type: sprite
-  spriteId: 4247
+  spriteId: 208
   spriteIndex: 0
 expanded: false
 */
@@ -123,7 +122,7 @@ expanded: false
 name: Construction
 icon:
   type: sprite
-  spriteId: 4258
+  spriteId: 221
   spriteIndex: 0
 expanded: false
 */
@@ -131,8 +130,9 @@ expanded: false
 ---
 name: Metal Equipment
 icon:
-  type: itemId
-  itemId: 21895
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
@@ -155,17 +155,17 @@ expanded: false
 ---
 name: Slayer
 icon:
-  type: itemId
-  itemId: 4155
+  type: sprite
+  spriteId: 216
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Chambers of Xeric
 icon:
-  type: sprite
-  spriteId: 4328
-  spriteIndex: 0
+  type: itemId
+  itemId: 20997
 expanded: false
 */
 /*@ define:group
@@ -180,9 +180,8 @@ expanded: false
 ---
 name: Tombs of Amascut
 icon:
-  type: sprite
-  spriteId: 4297
-  spriteIndex: 0
+  type: itemId
+  itemId: 26219
 expanded: false
 */
 /*@ define:group
@@ -190,15 +189,16 @@ expanded: false
 name: Tormented Demons Drop
 icon:
   type: itemId
-  itemId: 29577
+  itemId: 29580
 expanded: false
 */
 /*@ define:group
 ---
 name: Fish
 icon:
-  type: itemId
-  itemId: 13441
+  type: sprite
+  spriteId: 212
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
@@ -229,73 +229,80 @@ expanded: false
 ---
 name: Logs
 icon:
-  type: itemId
-  itemId: 1515
+  type: sprite
+  spriteId: 214
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Ores
 icon:
-  type: itemId
-  itemId: 451
+  type: sprite
+  spriteId: 209
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Bars
 icon:
-  type: itemId
-  itemId: 2363
+  type: sprite
+  spriteId: 210
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Gems
 icon:
-  type: itemId
-  itemId: 1615
+  type: sprite
+  spriteId: 207
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Herbs
 icon:
-  type: itemId
-  itemId: 257
+  type: sprite
+  spriteId: 205
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Raw Fish
 icon:
-  type: itemId
-  itemId: 383
+  type: sprite
+  spriteId: 211
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Fishing Bait
 icon:
-  type: itemId
-  itemId: 313
+  type: sprite
+  spriteId: 211
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Fishing Equipment
 icon:
-  type: itemId
-  itemId: 307
+  type: sprite
+  spriteId: 211
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Gauntlet
 icon:
-  type: sprite
-  spriteId: 4318
-  spriteIndex: 0
+  type: itemId
+  itemId: 23971
 expanded: false
 */
 

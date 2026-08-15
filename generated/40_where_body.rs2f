@@ -2,18 +2,16 @@
 ---
 name: Chambers of Xeric
 icon:
-  type: sprite
-  spriteId: 4328
-  spriteIndex: 0
+  type: itemId
+  itemId: 20997
 expanded: false
 */
 /*@ define:group
 ---
 name: Tombs of Amascut
 icon:
-  type: sprite
-  spriteId: 4297
-  spriteIndex: 0
+  type: itemId
+  itemId: 26219
 expanded: false
 */
 /*@ define:group
@@ -21,34 +19,31 @@ expanded: false
 name: Yama
 icon:
   type: itemId
-  itemId: 20023
+  itemId: 30750
 expanded: false
 */
 /*@ define:group
 ---
 name: "Callisto / Artio"
 icon:
-  type: sprite
-  spriteId: 5622
-  spriteIndex: 0
+  type: itemId
+  itemId: 13178
 expanded: false
 */
 /*@ define:group
 ---
 name: "Venenatis / Spindel"
 icon:
-  type: sprite
-  spriteId: 5624
-  spriteIndex: 0
+  type: itemId
+  itemId: 13177
 expanded: false
 */
 /*@ define:group
 ---
 name: "Vet'ion / Calvar'ion"
 icon:
-  type: sprite
-  spriteId: 5623
-  spriteIndex: 0
+  type: itemId
+  itemId: 13179
 expanded: false
 */
 /*@ define:group
@@ -56,69 +51,64 @@ expanded: false
 name: God Wars Dungeon
 icon:
   type: itemId
-  itemId: 11798
+  itemId: 11804
 expanded: false
 */
 /*@ define:group
 ---
 name: Commander Zilyana
 icon:
-  type: sprite
-  spriteId: 4284
-  spriteIndex: 0
+  type: itemId
+  itemId: 11806
 expanded: false
 */
 /*@ define:group
 ---
 name: General Graardor
 icon:
-  type: sprite
-  spriteId: 4322
-  spriteIndex: 0
+  type: itemId
+  itemId: 11808
 expanded: false
 */
 /*@ define:group
 ---
 name: Kree'arra
 icon:
-  type: sprite
-  spriteId: 4325
-  spriteIndex: 0
+  type: itemId
+  itemId: 11802
 expanded: false
 */
 /*@ define:group
 ---
 name: K'ril Tsutsaroth
 icon:
-  type: sprite
-  spriteId: 4323
-  spriteIndex: 0
+  type: itemId
+  itemId: 11816
 expanded: false
 */
 /*@ define:group
 ---
 name: Nex
 icon:
-  type: sprite
-  spriteId: 4331
-  spriteIndex: 0
+  type: itemId
+  itemId: 26370
 expanded: false
 */
 /*@ define:group
 ---
 name: Wilderness Slayer
 icon:
-  type: itemId
-  itemId: 23494
+  type: sprite
+  spriteId: 216
+  spriteIndex: 0
 expanded: false
 */
 /*@ define:group
 ---
 name: Smoke Devils
 icon:
-  type: sprite
-  spriteId: 4277
-  spriteIndex: 0
+  type: itemId
+  itemId: 12002
 expanded: false
 */
 /*@ define:group
@@ -126,16 +116,15 @@ expanded: false
 name: Ancient Guthixian Temple (Tormented Demons)
 icon:
   type: itemId
-  itemId: 29577
+  itemId: 29580
 expanded: false
 */
 /*@ define:group
 ---
 name: The Gauntlet
 icon:
-  type: sprite
-  spriteId: 4318
-  spriteIndex: 0
+  type: itemId
+  itemId: 23971
 expanded: false
 */
 /*@ define:group

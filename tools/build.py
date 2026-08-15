@@ -59,9 +59,37 @@ def rewrite_inputs(body: str, namespace: str) -> str:
     return INPUT_NS.sub(f"define:input:{namespace}", body)
 
 
+def load_sprite_catalog() -> dict[str, int]:
+    raw = json.loads((SRC / "sprites.json").read_text())
+    return {k: int(v) for k, v in raw.items() if not k.startswith("_")}
+
+
+def resolve_icon(spec: dict, catalog: dict[str, int]) -> dict:
+    if "sprite" in spec:
+        name = spec["sprite"]
+        if name not in catalog:
+            die(f"unknown sprite name {name!r} — add it to src/sprites.json")
+        return {
+            "type": "sprite",
+            "spriteId": catalog[name],
+            "spriteIndex": int(spec.get("index", 0)),
+        }
+    if "item" in spec:
+        return {"type": "itemId", "itemId": int(spec["item"])}
+    if spec.get("type") in {"sprite", "itemId"}:
+        return spec
+    return {}
+
+
 def load_group_icons() -> dict:
+    catalog = load_sprite_catalog()
     raw = json.loads((SRC / "group_icons.json").read_text())
-    return {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, dict)}
+    out = {}
+    for k, v in raw.items():
+        if k.startswith("_") or not isinstance(v, dict):
+            continue
+        out[k] = resolve_icon(v, catalog)
+    return out
 
 
 def emit_group_header(name: str, spec: dict) -> str:
@@ -354,9 +382,35 @@ def concat() -> Path:
         parts.append(f"// ---- {p.relative_to(ROOT)} ----\n")
         parts.append(text.rstrip() + "\n\n")
     DIST.mkdir(parents=True, exist_ok=True)
+    text = "".join(parts)
+    text = stamp_group_icons(text, load_group_icons())
     out = DIST / "raxors-loot-filter.rs2f"
-    out.write_text("".join(parts))
+    out.write_text(text)
     return out
+
+
+def stamp_group_icons(text: str, icons: dict) -> str:
+    """Force every define:group header to use src/group_icons.json."""
+
+    def repl(match: re.Match) -> str:
+        block = match.group(0)
+        name_m = re.search(r"^name:\s*(.+)$", block, re.M)
+        if not name_m:
+            return block
+        key = name_m.group(1).strip().strip('"')
+        spec = icons.get(key)
+        if not spec:
+            return block
+        desc = ""
+        dm = re.search(r"^description:\s*\|?\s*\n((?:^[ \t].+\n)+)", block, re.M)
+        if dm:
+            desc = "description: |\n" + dm.group(1)
+        header = emit_group_header(key, spec)
+        if desc:
+            header = header.replace("expanded: false\n*/", desc + "expanded: false\n*/")
+        return header.rstrip() + "\n"
+
+    return re.sub(r"/\*@ define:group\n---.*?^\*/", repl, text, flags=re.S | re.M)
 
 
 def validate(path: Path) -> None:
@@ -386,6 +440,10 @@ def validate(path: Path) -> None:
     for b in banned:
         if b in text:
             errors.append(f"banned string {b!r}")
+    joe_sprites = (1531, 3288, 3231, 4239, 4240, 4241, 4244, 4247, 4248, 4249, 4250, 4253, 4256, 4258, 4328, 4297, 4318)
+    for sid in joe_sprites:
+        if re.search(rf"spriteId:\s*{sid}\b", text):
+            errors.append(f"Joe skill-tab sprite {sid} leaked — use SpriteID names")
     if errors:
         die("validation failed:\n  " + "\n  ".join(errors))
 
