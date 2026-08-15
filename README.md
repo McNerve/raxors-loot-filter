@@ -12,11 +12,15 @@ Built for [FilterScape](https://filterscape.xyz/). Eight modules, not a warehous
 
 ## Load it
 
+FilterScape → New filter → Show advanced options → Filter URL:
+
+```
+https://github.com/McNerve/raxors-loot-filter/blob/feat/raxor-v1/dist/raxors-loot-filter.rs2f
+```
+
 ```bash
 python3 tools/build.py
 ```
-
-Then FilterScape → New filter → Show advanced options → paste the raw URL of `dist/raxors-loot-filter.rs2f`, or export from Customize after importing the file.
 
 Copy these next to the plugin if you don't already have them from Joe's filter:
 
