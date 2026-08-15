@@ -3,6 +3,11 @@ hidden: true
 name: header
 */
 
+/*@ define:sitemeta
+---
+source: https://raw.githubusercontent.com/McNerve/raxors-loot-filter/refs/heads/feat/raxor-v1/filter.rs2f
+*/
+
 /*
   Raxor's Loot Filter
   Later modules win (apply overwrites). rule is terminal.

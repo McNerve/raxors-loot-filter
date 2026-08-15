@@ -697,6 +697,10 @@ def validate(path: Path) -> None:
         errors.append("missing meta name")
     if not text.lstrip().startswith("/*@ define:module:"):
         errors.append("filter MUST start with a define:module comment")
+    if "define:sitemeta" not in text:
+        errors.append("missing define:sitemeta — Filterscape cannot check for updates")
+    if "refs/heads/feat/raxor-v1/filter.rs2f" not in text:
+        errors.append("sitemeta must point at the feat/raxor-v1 raw URL, not a SHA")
     for needle in (
         "define:module:display",
         "define:module:loot_order",
