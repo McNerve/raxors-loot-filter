@@ -1,9 +1,0 @@
-/*@ define:module:floor
----
-name: Floor
-subtitle: What never hits the overlay
-description: |
-  Hide and show. Value floors, ownership, bones, food, pots, ammo, runes, herbs, and the rest.
-
-  Groups start collapsed. Search if you know the item.
-*/

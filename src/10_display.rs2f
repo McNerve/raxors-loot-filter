@@ -1,0 +1,206 @@
+/*@ define:module:display
+---
+name: Display
+subtitle: Icons, prices, timers, beams
+description: |
+  How every ground item looks before anything else runs.
+
+  Later modules (Categories, Value, Rares) overwrite these. Turn a switch
+  off here if you want less noise everywhere.
+*/
+
+/*@ define:input:display
+type: style
+label: Default
+exampleItem: Santa hat
+exampleItemId: 1050
+*/
+#define RAX_IDENTITY_DEFAULT textColor = "#FFFFFFFF"; textAccentColor = "#ff000000"; textAccent = 1; showDespawn = true; menuSort = 0; icon = CurrentItem();
+
+apply (true) {
+    RAX_IDENTITY_DEFAULT
+}
+
+/*@ define:input:display
+type: style
+label: Stackable / noted
+exampleItem: Magic shortbow (u)
+exampleItemId: 73
+*/
+#define RAX_IDENTITY_STACK textColor = "#ffd7b3e8"; textAccentColor = "#ff000000"; menuTextColor = "#ffd7b3e8"; textAccent = 1; showDespawn = true; icon = CurrentItem();
+
+apply (stackable:true || noted:true) {
+    RAX_IDENTITY_STACK
+}
+
+/*@ define:input:display
+type: style
+label: Untradeable
+exampleItem: Long bone
+exampleItemId: 10976
+*/
+#define RAX_IDENTITY_UNTRADE textColor = "#fff79e9e"; textAccentColor = "#ff000000"; menuTextColor = "#fff79e9e"; showDespawn = true; icon = CurrentItem();
+
+apply (tradeable:false && !name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) {
+    RAX_IDENTITY_UNTRADE
+}
+
+/*@ define:group
+---
+name: Prices
+expanded: false
+*/
+
+/*@ define:input:display
+type: boolean
+label: Show prices on tradeables
+group: Prices
+*/
+#define RAX_SHOW_TRADEABLE_VALUE true
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && RAX_SHOW_TRADEABLE_VALUE) {
+    showValue = true;
+}
+
+/*@ define:input:display
+type: boolean
+label: Show prices on untradeables
+group: Prices
+*/
+#define RAX_SHOW_UNTRADEABLE_VALUE false
+
+apply (tradeable:false && RAX_SHOW_UNTRADEABLE_VALUE) {
+    showValue = true;
+}
+
+/*@ define:input:display
+type: number
+label: Hide prices below this gp
+group: Prices
+*/
+#define RAX_PRICE_MIN_VALUE 20000
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_PRICE_MIN_VALUE) {
+    showValue = false;
+}
+
+/*@ define:group
+---
+name: Timers
+expanded: false
+*/
+
+/*@ define:input:display
+type: boolean
+label: Show despawn timers
+group: Timers
+*/
+#define RAX_SHOW_DESPAWN true
+
+apply (RAX_SHOW_DESPAWN) {
+    showDespawn = true;
+}
+
+apply (!RAX_SHOW_DESPAWN) {
+    showDespawn = false;
+}
+
+/*@ define:input:display
+type: number
+label: Hide despawn timer below this gp
+group: Timers
+*/
+#define RAX_DESPAWN_MIN_VALUE 0
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_DESPAWN_MIN_VALUE) {
+    showDespawn = false;
+}
+
+/*@ define:group
+---
+name: Icons
+expanded: false
+*/
+
+/*@ define:input:display
+type: boolean
+label: Show item icons
+group: Icons
+*/
+#define RAX_SHOW_ICONS true
+
+apply (!RAX_SHOW_ICONS) {
+    icon = Sprite(9000000, 0);
+}
+
+/*@ define:input:display
+type: number
+label: Hide icons below this gp
+group: Icons
+*/
+#define RAX_ICON_MIN_VALUE 0
+
+apply (RAX_SHOW_ICONS && (tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_ICON_MIN_VALUE) {
+    icon = Sprite(9000000, 0);
+}
+
+/*@ define:input:display
+type: stringlist
+label: Always show an icon for these
+group: Icons
+*/
+#define RAX_ICON_ALWAYS []
+
+apply (RAX_SHOW_ICONS && name:RAX_ICON_ALWAYS) {
+    icon = CurrentItem();
+}
+
+/*@ define:input:display
+type: boolean
+label: Same icon on every skilling/supply drop
+group: Icons
+*/
+#define RAX_FORCE_CATEGORY_ICON true
+
+/*@ define:input:display
+type: style
+label: That icon
+group: Icons
+exampleItem: Santa hat
+exampleItemId: 1050
+*/
+#define RAX_CATEGORY_ICON_STYLE icon = CurrentItem();
+
+/*@ define:group
+---
+name: Beams and sounds
+expanded: false
+description: |
+  Masters. Value and Rares can still turn beams/sounds back on for those drops
+  unless you also disable them there.
+*/
+
+/*@ define:input:display
+type: boolean
+label: Allow lootbeams
+group: Beams and sounds
+*/
+#define RAX_ALLOW_LOOTBEAMS true
+
+/*@ define:input:display
+type: boolean
+label: Allow drop sounds
+group: Beams and sounds
+*/
+#define RAX_ALLOW_SOUNDS true
+
+/*@ define:input:display
+type: boolean
+label: Allow notifications
+group: Beams and sounds
+*/
+#define RAX_ALLOW_NOTIFY true
+
+apply (!RAX_ALLOW_NOTIFY) {
+    notify = false;
+}

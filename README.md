@@ -2,13 +2,18 @@
 
 Daily-driver loot filter for RuneLite's [Loot Filters](https://runelite.net/plugin-hub/show/loot-filters) plugin.
 
-Built for [FilterScape](https://filterscape.xyz/). Eight modules, not a warehouse.
+Built for [FilterScape](https://filterscape.xyz/). Eight modules. Later modules win.
 
-## Look
+## Modules (top to bottom)
 
-- **Aisle** — role chips (food, runes, herbs, raids…). Joe-style item icons by default, one switch to change them all.
-- **Heat** — ink-on-pill temperature. Green → blue → amber → crimson. Beats aisle when an item is actually worth something.
-- **Always** — uniques, clues, alchs, RDT. Alchs lock gold.
+1. **Display** — icons, prices, despawn, beam/sound masters
+2. **Loot order** — take-menu
+3. **Hide** — junk and ownership
+4. **Locations** — this room only
+5. **Categories** — food, runes, herbs, raid supplies
+6. **Value** — Low / Medium / High / Insane
+7. **Rares** — uniques, alchs, RDT
+8. **Alerts** — pets, keys, clue nests, forgotten ammo/cannon, mutes
 
 ## Load it
 

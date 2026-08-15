@@ -166,7 +166,7 @@ icon:
 expanded: false
 */
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: stringlist
 label: Items to hide
 group: Individual Items
@@ -177,7 +177,7 @@ apply (name:RAX_GLOBAL_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: stringlist
 label: Items to show
 group: Individual Items
@@ -189,7 +189,7 @@ apply (name:RAX_GLOBAL_SHOW) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Hide items below this value
 group: Value-Based
@@ -200,7 +200,7 @@ apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && val
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Hide stackable items below this value
 group: Value-Based
@@ -211,7 +211,7 @@ apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && (st
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Hide non-stackable items below this value
 group: Value-Based
@@ -223,21 +223,21 @@ apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && sta
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: boolean
 label: Hide others' drops
 group: Ownership
 */
 #define RAX_GLOBAL_HIDE_OTHER_PLAYERS_ITEMS false
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: boolean
 label: Hide world spawns
 group: Ownership
 */
 #define RAX_GLOBAL_HIDE_SPAWN_ITEMS true
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: stringlist
 label: Exceptions to ownership
 group: Ownership
@@ -257,7 +257,7 @@ rule (RAX_GLOBAL_HIDE_OTHER_PLAYERS_ITEMS && ownership:OWNERSHIP_OTHER && !name:
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Clue tiers to force hidden
 group: Clue Scrolls
@@ -295,7 +295,7 @@ apply (name:RAX_CLUE_SCROLLS_HIDE) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Minimum value to display remains at
 group: Remains
@@ -318,7 +318,7 @@ apply (name:FACT_ENSOULED_HEAD_LIST && value:<RAX_REMAINS_MINIMUM_VALUE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Bones to force hidden
 group: Remains
@@ -360,7 +360,7 @@ apply (name:RAX_BONES_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Ashes to force hidden
 group: Remains
@@ -378,7 +378,7 @@ apply (name:RAX_ASHES_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Shades of morton remains to force hidden
 group: Remains
@@ -397,7 +397,7 @@ apply (name:RAX_SHADES_REMAINS_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Ensouled heads to force hidden
 group: Remains
@@ -434,7 +434,7 @@ apply (name:RAX_ENSOULED_HEADS_HIDE) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: stringlist
 label: Food to hide
 group: Food
@@ -445,7 +445,7 @@ apply (name:RAX_FOOD_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: stringlist
 label: Food to show
 group: Food
@@ -457,7 +457,7 @@ apply (name:RAX_FOOD_SHOW) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Potions to force hidden
 group: Potions
@@ -674,7 +674,7 @@ apply (name:RAX_POTIONS_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Potions to force shown
 group: Potions
@@ -892,7 +892,7 @@ apply (name:RAX_POTIONS_SHOW) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Standard arrows to force hidden
 group: Ammo
@@ -933,7 +933,7 @@ enum: [
 */
 #define RAX_AMMO_STANDARD_ARROWS_HIDE ["Bronze*","Iron*","Steel*","Mithril*","Adamant*","Rune*"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Standard Arrows minimum value
 group: Ammo
@@ -944,7 +944,7 @@ apply (name:FACT_AMMO_STANDARD_ARROWS_LIST && (name:RAX_AMMO_STANDARD_ARROWS_HID
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Darts to force hidden
 group: Ammo
@@ -993,7 +993,7 @@ enum: [
 */
 #define RAX_AMMO_DARTS_HIDE ["Bronze dart*","Iron dart*","Steel dart*","Black dart*","Mithril dart*","Adamant dart*"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Darts minimum value
 group: Ammo
@@ -1004,7 +1004,7 @@ apply (name:FACT_AMMO_DARTS_LIST && (name:RAX_AMMO_DARTS_HIDE || value:<RAX_AMMO
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Bolts to force hidden
 group: Ammo
@@ -1049,7 +1049,7 @@ enum: [
 */
 #define RAX_AMMO_BOLTS_HIDE ["Bronze bolts*","Blurite bolts*","Silver bolts*","Iron bolts*","Steel bolts*","Mithril bolts*"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Bolts minimum value
 group: Ammo
@@ -1060,7 +1060,7 @@ apply (name:FACT_AMMO_BOLTS_LIST && (name:RAX_AMMO_BOLTS_HIDE || value:<RAX_AMMO
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Enchanted bolts to force hidden
 group: Ammo
@@ -1109,7 +1109,7 @@ enum: [
 */
 #define RAX_AMMO_BOLTS_E_HIDE []
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Enchanted bolts minimum value
 group: Ammo
@@ -1120,7 +1120,7 @@ apply (name:FACT_AMMO_BOLTS_E_LIST && (name:RAX_AMMO_BOLTS_E_HIDE || value:<RAX_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Dragon enchanted bolts to force hidden
 group: Ammo
@@ -1169,7 +1169,7 @@ enum: [
 */
 #define RAX_AMMO_DRAGON_BOLTS_E_HIDE []
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Dragon enchanted bolts minimum value
 group: Ammo
@@ -1180,7 +1180,7 @@ apply (name:FACT_AMMO_DRAGON_BOLTS_E_LIST && (name:RAX_AMMO_DRAGON_BOLTS_E_HIDE 
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Javelins to force hidden
 group: Ammo
@@ -1196,7 +1196,7 @@ enum: [
 */
 #define RAX_AMMO_JAVELINS_HIDE ["Bronze javelin","Iron javelin","Steel javelin","Mithril javelin","Adamant javelin","Rune javelin"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Javelins minimum value
 group: Ammo
@@ -1207,7 +1207,7 @@ apply (name:FACT_AMMO_JAVELINS_LIST && (name:RAX_AMMO_JAVELINS_HIDE || value:<RA
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Special bolts to force hidden
 group: Ammo
@@ -1248,7 +1248,7 @@ enum: [
 */
 #define RAX_AMMO_SPECIAL_BOLTS_HIDE []
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Special bolts minimum value
 group: Ammo
@@ -1259,7 +1259,7 @@ apply (name:FACT_AMMO_SPECIAL_BOLTS_LIST && (name:RAX_AMMO_SPECIAL_BOLTS_HIDE ||
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Brutal arrows to force hidden
 group: Ammo
@@ -1296,7 +1296,7 @@ enum: [
 */
 #define RAX_AMMO_BRUTAL_ARROWS_HIDE ["Bronze brutal","Iron brutal","Steel brutal","Black brutal","Mithril brutal"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Brutal Arrows minimum value
 group: Ammo
@@ -1307,7 +1307,7 @@ apply (name:FACT_AMMO_BRUTAL_ARROWS_LIST && (name:RAX_AMMO_BRUTAL_ARROWS_HIDE ||
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Special arrows to force hidden
 group: Ammo
@@ -1320,7 +1320,7 @@ enum: [
 */
 #define RAX_AMMO_SPECIAL_ARROWS_HIDE ["Training Arrows","Ogre Arrow","Broad Arrows"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Special Arrows minimum value
 group: Ammo
@@ -1332,7 +1332,7 @@ apply (name:FACT_AMMO_SPECIAL_ARROWS_LIST && (name:RAX_AMMO_SPECIAL_ARROWS_HIDE 
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Gems to force hidden
 group: Gems
@@ -1381,7 +1381,7 @@ apply (name:RAX_GEMS_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Sapphire minimum quantity
 group: Gems
@@ -1392,7 +1392,7 @@ apply (name:["Uncut sapphire",   "Sapphire", ] && quantity:<RAX_SAPPHIRE_MIN_QUA
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Emerald minimum quantity
 group: Gems
@@ -1403,7 +1403,7 @@ apply (name:["Uncut emerald",   "Emerald", ] && quantity:<RAX_EMERALD_MIN_QUANTI
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Ruby minimum quantity
 group: Gems
@@ -1414,7 +1414,7 @@ apply (name:["Uncut ruby",   "Ruby", ] && quantity:<RAX_RUBY_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Diamond minimum quantity
 group: Gems
@@ -1425,7 +1425,7 @@ apply (name:["Uncut diamond",   "Diamond", ] && quantity:<RAX_DIAMOND_MIN_QUANTI
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Opal minimum quantity
 group: Gems
@@ -1436,7 +1436,7 @@ apply (name:["Uncut opal",   "Opal", ] && quantity:<RAX_OPAL_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Jade minimum quantity
 group: Gems
@@ -1447,7 +1447,7 @@ apply (name:["Uncut jade",   "Jade", ] && quantity:<RAX_JADE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Red topaz minimum quantity
 group: Gems
@@ -1458,7 +1458,7 @@ apply (name:["Uncut red topaz",   "Red topaz", ] && quantity:<RAX_RED_TOPAZ_MIN_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Dragonstone minimum quantity
 group: Gems
@@ -1469,7 +1469,7 @@ apply (name:["Uncut dragonstone",   "Dragonstone", ] && quantity:<RAX_DRAGONSTON
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Onyx minimum quantity
 group: Gems
@@ -1481,7 +1481,7 @@ apply (name:["Uncut onyx",   "Onyx", ] && quantity:<RAX_ONYX_MIN_QUANTITY) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Runes to force hidden
 group: Runes
@@ -1513,168 +1513,168 @@ enum: [
 */
 #define RAX_RUNES_HIDE []
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: boolean
 label: Force runes to be shown if they're above min quantity
 group: Runes
 */
 #define RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY true
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Air rune minimum quantity
 group: Runes
 */
 #define RAX_AIR_RUNE_MIN_QUANTITY 500
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Water rune minimum quantity
 group: Runes
 */
 #define RAX_WATER_RUNE_MIN_QUANTITY 500
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Earth rune minimum quantity
 group: Runes
 */
 #define RAX_EARTH_RUNE_MIN_QUANTITY 500
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Fire rune minimum quantity
 group: Runes
 */
 #define RAX_FIRE_RUNE_MIN_QUANTITY 500
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mind rune minimum quantity
 group: Runes
 */
 #define RAX_MIND_RUNE_MIN_QUANTITY 500
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Body rune minimum quantity
 group: Runes
 */
 #define RAX_BODY_RUNE_MIN_QUANTITY 500
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Cosmic rune minimum quantity
 group: Runes
 */
 #define RAX_COSMIC_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Chaos rune minimum quantity
 group: Runes
 */
 #define RAX_CHAOS_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Nature rune minimum quantity
 group: Runes
 */
 #define RAX_NATURE_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Law rune minimum quantity
 group: Runes
 */
 #define RAX_LAW_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Death rune minimum quantity
 group: Runes
 */
 #define RAX_DEATH_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Sunfire rune minimum quantity
 group: Runes
 */
 #define RAX_SUNFIRE_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Astral rune minimum quantity
 group: Runes
 */
 #define RAX_ASTRAL_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Blood rune minimum quantity
 group: Runes
 */
 #define RAX_BLOOD_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Soul rune minimum quantity
 group: Runes
 */
 #define RAX_SOUL_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Wrath rune minimum quantity
 group: Runes
 */
 #define RAX_WRATH_RUNE_MIN_QUANTITY 10
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mist rune minimum quantity
 group: Runes
 */
 #define RAX_MIST_RUNE_MIN_QUANTITY 50
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Dust rune minimum quantity
 group: Runes
 */
 #define RAX_DUST_RUNE_MIN_QUANTITY 50
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mud rune minimum quantity
 group: Runes
 */
 #define RAX_MUD_RUNE_MIN_QUANTITY 50
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Smoke rune minimum quantity
 group: Runes
 */
 #define RAX_SMOKE_RUNE_MIN_QUANTITY 50
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Steam rune minimum quantity
 group: Runes
 */
 #define RAX_STEAM_RUNE_MIN_QUANTITY 50
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Lava rune minimum quantity
 group: Runes
 */
 #define RAX_LAVA_RUNE_MIN_QUANTITY 50
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Aether rune minimum quantity
 group: Runes
@@ -1848,7 +1848,7 @@ apply (name:"Aether rune" && quantity:<RAX_LAVA_RUNE_MIN_QUANTITY && RAX_RUNES_S
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Hide herbs below this value
 group: Herbs
@@ -1859,7 +1859,7 @@ apply (name:FACT_ALL_HERBS && value:<RAX_HERBS_MINIMUM_VALUE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Herbs to force hidden
 group: Herbs
@@ -1932,7 +1932,7 @@ apply (name:RAX_HERBS_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Herbs to force shown
 group: Herbs
@@ -2005,7 +2005,7 @@ apply (name:RAX_HERBS_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Guam leaf minimum quantity
 group: Herbs
@@ -2016,7 +2016,7 @@ apply (name:"*guam leaf" && quantity:<RAX_HERBS_GUAM_LEAF_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Guam leaf noted minimum quantity
 group: Herbs
@@ -2027,7 +2027,7 @@ apply (name:"*guam leaf" && noted:true && quantity:<RAX_HERBS_GUAM_LEAF_NOTED_MI
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Marrentill minimum quantity
 group: Herbs
@@ -2038,7 +2038,7 @@ apply (name:"*marrentill" && quantity:<RAX_HERBS_MARRENTILL_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Marrentill noted minimum quantity
 group: Herbs
@@ -2049,7 +2049,7 @@ apply (name:"*marrentill" && noted:true && quantity:<RAX_HERBS_MARRENTILL_NOTED_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Tarromin minimum quantity
 group: Herbs
@@ -2060,7 +2060,7 @@ apply (name:"*tarromin" && quantity:<RAX_HERBS_TARROMIN_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Tarromin noted minimum quantity
 group: Herbs
@@ -2071,7 +2071,7 @@ apply (name:"*tarromin" && noted:true && quantity:<RAX_HERBS_TARROMIN_NOTED_MIN_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Harralander minimum quantity
 group: Herbs
@@ -2082,7 +2082,7 @@ apply (name:"*harralander" && quantity:<RAX_HERBS_HARRALANDER_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Harralander noted minimum quantity
 group: Herbs
@@ -2093,7 +2093,7 @@ apply (name:"*harralander" && noted:true && quantity:<RAX_HERBS_HARRALANDER_NOTE
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Ranarr weed minimum quantity
 group: Herbs
@@ -2104,7 +2104,7 @@ apply (name:"*ranarr weed" && quantity:<RAX_HERBS_RANARR_WEED_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Ranarr weed noted minimum quantity
 group: Herbs
@@ -2115,7 +2115,7 @@ apply (name:"*ranarr weed" && noted:true && quantity:<RAX_HERBS_RANARR_WEED_NOTE
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Toadflax minimum quantity
 group: Herbs
@@ -2126,7 +2126,7 @@ apply (name:"*toadflax" && quantity:<RAX_HERBS_TOADFLAX_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Toadflax noted minimum quantity
 group: Herbs
@@ -2137,7 +2137,7 @@ apply (name:"*toadflax" && noted:true && quantity:<RAX_HERBS_TOADFLAX_NOTED_MIN_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Irit leaf minimum quantity
 group: Herbs
@@ -2148,7 +2148,7 @@ apply (name:"*irit leaf" && quantity:<RAX_HERBS_IRIT_LEAF_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Irit leaf noted minimum quantity
 group: Herbs
@@ -2159,7 +2159,7 @@ apply (name:"*irit leaf" && noted:true && quantity:<RAX_HERBS_IRIT_LEAF_NOTED_MI
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Avantoe minimum quantity
 group: Herbs
@@ -2170,7 +2170,7 @@ apply (name:"*avantoe" && quantity:<RAX_HERBS_AVANTOE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Avantoe noted minimum quantity
 group: Herbs
@@ -2181,7 +2181,7 @@ apply (name:"*avantoe" && noted:true && quantity:<RAX_HERBS_AVANTOE_NOTED_MIN_QU
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Kwuarm minimum quantity
 group: Herbs
@@ -2192,7 +2192,7 @@ apply (name:"*kwuarm" && quantity:<RAX_HERBS_KWUARM_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Kwuarm noted minimum quantity
 group: Herbs
@@ -2203,7 +2203,7 @@ apply (name:"*kwuarm" && noted:true && quantity:<RAX_HERBS_KWUARM_NOTED_MIN_QUAN
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Huasca minimum quantity
 group: Herbs
@@ -2214,7 +2214,7 @@ apply (name:"*huasca" && quantity:<RAX_HERBS_HUASCA_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Huasca noted minimum quantity
 group: Herbs
@@ -2225,7 +2225,7 @@ apply (name:"*huasca" && noted:true && quantity:<RAX_HERBS_HUASCA_NOTED_MIN_QUAN
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Snapdragon minimum quantity
 group: Herbs
@@ -2236,7 +2236,7 @@ apply (name:"*snapdragon" && quantity:<RAX_HERBS_SNAPDRAGON_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Snapdragon noted minimum quantity
 group: Herbs
@@ -2247,7 +2247,7 @@ apply (name:"*snapdragon" && noted:true && quantity:<RAX_HERBS_SNAPDRAGON_NOTED_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Cadantine minimum quantity
 group: Herbs
@@ -2258,7 +2258,7 @@ apply (name:"*cadantine" && quantity:<RAX_HERBS_CADANTINE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Cadantine noted minimum quantity
 group: Herbs
@@ -2269,7 +2269,7 @@ apply (name:"*cadantine" && noted:true && quantity:<RAX_HERBS_CADANTINE_NOTED_MI
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Lantadyme minimum quantity
 group: Herbs
@@ -2280,7 +2280,7 @@ apply (name:"*lantadyme" && quantity:<RAX_HERBS_LANTADYME_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Lantadyme noted minimum quantity
 group: Herbs
@@ -2291,7 +2291,7 @@ apply (name:"*lantadyme" && noted:true && quantity:<RAX_HERBS_LANTADYME_NOTED_MI
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Dwarf weed minimum quantity
 group: Herbs
@@ -2302,7 +2302,7 @@ apply (name:"*dwarf weed" && quantity:<RAX_HERBS_DWARF_WEED_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Dwarf weed noted minimum quantity
 group: Herbs
@@ -2313,7 +2313,7 @@ apply (name:"*dwarf weed" && noted:true && quantity:<RAX_HERBS_DWARF_WEED_NOTED_
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Torstol minimum quantity
 group: Herbs
@@ -2324,7 +2324,7 @@ apply (name:"*torstol" && quantity:<RAX_HERBS_TORSTOL_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Torstol noted minimum quantity
 group: Herbs
@@ -2336,7 +2336,7 @@ apply (name:"*torstol" && noted:true && quantity:<RAX_HERBS_TORSTOL_NOTED_MIN_QU
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Fishing equipment to force hidden
 group: Fishing
@@ -2358,7 +2358,7 @@ apply (name:RAX_FISHING_EQUIPMENT_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Fishing bait to force hidden
 group: Fishing
@@ -2379,7 +2379,7 @@ apply (name:RAX_FISHING_BAIT_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Raw fish to force hidden
 group: Fishing
@@ -2430,7 +2430,7 @@ apply (name:RAX_FISHING_RAW_FISH_HIDE) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Ores to force hidden
 group: Ores
@@ -2456,7 +2456,7 @@ apply (name:RAX_ORES_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Copper ore minimum quantity
 group: Ores
@@ -2467,7 +2467,7 @@ apply (name:"copper ore" && quantity:<RAX_COPPER_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Tin ore minimum quantity
 group: Ores
@@ -2478,7 +2478,7 @@ apply (name:"tin ore" && quantity:<RAX_TIN_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Iron ore minimum quantity
 group: Ores
@@ -2489,7 +2489,7 @@ apply (name:"iron ore" && quantity:<RAX_IRON_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Silver ore minimum quantity
 group: Ores
@@ -2500,7 +2500,7 @@ apply (name:"silver ore" && quantity:<RAX_SILVER_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Coal minimum quantity
 group: Ores
@@ -2511,7 +2511,7 @@ apply (name:"coal" && quantity:<RAX_COAL_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Gold ore minimum quantity
 group: Ores
@@ -2522,7 +2522,7 @@ apply (name:"gold ore" && quantity:<RAX_GOLD_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mithril ore minimum quantity
 group: Ores
@@ -2533,7 +2533,7 @@ apply (name:"mithril ore" && quantity:<RAX_MITHRIL_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Adamantite ore minimum quantity
 group: Ores
@@ -2544,7 +2544,7 @@ apply (name:"adamantite ore" && quantity:<RAX_ADAMANTITE_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Runite ore minimum quantity
 group: Ores
@@ -2555,7 +2555,7 @@ apply (name:"runite ore" && quantity:<RAX_RUNITE_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Daeyalt ore minimum quantity
 group: Ores
@@ -2566,7 +2566,7 @@ apply (name:"daeyalt ore" && quantity:<RAX_DAEYALT_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Blasted ore minimum quantity
 group: Ores
@@ -2577,7 +2577,7 @@ apply (name:"blasted ore" && quantity:<RAX_BLASTED_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Blurite ore minimum quantity
 group: Ores
@@ -2588,7 +2588,7 @@ apply (name:"blurite ore" && quantity:<RAX_BLURITE_ORE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Lovakite ore minimum quantity
 group: Ores
@@ -2600,7 +2600,7 @@ apply (name:"lovakite ore" && quantity:<RAX_LOVAKITE_ORE_MIN_QUANTITY) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Bars to force hidden
 group: Bars
@@ -2628,7 +2628,7 @@ apply (name:RAX_BARS_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Bronze bar minimum quantity
 group: Bars
@@ -2639,7 +2639,7 @@ apply (name:"Bronze bar" && quantity:<RAX_BRONZE_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Iron bar minimum quantity
 group: Bars
@@ -2650,7 +2650,7 @@ apply (name:"Iron bar" && quantity:<RAX_IRON_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Silver bar minimum quantity
 group: Bars
@@ -2661,7 +2661,7 @@ apply (name:"Silver bar" && quantity:<RAX_SILVER_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Steel bar minimum quantity
 group: Bars
@@ -2672,7 +2672,7 @@ apply (name:"Steel bar" && quantity:<RAX_STEEL_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Gold bar minimum quantity
 group: Bars
@@ -2683,7 +2683,7 @@ apply (name:"Gold bar" && quantity:<RAX_GOLD_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mithril bar minimum quantity
 group: Bars
@@ -2694,7 +2694,7 @@ apply (name:"Mithril bar" && quantity:<RAX_MITHRIL_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Adamantite bar minimum quantity
 group: Bars
@@ -2705,7 +2705,7 @@ apply (name:"Adamantite bar" && quantity:<RAX_ADAMANTITE_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Runite bar minimum quantity
 group: Bars
@@ -2716,7 +2716,7 @@ apply (name:"Runite bar" && quantity:<RAX_RUNITE_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Elemental metal minimum quantity
 group: Bars
@@ -2727,7 +2727,7 @@ apply (name:"Elemental metal" && quantity:<RAX_ELEMENTAL_METAL_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Primed bar minimum quantity
 group: Bars
@@ -2738,7 +2738,7 @@ apply (name:"Primed bar" && quantity:<RAX_PRIMED_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Primed mind bar minimum quantity
 group: Bars
@@ -2749,7 +2749,7 @@ apply (name:"Primed mind bar" && quantity:<RAX_PRIMED_MIND_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Blurite bar minimum quantity
 group: Bars
@@ -2760,7 +2760,7 @@ apply (name:"Blurite bar" && quantity:<RAX_BLURITE_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Enchanted bar minimum quantity
 group: Bars
@@ -2771,7 +2771,7 @@ apply (name:"Enchanted bar" && quantity:<RAX_ENCHANTED_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Lovakite bar minimum quantity
 group: Bars
@@ -2782,7 +2782,7 @@ apply (name:"Lovakite bar" && quantity:<RAX_LOVAKITE_BAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: "'Perfect' gold bar minimum quantity"
 group: Bars
@@ -2794,7 +2794,7 @@ apply (name:"'Perfect' gold bar" && quantity:<RAX_PERFECT_GOLD_BAR_MIN_QUANTITY)
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Logs to force hidden
 group: Logs
@@ -2818,105 +2818,105 @@ enum: [
 */
 #define RAX_LOGS_HIDE []
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Logs minimum quantity
 group: Logs
 */
 #define RAX_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Oak logs minimum quantity
 group: Logs
 */
 #define RAX_OAK_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Willow logs minimum quantity
 group: Logs
 */
 #define RAX_WILLOW_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Maple logs minimum quantity
 group: Logs
 */
 #define RAX_MAPLE_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Yew logs minimum quantity
 group: Logs
 */
 #define RAX_YEW_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Magic logs minimum quantity
 group: Logs
 */
 #define RAX_MAGIC_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Redwood logs minimum quantity
 group: Logs
 */
 #define RAX_REDWOOD_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Teak logs minimum quantity
 group: Logs
 */
 #define RAX_TEAK_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mahogany logs minimum quantity
 group: Logs
 */
 #define RAX_MAHOGANY_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Achey tree logs minimum quantity
 group: Logs
 */
 #define RAX_ACHEY_TREE_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Arctic pine logs minimum quantity
 group: Logs
 */
 #define RAX_ARCTIC_PINE_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Scrapey tree logs minimum quantity
 group: Logs
 */
 #define RAX_SCRAPEY_TREE_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Juniper logs minimum quantity
 group: Logs
 */
 #define RAX_JUNIPER_LOGS_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Bark minimum quantity
 group: Logs
 */
 #define RAX_BARK_MIN_QUANTITY 0
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Blisterwood logs minimum quantity
 group: Logs
@@ -2988,7 +2988,7 @@ apply (name:"Blisterwood logs" && quantity:<RAX_BLISTERWOOD_LOGS_MIN_QUANTITY) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Hide seeds below this value
 group: Farming seeds
@@ -2999,7 +2999,7 @@ apply ((name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_FLOWER
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Allotment seeds to force hidden
 group: Farming seeds
@@ -3020,7 +3020,7 @@ apply (name:RAX_FARMING_SEEDS_ALLOTMENT_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Flower seeds to force hidden
 group: Farming seeds
@@ -3039,7 +3039,7 @@ apply (name:RAX_FARMING_SEEDS_FLOWER_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Herb seeds to force hidden
 group: Farming seeds
@@ -3067,7 +3067,7 @@ apply (name:RAX_FARMING_SEEDS_HERB_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Hops seeds to force hidden
 group: Farming seeds
@@ -3087,7 +3087,7 @@ apply (name:RAX_FARMING_SEEDS_HOPS_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Bush seeds to force hidden
 group: Farming seeds
@@ -3106,7 +3106,7 @@ apply (name:RAX_FARMING_SEEDS_BUSH_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Tree seeds to force hidden
 group: Farming seeds
@@ -3124,7 +3124,7 @@ apply (name:RAX_FARMING_SEEDS_TREE_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Fruit tree seeds to force hidden
 group: Farming seeds
@@ -3145,7 +3145,7 @@ apply (name:RAX_FARMING_SEEDS_FRUIT_TREE_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Hardwood tree seeds to force hidden
 group: Farming seeds
@@ -3165,7 +3165,7 @@ apply (name:RAX_FARMING_SEEDS_SPECIAL_TREE_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Special seeds to force hidden
 group: Farming seeds
@@ -3185,7 +3185,7 @@ apply (name:RAX_FARMING_SEEDS_SPECIAL_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Anima seeds to force hidden
 group: Farming seeds
@@ -3202,7 +3202,7 @@ apply (name:RAX_FARMING_SEEDS_ANIMA_HIDE) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Allotment seeds to force shown
 group: Farming seeds
@@ -3223,7 +3223,7 @@ apply (name:RAX_FARMING_SEEDS_ALLOTMENT_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Flower seeds to force shown
 group: Farming seeds
@@ -3242,7 +3242,7 @@ apply (name:RAX_FARMING_SEEDS_FLOWER_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Herb seeds to force shown
 group: Farming seeds
@@ -3270,7 +3270,7 @@ apply (name:RAX_FARMING_SEEDS_HERB_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Hops seeds to force shown
 group: Farming seeds
@@ -3290,7 +3290,7 @@ apply (name:RAX_FARMING_SEEDS_HOPS_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Bush seeds to force shown
 group: Farming seeds
@@ -3309,7 +3309,7 @@ apply (name:RAX_FARMING_SEEDS_BUSH_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Tree seeds to force shown
 group: Farming seeds
@@ -3327,7 +3327,7 @@ apply (name:RAX_FARMING_SEEDS_TREE_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Fruit tree seeds to force shown
 group: Farming seeds
@@ -3348,7 +3348,7 @@ apply (name:RAX_FARMING_SEEDS_FRUIT_TREE_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Hardwood tree seeds to force shown
 group: Farming seeds
@@ -3368,7 +3368,7 @@ apply (name:RAX_FARMING_SEEDS_SPECIAL_TREE_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Special seeds to force shown
 group: Farming seeds
@@ -3388,7 +3388,7 @@ apply (name:RAX_FARMING_SEEDS_SPECIAL_SHOW) {
     hidden = false;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Anima seeds to force shown
 group: Farming seeds
@@ -3405,7 +3405,7 @@ apply (name:RAX_FARMING_SEEDS_ANIMA_SHOW) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Secondaries to force hidden
 group: Herblore secondaries
@@ -3439,7 +3439,7 @@ enum: [
 */
 #define RAX_SECONDARIES_HIDE ["Eye of newt","Volcanic ash","Chocolate dust"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Secondaries to force shown
 group: Herblore secondaries
@@ -3473,7 +3473,7 @@ enum: [
 */
 #define RAX_SECONDARIES_SHOW ["Crushed nest","Nihil dust","Lily of the sands","Aldarium","Araxyte venom sack"]
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Minimum value to display secondaries at
 group: Herblore secondaries
@@ -3493,7 +3493,7 @@ apply (name:RAX_SECONDARIES_SHOW) {
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: stringlist
 label: Currency to force hidden
 group: Currency
@@ -3504,7 +3504,7 @@ apply (name:RAX_CURRENCY_HIDE) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Abyssal pearls minimum quantity
 group: Currency
@@ -3515,7 +3515,7 @@ apply (name:"Archery ticket" && quantity:<RAX_ARCHERY_TICKET_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Agility arena ticket minimum quantity
 group: Currency
@@ -3526,7 +3526,7 @@ apply (name:"Coins" && quantity:<RAX_COINS_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Anima-infused bark minimum quantity
 group: Currency
@@ -3537,7 +3537,7 @@ apply (name:"Mole claw" && quantity:<RAX_MOLE_CLAW_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Archery ticket minimum quantity
 group: Currency
@@ -3548,7 +3548,7 @@ apply (name:"Mole skin" && quantity:<RAX_MOLE_SKIN_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Barronite shards minimum quantity
 group: Currency
@@ -3559,7 +3559,7 @@ apply (name:"Numulite" && quantity:<RAX_NUMULITE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Blood money minimum quantity
 group: Currency
@@ -3570,7 +3570,7 @@ apply (name:"Platinum token" && quantity:<RAX_PLATINUM_TOKEN_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Brimhaven voucher minimum quantity
 group: Currency
@@ -3581,7 +3581,7 @@ apply (name:"Trading sticks" && quantity:<RAX_TRADING_STICKS_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Castle wars ticket minimum quantity
 group: Currency
@@ -3592,7 +3592,7 @@ apply (name:"Shantay pass" && quantity:<RAX_SHANTAY_PASS_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Coins minimum quantity
 group: Currency
@@ -3603,7 +3603,7 @@ apply (name:"Ship ticket" && quantity:<RAX_SHIP_TICKET_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Ecto-token minimum quantity
 group: Currency
@@ -3614,7 +3614,7 @@ apply (name:"Abyssal pearls" && quantity:<RAX_ABYSSAL_PEARLS_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Frog token minimum quantity
 group: Currency
@@ -3625,7 +3625,7 @@ apply (name:"Anima-infused bark" && quantity:<RAX_ANIMA_INFUSED_BARK_MIN_QUANTIT
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Glistening tear minimum quantity
 group: Currency
@@ -3636,7 +3636,7 @@ apply (name:"Agility arena ticket" && quantity:<RAX_AGILITY_ARENA_TICKET_MIN_QUA
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Golden nugget minimum quantity
 group: Currency
@@ -3647,7 +3647,7 @@ apply (name:"Barronite shards" && quantity:<RAX_BARRONITE_SHARDS_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Hallowed mark minimum quantity
 group: Currency
@@ -3658,7 +3658,7 @@ apply (name:"Blood money" && quantity:<RAX_BLOOD_MONEY_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Intelligence minimum quantity
 group: Currency
@@ -3669,7 +3669,7 @@ apply (name:"Brimhaven voucher" && quantity:<RAX_BRIMHAVEN_VOUCHER_MIN_QUANTITY)
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mark of grace minimum quantity
 group: Currency
@@ -3680,7 +3680,7 @@ apply (name:"Castle wars ticket" && quantity:<RAX_CASTLE_WARS_TICKET_MIN_QUANTIT
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mermaid's tear minimum quantity
 group: Currency
@@ -3691,7 +3691,7 @@ apply (name:"Ecto-token" && quantity:<RAX_ECTO_TOKEN_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Minnow minimum quantity
 group: Currency
@@ -3702,7 +3702,7 @@ apply (name:"Frog token" && quantity:<RAX_FROG_TOKEN_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Molch pearl minimum quantity
 group: Currency
@@ -3713,7 +3713,7 @@ apply (name:"Golden nugget" && quantity:<RAX_GOLDEN_NUGGET_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mole claw minimum quantity
 group: Currency
@@ -3724,7 +3724,7 @@ apply (name:"Glistening tear" && quantity:<RAX_GLISTENING_TEAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Mole skin minimum quantity
 group: Currency
@@ -3735,7 +3735,7 @@ apply (name:"Hallowed mark" && quantity:<RAX_HALLOWED_MARK_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Nuggets minimum quantity
 group: Currency
@@ -3746,7 +3746,7 @@ apply (name:"Intelligence" && quantity:<RAX_INTELLIGENCE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Numulite minimum quantity
 group: Currency
@@ -3757,7 +3757,7 @@ apply (name:"Mark of grace" && quantity:<RAX_MARK_OF_GRACE_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Paramaya ticket minimum quantity
 group: Currency
@@ -3768,7 +3768,7 @@ apply (name:"Mermaid's tear" && quantity:<RAX_MERMAIDS_TEAR_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Platinum token minimum quantity
 group: Currency
@@ -3779,7 +3779,7 @@ apply (name:"Minnow" && quantity:<RAX_MINNOW_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Rare creature parts minimum quantity
 group: Currency
@@ -3790,7 +3790,7 @@ apply (name:"Molch pearl" && quantity:<RAX_MOLCH_PEARL_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Reward token credits minimum quantity
 group: Currency
@@ -3801,7 +3801,7 @@ apply (name:"Nuggets" && quantity:<RAX_NUGGETS_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Shantay pass minimum quantity
 group: Currency
@@ -3812,7 +3812,7 @@ apply (name:"Paramaya ticket" && quantity:<RAX_PARAMAYA_TICKET_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Ship ticket minimum quantity
 group: Currency
@@ -3823,7 +3823,7 @@ apply (name:"Rare creature parts" && quantity:<RAX_RARE_CREATURE_PARTS_MIN_QUANT
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Stardust minimum quantity
 group: Currency
@@ -3834,7 +3834,7 @@ apply (name:"Reward token credits" && quantity:<RAX_REWARD_TOKEN_CREDITS_MIN_QUA
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Termites minimum quantity
 group: Currency
@@ -3845,7 +3845,7 @@ apply (name:"Stardust" && quantity:<RAX_STARDUST_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Tokkul minimum quantity
 group: Currency
@@ -3856,7 +3856,7 @@ apply (name:"Tokkul" && quantity:<RAX_TOKKUL_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Trading sticks minimum quantity
 group: Currency
@@ -3867,7 +3867,7 @@ apply (name:"Termites" && quantity:<RAX_TERMITES_MIN_QUANTITY) {
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Unidentified minerals minimum quantity
 group: Currency
@@ -3878,7 +3878,7 @@ apply (name:"Unidentified minerals" && quantity:<RAX_UNIDENTIFIED_MINERALS_MIN_Q
     hidden = true;
 }
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: number
 label: Warrior guild token minimum quantity
 group: Currency
@@ -3890,7 +3890,7 @@ apply (name:"Warrior guild token" && quantity:<RAX_WARRIOR_GUILD_TOKEN_MIN_QUANT
 }
 
 
-/*@ define:input:floor
+/*@ define:input:hide
 type: enumlist
 label: Metal equipment to force hidden
 group: Metal Equipment

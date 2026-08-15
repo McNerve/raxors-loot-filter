@@ -1,0 +1,9 @@
+/*@ define:module:categories
+---
+name: Categories
+subtitle: Food, runes, herbs, raids supplies
+description: |
+  How a *kind* of item looks. Value (below) overwrites this once the drop is worth real gp.
+
+  Groups start collapsed.
+*/

@@ -1,36 +1,38 @@
 # Raxor's Loot Filter
 
-RuneLite loot filter for the Loot Filters plugin. Daily driver. Load via [FilterScape](https://filterscape.xyz/).
+RuneLite loot filter. Daily driver. Load via [FilterScape](https://filterscape.xyz/).
 
-## Identity
+## Names
 
-Heat over chips. Grocery aisle for role. Icons are a policy, not 300 one-offs.
+OSRS words only. Not Aisle / Heat / Kits / Ember.
 
-Do not clone Typical-Whack / Joe module names, `VAR_` prefixes, or the 11-module warehouse. Item lists and area coords are game facts — those may overlap. Architecture may not.
+## Pipeline (top → bottom). Later wins.
 
-## Pipeline (top → bottom)
+`apply` overwrites earlier `apply`. `rule` is terminal.
 
-1. `identity` — base paint, prices, despawn, icon policy knobs
-2. `pickup` — menu sort flags
-3. `floor` — hide / show
-4. `where` — area hide / show
-5. `aisle` — category + per-item chips (collapsed groups)
-6. `heat` — value temperature; wins over aisle
-7. `always` — uniques, alchs, clues, RDT; alchs lock by default
-8. `kits` — backpack ping, UIM deathpile, LMS silence
-9. `final` — last hide/show + generated sort ladder
-10. `facts` — hidden. Areas, account types, item name lists
+1. `display` — icons, prices, despawn, beam/sound masters
+2. `loot_order` — take-menu sort switches
+3. `hide` — junk, value floors, ownership
+4. `locations` — this room only (can force-show after hide)
+5. `categories` — food, runes, herbs, raid supplies
+6. `value` — Low / Medium / High / Insane (Ground Items buckets)
+7. `rares` — uniques, alchs, RDT
+8. `alerts` — pets, keys, clues-in-containers, forgotten ammo/cannon, mutes
+9. `final` — last hide/show + sort ladder
+10. `facts` — hidden. Areas, account types, item lists
+
+Value must stay below Categories. Rares below Value. Alerts last so mutes stick.
 
 ## Conventions
 
-- `RAX_` — Filterscape-facing config
-- `FACT_` — game facts (coords, name lists). Never shown in the UI
-- Style bodies stay expanded property lists so Filterscape's style editor works
+- `RAX_` — Filterscape config
+- `FACT_` — game facts
+- Style bodies stay expanded property lists
 - One `define:input:<module>` namespace per visible module
-- Groups default to `expanded: false`
-- Sounds: `tier3.wav`, `tier4.wav`, `uniques.wav`, `clues.wav` in `~/.runelite/loot-filters/sounds`
-- Alch icon: `~/.runelite/loot-filters/icons/alch.png`
-- Filterscape headers: `src/group_icons.json` + `src/sprites.json`. Skills use named `SKILL_*` from RuneLite `SpriteID` (197–221). Rooms use the signature drop. Never Joe's 42xx skill-tab archives or `1531` GE pin.
+- Groups `expanded: false`
+- Sounds in `~/.runelite/loot-filters/sounds`
+- `src/group_icons.json` + `src/sprites.json` — named `SKILL_*`, not Joe 42xx
+- File MUST start with `/*@ define:module`
 
 ## Commands
 
@@ -38,14 +40,10 @@ Do not clone Typical-Whack / Joe module names, `VAR_` prefixes, or the 11-module
 python3 tools/build.py
 ```
 
-Writes `dist/raxors-loot-filter.rs2f`. Import that file (or its GitHub raw URL) in Filterscape.
-
-Rebuild after editing `src/` or after changing the Joe seed path.
-
 ## Do not
 
-- Commit to `main` — branch `feat/`
-- Copy `VAR_` / Nismo `NLF_` / Cuzco names back in
-- Split aisle back into "category styles" + "individual styles"
-- Put heat before aisle (expensive food would stay a chip)
-- Use Joe's 42xx / 56xx sprite archives for headers
+- Commit to `main`
+- Copy `VAR_` / Nismo / Cuzco / Joe module names
+- Split categories back into two warehouses
+- Put value above categories
+- Use Joe's 42xx sprite archives

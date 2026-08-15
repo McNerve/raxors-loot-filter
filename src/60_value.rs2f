@@ -1,40 +1,41 @@
-/*@ define:module:heat
+/*@ define:module:value
 ---
-name: Heat
-subtitle: How loud is this drop
+name: Value
+subtitle: GE value tiers
 description: |
-  Ink-on-pill temperature. Runs after aisle, so a 2m shark is amber — not a food chip.
+  Same buckets as the old Ground Items plugin: Low, Medium, High, Insane.
 
-  20k green · 100k blue · 1m amber + beam + sound · 10m crimson + beam + sound
+  Runs after Categories, so a 2m shark is High, not a food chip.
+  Rares (below) still overwrite this.
 */
 
 /*@ define:group
 ---
-name: Ember
+name: Low
 icon:
   type: itemId
   itemId: 10828
 expanded: false
 */
 
-/*@ define:input:heat
+/*@ define:input:value
 type: number
-label: Ember starts at
-group: Ember
+label: Low starts at
+group: Low
 */
 #define RAX_HEAT_1_VALUE 20000
 
-/*@ define:input:heat
+/*@ define:input:value
 type: stringlist
-label: Pin to Ember
-group: Ember
+label: Pin to Low
+group: Low
 */
 #define RAX_HEAT_1_PIN ["Vorkath's head","Giantsoul amulet","Desiccated page","Pendant of ates","Long bone","Scurrius' spine","Alchemist's signet","unidentified*"]
 
-/*@ define:input:heat
+/*@ define:input:value
 type: style
-label: Ember
-group: Ember
+label: Low
+group: Low
 exampleItem: Helm of neitiznot
 exampleItemId: 10828
 */
@@ -46,31 +47,31 @@ apply ((value:>=RAX_HEAT_1_VALUE && value:<RAX_HEAT_2_VALUE) || name:RAX_HEAT_1_
 
 /*@ define:group
 ---
-name: Glow
+name: Medium
 icon:
   type: itemId
   itemId: 6920
 expanded: false
 */
 
-/*@ define:input:heat
+/*@ define:input:value
 type: number
-label: Glow starts at
-group: Glow
+label: Medium starts at
+group: Medium
 */
 #define RAX_HEAT_2_VALUE 100000
 
-/*@ define:input:heat
+/*@ define:input:value
 type: stringlist
-label: Pin to Glow
-group: Glow
+label: Pin to Medium
+group: Medium
 */
 #define RAX_HEAT_2_PIN ["Dossier","Ice quartz","Frozen tablet","Blood quartz","Strangled tablet","Shadow quartz","Sirenic tablet","Smoke quartz","Scarred tablet","Dark claw","Frozen cache","Ancient icon","Curved bone","Kq head"]
 
-/*@ define:input:heat
+/*@ define:input:value
 type: style
-label: Glow
-group: Glow
+label: Medium
+group: Medium
 exampleItem: Infinity boots
 exampleItemId: 6920
 */
@@ -82,31 +83,31 @@ apply ((value:>=RAX_HEAT_2_VALUE && value:<RAX_HEAT_3_VALUE) || name:RAX_HEAT_2_
 
 /*@ define:group
 ---
-name: Blaze
+name: High
 icon:
   type: itemId
   itemId: 4151
 expanded: false
 */
 
-/*@ define:input:heat
+/*@ define:input:value
 type: number
-label: Blaze starts at
-group: Blaze
+label: High starts at
+group: High
 */
 #define RAX_HEAT_3_VALUE 1000000
 
-/*@ define:input:heat
+/*@ define:input:value
 type: stringlist
-label: Pin to Blaze
-group: Blaze
+label: Pin to High
+group: High
 */
 #define RAX_HEAT_3_PIN ["Forgotten lockbox","Noxious pommel","Noxious point","Noxious blade","Hydra's eye","Hydra's fang","Hydra's heart","Unsired","Bludgeon claw","Bludgeon spine","Bludgeon axon","Dark totem","Slepey tablet","Parasitic egg","Mystic vigour prayer scroll","Deadeye prayer scroll","Kq head (tattered)"]
 
-/*@ define:input:heat
+/*@ define:input:value
 type: style
-label: Blaze
-group: Blaze
+label: High
+group: High
 exampleItem: Abyssal whip
 exampleItemId: 4151
 */
@@ -118,31 +119,31 @@ apply ((value:>=RAX_HEAT_3_VALUE && value:<RAX_HEAT_4_VALUE) || name:RAX_HEAT_3_
 
 /*@ define:group
 ---
-name: Inferno
+name: Insane
 icon:
   type: itemId
   itemId: 20997
 expanded: false
 */
 
-/*@ define:input:heat
+/*@ define:input:value
 type: number
-label: Inferno starts at
-group: Inferno
+label: Insane starts at
+group: Insane
 */
 #define RAX_HEAT_4_VALUE 10000000
 
-/*@ define:input:heat
+/*@ define:input:value
 type: stringlist
-label: Pin to Inferno
-group: Inferno
+label: Pin to Insane
+group: Insane
 */
 #define RAX_HEAT_4_PIN ["Venator vestige","Leviathan's lure","Bellator vestige","Siren's staff","Ultor vestige","Executioner's axe head","Magus vestige","Eye of the duke","Araxyte fang","Tanzanite mutagen","Magma mutagen","Earth Warrior champion scroll","Ghoul champion scroll","Giant champion scroll","Goblin champion scroll","Hobgoblin champion scroll","Imp champion scroll","Jogre champion scroll","Lesser Demon champion scroll","Skeleton champion scroll","Zombie champion scroll","Mokhaiotl cloth","Eye of ayak","Avernic treads"]
 
-/*@ define:input:heat
+/*@ define:input:value
 type: style
-label: Inferno
-group: Inferno
+label: Insane
+group: Insane
 exampleItem: Twisted bow
 exampleItemId: 20997
 */
@@ -152,38 +153,47 @@ apply (value:>=RAX_HEAT_4_VALUE || name:RAX_HEAT_4_PIN) {
     RAX_HEAT_4_STYLE
 }
 
+
+apply (!RAX_ALLOW_LOOTBEAMS) {
+    showLootbeam = false;
+}
+
+apply (!RAX_ALLOW_SOUNDS) {
+    sound = 2411;
+}
+
 /*@ define:group
 ---
 name: Locks
 expanded: false
 description: |
-  Stop later modules from restyling a heat band. Off by default — Always (uniques / alchs) should still win.
+  Stop later modules from restyling this tier. Off by default so Rares can still win.
 */
 
-/*@ define:input:heat
+/*@ define:input:value
 type: boolean
-label: Lock Ember
+label: Lock Low
 group: Locks
 */
 #define RAX_HEAT_1_LOCK false
 
-/*@ define:input:heat
+/*@ define:input:value
 type: boolean
-label: Lock Glow
+label: Lock Medium
 group: Locks
 */
 #define RAX_HEAT_2_LOCK false
 
-/*@ define:input:heat
+/*@ define:input:value
 type: boolean
-label: Lock Blaze
+label: Lock High
 group: Locks
 */
 #define RAX_HEAT_3_LOCK false
 
-/*@ define:input:heat
+/*@ define:input:value
 type: boolean
-label: Lock Inferno
+label: Lock Insane
 group: Locks
 */
 #define RAX_HEAT_4_LOCK false

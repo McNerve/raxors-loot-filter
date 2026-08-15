@@ -1,0 +1,9 @@
+/*@ define:module:hide
+---
+name: Hide
+subtitle: Junk, floors, ownership
+description: |
+  What never hits the overlay. Locations can force-show after this.
+
+  Groups start collapsed. Search if you know the item.
+*/

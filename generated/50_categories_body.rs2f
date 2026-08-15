@@ -1,5 +1,5 @@
-// generated aisle — chips + families. Heat overwrites value.
-#define RAX_AISLE_NAMES ["Ancient blood ornament kit", "Purifying sigil*", "Avernic defender*", "Ghommal's avernic defender 5*", "Ghommal's avernic defender 6*", "Gold ring", "Clue scroll (beginner)", "Scroll box (beginner)", "Clue scroll (easy)", "Scroll box (easy)", "Clue scroll (medium)", "Scroll box (medium)", "Challenge scroll (medium)", "Clue scroll (hard)", "Scroll box (hard)", "Challenge scroll (hard)", "Clue scroll (elite)", "Scroll box (elite)", "Challenge scroll (elite)", "Clue scroll (master)", "Scroll box (master)", "Larran's key", "Brimstone key", "Dust battlestaff", "Mist battlestaff", "Eternal gem", "Imbued heart", "Golpar seed", "Buchu seed", "Noxifer seed", "Grimy golpar", "Grimy buchu leaf", "Grimy noxifer", "golpar", "buchu leaf", "noxifer", "Endarkened juice", "Stinkhorn mushroom", "Cicely", "Mallignum root plank", "Cavern grubs", "Empty gourd vial", "Water-filled gourd vial", "Dawnbringer", "Salve amulet (e)", "Smelling salts (*", "Ambrosia (*", "Tears of Elidinis (*", "Nectar (*", "Liquid adrenaline (*", "Blessed crystal scarab (*", "Silk dressing (*", "Honey locust", "Neutralising potion", "Big banana", "Eldritch ashes", "Fang", "Scarab dung", "Smouldering gland", "Smouldering heart", "Smouldering pile of flesh", "Tormented synapse", "Burning claw", "Burning claws", "Emberlight", "Purging staff", "Scorching bow", "Attack potion(*", "Antipoison(*", "Strength potion(*", "Serum 207(*", "Compost potion(*", "Restore potion(*", "Energy potion(*", "Defence potion(*", "Agility potion(*", "Combat potion(*", "Prayer potion(*", "Super attack(*", "Superantipoison(*", "Fishing potion(*", "Super energy(*", "Hunter potion(*", "Goading potion(*", "Super strength(*", "Prayer regeneration potion(*", "Super restore(*", "Sanfew serum(*", "Super defence(*", "Antidote+(*", "Antifire potion(*", "Divine super attack potion(*", "Divine super defence potion(*", "Divine super strength potion(*", "Ranging potion(*", "Divine ranging potion(*", "Magic potion(*", "Stamina potion(*", "Zamorak brew(*", "Divine magic potion(*", "Antidote++(*", "Bastion potion(*", "Battlemage potion(*", "Saradomin brew(*", "Extended antifire(*", "Ancient brew(*", "Divine bastion potion(*", "Divine battlemage potion(*", "Anti-venom(*", "Menaphite remedy(*", "Super combat potion(*", "Forgotten brew(*", "Super antifire potion(*", "Anti-venom+(*", "Extended anti-venom+(*", "Divine super combat potion(*", "Extended super antifire(*", "Surge potion(*", "Blighted super restore(*", "Anglerfish", "Dark crab", "Manta ray", "Sea turtle", "Shark", "Cooked Karambwan", "Monkfish", "Lava eel", "Swordfish", "Bass", "Lobster", "Rainbow fish", "Cave eel", "Tuna", "Salmon", "Cooked slimy eel", "Pike", "Cod", "Trout", "Mackerel", "Anchovies", "Herring", "Karambwanji", "Sardine", "Shrimps", "Tuna potato", "Mushroom potato", "Egg potato", "Potato with cheese", "Chilli potato", "Potato with butter", "Baked potato", "Logs", "Oak logs", "Willow logs", "Maple logs", "Yew logs", "Magic logs", "Redwood logs", "Teak logs", "Mahogany logs", "Achey tree logs", "Arctic pine logs", "Scrapey tree logs", "Juniper logs", "Bark", "Blisterwood logs", "copper ore", "tin ore", "iron ore", "silver ore", "coal", "gold ore", "mithril ore", "adamantite ore", "runite ore", "daeyalt ore", "blasted ore", "blurite ore", "lovakite ore", "Bronze bar", "Iron bar", "Steel bar", "Mithril bar", "Adamantite bar", "Runite bar", "Silver bar", "Gold bar", "Elemental metal", "Primed bar", "Primed mind bar", "Blurite bar", "Enchanted bar", "Lovakite bar", "'Perfect' gold bar", "Air rune", "Water rune", "Earth rune", "Fire rune", "Mind rune", "Body rune", "Cosmic rune", "Chaos rune", "Nature rune", "Law rune", "Death rune", "Sunfire rune", "Astral rune", "Blood rune", "Soul rune", "Wrath rune", "Mist rune", "Dust rune", "Mud rune", "Smoke rune", "Steam rune", "Lava rune", "Aether rune", "*guam leaf", "*marrentill", "*tarromin", "*harralander", "*ranarr weed", "*toadflax", "*irit leaf", "*avantoe", "*kwuarm", "*huasca", "*snapdragon", "*cadantine", "*lantadyme", "*dwarf weed", "*torstol", "Raw shrimps", "Raw anchovies", "Raw guppy", "Raw cavefish", "Raw tetra", "Frog spawn", "Raw monkfish", "Minnow", "Raw mackerel", "Raw cod", "Raw bass", "Raw catfish", "Raw sardine", "Raw herring", "Raw pike", "Raw slimy eel", "Raw cave eel", "Raw anglerfish", "Sacred eel", "Raw trout", "Raw salmon", "Raw rainbow fish", "Raw lava eel", "Infernal eel", "Leaping trout", "Leaping salmon", "Leaping sturgeon", "Raw tuna", "Raw swordfish", "Raw shark", "Raw lobster", "Raw dark crab", "Bluegill", "Common tench", "Mottled eel", "Greater siren", "Raw karambwan", "Sandworms", "Fishing bait", "Feather", "Stripy feather", "Dark fishing bait", "King worm", "Fish chunks", "Raw karambwanji", "Diabolic worms", "Small fishing net", "Big fishing net", "Drift net", "Fishing rod", "Fly fishing rod", "Oily fishing rod", "Harpoon", "Lobster pot", "Karambwan vessel", "Abyssal pearls", "Agility arena ticket", "Anima-infused bark", "Archery ticket", "Barronite shards", "Blood money", "Brimhaven voucher", "Castle wars ticket", "Coins", "Ecto-token", "Frog token", "Glistening tear", "Golden nugget", "Hallowed mark", "Intelligence", "Mark of grace", "Mermaid's tear", "Molch pearl", "Mole claw", "Mole skin", "Nuggets", "Numulite", "Paramaya ticket", "Platinum token", "Shantay pass", "Ship ticket", "Stardust", "Termites", "Tokkul", "Trading sticks", "Unidentified minerals", "Warrior guild token", "* sceptre", "* axe", "* pickaxe", "* harpoon", "Pestle and mortar", "*teleport crystal", "*escape crystal", "* shards", "Crystal dust", "Vial", "Water-filled vial", "Grym leaf", "Grym potion (unf)", "Egniol potion (*", "Raw paddlefish", "Paddlefish", "Crystal paddlefish", "Corrupted paddlefish", "Weapon frame", "* spike", "* orb", "* bowstring", "* halberd *", "* bow *", "* staff *", "Linum tirinum*", "Phren bark*", "* ore", "* helm *", "* body *", "* legs *"]
+// generated categories — Value overwrites these when gp is real.
+#define RAX_CATEGORY_NAMES ["Ancient blood ornament kit", "Purifying sigil*", "Avernic defender*", "Ghommal's avernic defender 5*", "Ghommal's avernic defender 6*", "Gold ring", "Clue scroll (beginner)", "Scroll box (beginner)", "Clue scroll (easy)", "Scroll box (easy)", "Clue scroll (medium)", "Scroll box (medium)", "Challenge scroll (medium)", "Clue scroll (hard)", "Scroll box (hard)", "Challenge scroll (hard)", "Clue scroll (elite)", "Scroll box (elite)", "Challenge scroll (elite)", "Clue scroll (master)", "Scroll box (master)", "Larran's key", "Brimstone key", "Dust battlestaff", "Mist battlestaff", "Eternal gem", "Imbued heart", "Golpar seed", "Buchu seed", "Noxifer seed", "Grimy golpar", "Grimy buchu leaf", "Grimy noxifer", "golpar", "buchu leaf", "noxifer", "Endarkened juice", "Stinkhorn mushroom", "Cicely", "Mallignum root plank", "Cavern grubs", "Empty gourd vial", "Water-filled gourd vial", "Dawnbringer", "Salve amulet (e)", "Smelling salts (*", "Ambrosia (*", "Tears of Elidinis (*", "Nectar (*", "Liquid adrenaline (*", "Blessed crystal scarab (*", "Silk dressing (*", "Honey locust", "Neutralising potion", "Big banana", "Eldritch ashes", "Fang", "Scarab dung", "Smouldering gland", "Smouldering heart", "Smouldering pile of flesh", "Tormented synapse", "Burning claw", "Burning claws", "Emberlight", "Purging staff", "Scorching bow", "Attack potion(*", "Antipoison(*", "Strength potion(*", "Serum 207(*", "Compost potion(*", "Restore potion(*", "Energy potion(*", "Defence potion(*", "Agility potion(*", "Combat potion(*", "Prayer potion(*", "Super attack(*", "Superantipoison(*", "Fishing potion(*", "Super energy(*", "Hunter potion(*", "Goading potion(*", "Super strength(*", "Prayer regeneration potion(*", "Super restore(*", "Sanfew serum(*", "Super defence(*", "Antidote+(*", "Antifire potion(*", "Divine super attack potion(*", "Divine super defence potion(*", "Divine super strength potion(*", "Ranging potion(*", "Divine ranging potion(*", "Magic potion(*", "Stamina potion(*", "Zamorak brew(*", "Divine magic potion(*", "Antidote++(*", "Bastion potion(*", "Battlemage potion(*", "Saradomin brew(*", "Extended antifire(*", "Ancient brew(*", "Divine bastion potion(*", "Divine battlemage potion(*", "Anti-venom(*", "Menaphite remedy(*", "Super combat potion(*", "Forgotten brew(*", "Super antifire potion(*", "Anti-venom+(*", "Extended anti-venom+(*", "Divine super combat potion(*", "Extended super antifire(*", "Surge potion(*", "Blighted super restore(*", "Anglerfish", "Dark crab", "Manta ray", "Sea turtle", "Shark", "Cooked Karambwan", "Monkfish", "Lava eel", "Swordfish", "Bass", "Lobster", "Rainbow fish", "Cave eel", "Tuna", "Salmon", "Cooked slimy eel", "Pike", "Cod", "Trout", "Mackerel", "Anchovies", "Herring", "Karambwanji", "Sardine", "Shrimps", "Tuna potato", "Mushroom potato", "Egg potato", "Potato with cheese", "Chilli potato", "Potato with butter", "Baked potato", "Logs", "Oak logs", "Willow logs", "Maple logs", "Yew logs", "Magic logs", "Redwood logs", "Teak logs", "Mahogany logs", "Achey tree logs", "Arctic pine logs", "Scrapey tree logs", "Juniper logs", "Bark", "Blisterwood logs", "copper ore", "tin ore", "iron ore", "silver ore", "coal", "gold ore", "mithril ore", "adamantite ore", "runite ore", "daeyalt ore", "blasted ore", "blurite ore", "lovakite ore", "Bronze bar", "Iron bar", "Steel bar", "Mithril bar", "Adamantite bar", "Runite bar", "Silver bar", "Gold bar", "Elemental metal", "Primed bar", "Primed mind bar", "Blurite bar", "Enchanted bar", "Lovakite bar", "'Perfect' gold bar", "Air rune", "Water rune", "Earth rune", "Fire rune", "Mind rune", "Body rune", "Cosmic rune", "Chaos rune", "Nature rune", "Law rune", "Death rune", "Sunfire rune", "Astral rune", "Blood rune", "Soul rune", "Wrath rune", "Mist rune", "Dust rune", "Mud rune", "Smoke rune", "Steam rune", "Lava rune", "Aether rune", "*guam leaf", "*marrentill", "*tarromin", "*harralander", "*ranarr weed", "*toadflax", "*irit leaf", "*avantoe", "*kwuarm", "*huasca", "*snapdragon", "*cadantine", "*lantadyme", "*dwarf weed", "*torstol", "Raw shrimps", "Raw anchovies", "Raw guppy", "Raw cavefish", "Raw tetra", "Frog spawn", "Raw monkfish", "Minnow", "Raw mackerel", "Raw cod", "Raw bass", "Raw catfish", "Raw sardine", "Raw herring", "Raw pike", "Raw slimy eel", "Raw cave eel", "Raw anglerfish", "Sacred eel", "Raw trout", "Raw salmon", "Raw rainbow fish", "Raw lava eel", "Infernal eel", "Leaping trout", "Leaping salmon", "Leaping sturgeon", "Raw tuna", "Raw swordfish", "Raw shark", "Raw lobster", "Raw dark crab", "Bluegill", "Common tench", "Mottled eel", "Greater siren", "Raw karambwan", "Sandworms", "Fishing bait", "Feather", "Stripy feather", "Dark fishing bait", "King worm", "Fish chunks", "Raw karambwanji", "Diabolic worms", "Small fishing net", "Big fishing net", "Drift net", "Fishing rod", "Fly fishing rod", "Oily fishing rod", "Harpoon", "Lobster pot", "Karambwan vessel", "Abyssal pearls", "Agility arena ticket", "Anima-infused bark", "Archery ticket", "Barronite shards", "Blood money", "Brimhaven voucher", "Castle wars ticket", "Coins", "Ecto-token", "Frog token", "Glistening tear", "Golden nugget", "Hallowed mark", "Intelligence", "Mark of grace", "Mermaid's tear", "Molch pearl", "Mole claw", "Mole skin", "Nuggets", "Numulite", "Paramaya ticket", "Platinum token", "Shantay pass", "Ship ticket", "Stardust", "Termites", "Tokkul", "Trading sticks", "Unidentified minerals", "Warrior guild token", "* sceptre", "* axe", "* pickaxe", "* harpoon", "Pestle and mortar", "*teleport crystal", "*escape crystal", "* shards", "Crystal dust", "Vial", "Water-filled vial", "Grym leaf", "Grym potion (unf)", "Egniol potion (*", "Raw paddlefish", "Paddlefish", "Crystal paddlefish", "Corrupted paddlefish", "Weapon frame", "* spike", "* orb", "* bowstring", "* halberd *", "* bow *", "* staff *", "Linum tirinum*", "Phren bark*", "* ore", "* helm *", "* body *", "* legs *"]
 
 /*@ define:group
 ---
@@ -306,7 +306,7 @@ icon:
 expanded: false
 */
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Currency Style
 group: Currency
@@ -320,7 +320,7 @@ apply (name:FACT_CURRENCY_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Food Items Style
 group: Food
@@ -333,7 +333,7 @@ apply(name:FACT_FISH_FOODS_LIST || name:FACT_POTATOES_FOODS_LIST || name:FACT_HU
     RAX_CATEGORY_FOOD_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fish Food Style
 group: Food
@@ -346,7 +346,7 @@ apply (name:FACT_FISH_FOODS_LIST) {
     RAX_FOOD_FISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Potatoes Food Style
 group: Food
@@ -359,7 +359,7 @@ apply (name:FACT_POTATOES_FOODS_LIST) {
     RAX_POTATOES_FOODS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Hunter Food Style
 group: Food
@@ -372,7 +372,7 @@ apply (name:FACT_HUNTER_FOODS_LIST) {
     RAX_FOOD_HUNTER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Pie Food Style
 group: Food
@@ -385,7 +385,7 @@ apply (name:FACT_PIE_FOODS_LIST) {
     RAX_PIE_FOODS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Pizza Food Style
 group: Food
@@ -398,7 +398,7 @@ apply (name:FACT_PIZZA_FOODS_LIST) {
     RAX_PIZZA_FOODS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cake Food Style
 group: Food
@@ -412,7 +412,7 @@ apply (name:FACT_CAKE_FOODS_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Potion Items Style
 group: Potions
@@ -425,7 +425,7 @@ apply (name:FACT_POTIONS_LIST || name:FACT_BARB_POTIONS_LIST) {
   RAX_CATEGORY_ALL_POTIONS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Potions Style
 group: Potions
@@ -438,7 +438,7 @@ apply (name:FACT_POTIONS_LIST) {
   RAX_CATEGORY_POTIONS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Barbarian Potions Style
 group: Potions
@@ -452,7 +452,7 @@ apply (name:FACT_BARB_POTIONS_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Prayer Items Style
 group: Prayer
@@ -465,7 +465,7 @@ apply (name:FACT_BONES_LIST || name:FACT_ASHES_LIST || name:FACT_SHADES_REMAINS_
   RAX_CATEGORY_PRAYER_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bones Style
 group: Prayer
@@ -478,7 +478,7 @@ apply (name:FACT_BONES_LIST) {
     RAX_BONES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ashes Style
 group: Prayer
@@ -491,7 +491,7 @@ apply (name:FACT_ASHES_LIST) {
     RAX_ASHES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Shades Remains Style
 group: Prayer
@@ -504,7 +504,7 @@ apply (name:FACT_SHADES_REMAINS_LIST) {
     RAX_SHADES_REMAINS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ensouled Head Style
 group: Prayer
@@ -518,7 +518,7 @@ apply (name:FACT_ENSOULED_HEAD_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Ammo Items Style
 group: Ammo
@@ -531,7 +531,7 @@ apply (name:FACT_BRONZE_AMMO || name:FACT_IRON_AMMO || name:FACT_STEEL_AMMO || n
     RAX_CATEGORY_AMMO_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Arrows Style
 group: Ammo
@@ -544,7 +544,7 @@ apply (name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST 
   RAX_AMMO_ARROWS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Darts Style
 group: Ammo
@@ -557,7 +557,7 @@ apply (name:FACT_AMMO_DARTS_LIST) {
   RAX_AMMO_DARTS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bolts Style
 group: Ammo
@@ -570,7 +570,7 @@ apply (name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMM
   RAX_AMMO_BOLTS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Javelins Style
 group: Ammo
@@ -583,7 +583,7 @@ apply (name:FACT_AMMO_JAVELINS_LIST) {
   RAX_AMMO_JAVELINS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Knives Style
 group: Ammo
@@ -596,7 +596,7 @@ apply (name:FACT_AMMO_KNIVES_LIST) {
   RAX_AMMO_KNIVES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Thowing Axes Style
 group: Ammo
@@ -609,7 +609,7 @@ apply (name:FACT_AMMO_THROWING_AXES_LIST) {
   RAX_AMMO_THROWING_AXES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Chinchompas Style
 group: Ammo
@@ -622,7 +622,7 @@ apply (name:FACT_AMMO_CHINCHOMPAS_LIST) {
   RAX_AMMO_CHINCHOMPAS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Misc Ammo Style (Atlatl dart, Toktz-xil-ul, etc.)"
 group: Ammo
@@ -636,7 +636,7 @@ apply (name:FACT_AMMO_MISC_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Runes Items Style
 group: Runes
@@ -649,7 +649,7 @@ apply (name:FACT_RUNES_LIST) {
     RAX_CATEGORY_RUNES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Elemental Runes Style
 group: Runes
@@ -662,7 +662,7 @@ apply (name:FACT_RUNES_ELEMENTAL_LIST) {
   RAX_CATEGORY_ELEMENTAL_RUNES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Catalytic Runes Style
 group: Runes
@@ -675,7 +675,7 @@ apply (name:FACT_RUNES_CATALYTIC_LIST) {
   RAX_CATEGORY_CATALYTIC_RUNES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Combination Runes Style
 group: Runes
@@ -689,7 +689,7 @@ apply (name:FACT_RUNES_COMBINATION_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ores Style
 group: Mining
@@ -703,7 +703,7 @@ apply (name:FACT_ORES_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bars Style
 group: Smithing
@@ -717,7 +717,7 @@ apply (name:FACT_BARS_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Herblore Items Style
 group: Herblore
@@ -730,7 +730,7 @@ apply (name:FACT_ALL_HERBS || name:FACT_SECONDARIES_LIST || name:FACT_ALL_HERBLO
   RAX_CATEGORY_HERBLORE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Herbs Style
 group: Herblore
@@ -743,7 +743,7 @@ apply (name:FACT_ALL_HERBS) {
   RAX_CATEGORY_HERBS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Secondaries Style
 group: Herblore
@@ -756,7 +756,7 @@ apply (name:FACT_SECONDARIES_LIST) {
   RAX_CATEGORY_HERBLORE_SECONDARIES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Herblore Equipment Style (pestle and mortar, vials, etc.)"
 group: Herblore
@@ -770,7 +770,7 @@ apply (name:FACT_ALL_HERBLORE_EQUIPMENT) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Logs Style
 group: Woodcutting
@@ -784,7 +784,7 @@ apply (name:FACT_LOGS_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Fishing Items Style
 group: Fishing
@@ -797,7 +797,7 @@ apply (name:FACT_FISHING_RAW_FISH_LIST || name:FACT_FISHING_EQUIPMENT_LIST || na
   RAX_CATEGORY_STYLE_FISHING_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw fish Style
 group: Fishing
@@ -810,7 +810,7 @@ apply (name:FACT_FISHING_RAW_FISH_LIST) {
   RAX_CATEGORY_STYLE_FISHING_RAW_FISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Fishing equipment Style (fishing rods, harpoons, etc.)"
 group: Fishing
@@ -823,7 +823,7 @@ apply (name:FACT_FISHING_EQUIPMENT_LIST) {
   RAX_CATEGORY_STYLE_FISHING_EQUIPMENT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fishing bait Style
 group: Fishing
@@ -837,7 +837,7 @@ apply (name:FACT_FISHING_BAIT_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Farming Items Style
 group: Farming
@@ -850,7 +850,7 @@ apply (name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_FLOWER_
   RAX_CATEGORY_FARMING_SEEDS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Allotment Seeds Style
 group: Farming
@@ -863,7 +863,7 @@ apply (name:FACT_FARMING_SEEDS_ALLOTMENT_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_ALLOTMENT_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Flower Seeds Style
 group: Farming
@@ -876,7 +876,7 @@ apply (name:FACT_FARMING_SEEDS_FLOWER_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_FLOWER_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Herb Seeds Style
 group: Farming
@@ -889,7 +889,7 @@ apply (name:FACT_FARMING_SEEDS_HERB_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_HERB_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Hops Seeds Style
 group: Farming
@@ -902,7 +902,7 @@ apply (name:FACT_FARMING_SEEDS_HOPS_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_HOPS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bush Seeds Style
 group: Farming
@@ -915,7 +915,7 @@ apply (name:FACT_FARMING_SEEDS_BUSH_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_BUSH_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tree Seeds Style
 group: Farming
@@ -928,7 +928,7 @@ apply (name:FACT_FARMING_SEEDS_TREE_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_TREE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fruit Tree Seeds Style
 group: Farming
@@ -941,7 +941,7 @@ apply (name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_FRUIT_TREE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Special Tree Seeds Style
 group: Farming
@@ -954,7 +954,7 @@ apply (name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_SPECIAL_TREE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Special Seeds Style
 group: Farming
@@ -967,7 +967,7 @@ apply (name:FACT_FARMING_SEEDS_SPECIAL_LIST) {
   RAX_CATEGORY_FARMING_SEEDS_SPECIAL_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anima Seeds Style
 group: Farming
@@ -981,7 +981,7 @@ apply (name:FACT_FARMING_SEEDS_ANIMA_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Fletching Items Style
 group: Fletching
@@ -994,7 +994,7 @@ apply (name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_FLETCHING_UNSTRUN
   RAX_CATEGORY_FLETCHING_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Unstrung Style (unstrung shortbows, longbows, and crossbows)"
 group: Fletching
@@ -1007,7 +1007,7 @@ apply (name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_FLETCHING_UNSTRUN
   RAX_CATEGORY_FLETCHING_UNSTRUNG_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Arrowtips Style
 group: Fletching
@@ -1020,7 +1020,7 @@ apply (name:FACT_FLETCHING_ARROW_TIPS_LIST) {
   RAX_CATEGORY_FLETCHING_ARROW_TIPS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dart Tips Style
 group: Fletching
@@ -1033,7 +1033,7 @@ apply (name:FACT_FLETCHING_DART_TIP_LIST) {
   RAX_CATEGORY_FLETCHING_DART_TIP_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Javelin Heads Style
 group: Fletching
@@ -1046,7 +1046,7 @@ apply (name:FACT_FLETCHING_JAVELIN_HEADS_LIST) {
   RAX_CATEGORY_FLETCHING_JAVELIN_HEADS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Unfinished Bolts Style
 group: Fletching
@@ -1059,7 +1059,7 @@ apply (name:FACT_FLETCHING_UNFINISHED_BOLTS_LIST) {
   RAX_CATEGORY_FLETCHING_UNFINISHED_BOLTS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bolt Tips Style
 group: Fletching
@@ -1072,7 +1072,7 @@ apply (name:FACT_FLETCHING_BOLT_TIPS_LIST) {
   RAX_CATEGORY_FLETCHING_BOLT_TIPS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Misc Style (arrow shafts, bow strings, etc.)"
 group: Fletching
@@ -1086,7 +1086,7 @@ apply (name:FACT_FLETCHING_MISC_LIST || name:FACT_FLETCHING_CROSSBOW_LIMBS_LIST 
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: All Construction Items Style
 group: Construction
@@ -1099,7 +1099,7 @@ apply (name:FACT_CONSTRUCTION_PLANKS_LIST || name:FACT_CONSTRUCTION_NAILS_LIST |
   RAX_CATEGORY_CONSTRUCTION_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Planks Style
 group: Construction
@@ -1111,7 +1111,7 @@ exampleItemId: 960
 apply (name:FACT_CONSTRUCTION_PLANKS_LIST) {
   RAX_CONSTRUCTION_PLANKS_CUSTOMSTYLE
 }
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Nails Style
 group: Construction
@@ -1123,7 +1123,7 @@ exampleItemId: 4819
 apply (name:FACT_CONSTRUCTION_NAILS_LIST) {
   RAX_CONSTRUCTION_NAILS_CUSTOMSTYLE
 }
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Stonemason Style (limestone brick, marble block, etc.)"
 group: Construction
@@ -1135,7 +1135,7 @@ exampleItemId: 3420
 apply (name:FACT_CONSTRUCTION_STONEMASON_LIST) {
   RAX_CONSTRUCTION_STONEMASON_CUSTOMSTYLE
 }
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Misc Construction Style (bolt of cloth, saw)"
 group: Construction
@@ -1149,7 +1149,7 @@ apply (name:FACT_CONSTRUCTION_MISC_LIST) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bronze Armour and Weapons
 group: Metal Equipment
@@ -1162,7 +1162,7 @@ apply (name:FACT_BRONZE_ONE_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_TWO_HANDED_
     RAX_BRONZE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Iron Armour and Weapons
 group: Metal Equipment
@@ -1175,7 +1175,7 @@ apply (name:FACT_IRON_ONE_HANDED_MELEE_WEAPONS || name:FACT_IRON_TWO_HANDED_MELE
     RAX_IRON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Steel Armour and Weapons
 group: Metal Equipment
@@ -1188,7 +1188,7 @@ apply (name:FACT_STEEL_ONE_HANDED_MELEE_WEAPONS || name:FACT_STEEL_TWO_HANDED_ME
     RAX_STEEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Black Armour and Weapons
 group: Metal Equipment
@@ -1201,7 +1201,7 @@ apply (name:FACT_BLACK_ONE_HANDED_MELEE_WEAPONS || name:FACT_BLACK_TWO_HANDED_ME
     RAX_BLACK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mithril Armour and Weapons
 group: Metal Equipment
@@ -1214,7 +1214,7 @@ apply (name:FACT_MITHRIL_ONE_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_TWO_HANDE
     RAX_MITHRIL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Adamant Armour and Weapons
 group: Metal Equipment
@@ -1227,7 +1227,7 @@ apply (name:FACT_ADAMANT_ONE_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_TWO_HANDE
     RAX_ADAMANT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune Armour and Weapons
 group: Metal Equipment
@@ -1240,7 +1240,7 @@ apply (name:FACT_RUNE_ONE_HANDED_MELEE_WEAPONS || name:FACT_RUNE_TWO_HANDED_MELE
     RAX_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dragon Armour and Weapons
 group: Metal Equipment
@@ -1253,7 +1253,7 @@ apply (name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_TWO_HANDED_
     RAX_DRAGON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bronze (t) Armour
 group: Metal Equipment
@@ -1265,7 +1265,7 @@ apply (name:FACT_BRONZE_TRIMMED_ARMOUR) {
     RAX_BRONZE_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Iron (t) Armour
 group: Metal Equipment
@@ -1277,7 +1277,7 @@ apply (name:FACT_IRON_TRIMMED_ARMOUR) {
     RAX_IRON_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Steel (t) Armour
 group: Metal Equipment
@@ -1289,7 +1289,7 @@ apply (name:FACT_STEEL_TRIMMED_ARMOUR) {
     RAX_STEEL_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Black (t) Armour
 group: Metal Equipment
@@ -1301,7 +1301,7 @@ apply (name:FACT_BLACK_TRIMMED_ARMOUR) {
     RAX_BLACK_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mithril (t) Armour
 group: Metal Equipment
@@ -1313,7 +1313,7 @@ apply (name:FACT_MITHRIL_TRIMMED_ARMOUR) {
     RAX_MITHRIL_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Adamant (t) Armour
 group: Metal Equipment
@@ -1325,7 +1325,7 @@ apply (name:FACT_ADAMANT_TRIMMED_ARMOUR) {
     RAX_ADAMANT_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune (t) Armour
 group: Metal Equipment
@@ -1337,7 +1337,7 @@ apply (name:FACT_RUNE_TRIMMED_ARMOUR) {
     RAX_RUNE_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bronze (g) Armour
 group: Metal Equipment
@@ -1349,7 +1349,7 @@ apply (name:FACT_BRONZE_GOLD_TRIMMED_ARMOUR) {
     RAX_BRONZE_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Iron (g) Armour
 group: Metal Equipment
@@ -1361,7 +1361,7 @@ apply (name:FACT_IRON_GOLD_TRIMMED_ARMOUR) {
     RAX_IRON_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Steel (g) Armour
 group: Metal Equipment
@@ -1373,7 +1373,7 @@ apply (name:FACT_STEEL_GOLD_TRIMMED_ARMOUR) {
     RAX_STEEL_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Black (g) Armour
 group: Metal Equipment
@@ -1385,7 +1385,7 @@ apply (name:FACT_BLACK_GOLD_TRIMMED_ARMOUR) {
     RAX_BLACK_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mithril (g) Armour
 group: Metal Equipment
@@ -1397,7 +1397,7 @@ apply (name:FACT_MITHRIL_GOLD_TRIMMED_ARMOUR) {
     RAX_MITHRIL_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Adamant (g) Armour
 group: Metal Equipment
@@ -1409,7 +1409,7 @@ apply (name:FACT_ADAMANT_GOLD_TRIMMED_ARMOUR) {
     RAX_ADAMANT_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune (g) Armour
 group: Metal Equipment
@@ -1421,7 +1421,7 @@ apply (name:FACT_RUNE_GOLD_TRIMMED_ARMOUR) {
     RAX_RUNE_GOLD_TRIMMED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Black heraldic Armour
 group: Metal Equipment
@@ -1433,7 +1433,7 @@ apply (name:FACT_BLACK_HERALDIC_ARMOUR) {
     RAX_BLACK_HERALDIC_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Adamant heraldic Armour
 group: Metal Equipment
@@ -1445,7 +1445,7 @@ apply (name:FACT_ADAMANT_HERALDIC_ARMOUR) {
     RAX_ADAMANT_HERALDIC_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune heraldic Armour
 group: Metal Equipment
@@ -1457,7 +1457,7 @@ apply (name:FACT_RUNE_HERALDIC_ARMOUR) {
     RAX_RUNE_HERALDIC_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune saradomin Armour
 group: Metal Equipment
@@ -1469,7 +1469,7 @@ apply (name:FACT_RUNE_SARADOMIN_TRIMMED_ARMOUR) {
     RAX_RUNE_SARADOMIN_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune guthix Armour
 group: Metal Equipment
@@ -1481,7 +1481,7 @@ apply (name:FACT_RUNE_GUTHIX_TRIMMED_ARMOUR) {
     RAX_RUNE_GUTHIX_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune zamorak Armour
 group: Metal Equipment
@@ -1493,7 +1493,7 @@ apply (name:FACT_RUNE_ZAMORAK_TRIMMED_ARMOUR) {
     RAX_RUNE_ZAMORAK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune ancient Armour
 group: Metal Equipment
@@ -1505,7 +1505,7 @@ apply (name:FACT_RUNE_ANCIENT_TRIMMED_ARMOUR) {
     RAX_RUNE_ANCIENT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune armadyl Armour
 group: Metal Equipment
@@ -1517,7 +1517,7 @@ apply (name:FACT_RUNE_ARMADYL_TRIMMED_ARMOUR) {
     RAX_RUNE_ARMADYL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rune bandos Armour
 group: Metal Equipment
@@ -1529,7 +1529,7 @@ apply (name:FACT_RUNE_BANDOS_TRIMMED_ARMOUR) {
     RAX_RUNE_BANDOS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Gilded Armour and Weapons
 group: Metal Equipment
@@ -1541,7 +1541,7 @@ apply (name:FACT_RUNE_GILDED) {
     RAX_RUNE_GILDED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ancient blood ornament kit custom style
 group: Misc
@@ -1554,7 +1554,7 @@ apply (name:"Ancient blood ornament kit") {
     RAX_ANCIENT_BLOOD_ORNAMENT_KIT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Purifying sigil custom style
 group: Misc
@@ -1567,7 +1567,7 @@ apply (name:"Purifying sigil*") {
     RAX_PURIFYING_SIGIL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Avernic defender custom style"
 group: Misc
@@ -1580,7 +1580,7 @@ apply (name:"Avernic defender*") {
   RAX_AVERNIC_DEFENDER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Ghommal's avernic defender 5 custom style"
 group: Misc
@@ -1593,7 +1593,7 @@ apply (name:"Ghommal's avernic defender 5*") {
   RAX_GHOMMALS_AVERNIC_DEFENDER_5_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "Ghommal's avernic defender 6 custom style"
 group: Misc
@@ -1606,7 +1606,7 @@ apply (name:"Ghommal's avernic defender 6*") {
   RAX_GHOMMALS_AVERNIC_DEFENDER_6_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "DT2 Gold Ring Style"
 group: Misc
@@ -1620,7 +1620,7 @@ apply (name:"Gold ring" && (area:FACT_THE_WHISPERER_AREA || area:FACT_VARDORVIS_
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Beginner clue scroll
 group: Clue Scrolls
@@ -1633,7 +1633,7 @@ apply (name:"Clue scroll (beginner)" || name:"Scroll box (beginner)") {
     RAX_CLUE_SCROLLS_BEGINNER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Easy clue scroll
 group: Clue Scrolls
@@ -1646,7 +1646,7 @@ apply (name:"Clue scroll (easy)" || name:"Scroll box (easy)") {
     RAX_CLUE_SCROLLS_EASY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Medium clue scroll
 group: Clue Scrolls
@@ -1659,7 +1659,7 @@ apply (name:"Clue scroll (medium)" || name:"Scroll box (medium)" || name:"Challe
     RAX_CLUE_SCROLLS_MEDIUM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Hard clue scroll
 group: Clue Scrolls
@@ -1672,7 +1672,7 @@ apply (name:"Clue scroll (hard)" || name:"Scroll box (hard)" || name:"Challenge 
     RAX_CLUE_SCROLLS_HARD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Elite clue scroll
 group: Clue Scrolls
@@ -1685,7 +1685,7 @@ apply (name:"Clue scroll (elite)" || name:"Scroll box (elite)" || name:"Challeng
     RAX_CLUE_SCROLLS_ELITE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Master clue scroll
 group: Clue Scrolls
@@ -1698,7 +1698,7 @@ apply (name:"Clue scroll (master)" || name:"Scroll box (master)") {
     RAX_CLUE_SCROLLS_MASTER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Hard clue scroll - wilderness step
 group: Clue Scrolls
@@ -1711,7 +1711,7 @@ apply (id:FACT_CLUE_HARD_WILDY_IDS) {
     RAX_CLUE_SCROLLS_HARD_WILDERNESS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Elite clue scroll - wilderness step
 group: Clue Scrolls
@@ -1724,7 +1724,7 @@ apply (id:FACT_CLUE_ELITE_WILDY_IDS) {
     RAX_CLUE_SCROLLS_ELITE_WILDERNESS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Elite clue scroll - challenge scroll
 group: Clue Scrolls
@@ -1738,7 +1738,7 @@ apply (name:"Challenge scroll (elite)") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Larran's key
 group: Slayer
@@ -1750,7 +1750,7 @@ apply (name:"Larran's key") {
     RAX_SLAYER_LARRANS_KEY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Brimstone key
 group: Slayer
@@ -1762,7 +1762,7 @@ apply (name:"Brimstone key") {
     RAX_SLAYER_BRIMSTONE_KEY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dust battlestaff
 group: Slayer
@@ -1774,7 +1774,7 @@ apply (name:"Dust battlestaff") {
     RAX_SLAYER_DUST_BATTLESTAFF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mist battlestaff
 group: Slayer
@@ -1786,7 +1786,7 @@ apply (name:"Mist battlestaff") {
     RAX_SLAYER_MIST_BATTLESTAFF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Eternal gem
 group: Slayer
@@ -1798,7 +1798,7 @@ apply (name:"Eternal gem") {
     RAX_SLAYER_ETERNAL_GEM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Imbued heart
 group: Slayer
@@ -1811,7 +1811,7 @@ apply (name:"Imbued heart") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Overload custom style
 group: Chambers of Xeric
@@ -1825,7 +1825,7 @@ apply (area:FACT_COX_AREA && name:["overload (-)*",   "overload (4)",   "overloa
     RAX_COX_OVERLOAD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Xeric's aid custom style
 group: Chambers of Xeric
@@ -1839,7 +1839,7 @@ apply (area:FACT_COX_AREA && name:["xeric's aid (-)*",   "xeric's aid (4)",   "x
     RAX_COX_XERICS_AID_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Revitalisation potion custom style
 group: Chambers of Xeric
@@ -1853,7 +1853,7 @@ apply (area:FACT_COX_AREA && name:["revitalisation (-)*",   "revitalisation poti
     RAX_COX_REVITALISATION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Prayer enhance custom style
 group: Chambers of Xeric
@@ -1867,7 +1867,7 @@ apply (area:FACT_COX_AREA && name:["prayer enhance (-)*",   "prayer enhance (4)"
     RAX_COX_PRAYER_ENHANCE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Elder potion custom style
 group: Chambers of Xeric
@@ -1881,7 +1881,7 @@ apply (area:FACT_COX_AREA && name:["elder (-)*",   "elder potion*",   "elder (+)
     RAX_COX_ELDER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Twisted potion custom style
 group: Chambers of Xeric
@@ -1895,7 +1895,7 @@ apply (area:FACT_COX_AREA && name:["twisted (-)*",   "twisted potion*",   "twist
     RAX_COX_TWISTED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Kodai potion custom style
 group: Chambers of Xeric
@@ -1909,7 +1909,7 @@ apply (area:FACT_COX_AREA && name:["kodai (-)*",   "kodai potion*",   "kodai (+)
     RAX_COX_KODAI_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Antipoison custom style
 group: Chambers of Xeric
@@ -1923,7 +1923,7 @@ apply (area:FACT_COX_AREA && name:["antipoison (-)*",   "antipoison (4)",   "ant
     RAX_COX_ANTIPOISON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Golpar seed custom style
 group: Chambers of Xeric
@@ -1937,7 +1937,7 @@ apply (area:FACT_COX_AREA && name:"Golpar seed") {
     RAX_GOLPAR_SEED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Buchu seed custom style
 group: Chambers of Xeric
@@ -1951,7 +1951,7 @@ apply (area:FACT_COX_AREA && name:"Buchu seed") {
     RAX_BUCHU_SEED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Noxifer seed custom style
 group: Chambers of Xeric
@@ -1965,7 +1965,7 @@ apply (area:FACT_COX_AREA && name:"Noxifer seed") {
     RAX_NOXIFER_SEED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Grimy golpar custom style
 group: Chambers of Xeric
@@ -1979,7 +1979,7 @@ apply (area:FACT_COX_AREA && name:"Grimy golpar") {
     RAX_GRIMY_GOLPAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Grimy buchu leaf custom style
 group: Chambers of Xeric
@@ -1993,7 +1993,7 @@ apply (area:FACT_COX_AREA && name:"Grimy buchu leaf") {
     RAX_GRIMY_BUCHU_LEAF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Grimy noxifer custom style
 group: Chambers of Xeric
@@ -2007,7 +2007,7 @@ apply (area:FACT_COX_AREA && name:"Grimy noxifer") {
     RAX_GRIMY_NOXIFER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Golpar custom style
 group: Chambers of Xeric
@@ -2021,7 +2021,7 @@ apply (area:FACT_COX_AREA && name:"golpar") {
     RAX_GOLPAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Buchu leaf custom style
 group: Chambers of Xeric
@@ -2035,7 +2035,7 @@ apply (area:FACT_COX_AREA && name:"buchu leaf") {
     RAX_BUCHU_LEAF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Noxifer custom style
 group: Chambers of Xeric
@@ -2049,7 +2049,7 @@ apply (area:FACT_COX_AREA && name:"noxifer") {
     RAX_NOXIFER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Endarkened juice custom style
 group: Chambers of Xeric
@@ -2063,7 +2063,7 @@ apply (area:FACT_COX_AREA && name:"Endarkened juice") {
     RAX_ENDARKENED_JUICE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Stinkhorn mushroom custom style
 group: Chambers of Xeric
@@ -2077,7 +2077,7 @@ apply (area:FACT_COX_AREA && name:"Stinkhorn mushroom") {
     RAX_STINKHORN_MUSHROOM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cicely custom style
 group: Chambers of Xeric
@@ -2091,7 +2091,7 @@ apply (area:FACT_COX_AREA && name:"Cicely") {
     RAX_CICELY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mallignum root plank custom style
 group: Chambers of Xeric
@@ -2105,7 +2105,7 @@ apply (area:FACT_COX_AREA && name:"Mallignum root plank") {
     RAX_MALLIGNUM_ROOT_PLANK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cavern grubs custom style
 group: Chambers of Xeric
@@ -2119,7 +2119,7 @@ apply (area:FACT_COX_AREA && name:"Cavern grubs") {
     RAX_CAVERN_GRUBS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Empty gourd vial custom style
 group: Chambers of Xeric
@@ -2133,7 +2133,7 @@ apply (area:FACT_COX_AREA && name:"Empty gourd vial") {
     RAX_EMPTY_GOURD_VIAL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Water-filled gourd vial custom style
 group: Chambers of Xeric
@@ -2148,7 +2148,7 @@ apply (area:FACT_COX_AREA && name:"Water-filled gourd vial") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dawnbringer custom style
 group: Theatre of Blood
@@ -2157,7 +2157,7 @@ backgroundImage: Verzik Vitur
 */
 #define RAX_TOB_DAWNBRINGER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ad62a7";borderColor = "#FFb8a22e";textAccentColor = "#FF000000";menuTextColor = "#FFad62a7";
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Salve custom style
 group: Theatre of Blood
@@ -2175,7 +2175,7 @@ apply (name:"Salve amulet (e)") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Smelling salts
 group: Tombs of Amascut
@@ -2187,7 +2187,7 @@ apply (area:FACT_TOA_AREA && name:"Smelling salts (*") {
     RAX_SMELLING_SALTS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ambrosia
 group: Tombs of Amascut
@@ -2199,7 +2199,7 @@ apply (area:FACT_TOA_AREA && name:"Ambrosia (*") {
     RAX_AMBROSIA_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tears of Elidinis
 group: Tombs of Amascut
@@ -2211,7 +2211,7 @@ apply (area:FACT_TOA_AREA && name:"Tears of Elidinis (*") {
     RAX_TEARS_OF_ELIDINIS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Nectar
 group: Tombs of Amascut
@@ -2223,7 +2223,7 @@ apply (area:FACT_TOA_AREA && name:"Nectar (*") {
     RAX_NECTAR_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Liquid adrenaline
 group: Tombs of Amascut
@@ -2235,7 +2235,7 @@ apply (area:FACT_TOA_AREA && name:"Liquid adrenaline (*") {
     RAX_LIQUID_ADRENALINE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blessed crystal scarab
 group: Tombs of Amascut
@@ -2247,7 +2247,7 @@ apply (area:FACT_TOA_AREA && name:"Blessed crystal scarab (*") {
     RAX_BLESSED_CRYSTAL_SCARAB_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Silk dressing
 group: Tombs of Amascut
@@ -2259,7 +2259,7 @@ apply (area:FACT_TOA_AREA && name:"Silk dressing (*") {
     RAX_SILK_DRESSING_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Honey locust
 group: Tombs of Amascut
@@ -2271,7 +2271,7 @@ apply (area:FACT_TOA_AREA && name:"Honey locust") {
     RAX_HONEY_LOCUST_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Neutralising potion
 group: Tombs of Amascut
@@ -2283,7 +2283,7 @@ apply (area:FACT_TOA_AREA && name:"Neutralising potion") {
     RAX_NEUTRALISING_POTION_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Big banana
 group: Tombs of Amascut
@@ -2295,7 +2295,7 @@ apply (area:FACT_TOA_AREA && name:"Big banana") {
     RAX_BIG_BANANA_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Eldritch ashes
 group: Tombs of Amascut
@@ -2307,7 +2307,7 @@ apply (area:FACT_TOA_AREA && name:"Eldritch ashes") {
     RAX_ELDRITCH_ASHES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fang
 group: Tombs of Amascut
@@ -2319,7 +2319,7 @@ apply (area:FACT_TOA_AREA && name:"Fang") {
     RAX_FANG_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Scarab dung
 group: Tombs of Amascut
@@ -2332,7 +2332,7 @@ apply (area:FACT_TOA_AREA && name:"Scarab dung") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Smouldering gland
 group: Tormented Demons Drop
@@ -2344,7 +2344,7 @@ apply (name:"Smouldering gland") {
     RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_GLAND_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Smouldering heart
 group: Tormented Demons Drop
@@ -2356,7 +2356,7 @@ apply (name:"Smouldering heart") {
     RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_HEART_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Smouldering pile of flesh
 group: Tormented Demons Drop
@@ -2368,7 +2368,7 @@ apply (name:"Smouldering pile of flesh") {
     RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_PILE_OF_FLESH_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tormented synapse
 group: Tormented Demons Drop
@@ -2380,7 +2380,7 @@ apply (name:"Tormented synapse") {
     RAX_MONSTERS_TORMENTED_DEMONS_TORMENTED_SYNAPSE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Burning claws
 group: Tormented Demons Drop
@@ -2392,7 +2392,7 @@ apply (name:"Burning claw" || name:"Burning claws") {
     RAX_MONSTERS_TORMENTED_DEMONS_BURNING_CLAW_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Emberlight
 group: Tormented Demons Drop
@@ -2404,7 +2404,7 @@ apply (name:"Emberlight") {
   RAX_MONSTERS_TORMENTED_DEMONS_EMBERLIGHT_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Purging staff
 group: Tormented Demons Drop
@@ -2416,7 +2416,7 @@ apply (name:"Purging staff") {
   RAX_MONSTERS_TORMENTED_DEMONS_PURGING_STAFF_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Scorching bow
 group: Tormented Demons Drop
@@ -2429,7 +2429,7 @@ apply (name:"Scorching bow") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Attack potion
 group: Potions
@@ -2441,7 +2441,7 @@ apply (name:"Attack potion(*") {
     RAX_ATTACK_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Antipoison
 group: Potions
@@ -2453,7 +2453,7 @@ apply (name:"Antipoison(*") {
     RAX_ANTIPOISON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Strength potion
 group: Potions
@@ -2465,7 +2465,7 @@ apply (name:"Strength potion(*") {
     RAX_STRENGTH_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Serum 207
 group: Potions
@@ -2477,7 +2477,7 @@ apply (name:"Serum 207(*") {
     RAX_SERUM_207_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Compost potion
 group: Potions
@@ -2489,7 +2489,7 @@ apply (name:"Compost potion(*") {
     RAX_COMPOST_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Restore potion
 group: Potions
@@ -2501,7 +2501,7 @@ apply (name:"Restore potion(*") {
     RAX_RESTORE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Energy potion
 group: Potions
@@ -2513,7 +2513,7 @@ apply (name:"Energy potion(*") {
     RAX_ENERGY_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Defence potion
 group: Potions
@@ -2525,7 +2525,7 @@ apply (name:"Defence potion(*") {
     RAX_DEFENCE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Agility potion
 group: Potions
@@ -2537,7 +2537,7 @@ apply (name:"Agility potion(*") {
     RAX_AGILITY_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Combat potion
 group: Potions
@@ -2549,7 +2549,7 @@ apply (name:"Combat potion(*") {
     RAX_COMBAT_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Prayer potion
 group: Potions
@@ -2561,7 +2561,7 @@ apply (name:"Prayer potion(*") {
     RAX_PRAYER_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super attack
 group: Potions
@@ -2573,7 +2573,7 @@ apply (name:"Super attack(*") {
     RAX_SUPER_ATTACK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Superantipoison
 group: Potions
@@ -2585,7 +2585,7 @@ apply (name:"Superantipoison(*") {
     RAX_SUPERANTIPOISON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fishing potion
 group: Potions
@@ -2597,7 +2597,7 @@ apply (name:"Fishing potion(*") {
     RAX_FISHING_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super energy
 group: Potions
@@ -2609,7 +2609,7 @@ apply (name:"Super energy(*") {
     RAX_SUPER_ENERGY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Hunter potion
 group: Potions
@@ -2621,7 +2621,7 @@ apply (name:"Hunter potion(*") {
     RAX_HUNTER_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Goading potion
 group: Potions
@@ -2633,7 +2633,7 @@ apply (name:"Goading potion(*") {
     RAX_GOADING_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super strength
 group: Potions
@@ -2645,7 +2645,7 @@ apply (name:"Super strength(*") {
     RAX_SUPER_STRENGTH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Prayer regeneration potion
 group: Potions
@@ -2657,7 +2657,7 @@ apply (name:"Prayer regeneration potion(*") {
     RAX_PRAYER_REGENERATION_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super restore
 group: Potions
@@ -2669,7 +2669,7 @@ apply (name:"Super restore(*") {
     RAX_SUPER_RESTORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sanfew serum
 group: Potions
@@ -2681,7 +2681,7 @@ apply (name:"Sanfew serum(*") {
     RAX_SANFEW_SERUM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super defence
 group: Potions
@@ -2693,7 +2693,7 @@ apply (name:"Super defence(*") {
     RAX_SUPER_DEFENCE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Antidote+
 group: Potions
@@ -2705,7 +2705,7 @@ apply (name:"Antidote+(*") {
     RAX_ANTIDOTE_PLUS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Antifire potion
 group: Potions
@@ -2717,7 +2717,7 @@ apply (name:"Antifire potion(*") {
     RAX_ANTIFIRE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine super attack potion
 group: Potions
@@ -2729,7 +2729,7 @@ apply (name:"Divine super attack potion(*") {
     RAX_DIVINE_SUPER_ATTACK_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine super defence potion
 group: Potions
@@ -2741,7 +2741,7 @@ apply (name:"Divine super defence potion(*") {
     RAX_DIVINE_SUPER_DEFENCE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine super strength potion
 group: Potions
@@ -2753,7 +2753,7 @@ apply (name:"Divine super strength potion(*") {
     RAX_DIVINE_SUPER_STRENGTH_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ranging potion
 group: Potions
@@ -2765,7 +2765,7 @@ apply (name:"Ranging potion(*") {
     RAX_RANGING_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine ranging potion
 group: Potions
@@ -2777,7 +2777,7 @@ apply (name:"Divine ranging potion(*") {
     RAX_DIVINE_RANGING_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Magic potion
 group: Potions
@@ -2789,7 +2789,7 @@ apply (name:"Magic potion(*") {
     RAX_MAGIC_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Stamina potion
 group: Potions
@@ -2801,7 +2801,7 @@ apply (name:"Stamina potion(*") {
     RAX_STAMINA_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Zamorak brew
 group: Potions
@@ -2813,7 +2813,7 @@ apply (name:"Zamorak brew(*") {
     RAX_ZAMORAK_BREW_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine magic potion
 group: Potions
@@ -2825,7 +2825,7 @@ apply (name:"Divine magic potion(*") {
     RAX_DIVINE_MAGIC_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Antidote++
 group: Potions
@@ -2837,7 +2837,7 @@ apply (name:"Antidote++(*") {
     RAX_ANTIDOTE_PLUS_PLUS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bastion potion
 group: Potions
@@ -2849,7 +2849,7 @@ apply (name:"Bastion potion(*") {
     RAX_BASTION_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Battlemage potion
 group: Potions
@@ -2861,7 +2861,7 @@ apply (name:"Battlemage potion(*") {
     RAX_BATTLEMAGE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Saradomin brew
 group: Potions
@@ -2873,7 +2873,7 @@ apply (name:"Saradomin brew(*") {
     RAX_SARADOMIN_BREW_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Extended antifire
 group: Potions
@@ -2885,7 +2885,7 @@ apply (name:"Extended antifire(*") {
     RAX_EXTENDED_ANTIFIRE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ancient brew
 group: Potions
@@ -2897,7 +2897,7 @@ apply (name:"Ancient brew(*") {
     RAX_ANCIENT_BREW_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine bastion potion
 group: Potions
@@ -2909,7 +2909,7 @@ apply (name:"Divine bastion potion(*") {
     RAX_DIVINE_BASTION_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine battlemage potion
 group: Potions
@@ -2921,7 +2921,7 @@ apply (name:"Divine battlemage potion(*") {
     RAX_DIVINE_BATTLEMAGE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anti-venom
 group: Potions
@@ -2933,7 +2933,7 @@ apply (name:"Anti-venom(*") {
     RAX_ANTI_VENOM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Menaphite remedy
 group: Potions
@@ -2945,7 +2945,7 @@ apply (name:"Menaphite remedy(*") {
     RAX_MENAPHITE_REMEDY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super combat potion
 group: Potions
@@ -2957,7 +2957,7 @@ apply (name:"Super combat potion(*") {
     RAX_SUPER_COMBAT_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Forgotten brew
 group: Potions
@@ -2969,7 +2969,7 @@ apply (name:"Forgotten brew(*") {
     RAX_FORGOTTEN_BREW_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Super antifire potion
 group: Potions
@@ -2981,7 +2981,7 @@ apply (name:"Super antifire potion(*") {
     RAX_SUPER_ANTIFIRE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anti-venom+
 group: Potions
@@ -2993,7 +2993,7 @@ apply (name:"Anti-venom+(*") {
     RAX_ANTI_VENOM_PLUS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Extended anti-venom+
 group: Potions
@@ -3005,7 +3005,7 @@ apply (name:"Extended anti-venom+(*") {
     RAX_EXTENDED_ANTI_VENOM_PLUS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Divine super combat potion
 group: Potions
@@ -3017,7 +3017,7 @@ apply (name:"Divine super combat potion(*") {
     RAX_DIVINE_SUPER_COMBAT_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Extended super antifire
 group: Potions
@@ -3029,7 +3029,7 @@ apply (name:"Extended super antifire(*") {
     RAX_EXTENDED_SUPER_ANTIFIRE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Surge potion
 group: Potions
@@ -3041,7 +3041,7 @@ apply (name:"Surge potion(*") {
     RAX_SURGE_POTION_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blighted Super Restore
 group: Potions
@@ -3054,7 +3054,7 @@ apply (name:"Blighted super restore(*") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anglerfish custom style
 group: Fish
@@ -3066,7 +3066,7 @@ apply (name:"Anglerfish") {
     RAX_ANGLERFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dark crab custom style
 group: Fish
@@ -3078,7 +3078,7 @@ apply (name:"Dark crab") {
     RAX_DARK_CRAB_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Manta ray custom style
 group: Fish
@@ -3090,7 +3090,7 @@ apply (name:"Manta ray") {
     RAX_MANTA_RAY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sea turtle custom style
 group: Fish
@@ -3102,7 +3102,7 @@ apply (name:"Sea turtle") {
     RAX_SEA_TURTLE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Shark custom style
 group: Fish
@@ -3114,7 +3114,7 @@ apply (name:"Shark") {
     RAX_SHARK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Karambwan custom style
 group: Fish
@@ -3126,7 +3126,7 @@ apply (name:"Cooked Karambwan") {
     RAX_KARAMBWAN_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Monkfish custom style
 group: Fish
@@ -3138,7 +3138,7 @@ apply (name:"Monkfish") {
     RAX_MONKFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lava eel custom style
 group: Fish
@@ -3150,7 +3150,7 @@ apply (name:"Lava eel") {
     RAX_LAVA_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Swordfish custom style
 group: Fish
@@ -3162,7 +3162,7 @@ apply (name:"Swordfish") {
     RAX_SWORDFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bass custom style
 group: Fish
@@ -3174,7 +3174,7 @@ apply (name:"Bass") {
     RAX_BASS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lobster custom style
 group: Fish
@@ -3186,7 +3186,7 @@ apply (name:"Lobster") {
     RAX_LOBSTER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Rainbow fish custom style
 group: Fish
@@ -3198,7 +3198,7 @@ apply (name:"Rainbow fish") {
     RAX_RAINBOW_FISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cave eel custom style
 group: Fish
@@ -3210,7 +3210,7 @@ apply (name:"Cave eel") {
     RAX_CAVE_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tuna custom style
 group: Fish
@@ -3222,7 +3222,7 @@ apply (name:"Tuna") {
     RAX_TUNA_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Salmon custom style
 group: Fish
@@ -3234,7 +3234,7 @@ apply (name:"Salmon") {
     RAX_SALMON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cooked slimy eel custom style
 group: Fish
@@ -3246,7 +3246,7 @@ apply (name:"Cooked slimy eel") {
     RAX_SLIMY_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Pike custom style
 group: Fish
@@ -3258,7 +3258,7 @@ apply (name:"Pike") {
     RAX_PIKE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cod custom style
 group: Fish
@@ -3270,7 +3270,7 @@ apply (name:"Cod") {
     RAX_COD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Trout custom style
 group: Fish
@@ -3282,7 +3282,7 @@ apply (name:"Trout") {
     RAX_TROUT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mackerel custom style
 group: Fish
@@ -3294,7 +3294,7 @@ apply (name:"Mackerel") {
     RAX_MACKEREL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anchovies custom style
 group: Fish
@@ -3306,7 +3306,7 @@ apply (name:"Anchovies") {
     RAX_ANCHOVIES_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Herring custom style
 group: Fish
@@ -3318,7 +3318,7 @@ apply (name:"Herring") {
     RAX_HERRING_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Karambwanji custom style
 group: Fish
@@ -3330,7 +3330,7 @@ apply (name:"Karambwanji") {
     RAX_KARAMBWANJI_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sardine custom style
 group: Fish
@@ -3342,7 +3342,7 @@ apply (name:"Sardine") {
     RAX_SARDINE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Shrimps custom style
 group: Fish
@@ -3355,7 +3355,7 @@ apply (name:"Shrimps") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3366,7 +3366,7 @@ apply (name:"Tuna potato") {
     RAX_TUNA_POTATO_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3377,7 +3377,7 @@ apply (name:"Mushroom potato") {
     RAX_MUSHROOM_POTATO_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3388,7 +3388,7 @@ apply (name:"Egg potato") {
     RAX_EGG_POTATO_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3399,7 +3399,7 @@ apply (name:"Potato with cheese") {
     RAX_POTATO_WITH_CHEESE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3410,7 +3410,7 @@ apply (name:"Chilli potato") {
     RAX_CHILLI_POTATO_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3421,7 +3421,7 @@ apply (name:"Potato with butter") {
     RAX_POTATO_WITH_BUTTER_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Baked potato custom style
 group: Potato
@@ -3433,7 +3433,7 @@ apply (name:"Baked potato") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Summer pie custom style
 group: Pie
@@ -3444,7 +3444,7 @@ apply (name:["Summer pie", "Half a summer pie"]) {
     RAX_SUMMER_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Wild pie custom style
 group: Pie
@@ -3455,7 +3455,7 @@ apply (name:["Wild pie", "Half a wild pie"]) {
     RAX_WILD_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dragonfruit pie custom style
 group: Pie
@@ -3466,7 +3466,7 @@ apply (name:["Dragonfruit pie", "Half a dragonfruit pie"]) {
     RAX_DRAGONFRUIT_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Admiral pie custom style
 group: Pie
@@ -3477,7 +3477,7 @@ apply (name:["Admiral pie", "Half a admiral pie"]) {
     RAX_ADMIRAL_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mushroom pie custom style
 group: Pie
@@ -3488,7 +3488,7 @@ apply (name:["Mushroom pie", "Half a mushroom pie"]) {
     RAX_MUSHROOM_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Botanical pie custom style
 group: Pie
@@ -3499,7 +3499,7 @@ apply (name:["Botanical pie", "Half a botanical pie"]) {
     RAX_BOTANICAL_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fish pie custom style
 group: Pie
@@ -3510,7 +3510,7 @@ apply (name:["Fish pie", "Half a fish pie"]) {
     RAX_FISH_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Garden pie custom style
 group: Pie
@@ -3521,7 +3521,7 @@ apply (name:["Garden pie", "Half a garden pie"]) {
     RAX_GARDEN_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Apple pie custom style
 group: Pie
@@ -3532,7 +3532,7 @@ apply (name:["Apple pie", "Half a apple pie"]) {
     RAX_APPLE_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Meat pie custom style
 group: Pie
@@ -3543,7 +3543,7 @@ apply (name:["Meat pie", "Half a meat pie"]) {
     RAX_MEAT_PIE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Redberry pie custom style
 group: Pie
@@ -3555,7 +3555,7 @@ apply (name:["Redberry pie", "Half a redberry pie"]) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Pineapple pizza custom style
 group: Pizza
@@ -3566,7 +3566,7 @@ apply (name:["1/2 Pineapple pizza", "Pineapple pizza"]) {
     RAX_PINEAPPLE_PIZZA_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anchovy pizza custom style
 group: Pizza
@@ -3577,7 +3577,7 @@ apply (name:["1/2 Anchovy pizza", "Anchovy pizza"]) {
     RAX_ANCHOVY_PIZZA_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Meat pizza custom style
 group: Pizza
@@ -3588,7 +3588,7 @@ apply (name:["1/2 Meat pizza", "Meat pizza"]) {
     RAX_MEAT_PIZZA_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Plain pizza custom style
 group: Pizza
@@ -3600,7 +3600,7 @@ apply (name:["1/2 Plain pizza", "Plain pizza"]) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Logs custom style
 group: Logs
@@ -3612,7 +3612,7 @@ apply (name:"Logs") {
     RAX_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Oak logs custom style
 group: Logs
@@ -3624,7 +3624,7 @@ apply (name:"Oak logs") {
     RAX_OAK_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Willow logs custom style
 group: Logs
@@ -3636,7 +3636,7 @@ apply (name:"Willow logs") {
     RAX_WILLOW_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Maple logs custom style
 group: Logs
@@ -3648,7 +3648,7 @@ apply (name:"Maple logs") {
     RAX_MAPLE_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Yew logs custom style
 group: Logs
@@ -3660,7 +3660,7 @@ apply (name:"Yew logs") {
     RAX_YEW_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Magic logs custom style
 group: Logs
@@ -3672,7 +3672,7 @@ apply (name:"Magic logs") {
     RAX_MAGIC_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Redwood logs custom style
 group: Logs
@@ -3684,7 +3684,7 @@ apply (name:"Redwood logs") {
     RAX_REDWOOD_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Teak logs custom style
 group: Logs
@@ -3696,7 +3696,7 @@ apply (name:"Teak logs") {
     RAX_TEAK_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mahogany logs custom style
 group: Logs
@@ -3708,7 +3708,7 @@ apply (name:"Mahogany logs") {
     RAX_MAHOGANY_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Achey tree logs custom style
 group: Logs
@@ -3720,7 +3720,7 @@ apply (name:"Achey tree logs") {
     RAX_ACHEY_TREE_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Arctic pine logs custom style
 group: Logs
@@ -3732,7 +3732,7 @@ apply (name:"Arctic pine logs") {
     RAX_ARCTIC_PINE_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Scrapey tree logs custom style
 group: Logs
@@ -3744,7 +3744,7 @@ apply (name:"Scrapey tree logs") {
     RAX_SCRAPEY_TREE_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Juniper logs custom style
 group: Logs
@@ -3756,7 +3756,7 @@ apply (name:"Juniper logs") {
     RAX_JUNIPER_LOGS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bark custom style
 group: Logs
@@ -3768,7 +3768,7 @@ apply (name:"Bark") {
     RAX_BARK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blisterwood logs custom style
 group: Logs
@@ -3782,7 +3782,7 @@ apply (name:"Blisterwood logs") {
 
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Copper ore custom style
 group: Ores
@@ -3794,7 +3794,7 @@ apply (name:"copper ore") {
     RAX_COPPER_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tin ore custom style
 group: Ores
@@ -3806,7 +3806,7 @@ apply (name:"tin ore") {
     RAX_TIN_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Iron ore custom style
 group: Ores
@@ -3818,7 +3818,7 @@ apply (name:"iron ore") {
     RAX_IRON_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Silver ore custom style
 group: Ores
@@ -3830,7 +3830,7 @@ apply (name:"silver ore") {
     RAX_SILVER_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Coal custom style
 group: Ores
@@ -3842,7 +3842,7 @@ apply (name:"coal") {
     RAX_COAL_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Gold ore custom style
 group: Ores
@@ -3854,7 +3854,7 @@ apply (name:"gold ore") {
     RAX_GOLD_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mithril ore custom style
 group: Ores
@@ -3866,7 +3866,7 @@ apply (name:"mithril ore") {
     RAX_MITHRIL_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Adamantite ore custom style
 group: Ores
@@ -3878,7 +3878,7 @@ apply (name:"adamantite ore") {
     RAX_ADAMANTITE_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Runite ore custom style
 group: Ores
@@ -3890,7 +3890,7 @@ apply (name:"runite ore") {
     RAX_RUNITE_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Daeyalt ore custom style
 group: Ores
@@ -3902,7 +3902,7 @@ apply (name:"daeyalt ore") {
     RAX_DAEYALT_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blasted ore custom style
 group: Ores
@@ -3914,7 +3914,7 @@ apply (name:"blasted ore") {
     RAX_BLASTED_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blurite ore custom style
 group: Ores
@@ -3926,7 +3926,7 @@ apply (name:"blurite ore") {
     RAX_BLURITE_ORE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lovakite ore custom style
 group: Ores
@@ -3939,7 +3939,7 @@ apply (name:"lovakite ore") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bronze bar custom style
 group: Bars
@@ -3952,7 +3952,7 @@ apply (name:"Bronze bar") {
     RAX_BRONZE_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Iron bar custom style
 group: Bars
@@ -3965,7 +3965,7 @@ apply (name:"Iron bar") {
     RAX_IRON_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Steel bar custom style
 group: Bars
@@ -3978,7 +3978,7 @@ apply (name:"Steel bar") {
     RAX_STEEL_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mithril bar custom style
 group: Bars
@@ -3991,7 +3991,7 @@ apply (name:"Mithril bar") {
     RAX_MITHRIL_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Adamantite bar custom style
 group: Bars
@@ -4004,7 +4004,7 @@ apply (name:"Adamantite bar") {
     RAX_ADAMANTITE_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Runite bar custom style
 group: Bars
@@ -4017,7 +4017,7 @@ apply (name:"Runite bar") {
     RAX_RUNITE_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Silver bar custom style
 group: Bars
@@ -4030,7 +4030,7 @@ apply (name:"Silver bar") {
     RAX_SILVER_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Gold bar custom style
 group: Bars
@@ -4043,7 +4043,7 @@ apply (name:"Gold bar") {
     RAX_GOLD_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Elemental metal custom style
 group: Bars
@@ -4056,7 +4056,7 @@ apply (name:"Elemental metal") {
     RAX_ELEMENTAL_METAL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Primed bar custom style
 group: Bars
@@ -4069,7 +4069,7 @@ apply (name:"Primed bar") {
     RAX_PRIMED_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Primed mind bar custom style
 group: Bars
@@ -4082,7 +4082,7 @@ apply (name:"Primed mind bar") {
     RAX_PRIMED_MIND_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blurite bar custom style
 group: Bars
@@ -4095,7 +4095,7 @@ apply (name:"Blurite bar") {
     RAX_BLURITE_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Enchanted bar custom style
 group: Bars
@@ -4108,7 +4108,7 @@ apply (name:"Enchanted bar") {
     RAX_ENCHANTED_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lovakite bar custom style
 group: Bars
@@ -4121,7 +4121,7 @@ apply (name:"Lovakite bar") {
     RAX_LOVAKITE_BAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: "'Perfect' gold bar custom style"
 group: Bars
@@ -4135,7 +4135,7 @@ apply (name:"'Perfect' gold bar") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sapphire custom style
 group: Gems
@@ -4147,7 +4147,7 @@ apply (name:["Uncut sapphire",   "Sapphire", ]) {
     RAX_SAPPHIRE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Emerald custom style
 group: Gems
@@ -4159,7 +4159,7 @@ apply (name:["Uncut emerald",   "Emerald", ]) {
     RAX_EMERALD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ruby custom style
 group: Gems
@@ -4171,7 +4171,7 @@ apply (name:["Uncut ruby",   "Ruby", ]) {
     RAX_RUBY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Diamond custom style
 group: Gems
@@ -4183,7 +4183,7 @@ apply (name:["Uncut diamond",   "Diamond", ]) {
     RAX_DIAMOND_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Opal custom style
 group: Gems
@@ -4195,7 +4195,7 @@ apply (name:["Uncut opal",   "Opal", ]) {
     RAX_OPAL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Jade custom style
 group: Gems
@@ -4207,7 +4207,7 @@ apply (name:["Uncut jade",   "Jade", ]) {
     RAX_JADE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Red topaz custom style
 group: Gems
@@ -4219,7 +4219,7 @@ apply (name:["Uncut red topaz",   "Red topaz", ]) {
     RAX_RED_TOPAZ_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dragonstone custom style
 group: Gems
@@ -4231,7 +4231,7 @@ apply (name:["Uncut dragonstone",   "Dragonstone", ]) {
     RAX_DRAGONSTONE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Onyx custom style
 group: Gems
@@ -4244,7 +4244,7 @@ apply (name:["Uncut onyx",   "Onyx", ]) {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Air rune custom style
 group: Runes
@@ -4256,7 +4256,7 @@ apply (name:"Air rune") {
     RAX_AIR_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Water rune custom style
 group: Runes
@@ -4268,7 +4268,7 @@ apply (name:"Water rune") {
     RAX_WATER_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Earth rune custom style
 group: Runes
@@ -4280,7 +4280,7 @@ apply (name:"Earth rune") {
     RAX_EARTH_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fire rune custom style
 group: Runes
@@ -4292,7 +4292,7 @@ apply (name:"Fire rune") {
     RAX_FIRE_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mind rune custom style
 group: Runes
@@ -4304,7 +4304,7 @@ apply (name:"Mind rune") {
     RAX_MIND_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Body rune custom style
 group: Runes
@@ -4316,7 +4316,7 @@ apply (name:"Body rune") {
     RAX_BODY_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cosmic rune custom style
 group: Runes
@@ -4328,7 +4328,7 @@ apply (name:"Cosmic rune") {
     RAX_COSMIC_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Chaos rune custom style
 group: Runes
@@ -4340,7 +4340,7 @@ apply (name:"Chaos rune") {
     RAX_CHAOS_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Nature rune custom style
 group: Runes
@@ -4352,7 +4352,7 @@ apply (name:"Nature rune") {
     RAX_NATURE_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Law rune custom style
 group: Runes
@@ -4364,7 +4364,7 @@ apply (name:"Law rune") {
     RAX_LAW_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Death rune custom style
 group: Runes
@@ -4376,7 +4376,7 @@ apply (name:"Death rune") {
     RAX_DEATH_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sunfire rune custom style
 group: Runes
@@ -4388,7 +4388,7 @@ apply (name:"Sunfire rune") {
     RAX_SUNFIRE_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Astral rune custom style
 group: Runes
@@ -4400,7 +4400,7 @@ apply (name:"Astral rune") {
     RAX_ASTRAL_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blood rune custom style
 group: Runes
@@ -4412,7 +4412,7 @@ apply (name:"Blood rune") {
     RAX_BLOOD_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Soul rune custom style
 group: Runes
@@ -4424,7 +4424,7 @@ apply (name:"Soul rune") {
     RAX_SOUL_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Wrath rune custom style
 group: Runes
@@ -4436,7 +4436,7 @@ apply (name:"Wrath rune") {
     RAX_WRATH_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mist rune custom style
 group: Runes
@@ -4448,7 +4448,7 @@ apply (name:"Mist rune") {
     RAX_MIST_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dust rune custom style
 group: Runes
@@ -4460,7 +4460,7 @@ apply (name:"Dust rune") {
     RAX_DUST_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mud rune custom style
 group: Runes
@@ -4472,7 +4472,7 @@ apply (name:"Mud rune") {
     RAX_MUD_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Smoke rune custom style
 group: Runes
@@ -4484,7 +4484,7 @@ apply (name:"Smoke rune") {
     RAX_SMOKE_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Steam rune custom style
 group: Runes
@@ -4496,7 +4496,7 @@ apply (name:"Steam rune") {
     RAX_STEAM_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lava rune custom style
 group: Runes
@@ -4508,7 +4508,7 @@ apply (name:"Lava rune") {
     RAX_LAVA_RUNE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Aether rune custom style
 group: Runes
@@ -4522,7 +4522,7 @@ apply (name:"Aether rune") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Guam leaf custom style
 group: Herbs
@@ -4534,7 +4534,7 @@ apply (name:"*guam leaf") {
     RAX_HERBS_GUAM_LEAF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Marrentill custom style
 group: Herbs
@@ -4546,7 +4546,7 @@ apply (name:"*marrentill") {
     RAX_HERBS_MARRENTILL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tarromin custom style
 group: Herbs
@@ -4558,7 +4558,7 @@ apply (name:"*tarromin") {
     RAX_HERBS_TARROMIN_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Harralander custom style
 group: Herbs
@@ -4570,7 +4570,7 @@ apply (name:"*harralander") {
     RAX_HERBS_HARRALANDER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ranarr weed custom style
 group: Herbs
@@ -4582,7 +4582,7 @@ apply (name:"*ranarr weed") {
     RAX_HERBS_RANARR_WEED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Toadflax custom style
 group: Herbs
@@ -4594,7 +4594,7 @@ apply (name:"*toadflax") {
     RAX_HERBS_TOADFLAX_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Irit leaf custom style
 group: Herbs
@@ -4606,7 +4606,7 @@ apply (name:"*irit leaf") {
     RAX_HERBS_IRIT_LEAF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Avantoe custom style
 group: Herbs
@@ -4618,7 +4618,7 @@ apply (name:"*avantoe") {
     RAX_HERBS_AVANTOE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Kwuarm custom style
 group: Herbs
@@ -4630,7 +4630,7 @@ apply (name:"*kwuarm") {
     RAX_HERBS_KWUARM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Huasca custom style
 group: Herbs
@@ -4642,7 +4642,7 @@ apply (name:"*huasca") {
     RAX_HERBS_HUASCA_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Snapdragon custom style
 group: Herbs
@@ -4654,7 +4654,7 @@ apply (name:"*snapdragon") {
     RAX_HERBS_SNAPDRAGON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Cadantine custom style
 group: Herbs
@@ -4666,7 +4666,7 @@ apply (name:"*cadantine") {
     RAX_HERBS_CADANTINE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lantadyme custom style
 group: Herbs
@@ -4678,7 +4678,7 @@ apply (name:"*lantadyme") {
     RAX_HERBS_LANTADYME_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dwarf weed custom style
 group: Herbs
@@ -4690,7 +4690,7 @@ apply (name:"*dwarf weed") {
     RAX_HERBS_DWARF_WEED_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Torstol custom style
 group: Herbs
@@ -4703,7 +4703,7 @@ apply (name:"*torstol") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw shrimps custom style
 group: Raw Fish
@@ -4715,7 +4715,7 @@ apply (name:"Raw shrimps") {
     RAX_RAW_SHRIMPS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw anchovies custom style
 group: Raw Fish
@@ -4727,7 +4727,7 @@ apply (name:"Raw anchovies") {
     RAX_RAW_ANCHOVIES_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw guppy custom style
 group: Raw Fish
@@ -4739,7 +4739,7 @@ apply (name:"Raw guppy") {
     RAX_RAW_GUPPY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw cavefish custom style
 group: Raw Fish
@@ -4751,7 +4751,7 @@ apply (name:"Raw cavefish") {
     RAX_RAW_CAVEFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw tetra custom style
 group: Raw Fish
@@ -4763,7 +4763,7 @@ apply (name:"Raw tetra") {
     RAX_RAW_TETRA_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Frog spawn custom style
 group: Raw Fish
@@ -4775,7 +4775,7 @@ apply (name:"Frog spawn") {
     RAX_FROG_SPAWN_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw monkfish custom style
 group: Raw Fish
@@ -4787,7 +4787,7 @@ apply (name:"Raw monkfish") {
     RAX_RAW_MONKFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Minnow custom style
 group: Raw Fish
@@ -4799,7 +4799,7 @@ apply (name:"Minnow") {
     RAX_MINNOW_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw mackerel custom style
 group: Raw Fish
@@ -4811,7 +4811,7 @@ apply (name:"Raw mackerel") {
     RAX_RAW_MACKEREL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw cod custom style
 group: Raw Fish
@@ -4823,7 +4823,7 @@ apply (name:"Raw cod") {
     RAX_RAW_COD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw bass custom style
 group: Raw Fish
@@ -4835,7 +4835,7 @@ apply (name:"Raw bass") {
     RAX_RAW_BASS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw catfish custom style
 group: Raw Fish
@@ -4847,7 +4847,7 @@ apply (name:"Raw catfish") {
     RAX_RAW_CATFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw sardine custom style
 group: Raw Fish
@@ -4859,7 +4859,7 @@ apply (name:"Raw sardine") {
     RAX_RAW_SARDINE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw herring custom style
 group: Raw Fish
@@ -4871,7 +4871,7 @@ apply (name:"Raw herring") {
     RAX_RAW_HERRING_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw pike custom style
 group: Raw Fish
@@ -4883,7 +4883,7 @@ apply (name:"Raw pike") {
     RAX_RAW_PIKE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw slimy eel custom style
 group: Raw Fish
@@ -4895,7 +4895,7 @@ apply (name:"Raw slimy eel") {
     RAX_RAW_SLIMY_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw cave eel custom style
 group: Raw Fish
@@ -4907,7 +4907,7 @@ apply (name:"Raw cave eel") {
     RAX_RAW_CAVE_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw anglerfish custom style
 group: Raw Fish
@@ -4919,7 +4919,7 @@ apply (name:"Raw anglerfish") {
     RAX_RAW_ANGLERFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sacred eel custom style
 group: Raw Fish
@@ -4931,7 +4931,7 @@ apply (name:"Sacred eel") {
     RAX_SACRED_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw trout custom style
 group: Raw Fish
@@ -4943,7 +4943,7 @@ apply (name:"Raw trout") {
     RAX_RAW_TROUT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw salmon custom style
 group: Raw Fish
@@ -4955,7 +4955,7 @@ apply (name:"Raw salmon") {
     RAX_RAW_SALMON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw rainbow fish custom style
 group: Raw Fish
@@ -4967,7 +4967,7 @@ apply (name:"Raw rainbow fish") {
     RAX_RAW_RAINBOW_FISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw lava eel custom style
 group: Raw Fish
@@ -4979,7 +4979,7 @@ apply (name:"Raw lava eel") {
     RAX_RAW_LAVA_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Infernal eel custom style
 group: Raw Fish
@@ -4991,7 +4991,7 @@ apply (name:"Infernal eel") {
     RAX_INFERNAL_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Leaping trout custom style
 group: Raw Fish
@@ -5003,7 +5003,7 @@ apply (name:"Leaping trout") {
     RAX_LEAPING_TROUT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Leaping salmon custom style
 group: Raw Fish
@@ -5015,7 +5015,7 @@ apply (name:"Leaping salmon") {
     RAX_LEAPING_SALMON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Leaping sturgeon custom style
 group: Raw Fish
@@ -5027,7 +5027,7 @@ apply (name:"Leaping sturgeon") {
     RAX_LEAPING_STURGEON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw tuna custom style
 group: Raw Fish
@@ -5039,7 +5039,7 @@ apply (name:"Raw tuna") {
     RAX_RAW_TUNA_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw swordfish custom style
 group: Raw Fish
@@ -5051,7 +5051,7 @@ apply (name:"Raw swordfish") {
     RAX_RAW_SWORDFISH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw shark custom style
 group: Raw Fish
@@ -5063,7 +5063,7 @@ apply (name:"Raw shark") {
     RAX_RAW_SHARK_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw lobster custom style
 group: Raw Fish
@@ -5075,7 +5075,7 @@ apply (name:"Raw lobster") {
     RAX_RAW_LOBSTER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw dark crab custom style
 group: Raw Fish
@@ -5087,7 +5087,7 @@ apply (name:"Raw dark crab") {
     RAX_RAW_DARK_CRAB_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Bluegill custom style
 group: Raw Fish
@@ -5099,7 +5099,7 @@ apply (name:"Bluegill") {
     RAX_BLUEGILL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Common tench custom style
 group: Raw Fish
@@ -5111,7 +5111,7 @@ apply (name:"Common tench") {
     RAX_COMMON_TENCH_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mottled eel custom style
 group: Raw Fish
@@ -5123,7 +5123,7 @@ apply (name:"Mottled eel") {
     RAX_MOTTLED_EEL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Greater siren custom style
 group: Raw Fish
@@ -5135,7 +5135,7 @@ apply (name:"Greater siren") {
     RAX_GREATER_SIREN_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw karambwan custom style
 group: Raw Fish
@@ -5148,7 +5148,7 @@ apply (name:"Raw karambwan") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Sandworms custom style
 group: Fishing Bait
@@ -5160,7 +5160,7 @@ apply (name:"Sandworms") {
     RAX_SANDWORMS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fishing bait custom style
 group: Fishing Bait
@@ -5172,7 +5172,7 @@ apply (name:"Fishing bait") {
     RAX_FISHING_BAIT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Feather custom style
 group: Fishing Bait
@@ -5184,7 +5184,7 @@ apply (name:"Feather") {
     RAX_FEATHER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Stripy feather custom style
 group: Fishing Bait
@@ -5196,7 +5196,7 @@ apply (name:"Stripy feather") {
     RAX_STRIPY_FEATHER_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Dark fishing bait custom style
 group: Fishing Bait
@@ -5208,7 +5208,7 @@ apply (name:"Dark fishing bait") {
     RAX_DARK_FISHING_BAIT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: King worm custom style
 group: Fishing Bait
@@ -5220,7 +5220,7 @@ apply (name:"King worm") {
     RAX_KING_WORM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fish chunks custom style
 group: Fishing Bait
@@ -5232,7 +5232,7 @@ apply (name:"Fish chunks") {
     RAX_FISH_CHUNKS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw karambwanji custom style
 group: Fishing Bait
@@ -5244,7 +5244,7 @@ apply (name:"Raw karambwanji") {
     RAX_RAW_KARAMBWANJI_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Diabolic worms custom style
 group: Fishing Bait
@@ -5257,7 +5257,7 @@ apply (name:"Diabolic worms") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Small fishing net custom style
 group: Fishing Equipment
@@ -5269,7 +5269,7 @@ apply (name:"Small fishing net") {
     RAX_SMALL_FISHING_NET_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Big fishing net custom style
 group: Fishing Equipment
@@ -5281,7 +5281,7 @@ apply (name:"Big fishing net") {
     RAX_BIG_FISHING_NET_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Drift net custom style
 group: Fishing Equipment
@@ -5293,7 +5293,7 @@ apply (name:"Drift net") {
     RAX_DRIFT_NET_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fishing rod custom style
 group: Fishing Equipment
@@ -5305,7 +5305,7 @@ apply (name:"Fishing rod") {
     RAX_FISHING_ROD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Fly fishing rod custom style
 group: Fishing Equipment
@@ -5317,7 +5317,7 @@ apply (name:"Fly fishing rod") {
     RAX_FLY_FISHING_ROD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Oily fishing rod custom style
 group: Fishing Equipment
@@ -5329,7 +5329,7 @@ apply (name:"Oily fishing rod") {
     RAX_OILY_FISHING_ROD_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Harpoon custom style
 group: Fishing Equipment
@@ -5341,7 +5341,7 @@ apply (name:"Harpoon") {
     RAX_HARPOON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Lobster pot custom style
 group: Fishing Equipment
@@ -5353,7 +5353,7 @@ apply (name:"Lobster pot") {
     RAX_LOBSTER_POT_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Karambwan vessel custom style
 group: Fishing Equipment
@@ -5366,7 +5366,7 @@ apply (name:"Karambwan vessel") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Abyssal pearls custom style
 group: Currency
@@ -5379,7 +5379,7 @@ apply (name:"Abyssal pearls") {
     RAX_ABYSSAL_PEARLS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Agility arena ticket custom style
 group: Currency
@@ -5392,7 +5392,7 @@ apply (name:"Agility arena ticket") {
     RAX_AGILITY_ARENA_TICKET_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Anima-infused bark custom style
 group: Currency
@@ -5405,7 +5405,7 @@ apply (name:"Anima-infused bark") {
     RAX_ANIMA_INFUSED_BARK_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Archery ticket custom style
 group: Currency
@@ -5418,7 +5418,7 @@ apply (name:"Archery ticket") {
     RAX_ARCHERY_TICKET_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Barronite shards custom style
 group: Currency
@@ -5431,7 +5431,7 @@ apply (name:"Barronite shards") {
     RAX_BARRONITE_SHARDS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Blood money custom style
 group: Currency
@@ -5444,7 +5444,7 @@ apply (name:"Blood money") {
     RAX_BLOOD_MONEY_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Brimhaven voucher custom style
 group: Currency
@@ -5457,7 +5457,7 @@ apply (name:"Brimhaven voucher") {
     RAX_BRIMHAVEN_VOUCHER_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Castle wars ticket custom style
 group: Currency
@@ -5470,7 +5470,7 @@ apply (name:"Castle wars ticket") {
     RAX_CASTLE_WARS_TICKET_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Coins custom style
 group: Currency
@@ -5483,7 +5483,7 @@ apply (name:"Coins") {
     RAX_COINS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ecto-token custom style
 group: Currency
@@ -5496,7 +5496,7 @@ apply (name:"Ecto-token") {
     RAX_ECTO_TOKEN_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Frog token custom style
 group: Currency
@@ -5509,7 +5509,7 @@ apply (name:"Frog token") {
     RAX_FROG_TOKEN_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Glistening tear custom style
 group: Currency
@@ -5522,7 +5522,7 @@ apply (name:"Glistening tear") {
     RAX_GLISTENING_TEAR_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Golden nugget custom style
 group: Currency
@@ -5535,7 +5535,7 @@ apply (name:"Golden nugget") {
     RAX_GOLDEN_NUGGET_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Hallowed mark custom style
 group: Currency
@@ -5548,7 +5548,7 @@ apply (name:"Hallowed mark") {
     RAX_HALLOWED_MARK_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Intelligence custom style
 group: Currency
@@ -5561,7 +5561,7 @@ apply (name:"Intelligence") {
     RAX_INTELLIGENCE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mark of grace custom style
 group: Currency
@@ -5574,7 +5574,7 @@ apply (name:"Mark of grace") {
     RAX_MARK_OF_GRACE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mermaid's tear custom style
 group: Currency
@@ -5587,7 +5587,7 @@ apply (name:"Mermaid's tear") {
     RAX_MERMAIDS_TEAR_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Minnow custom style
 group: Currency
@@ -5600,7 +5600,7 @@ apply (name:"Minnow") {
     RAX_MINNOW_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Molch pearl custom style
 group: Currency
@@ -5613,7 +5613,7 @@ apply (name:"Molch pearl") {
     RAX_MOLCH_PEARL_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mole claw custom style
 group: Currency
@@ -5626,7 +5626,7 @@ apply (name:"Mole claw") {
     RAX_MOLE_CLAW_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Mole skin custom style
 group: Currency
@@ -5639,7 +5639,7 @@ apply (name:"Mole skin") {
     RAX_MOLE_SKIN_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Nuggets custom style
 group: Currency
@@ -5652,7 +5652,7 @@ apply (name:"Nuggets") {
     RAX_NUGGETS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Numulite custom style
 group: Currency
@@ -5665,7 +5665,7 @@ apply (name:"Numulite") {
     RAX_NUMULITE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Paramaya ticket custom style
 group: Currency
@@ -5678,7 +5678,7 @@ apply (name:"Paramaya ticket") {
     RAX_PARAMAYA_TICKET_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Platinum token custom style
 group: Currency
@@ -5691,7 +5691,7 @@ apply (name:"Platinum token") {
     RAX_PLATINUM_TOKEN_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Shantay pass custom style
 group: Currency
@@ -5704,7 +5704,7 @@ apply (name:"Shantay pass") {
     RAX_SHANTAY_PASS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Ship ticket custom style
 group: Currency
@@ -5717,7 +5717,7 @@ apply (name:"Ship ticket") {
     RAX_SHIP_TICKET_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Stardust custom style
 group: Currency
@@ -5730,7 +5730,7 @@ apply (name:"Stardust") {
     RAX_STARDUST_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Termites custom style
 group: Currency
@@ -5743,7 +5743,7 @@ apply (name:"Termites") {
     RAX_TERMITES_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Tokkul custom style
 group: Currency
@@ -5756,7 +5756,7 @@ apply (name:"Tokkul") {
     RAX_TOKKUL_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Trading sticks custom style
 group: Currency
@@ -5769,7 +5769,7 @@ apply (name:"Trading sticks") {
     RAX_TRADING_STICKS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Unidentified minerals custom style
 group: Currency
@@ -5782,7 +5782,7 @@ apply (name:"Unidentified minerals") {
     RAX_UNIDENTIFIED_MINERALS_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Warrior guild token custom style
 group: Currency
@@ -5796,7 +5796,7 @@ apply (name:"Warrior guild token") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal sceptre custom style
 group: Gauntlet
@@ -5808,7 +5808,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* sceptre") {
     RAX_GAUNTLET_CRYSTAL_SCEPTRE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal axe custom style
 group: Gauntlet
@@ -5820,7 +5820,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* axe") {
     RAX_GAUNTLET_CRYSTAL_AXE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal pickaxe custom style
 group: Gauntlet
@@ -5832,7 +5832,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* pickaxe") {
     RAX_GAUNTLET_CRYSTAL_PICKAXE_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal harpoon custom style
 group: Gauntlet
@@ -5844,7 +5844,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* harpoon") {
     RAX_GAUNTLET_CRYSTAL_HARPOON_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Pestle and mortar custom style
 group: Gauntlet
@@ -5856,7 +5856,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Pestle and mortar") {
     RAX_GAUNTLET_PESTLE_AND_MORTAR_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Teleport crystal custom style
 group: Gauntlet
@@ -5868,7 +5868,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"*teleport crystal") {
     RAX_GAUNTLET_TELEPORT_CRYSTAL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Escape crystal custom style
 group: Gauntlet
@@ -5881,7 +5881,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"*escape crystal") {
 }
 
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal shards custom style
 group: Gauntlet
@@ -5893,7 +5893,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* shards") {
     RAX_GAUNTLET_CRYSTAL_SHARDS_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal dust custom style
 group: Gauntlet
@@ -5905,7 +5905,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Crystal dust") {
     RAX_GAUNTLET_CRYSTAL_DUST_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Vial custom style
 group: Gauntlet
@@ -5917,7 +5917,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Vial") {
     RAX_GAUNTLET_VIAL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Water-filled vial custom style
 group: Gauntlet
@@ -5929,7 +5929,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Water-filled vial") {
     RAX_GAUNTLET_WATER_FILLED_VIAL_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Grym leaf custom style
 group: Gauntlet
@@ -5941,7 +5941,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Grym leaf") {
     RAX_GAUNTLET_GRYM_LEAF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Grym potion (unf) custom style
 group: Gauntlet
@@ -5953,7 +5953,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Grym potion (unf)") {
     RAX_GAUNTLET_GRYM_POTION_UNF_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Raw paddlefish custom style
 group: Gauntlet
@@ -5965,7 +5965,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Egniol potion (*") {
     RAX_GAUNTLET_EGNIOL_POTION_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Weapon frame custom style
 group: Gauntlet
@@ -5977,7 +5977,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Raw paddlefish") {
     RAX_GAUNTLET_RAW_PADDLEFISH_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal spike custom style
 group: Gauntlet
@@ -5989,7 +5989,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Paddlefish") {
     RAX_GAUNTLET_PADDLEFISH_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal orb custom style
 group: Gauntlet
@@ -6001,7 +6001,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Crystal paddlefish" || name:"Corrupted p
      RAX_GAUNTLET_CRYSTAL_PADDLEFISH_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystalline bowstring custom style
 group: Gauntlet
@@ -6013,7 +6013,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Weapon frame") {
      RAX_GAUNTLET_WEAPON_FRAME_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Linum tirinum custom style
 group: Gauntlet
@@ -6025,7 +6025,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* spike") {
     RAX_GAUNTLET_CRYSTAL_SPIKE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Phren bark custom style
 group: Gauntlet
@@ -6037,7 +6037,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* orb") {
     RAX_GAUNTLET_CRYSTAL_ORB_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal ore custom style
 group: Gauntlet
@@ -6049,7 +6049,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* bowstring") {
     RAX_GAUNTLET_CRYSTALLINE_BOWSTRING_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Egniol potion custom style
 group: Gauntlet
@@ -6061,7 +6061,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* halberd *") {
     RAX_GAUNTLET_CRYSTAL_HALBERD_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Paddlefish custom style
 group: Gauntlet
@@ -6073,7 +6073,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* bow *") {
     RAX_GAUNTLET_CRYSTAL_BOW_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal paddlefish custom style
 group: Gauntlet
@@ -6085,7 +6085,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* staff *") {
     RAX_GAUNTLET_CRYSTAL_STAFF_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal halberd custom style
 group: Gauntlet
@@ -6097,7 +6097,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Linum tirinum*") {
     RAX_GAUNTLET_LINUM_TIRINUM_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal bow custom style
 group: Gauntlet
@@ -6109,7 +6109,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"Phren bark*") {
     RAX_GAUNTLET_PHREN_BARK_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal staff custom style
 group: Gauntlet
@@ -6121,7 +6121,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* ore") {
     RAX_GAUNTLET_CRYSTAL_ORE_CUSTOMSTYLE
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal helm custom style
 group: Gauntlet
@@ -6133,7 +6133,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* helm *") {
     RAX_GAUNTLET_CRYSTAL_HELM_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal body custom style
 group: Gauntlet
@@ -6145,7 +6145,7 @@ apply (area:FACT_GAUNTLET_AREA && name:"* body *") {
     RAX_GAUNTLET_CRYSTAL_BODY_CUSTOMSTYLE 
 }
 
-/*@ define:input:aisle
+/*@ define:input:categories
 type: style
 label: Crystal legs custom style
 group: Gauntlet
@@ -6157,6 +6157,6 @@ apply (area:FACT_GAUNTLET_AREA && name:"* legs *") {
     RAX_GAUNTLET_CRYSTAL_LEGS_CUSTOMSTYLE 
 }
 
-apply (RAX_FORCE_AISLE_ICON && (name:RAX_AISLE_NAMES || name:FACT_ADAMANT_AMMO || name:FACT_ADAMANT_ARMOUR || name:FACT_ADAMANT_GOLD_TRIMMED_ARMOUR || name:FACT_ADAMANT_HERALDIC_ARMOUR || name:FACT_ADAMANT_ONE_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_OTHER || name:FACT_ADAMANT_RANGED_WEAPONS || name:FACT_ADAMANT_TRIMMED_ARMOUR || name:FACT_ADAMANT_TWO_HANDED_MELEE_WEAPONS || name:FACT_ALL_HERBLORE_EQUIPMENT || name:FACT_ALL_HERBS || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_CHINCHOMPAS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_KNIVES_LIST || name:FACT_AMMO_MISC_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST || name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_THROWING_AXES_LIST || name:FACT_ASHES_LIST || name:FACT_BARB_POTIONS_LIST || name:FACT_BARS_LIST || name:FACT_BLACK_AMMO || name:FACT_BLACK_ARMOUR || name:FACT_BLACK_GOLD_TRIMMED_ARMOUR || name:FACT_BLACK_HERALDIC_ARMOUR || name:FACT_BLACK_ONE_HANDED_MELEE_WEAPONS || name:FACT_BLACK_OTHER || name:FACT_BLACK_RANGED_WEAPONS || name:FACT_BLACK_TRIMMED_ARMOUR || name:FACT_BLACK_TWO_HANDED_MELEE_WEAPONS || name:FACT_BONES_LIST || name:FACT_BRONZE_AMMO || name:FACT_BRONZE_ARMOUR || name:FACT_BRONZE_GOLD_TRIMMED_ARMOUR || name:FACT_BRONZE_ONE_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_OTHER || name:FACT_BRONZE_RANGED_WEAPONS || name:FACT_BRONZE_TRIMMED_ARMOUR || name:FACT_BRONZE_TWO_HANDED_MELEE_WEAPONS || name:FACT_CAKE_FOODS_LIST || name:FACT_CONSTRUCTION_MISC_LIST || name:FACT_CONSTRUCTION_NAILS_LIST || name:FACT_CONSTRUCTION_PLANKS_LIST || name:FACT_CONSTRUCTION_STONEMASON_LIST || name:FACT_CURRENCY_LIST || name:FACT_DRAGON_AMMO || name:FACT_DRAGON_ARMOUR || name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_RANGED_WEAPONS || name:FACT_DRAGON_TWO_HANDED_MELEE_WEAPONS || name:FACT_ENSOULED_HEAD_LIST || name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_ANIMA_LIST || name:FACT_FARMING_SEEDS_BUSH_LIST || name:FACT_FARMING_SEEDS_FLOWER_LIST || name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST || name:FACT_FARMING_SEEDS_HERB_LIST || name:FACT_FARMING_SEEDS_HOPS_LIST || name:FACT_FARMING_SEEDS_SPECIAL_LIST || name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST || name:FACT_FARMING_SEEDS_TREE_LIST || name:FACT_FISHING_BAIT_LIST || name:FACT_FISHING_EQUIPMENT_LIST || name:FACT_FISHING_RAW_FISH_LIST || name:FACT_FISH_FOODS_LIST || name:FACT_FLETCHING_ARROW_TIPS_LIST || name:FACT_FLETCHING_BOLT_TIPS_LIST || name:FACT_FLETCHING_CROSSBOW_LIMBS_LIST || name:FACT_FLETCHING_CROSSBOW_STOCK_LIST || name:FACT_FLETCHING_DART_TIP_LIST || name:FACT_FLETCHING_JAVELIN_HEADS_LIST || name:FACT_FLETCHING_MISC_LIST || name:FACT_FLETCHING_UNFINISHED_BOLTS_LIST || name:FACT_FLETCHING_UNSTRUNG_CROSSBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_LONGBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_HUNTER_FOODS_LIST || name:FACT_IRON_AMMO || name:FACT_IRON_ARMOUR || name:FACT_IRON_GOLD_TRIMMED_ARMOUR || name:FACT_IRON_ONE_HANDED_MELEE_WEAPONS || name:FACT_IRON_OTHER || name:FACT_IRON_RANGED_WEAPONS || name:FACT_IRON_TRIMMED_ARMOUR || name:FACT_IRON_TWO_HANDED_MELEE_WEAPONS || name:FACT_LAST_MAN_STANDING_AMMO_LIST || name:FACT_LOGS_LIST || name:FACT_MITHRIL_AMMO || name:FACT_MITHRIL_ARMOUR || name:FACT_MITHRIL_GOLD_TRIMMED_ARMOUR || name:FACT_MITHRIL_ONE_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_OTHER || name:FACT_MITHRIL_RANGED_WEAPONS || name:FACT_MITHRIL_TRIMMED_ARMOUR || name:FACT_MITHRIL_TWO_HANDED_MELEE_WEAPONS || name:FACT_ORES_LIST || name:FACT_PIE_FOODS_LIST || name:FACT_PIZZA_FOODS_LIST || name:FACT_POTATOES_FOODS_LIST || name:FACT_POTIONS_LIST || name:FACT_RUNES_CATALYTIC_LIST || name:FACT_RUNES_COMBINATION_LIST || name:FACT_RUNES_ELEMENTAL_LIST || name:FACT_RUNES_LIST || name:FACT_RUNE_AMMO || name:FACT_RUNE_ANCIENT_TRIMMED_ARMOUR || name:FACT_RUNE_ARMADYL_TRIMMED_ARMOUR || name:FACT_RUNE_ARMOUR || name:FACT_RUNE_BANDOS_TRIMMED_ARMOUR || name:FACT_RUNE_GILDED || name:FACT_RUNE_GOLD_TRIMMED_ARMOUR || name:FACT_RUNE_GUTHIX_TRIMMED_ARMOUR || name:FACT_RUNE_HERALDIC_ARMOUR || name:FACT_RUNE_ONE_HANDED_MELEE_WEAPONS || name:FACT_RUNE_OTHER || name:FACT_RUNE_RANGED_WEAPONS || name:FACT_RUNE_SARADOMIN_TRIMMED_ARMOUR || name:FACT_RUNE_TRIMMED_ARMOUR || name:FACT_RUNE_TWO_HANDED_MELEE_WEAPONS || name:FACT_RUNE_ZAMORAK_TRIMMED_ARMOUR || name:FACT_SECONDARIES_LIST || name:FACT_SHADES_REMAINS_LIST || name:FACT_STEEL_AMMO || name:FACT_STEEL_ARMOUR || name:FACT_STEEL_GOLD_TRIMMED_ARMOUR || name:FACT_STEEL_ONE_HANDED_MELEE_WEAPONS || name:FACT_STEEL_OTHER || name:FACT_STEEL_RANGED_WEAPONS || name:FACT_STEEL_TRIMMED_ARMOUR || name:FACT_STEEL_TWO_HANDED_MELEE_WEAPONS)) {
-    RAX_AISLE_ICON_STYLE
+apply (RAX_SHOW_ICONS && RAX_FORCE_CATEGORY_ICON && (name:RAX_CATEGORY_NAMES || name:FACT_ADAMANT_AMMO || name:FACT_ADAMANT_ARMOUR || name:FACT_ADAMANT_GOLD_TRIMMED_ARMOUR || name:FACT_ADAMANT_HERALDIC_ARMOUR || name:FACT_ADAMANT_ONE_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_OTHER || name:FACT_ADAMANT_RANGED_WEAPONS || name:FACT_ADAMANT_TRIMMED_ARMOUR || name:FACT_ADAMANT_TWO_HANDED_MELEE_WEAPONS || name:FACT_ALL_HERBLORE_EQUIPMENT || name:FACT_ALL_HERBS || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_CHINCHOMPAS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_KNIVES_LIST || name:FACT_AMMO_MISC_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST || name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_THROWING_AXES_LIST || name:FACT_ASHES_LIST || name:FACT_BARB_POTIONS_LIST || name:FACT_BARS_LIST || name:FACT_BLACK_AMMO || name:FACT_BLACK_ARMOUR || name:FACT_BLACK_GOLD_TRIMMED_ARMOUR || name:FACT_BLACK_HERALDIC_ARMOUR || name:FACT_BLACK_ONE_HANDED_MELEE_WEAPONS || name:FACT_BLACK_OTHER || name:FACT_BLACK_RANGED_WEAPONS || name:FACT_BLACK_TRIMMED_ARMOUR || name:FACT_BLACK_TWO_HANDED_MELEE_WEAPONS || name:FACT_BONES_LIST || name:FACT_BRONZE_AMMO || name:FACT_BRONZE_ARMOUR || name:FACT_BRONZE_GOLD_TRIMMED_ARMOUR || name:FACT_BRONZE_ONE_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_OTHER || name:FACT_BRONZE_RANGED_WEAPONS || name:FACT_BRONZE_TRIMMED_ARMOUR || name:FACT_BRONZE_TWO_HANDED_MELEE_WEAPONS || name:FACT_CAKE_FOODS_LIST || name:FACT_CONSTRUCTION_MISC_LIST || name:FACT_CONSTRUCTION_NAILS_LIST || name:FACT_CONSTRUCTION_PLANKS_LIST || name:FACT_CONSTRUCTION_STONEMASON_LIST || name:FACT_CURRENCY_LIST || name:FACT_DRAGON_AMMO || name:FACT_DRAGON_ARMOUR || name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_RANGED_WEAPONS || name:FACT_DRAGON_TWO_HANDED_MELEE_WEAPONS || name:FACT_ENSOULED_HEAD_LIST || name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_ANIMA_LIST || name:FACT_FARMING_SEEDS_BUSH_LIST || name:FACT_FARMING_SEEDS_FLOWER_LIST || name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST || name:FACT_FARMING_SEEDS_HERB_LIST || name:FACT_FARMING_SEEDS_HOPS_LIST || name:FACT_FARMING_SEEDS_SPECIAL_LIST || name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST || name:FACT_FARMING_SEEDS_TREE_LIST || name:FACT_FISHING_BAIT_LIST || name:FACT_FISHING_EQUIPMENT_LIST || name:FACT_FISHING_RAW_FISH_LIST || name:FACT_FISH_FOODS_LIST || name:FACT_FLETCHING_ARROW_TIPS_LIST || name:FACT_FLETCHING_BOLT_TIPS_LIST || name:FACT_FLETCHING_CROSSBOW_LIMBS_LIST || name:FACT_FLETCHING_CROSSBOW_STOCK_LIST || name:FACT_FLETCHING_DART_TIP_LIST || name:FACT_FLETCHING_JAVELIN_HEADS_LIST || name:FACT_FLETCHING_MISC_LIST || name:FACT_FLETCHING_UNFINISHED_BOLTS_LIST || name:FACT_FLETCHING_UNSTRUNG_CROSSBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_LONGBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_HUNTER_FOODS_LIST || name:FACT_IRON_AMMO || name:FACT_IRON_ARMOUR || name:FACT_IRON_GOLD_TRIMMED_ARMOUR || name:FACT_IRON_ONE_HANDED_MELEE_WEAPONS || name:FACT_IRON_OTHER || name:FACT_IRON_RANGED_WEAPONS || name:FACT_IRON_TRIMMED_ARMOUR || name:FACT_IRON_TWO_HANDED_MELEE_WEAPONS || name:FACT_LAST_MAN_STANDING_AMMO_LIST || name:FACT_LOGS_LIST || name:FACT_MITHRIL_AMMO || name:FACT_MITHRIL_ARMOUR || name:FACT_MITHRIL_GOLD_TRIMMED_ARMOUR || name:FACT_MITHRIL_ONE_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_OTHER || name:FACT_MITHRIL_RANGED_WEAPONS || name:FACT_MITHRIL_TRIMMED_ARMOUR || name:FACT_MITHRIL_TWO_HANDED_MELEE_WEAPONS || name:FACT_ORES_LIST || name:FACT_PIE_FOODS_LIST || name:FACT_PIZZA_FOODS_LIST || name:FACT_POTATOES_FOODS_LIST || name:FACT_POTIONS_LIST || name:FACT_RUNES_CATALYTIC_LIST || name:FACT_RUNES_COMBINATION_LIST || name:FACT_RUNES_ELEMENTAL_LIST || name:FACT_RUNES_LIST || name:FACT_RUNE_AMMO || name:FACT_RUNE_ANCIENT_TRIMMED_ARMOUR || name:FACT_RUNE_ARMADYL_TRIMMED_ARMOUR || name:FACT_RUNE_ARMOUR || name:FACT_RUNE_BANDOS_TRIMMED_ARMOUR || name:FACT_RUNE_GILDED || name:FACT_RUNE_GOLD_TRIMMED_ARMOUR || name:FACT_RUNE_GUTHIX_TRIMMED_ARMOUR || name:FACT_RUNE_HERALDIC_ARMOUR || name:FACT_RUNE_ONE_HANDED_MELEE_WEAPONS || name:FACT_RUNE_OTHER || name:FACT_RUNE_RANGED_WEAPONS || name:FACT_RUNE_SARADOMIN_TRIMMED_ARMOUR || name:FACT_RUNE_TRIMMED_ARMOUR || name:FACT_RUNE_TWO_HANDED_MELEE_WEAPONS || name:FACT_RUNE_ZAMORAK_TRIMMED_ARMOUR || name:FACT_SECONDARIES_LIST || name:FACT_SHADES_REMAINS_LIST || name:FACT_STEEL_AMMO || name:FACT_STEEL_ARMOUR || name:FACT_STEEL_GOLD_TRIMMED_ARMOUR || name:FACT_STEEL_ONE_HANDED_MELEE_WEAPONS || name:FACT_STEEL_OTHER || name:FACT_STEEL_RANGED_WEAPONS || name:FACT_STEEL_TRIMMED_ARMOUR || name:FACT_STEEL_TWO_HANDED_MELEE_WEAPONS)) {
+    RAX_CATEGORY_ICON_STYLE
 }

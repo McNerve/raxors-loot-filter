@@ -1,0 +1,258 @@
+/*@ define:module:alerts
+---
+name: Alerts
+subtitle: Pets, keys, clues, forgotten gear
+description: |
+  Last visible module. Sounds and mutes run after every style so they stick.
+
+  Forgotten gear = you dropped one ammo or a cannon piece. Pets, keys,
+  champion scrolls, and clue nests/bottles/geodes get their own ping.
+*/
+
+/*@ define:group
+---
+name: Forgotten gear
+expanded: false
+description: |
+  Quantity == 1 on ammo usually means it fell out of the quiver, not a drop.
+  Same idea for a lone cannonball or a cannon stand.
+*/
+
+/*@ define:input:alerts
+type: boolean
+label: Ping when a single piece of ammo hits the floor
+group: Forgotten gear
+*/
+#define RAX_AMMO_PING true
+
+/*@ define:input:alerts
+type: number
+label: Ammo ping sound ID
+group: Forgotten gear
+*/
+#define RAX_AMMO_PING_SOUND 933
+
+apply (RAX_ALLOW_SOUNDS && RAX_AMMO_PING && ownership:OWNERSHIP_SELF && quantity:==1 && (name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST)) {
+    sound = RAX_AMMO_PING_SOUND;
+}
+
+/*@ define:input:alerts
+type: boolean
+label: Ping a lone cannonball or granite cannonball
+group: Forgotten gear
+*/
+#define RAX_CANNONBALL_PING true
+
+apply (RAX_ALLOW_SOUNDS && RAX_CANNONBALL_PING && ownership:OWNERSHIP_SELF && quantity:==1 && name:["Cannonball","Granite cannonball"]) {
+    sound = RAX_AMMO_PING_SOUND;
+}
+
+/*@ define:input:alerts
+type: boolean
+label: Highlight dropped dwarf cannon pieces
+group: Forgotten gear
+*/
+#define RAX_CANNON_PIECES true
+
+/*@ define:input:alerts
+type: style
+label: Cannon pieces
+group: Forgotten gear
+exampleItem: Cannon barrels
+exampleItemId: 10
+*/
+#define RAX_CANNON_STYLE textColor = "#ff000000"; backgroundColor = "#99c4a574"; borderColor = "#ff000000"; showLootbeam = true; icon = CurrentItem();
+
+apply (RAX_CANNON_PIECES && name:["Cannon barrels","Cannon base","Cannon stand","Cannon furnace","Dwarf cannon set"]) {
+    RAX_CANNON_STYLE
+}
+
+/*@ define:group
+---
+name: Pets
+expanded: false
+*/
+
+/*@ define:input:alerts
+type: boolean
+label: Highlight pets
+group: Pets
+*/
+#define RAX_PETS true
+
+/*@ define:input:alerts
+type: style
+label: Pet style
+group: Pets
+exampleItem: Baby mole
+exampleItemId: 12646
+*/
+#define RAX_PET_STYLE fontType = 3; showLootbeam = true; notify = true; sound = "uniques.wav"; icon = CurrentItem();
+
+/*@ define:input:alerts
+type: stringlist
+label: Pets
+group: Pets
+*/
+#define RAX_PET_LIST ["Abyssal orphan","Baby mole","Kalphite princess","Pet smoke devil","Skotos","Venenatis spiderling","Callisto cub","Vet'ion jr.","Scorpia's offspring","Prince black dragon","Pet snakeling","Pet kree'arra","Pet general graardor","Pet zilyana","Pet k'ril tsutsaroth","Pet kraken","Hellpuppy","Pet dark core","Pet penance queen","Heron","Rock golem","Beaver","Baby chinchompha","Giant squirrel","Tangleroot","Rift guardian","Rocky","Herbi","Chompy chick","Pet chaos elemental","Pet dagannoth supreme","Pet dagannoth prime","Pet dagannoth rex","Pet penance queen","Noon","Midnight","Ikkle hydra","Sarachnis cub","Youngllef","Corrupted youngllef","Little nightmare","Lil' zik","Tumeken's guardian","Nexling","Wisp","Butch","Lil'viathan","Baron","Muphin","Quetzin","Smol heredit","Nid","Huberte","Moxi","Yami"]
+
+apply (RAX_PETS && name:RAX_PET_LIST) {
+    RAX_PET_STYLE
+}
+
+/*@ define:group
+---
+name: Keys
+expanded: false
+*/
+
+/*@ define:input:alerts
+type: boolean
+label: Highlight keys
+group: Keys
+*/
+#define RAX_KEYS true
+
+/*@ define:input:alerts
+type: style
+label: Key style
+group: Keys
+exampleItem: Crystal key
+exampleItemId: 989
+*/
+#define RAX_KEY_STYLE showLootbeam = true; sound = "tier3.wav"; icon = CurrentItem();
+
+/*@ define:input:alerts
+type: stringlist
+label: Keys
+group: Keys
+*/
+#define RAX_KEY_LIST ["Crystal key","Loop half of key","Tooth half of key","Brimstone key","Larran's key","Frozen cache","Giant key","Ecumenical key","Strange old lockpick","Brittle key"]
+
+apply (RAX_KEYS && name:RAX_KEY_LIST) {
+    RAX_KEY_STYLE
+}
+
+/*@ define:group
+---
+name: Clue containers
+expanded: false
+description: |
+  Nests, bottles, geodes, scroll boxes — the thing that *becomes* a clue.
+  Clue scrolls themselves are styled under Categories.
+*/
+
+/*@ define:input:alerts
+type: boolean
+label: Highlight clue nests, bottles, geodes, scroll boxes
+group: Clue containers
+*/
+#define RAX_CLUE_CONTAINERS true
+
+/*@ define:input:alerts
+type: style
+label: Clue container style
+group: Clue containers
+exampleItem: Clue nest (elite)
+exampleItemId: 19712
+*/
+#define RAX_CLUE_CONTAINER_STYLE sound = "clues.wav"; icon = CurrentItem();
+
+apply (RAX_CLUE_CONTAINERS && name:["Clue nest*","Clue bottle*","Clue geode*","Scroll box*","Reward casket*"]) {
+    RAX_CLUE_CONTAINER_STYLE
+}
+
+/*@ define:group
+---
+name: Champion scrolls
+expanded: false
+*/
+
+/*@ define:input:alerts
+type: boolean
+label: Highlight champion scrolls
+group: Champion scrolls
+*/
+#define RAX_CHAMPIONS true
+
+/*@ define:input:alerts
+type: style
+label: Champion scroll style
+group: Champion scrolls
+exampleItem: Goblin champion scroll
+exampleItemId: 6801
+*/
+#define RAX_CHAMPION_STYLE showLootbeam = true; notify = true; sound = "uniques.wav"; fontType = 3; icon = CurrentItem();
+
+apply (RAX_CHAMPIONS && name:"*champion scroll") {
+    RAX_CHAMPION_STYLE
+}
+
+/*@ define:group
+---
+name: Mute
+expanded: false
+description: |
+  Last. Silences sounds and notifications in places where the ground is a mess
+  on purpose — deathpiles, LMS, BH, Colosseum lobby.
+*/
+
+/*@ define:input:alerts
+type: boolean
+label: Mute UIM deathpile spots
+group: Mute
+*/
+#define RAX_MUTE_DEATHPILE true
+
+apply (RAX_MUTE_DEATHPILE && accountType:FACT_ACCOUNT_TYPE_ULTIMATE_IRONMAN && (area:FACT_PRIF_SPAWN_AREA || area:FACT_FALADOR_SPAWN_AREA || area:FACT_EDGEVILLE_NETTLES_AREA || area:FACT_EDGEVILLE_MONASTERY_SECOND_FLOOR_AREA || area:FACT_ARDY_MARKET_CHEST_AREA || area:FACT_COLO_LOBBY_AREA || area:FACT_LUMBRIDGE_BASEMENT_CAVE_EXIT_AREA)) {
+    sound = 2411;
+    notify = false;
+}
+
+/*@ define:input:alerts
+type: boolean
+label: Mute Last Man Standing
+group: Mute
+*/
+#define RAX_MUTE_LMS true
+
+apply (RAX_MUTE_LMS && (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA || area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA)) {
+    sound = 2411;
+    notify = false;
+}
+
+/*@ define:input:alerts
+type: boolean
+label: Mute Bounty Hunter
+group: Mute
+*/
+#define RAX_MUTE_BH false
+
+apply (RAX_MUTE_BH && area:FACT_BOUNTY_HUNTER_AREA) {
+    sound = 2411;
+    notify = false;
+}
+
+/*@ define:input:alerts
+type: boolean
+label: Mute other players' drops
+group: Mute
+*/
+#define RAX_MUTE_OTHERS false
+
+apply (RAX_MUTE_OTHERS && ownership:OWNERSHIP_OTHER) {
+    sound = 2411;
+    notify = false;
+}
+
+/*@ define:input:alerts
+type: boolean
+label: Mute world spawns
+group: Mute
+*/
+#define RAX_MUTE_SPAWNS false
+
+apply (RAX_MUTE_SPAWNS && ownership:OWNERSHIP_NONE) {
+    sound = 2411;
+    notify = false;
+}

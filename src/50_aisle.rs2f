@@ -1,9 +1,0 @@
-/*@ define:module:aisle
----
-name: Aisle
-subtitle: What is this thing
-description: |
-  Grocery aisle. Category family first, then per-item chips. Heat will overwrite anything that actually costs money.
-
-  Groups start collapsed. Force-aisle-icon lives under Identity.
-*/

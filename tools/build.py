@@ -157,30 +157,30 @@ def write(path: Path, text: str) -> None:
     path.write_text(text)
 
 
-def emit_floor(mods: dict[str, str], icons: dict) -> None:
+def emit_hide(mods: dict[str, str], icons: dict) -> None:
     body = strip_module_header(mods["filtering"])
     body = raxify(body)
-    body = rewrite_inputs(body, "floor")
+    body = rewrite_inputs(body, "hide")
     body = collapse_groups(body)
     body = inject_group_icons(body, icons)
-    write(GEN / "30_floor_body.rs2f", body)
+    write(GEN / "30_hide_body.rs2f", body)
 
 
-def emit_where(mods: dict[str, str], icons: dict) -> None:
+def emit_locations(mods: dict[str, str], icons: dict) -> None:
     body = strip_module_header(mods["area_based_filtering"])
     body = raxify(body)
-    body = rewrite_inputs(body, "where")
+    body = rewrite_inputs(body, "locations")
     body = collapse_groups(body)
     body = inject_group_icons(body, icons)
-    write(GEN / "40_where_body.rs2f", body)
+    write(GEN / "40_locations_body.rs2f", body)
 
 
-def emit_aisle(mods: dict[str, str], icons: dict) -> list[str]:
+def emit_categories(mods: dict[str, str], icons: dict) -> list[str]:
     cat = strip_module_header(mods["item_category_styles"])
     ind = strip_module_header(mods["individual_item_styles"])
     body = cat + "\n" + ind
     body = raxify(body)
-    body = rewrite_inputs(body, "aisle")
+    body = rewrite_inputs(body, "categories")
     body = GROUP_STYLES.sub(r"group: \1", body)
     body = collapse_groups(body)
     body = inject_group_icons(body, icons)
@@ -195,20 +195,20 @@ def emit_aisle(mods: dict[str, str], icons: dict) -> list[str]:
     facts = sorted(set(re.findall(r"name:(FACT_[A-Z0-9_]+)", body)))
     quoted = ", ".join(f'"{n}"' for n in literals)
     fact_or = " || ".join(f"name:{f}" for f in facts)
-    cond = "name:RAX_AISLE_NAMES"
+    cond = "name:RAX_CATEGORY_NAMES"
     if fact_or:
         cond = f"({cond} || {fact_or})"
 
     banner = (
-        "// generated aisle — chips + families. Heat overwrites value.\n"
-        f"#define RAX_AISLE_NAMES [{quoted}]\n\n"
+        "// generated categories — Value overwrites these when gp is real.\n"
+        f"#define RAX_CATEGORY_NAMES [{quoted}]\n\n"
     )
     force = (
-        "\napply (RAX_FORCE_AISLE_ICON && "
+        "\napply (RAX_SHOW_ICONS && RAX_FORCE_CATEGORY_ICON && "
         + cond
-        + ") {\n    RAX_AISLE_ICON_STYLE\n}\n"
+        + ") {\n    RAX_CATEGORY_ICON_STYLE\n}\n"
     )
-    write(GEN / "50_aisle_body.rs2f", banner + body + force)
+    write(GEN / "50_categories_body.rs2f", banner + body + force)
     return literals
 
 
@@ -348,18 +348,18 @@ def emit_facts(mods: dict[str, str]) -> None:
 ORDER = [
     SRC / "00_header.rs2f",
     SRC / "01_tokens.rs2f",
-    SRC / "10_identity.rs2f",
-    SRC / "20_pickup.rs2f",
-    SRC / "30_floor.rs2f",
-    GEN / "30_floor_body.rs2f",
-    SRC / "40_where.rs2f",
-    GEN / "40_where_body.rs2f",
-    SRC / "50_aisle.rs2f",
-    GEN / "50_aisle_body.rs2f",
-    SRC / "60_heat.rs2f",
-    SRC / "70_always.rs2f",
+    SRC / "10_display.rs2f",
+    SRC / "20_loot_order.rs2f",
+    SRC / "30_hide.rs2f",
+    GEN / "30_hide_body.rs2f",
+    SRC / "40_locations.rs2f",
+    GEN / "40_locations_body.rs2f",
+    SRC / "50_categories.rs2f",
+    GEN / "50_categories_body.rs2f",
+    SRC / "60_value.rs2f",
+    SRC / "70_rares.rs2f",
     GEN / "71_rdt.rs2f",
-    SRC / "80_kits.rs2f",
+    SRC / "80_alerts.rs2f",
     GEN / "90_final.rs2f",
     GEN / "99_facts.rs2f",
 ]
@@ -376,7 +376,7 @@ def concat() -> Path:
     parts = []
     for p in ORDER:
         text = p.read_text()
-        if p.name == "70_always.rs2f":
+        if p.name == "70_rares.rs2f":
             text = text.replace("/*{{RAX_UNIQUES_LIST}}*/", uniques_val)
             text = text.replace("/*{{RAX_ALCHS_LIST}}*/", alchs_val)
         parts.append(text.rstrip() + "\n\n")
@@ -427,14 +427,14 @@ def validate(path: Path) -> None:
     if not text.lstrip().startswith("/*@ define:module:"):
         errors.append("filter MUST start with a define:module comment")
     for needle in (
-        "define:module:identity",
-        "define:module:pickup",
-        "define:module:floor",
-        "define:module:where",
-        "define:module:aisle",
-        "define:module:heat",
-        "define:module:always",
-        "define:module:kits",
+        "define:module:display",
+        "define:module:loot_order",
+        "define:module:hide",
+        "define:module:locations",
+        "define:module:categories",
+        "define:module:value",
+        "define:module:rares",
+        "define:module:alerts",
     ):
         if needle not in text:
             errors.append(f"missing {needle}")
@@ -471,9 +471,9 @@ def main() -> None:
 
     GEN.mkdir(parents=True, exist_ok=True)
     icons = load_group_icons()
-    emit_floor(mods, icons)
-    emit_where(mods, icons)
-    emit_aisle(mods, icons)
+    emit_hide(mods, icons)
+    emit_locations(mods, icons)
+    emit_categories(mods, icons)
     emit_lists(mods)
     emit_final()
     emit_facts(mods)

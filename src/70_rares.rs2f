@@ -1,11 +1,11 @@
-/*@ define:module:always
+/*@ define:module:rares
 ---
-name: Always
-subtitle: Never silent
+name: Rares
+subtitle: Uniques, clues, alchs, RDT
 description: |
-  Uniques, clues, alchs, rare drop table. Runs after heat.
+  Collection-log uniques, high alchs, rare drop table. Runs after Value.
 
-  Alchs lock gold by default so nothing restyles them. Uniques layer on top of heat.
+  Alchs lock gold by default. Uniques layer on top of Value.
 */
 
 /*@ define:group
@@ -17,7 +17,7 @@ icon:
 expanded: false
 */
 
-/*@ define:input:always
+/*@ define:input:rares
 type: style
 label: Uniques
 group: Uniques
@@ -30,14 +30,14 @@ apply (name:RAX_UNIQUES_LIST) {
     RAX_UNIQUE_STYLE
 }
 
-/*@ define:input:always
+/*@ define:input:rares
 type: stringlist
 label: Uniques
 group: Uniques
 */
 #define RAX_UNIQUES_LIST /*{{RAX_UNIQUES_LIST}}*/
 
-/*@ define:input:always
+/*@ define:input:rares
 type: boolean
 label: Silence unique sounds at bosses that already roar
 group: Uniques
@@ -52,7 +52,7 @@ apply (RAX_UNIQUE_SILENCE_BOSS_SOUND && name:RAX_UNIQUES_LIST && (
     sound = 2411;
 }
 
-/*@ define:input:always
+/*@ define:input:rares
 type: boolean
 label: Lock uniques
 group: Uniques
@@ -70,7 +70,7 @@ icon:
 expanded: false
 */
 
-/*@ define:input:always
+/*@ define:input:rares
 type: boolean
 label: Force-show alchs
 group: Alchs
@@ -81,7 +81,7 @@ apply (RAX_ALCH_FORCE_SHOW && name:RAX_ALCHS_LIST) {
     hidden = false;
 }
 
-/*@ define:input:always
+/*@ define:input:rares
 type: style
 label: Alchs
 group: Alchs
@@ -94,14 +94,14 @@ apply (name:RAX_ALCHS_LIST) {
     RAX_ALCH_STYLE
 }
 
-/*@ define:input:always
+/*@ define:input:rares
 type: stringlist
 label: Alch list
 group: Alchs
 */
 #define RAX_ALCHS_LIST /*{{RAX_ALCHS_LIST}}*/
 
-/*@ define:input:always
+/*@ define:input:rares
 type: boolean
 label: Lock alchs
 group: Alchs
@@ -119,7 +119,7 @@ icon:
 expanded: false
 */
 
-/*@ define:input:always
+/*@ define:input:rares
 type: style
 label: Rare drop table
 group: Rare drop table

@@ -5,11 +5,12 @@ name: header
 
 /*
   Raxor's Loot Filter
-  Pipeline: identity → pickup → floor → where → aisle → heat → always → kits → final
-  Heat wins over aisle. Always wins over heat. Alchs lock.
+  Later modules win (apply overwrites). rule is terminal.
+
+  display → loot_order → hide → locations → categories → value → rares → alerts → final
 */
 
 meta {
     name = "Raxor's Loot Filter";
-    description = "Heat over chips. Grocery aisle for role. Icons as a policy.";
+    description = "OSRS ground loot. Categories, then value, then rares. Alerts last.";
 }
