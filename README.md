@@ -12,10 +12,10 @@ Built for [FilterScape](https://filterscape.xyz/). Eight modules, not a warehous
 
 ## Load it
 
-FilterScape → New filter → Show advanced options → Filter URL:
+FilterScape → New filter → Show advanced options → Filter URL. Use the **raw** file, not the GitHub blob page:
 
 ```
-https://github.com/McNerve/raxors-loot-filter/blob/feat/raxor-v1/dist/raxors-loot-filter.rs2f
+https://raw.githubusercontent.com/McNerve/raxors-loot-filter/refs/heads/feat/raxor-v1/filter.rs2f
 ```
 
 ```bash

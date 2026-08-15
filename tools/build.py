@@ -386,6 +386,7 @@ def concat() -> Path:
     text = stamp_group_icons(text, load_group_icons())
     out = DIST / "raxors-loot-filter.rs2f"
     out.write_text(text)
+    (ROOT / "filter.rs2f").write_text(text)
     return out
 
 
