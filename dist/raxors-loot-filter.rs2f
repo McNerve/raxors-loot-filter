@@ -1,4 +1,3 @@
-// ---- src/00_header.rs2f ----
 /*@ define:module:header
 hidden: true
 name: header
@@ -15,7 +14,6 @@ meta {
     description = "Heat over chips. Grocery aisle for role. Icons as a policy.";
 }
 
-// ---- src/01_tokens.rs2f ----
 /*@ define:module:tokens
 hidden: true
 name: tokens
@@ -55,7 +53,6 @@ name: tokens
 #define RAX_FONT_BOLD      3
 #define RAX_ACCENT_SHADOW  1
 
-// ---- src/10_identity.rs2f ----
 /*@ define:module:identity
 ---
 name: Identity
@@ -220,7 +217,6 @@ exampleItemId: 1050
 */
 #define RAX_AISLE_ICON_STYLE icon = CurrentItem();
 
-// ---- src/20_pickup.rs2f ----
 /*@ define:module:pickup
 ---
 name: Pickup
@@ -255,7 +251,6 @@ label: Always pick these first
 */
 #define RAX_SORT_PIN ["xeric's aid*","Revitalisation*","Prayer enhance*","twisted*"]
 
-// ---- src/30_floor.rs2f ----
 /*@ define:module:floor
 ---
 name: Floor
@@ -266,7 +261,6 @@ description: |
   Groups start collapsed. Search if you know the item.
 */
 
-// ---- generated/30_floor_body.rs2f ----
 /*@ define:group
 ---
 name: Individual Items
@@ -4220,7 +4214,6 @@ apply ((name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_TWO_HANDED
     hidden = true;
 }
 
-// ---- src/40_where.rs2f ----
 /*@ define:module:where
 ---
 name: Where
@@ -4231,7 +4224,6 @@ description: |
   Groups start collapsed. Open the room you're in.
 */
 
-// ---- generated/40_where_body.rs2f ----
 /*@ define:group
 ---
 name: Chambers of Xeric
@@ -6294,7 +6286,6 @@ apply (area:FACT_BOUNTY_HUNTER_AREA && name:RAX_BOUNTY_HUNTER_HIDDEN_LIST) {
     hidden = true;
 }
 
-// ---- src/50_aisle.rs2f ----
 /*@ define:module:aisle
 ---
 name: Aisle
@@ -6305,7 +6296,6 @@ description: |
   Groups start collapsed. Force-aisle-icon lives under Identity.
 */
 
-// ---- generated/50_aisle_body.rs2f ----
 // generated aisle — chips + families. Heat overwrites value.
 #define RAX_AISLE_NAMES ["Ancient blood ornament kit", "Purifying sigil*", "Avernic defender*", "Ghommal's avernic defender 5*", "Ghommal's avernic defender 6*", "Gold ring", "Clue scroll (beginner)", "Scroll box (beginner)", "Clue scroll (easy)", "Scroll box (easy)", "Clue scroll (medium)", "Scroll box (medium)", "Challenge scroll (medium)", "Clue scroll (hard)", "Scroll box (hard)", "Challenge scroll (hard)", "Clue scroll (elite)", "Scroll box (elite)", "Challenge scroll (elite)", "Clue scroll (master)", "Scroll box (master)", "Larran's key", "Brimstone key", "Dust battlestaff", "Mist battlestaff", "Eternal gem", "Imbued heart", "Golpar seed", "Buchu seed", "Noxifer seed", "Grimy golpar", "Grimy buchu leaf", "Grimy noxifer", "golpar", "buchu leaf", "noxifer", "Endarkened juice", "Stinkhorn mushroom", "Cicely", "Mallignum root plank", "Cavern grubs", "Empty gourd vial", "Water-filled gourd vial", "Dawnbringer", "Salve amulet (e)", "Smelling salts (*", "Ambrosia (*", "Tears of Elidinis (*", "Nectar (*", "Liquid adrenaline (*", "Blessed crystal scarab (*", "Silk dressing (*", "Honey locust", "Neutralising potion", "Big banana", "Eldritch ashes", "Fang", "Scarab dung", "Smouldering gland", "Smouldering heart", "Smouldering pile of flesh", "Tormented synapse", "Burning claw", "Burning claws", "Emberlight", "Purging staff", "Scorching bow", "Attack potion(*", "Antipoison(*", "Strength potion(*", "Serum 207(*", "Compost potion(*", "Restore potion(*", "Energy potion(*", "Defence potion(*", "Agility potion(*", "Combat potion(*", "Prayer potion(*", "Super attack(*", "Superantipoison(*", "Fishing potion(*", "Super energy(*", "Hunter potion(*", "Goading potion(*", "Super strength(*", "Prayer regeneration potion(*", "Super restore(*", "Sanfew serum(*", "Super defence(*", "Antidote+(*", "Antifire potion(*", "Divine super attack potion(*", "Divine super defence potion(*", "Divine super strength potion(*", "Ranging potion(*", "Divine ranging potion(*", "Magic potion(*", "Stamina potion(*", "Zamorak brew(*", "Divine magic potion(*", "Antidote++(*", "Bastion potion(*", "Battlemage potion(*", "Saradomin brew(*", "Extended antifire(*", "Ancient brew(*", "Divine bastion potion(*", "Divine battlemage potion(*", "Anti-venom(*", "Menaphite remedy(*", "Super combat potion(*", "Forgotten brew(*", "Super antifire potion(*", "Anti-venom+(*", "Extended anti-venom+(*", "Divine super combat potion(*", "Extended super antifire(*", "Surge potion(*", "Blighted super restore(*", "Anglerfish", "Dark crab", "Manta ray", "Sea turtle", "Shark", "Cooked Karambwan", "Monkfish", "Lava eel", "Swordfish", "Bass", "Lobster", "Rainbow fish", "Cave eel", "Tuna", "Salmon", "Cooked slimy eel", "Pike", "Cod", "Trout", "Mackerel", "Anchovies", "Herring", "Karambwanji", "Sardine", "Shrimps", "Tuna potato", "Mushroom potato", "Egg potato", "Potato with cheese", "Chilli potato", "Potato with butter", "Baked potato", "Logs", "Oak logs", "Willow logs", "Maple logs", "Yew logs", "Magic logs", "Redwood logs", "Teak logs", "Mahogany logs", "Achey tree logs", "Arctic pine logs", "Scrapey tree logs", "Juniper logs", "Bark", "Blisterwood logs", "copper ore", "tin ore", "iron ore", "silver ore", "coal", "gold ore", "mithril ore", "adamantite ore", "runite ore", "daeyalt ore", "blasted ore", "blurite ore", "lovakite ore", "Bronze bar", "Iron bar", "Steel bar", "Mithril bar", "Adamantite bar", "Runite bar", "Silver bar", "Gold bar", "Elemental metal", "Primed bar", "Primed mind bar", "Blurite bar", "Enchanted bar", "Lovakite bar", "'Perfect' gold bar", "Air rune", "Water rune", "Earth rune", "Fire rune", "Mind rune", "Body rune", "Cosmic rune", "Chaos rune", "Nature rune", "Law rune", "Death rune", "Sunfire rune", "Astral rune", "Blood rune", "Soul rune", "Wrath rune", "Mist rune", "Dust rune", "Mud rune", "Smoke rune", "Steam rune", "Lava rune", "Aether rune", "*guam leaf", "*marrentill", "*tarromin", "*harralander", "*ranarr weed", "*toadflax", "*irit leaf", "*avantoe", "*kwuarm", "*huasca", "*snapdragon", "*cadantine", "*lantadyme", "*dwarf weed", "*torstol", "Raw shrimps", "Raw anchovies", "Raw guppy", "Raw cavefish", "Raw tetra", "Frog spawn", "Raw monkfish", "Minnow", "Raw mackerel", "Raw cod", "Raw bass", "Raw catfish", "Raw sardine", "Raw herring", "Raw pike", "Raw slimy eel", "Raw cave eel", "Raw anglerfish", "Sacred eel", "Raw trout", "Raw salmon", "Raw rainbow fish", "Raw lava eel", "Infernal eel", "Leaping trout", "Leaping salmon", "Leaping sturgeon", "Raw tuna", "Raw swordfish", "Raw shark", "Raw lobster", "Raw dark crab", "Bluegill", "Common tench", "Mottled eel", "Greater siren", "Raw karambwan", "Sandworms", "Fishing bait", "Feather", "Stripy feather", "Dark fishing bait", "King worm", "Fish chunks", "Raw karambwanji", "Diabolic worms", "Small fishing net", "Big fishing net", "Drift net", "Fishing rod", "Fly fishing rod", "Oily fishing rod", "Harpoon", "Lobster pot", "Karambwan vessel", "Abyssal pearls", "Agility arena ticket", "Anima-infused bark", "Archery ticket", "Barronite shards", "Blood money", "Brimhaven voucher", "Castle wars ticket", "Coins", "Ecto-token", "Frog token", "Glistening tear", "Golden nugget", "Hallowed mark", "Intelligence", "Mark of grace", "Mermaid's tear", "Molch pearl", "Mole claw", "Mole skin", "Nuggets", "Numulite", "Paramaya ticket", "Platinum token", "Shantay pass", "Ship ticket", "Stardust", "Termites", "Tokkul", "Trading sticks", "Unidentified minerals", "Warrior guild token", "* sceptre", "* axe", "* pickaxe", "* harpoon", "Pestle and mortar", "*teleport crystal", "*escape crystal", "* shards", "Crystal dust", "Vial", "Water-filled vial", "Grym leaf", "Grym potion (unf)", "Egniol potion (*", "Raw paddlefish", "Paddlefish", "Crystal paddlefish", "Corrupted paddlefish", "Weapon frame", "* spike", "* orb", "* bowstring", "* halberd *", "* bow *", "* staff *", "Linum tirinum*", "Phren bark*", "* ore", "* helm *", "* body *", "* legs *"]
 
@@ -12504,7 +12494,6 @@ apply (RAX_FORCE_AISLE_ICON && (name:RAX_AISLE_NAMES || name:FACT_ADAMANT_AMMO |
     RAX_AISLE_ICON_STYLE
 }
 
-// ---- src/60_heat.rs2f ----
 /*@ define:module:heat
 ---
 name: Heat
@@ -12709,7 +12698,6 @@ rule (RAX_HEAT_2_LOCK && ((value:>=RAX_HEAT_2_VALUE && value:<RAX_HEAT_3_VALUE) 
 rule (RAX_HEAT_3_LOCK && ((value:>=RAX_HEAT_3_VALUE && value:<RAX_HEAT_4_VALUE) || name:RAX_HEAT_3_PIN)) {}
 rule (RAX_HEAT_4_LOCK && (value:>=RAX_HEAT_4_VALUE || name:RAX_HEAT_4_PIN)) {}
 
-// ---- src/70_always.rs2f ----
 /*@ define:module:always
 ---
 name: Always
@@ -12846,7 +12834,6 @@ exampleItemId: 1249
 
 // RDT quantity matches are injected by tools/build.py
 
-// ---- generated/71_rdt.rs2f ----
 // generated RDT quantity matches
 apply (name:"Nature rune" && quantity:==67) {
     RAX_RDT_STYLE
@@ -12930,7 +12917,6 @@ apply (name:"Dragon spear" && quantity:==1) {
     RAX_RDT_STYLE
 }
 
-// ---- src/80_kits.rs2f ----
 /*@ define:module:kits
 ---
 name: Kits
@@ -13026,7 +13012,6 @@ apply (RAX_MUTE_SPAWNS && ownership:OWNERSHIP_NONE) {
     notify = false;
 }
 
-// ---- generated/90_final.rs2f ----
 /*@ define:module:final
 hidden: true
 name: final
@@ -13310,7 +13295,6 @@ apply (name:RAX_SORT_PIN) {
     menuSort = 262;
 }
 
-// ---- generated/99_facts.rs2f ----
 /*@ define:module:facts
 hidden: true
 name: facts

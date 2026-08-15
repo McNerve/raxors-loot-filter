@@ -379,7 +379,6 @@ def concat() -> Path:
         if p.name == "70_always.rs2f":
             text = text.replace("/*{{RAX_UNIQUES_LIST}}*/", uniques_val)
             text = text.replace("/*{{RAX_ALCHS_LIST}}*/", alchs_val)
-        parts.append(f"// ---- {p.relative_to(ROOT)} ----\n")
         parts.append(text.rstrip() + "\n\n")
     DIST.mkdir(parents=True, exist_ok=True)
     text = "".join(parts)
@@ -425,6 +424,8 @@ def validate(path: Path) -> None:
         errors.append("leaked CONST_ prefix")
     if 'name = "Raxor\'s Loot Filter"' not in text:
         errors.append("missing meta name")
+    if not text.lstrip().startswith("/*@ define:module:"):
+        errors.append("filter MUST start with a define:module comment")
     for needle in (
         "define:module:identity",
         "define:module:pickup",
