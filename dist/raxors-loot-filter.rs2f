@@ -13008,19 +13008,46 @@ group: Trail
 #define RAX_CLUE_ENABLE true
 
 /*@ define:input:clues
-type: enumlist
-label: Mute these tiers
+type: boolean
+label: Hide beginner
 group: Trail
-enum: [
-  { "value": "* (beginner)", "label": "Beginner" },
-  { "value": "* (easy)", "label": "Easy" },
-  { "value": "* (medium)", "label": "Medium" },
-  { "value": "* (hard)", "label": "Hard" },
-  { "value": "* (elite)", "label": "Elite" },
-  { "value": "* (master)", "label": "Master" }
-]
 */
-#define RAX_CLUE_MUTE []
+#define RAX_CLUE_MUTE_BEGINNER false
+
+/*@ define:input:clues
+type: boolean
+label: Hide easy
+group: Trail
+*/
+#define RAX_CLUE_MUTE_EASY false
+
+/*@ define:input:clues
+type: boolean
+label: Hide medium
+group: Trail
+*/
+#define RAX_CLUE_MUTE_MEDIUM false
+
+/*@ define:input:clues
+type: boolean
+label: Hide hard
+group: Trail
+*/
+#define RAX_CLUE_MUTE_HARD false
+
+/*@ define:input:clues
+type: boolean
+label: Hide elite
+group: Trail
+*/
+#define RAX_CLUE_MUTE_ELITE false
+
+/*@ define:input:clues
+type: boolean
+label: Hide master
+group: Trail
+*/
+#define RAX_CLUE_MUTE_MASTER false
 
 // authored clue families — scroll/box/nest/bottle/geode/casket.
 
@@ -13158,9 +13185,12 @@ apply (RAX_CLUE_ENABLE && id:FACT_CLUE_ELITE_WILDY_IDS) {
     RAX_CLUE_ELITE_WILDY_STYLE
 }
 
-apply (name:RAX_CLUE_MUTE) {
-    hidden = true;
-}
+apply (RAX_CLUE_MUTE_BEGINNER && name:FACT_CLUE_BEGINNER) { hidden = true; }
+apply (RAX_CLUE_MUTE_EASY && name:FACT_CLUE_EASY) { hidden = true; }
+apply (RAX_CLUE_MUTE_MEDIUM && name:FACT_CLUE_MEDIUM) { hidden = true; }
+apply (RAX_CLUE_MUTE_HARD && name:FACT_CLUE_HARD) { hidden = true; }
+apply (RAX_CLUE_MUTE_ELITE && name:FACT_CLUE_ELITE) { hidden = true; }
+apply (RAX_CLUE_MUTE_MASTER && name:FACT_CLUE_MASTER) { hidden = true; }
 
 /*@ define:module:rares
 ---
