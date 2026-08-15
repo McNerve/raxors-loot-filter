@@ -1,6 +1,304 @@
 // generated aisle — chips + families. Heat overwrites value.
 #define RAX_AISLE_NAMES ["Ancient blood ornament kit", "Purifying sigil*", "Avernic defender*", "Ghommal's avernic defender 5*", "Ghommal's avernic defender 6*", "Gold ring", "Clue scroll (beginner)", "Scroll box (beginner)", "Clue scroll (easy)", "Scroll box (easy)", "Clue scroll (medium)", "Scroll box (medium)", "Challenge scroll (medium)", "Clue scroll (hard)", "Scroll box (hard)", "Challenge scroll (hard)", "Clue scroll (elite)", "Scroll box (elite)", "Challenge scroll (elite)", "Clue scroll (master)", "Scroll box (master)", "Larran's key", "Brimstone key", "Dust battlestaff", "Mist battlestaff", "Eternal gem", "Imbued heart", "Golpar seed", "Buchu seed", "Noxifer seed", "Grimy golpar", "Grimy buchu leaf", "Grimy noxifer", "golpar", "buchu leaf", "noxifer", "Endarkened juice", "Stinkhorn mushroom", "Cicely", "Mallignum root plank", "Cavern grubs", "Empty gourd vial", "Water-filled gourd vial", "Dawnbringer", "Salve amulet (e)", "Smelling salts (*", "Ambrosia (*", "Tears of Elidinis (*", "Nectar (*", "Liquid adrenaline (*", "Blessed crystal scarab (*", "Silk dressing (*", "Honey locust", "Neutralising potion", "Big banana", "Eldritch ashes", "Fang", "Scarab dung", "Smouldering gland", "Smouldering heart", "Smouldering pile of flesh", "Tormented synapse", "Burning claw", "Burning claws", "Emberlight", "Purging staff", "Scorching bow", "Attack potion(*", "Antipoison(*", "Strength potion(*", "Serum 207(*", "Compost potion(*", "Restore potion(*", "Energy potion(*", "Defence potion(*", "Agility potion(*", "Combat potion(*", "Prayer potion(*", "Super attack(*", "Superantipoison(*", "Fishing potion(*", "Super energy(*", "Hunter potion(*", "Goading potion(*", "Super strength(*", "Prayer regeneration potion(*", "Super restore(*", "Sanfew serum(*", "Super defence(*", "Antidote+(*", "Antifire potion(*", "Divine super attack potion(*", "Divine super defence potion(*", "Divine super strength potion(*", "Ranging potion(*", "Divine ranging potion(*", "Magic potion(*", "Stamina potion(*", "Zamorak brew(*", "Divine magic potion(*", "Antidote++(*", "Bastion potion(*", "Battlemage potion(*", "Saradomin brew(*", "Extended antifire(*", "Ancient brew(*", "Divine bastion potion(*", "Divine battlemage potion(*", "Anti-venom(*", "Menaphite remedy(*", "Super combat potion(*", "Forgotten brew(*", "Super antifire potion(*", "Anti-venom+(*", "Extended anti-venom+(*", "Divine super combat potion(*", "Extended super antifire(*", "Surge potion(*", "Blighted super restore(*", "Anglerfish", "Dark crab", "Manta ray", "Sea turtle", "Shark", "Cooked Karambwan", "Monkfish", "Lava eel", "Swordfish", "Bass", "Lobster", "Rainbow fish", "Cave eel", "Tuna", "Salmon", "Cooked slimy eel", "Pike", "Cod", "Trout", "Mackerel", "Anchovies", "Herring", "Karambwanji", "Sardine", "Shrimps", "Tuna potato", "Mushroom potato", "Egg potato", "Potato with cheese", "Chilli potato", "Potato with butter", "Baked potato", "Logs", "Oak logs", "Willow logs", "Maple logs", "Yew logs", "Magic logs", "Redwood logs", "Teak logs", "Mahogany logs", "Achey tree logs", "Arctic pine logs", "Scrapey tree logs", "Juniper logs", "Bark", "Blisterwood logs", "copper ore", "tin ore", "iron ore", "silver ore", "coal", "gold ore", "mithril ore", "adamantite ore", "runite ore", "daeyalt ore", "blasted ore", "blurite ore", "lovakite ore", "Bronze bar", "Iron bar", "Steel bar", "Mithril bar", "Adamantite bar", "Runite bar", "Silver bar", "Gold bar", "Elemental metal", "Primed bar", "Primed mind bar", "Blurite bar", "Enchanted bar", "Lovakite bar", "'Perfect' gold bar", "Air rune", "Water rune", "Earth rune", "Fire rune", "Mind rune", "Body rune", "Cosmic rune", "Chaos rune", "Nature rune", "Law rune", "Death rune", "Sunfire rune", "Astral rune", "Blood rune", "Soul rune", "Wrath rune", "Mist rune", "Dust rune", "Mud rune", "Smoke rune", "Steam rune", "Lava rune", "Aether rune", "*guam leaf", "*marrentill", "*tarromin", "*harralander", "*ranarr weed", "*toadflax", "*irit leaf", "*avantoe", "*kwuarm", "*huasca", "*snapdragon", "*cadantine", "*lantadyme", "*dwarf weed", "*torstol", "Raw shrimps", "Raw anchovies", "Raw guppy", "Raw cavefish", "Raw tetra", "Frog spawn", "Raw monkfish", "Minnow", "Raw mackerel", "Raw cod", "Raw bass", "Raw catfish", "Raw sardine", "Raw herring", "Raw pike", "Raw slimy eel", "Raw cave eel", "Raw anglerfish", "Sacred eel", "Raw trout", "Raw salmon", "Raw rainbow fish", "Raw lava eel", "Infernal eel", "Leaping trout", "Leaping salmon", "Leaping sturgeon", "Raw tuna", "Raw swordfish", "Raw shark", "Raw lobster", "Raw dark crab", "Bluegill", "Common tench", "Mottled eel", "Greater siren", "Raw karambwan", "Sandworms", "Fishing bait", "Feather", "Stripy feather", "Dark fishing bait", "King worm", "Fish chunks", "Raw karambwanji", "Diabolic worms", "Small fishing net", "Big fishing net", "Drift net", "Fishing rod", "Fly fishing rod", "Oily fishing rod", "Harpoon", "Lobster pot", "Karambwan vessel", "Abyssal pearls", "Agility arena ticket", "Anima-infused bark", "Archery ticket", "Barronite shards", "Blood money", "Brimhaven voucher", "Castle wars ticket", "Coins", "Ecto-token", "Frog token", "Glistening tear", "Golden nugget", "Hallowed mark", "Intelligence", "Mark of grace", "Mermaid's tear", "Molch pearl", "Mole claw", "Mole skin", "Nuggets", "Numulite", "Paramaya ticket", "Platinum token", "Shantay pass", "Ship ticket", "Stardust", "Termites", "Tokkul", "Trading sticks", "Unidentified minerals", "Warrior guild token", "* sceptre", "* axe", "* pickaxe", "* harpoon", "Pestle and mortar", "*teleport crystal", "*escape crystal", "* shards", "Crystal dust", "Vial", "Water-filled vial", "Grym leaf", "Grym potion (unf)", "Egniol potion (*", "Raw paddlefish", "Paddlefish", "Crystal paddlefish", "Corrupted paddlefish", "Weapon frame", "* spike", "* orb", "* bowstring", "* halberd *", "* bow *", "* staff *", "Linum tirinum*", "Phren bark*", "* ore", "* helm *", "* body *", "* legs *"]
 
+/*@ define:group
+---
+name: Currency
+icon:
+  type: sprite
+  spriteId: 1531
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Food
+icon:
+  type: sprite
+  spriteId: 3288
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Potions
+icon:
+  type: sprite
+  spriteId: 3231
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Prayer
+icon:
+  type: sprite
+  spriteId: 4240
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Ammo
+icon:
+  type: sprite
+  spriteId: 4239
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Runes
+icon:
+  type: sprite
+  spriteId: 4241
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Mining
+icon:
+  type: sprite
+  spriteId: 4248
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Smithing
+icon:
+  type: sprite
+  spriteId: 4249
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Herblore
+icon:
+  type: sprite
+  spriteId: 4244
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Woodcutting
+icon:
+  type: sprite
+  spriteId: 4253
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing
+icon:
+  type: sprite
+  spriteId: 4250
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Farming
+icon:
+  type: sprite
+  spriteId: 4256
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Fletching
+icon:
+  type: sprite
+  spriteId: 4247
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Construction
+icon:
+  type: sprite
+  spriteId: 4258
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Metal Equipment
+icon:
+  type: itemId
+  itemId: 21895
+expanded: false
+*/
+/*@ define:group
+---
+name: Misc
+icon:
+  type: itemId
+  itemId: 1050
+expanded: false
+*/
+/*@ define:group
+---
+name: Clue Scrolls
+icon:
+  type: itemId
+  itemId: 19835
+expanded: false
+*/
+/*@ define:group
+---
+name: Slayer
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+/*@ define:group
+---
+name: Chambers of Xeric
+icon:
+  type: sprite
+  spriteId: 4328
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Theatre of Blood
+icon:
+  type: itemId
+  itemId: 22486
+expanded: false
+*/
+/*@ define:group
+---
+name: Tombs of Amascut
+icon:
+  type: sprite
+  spriteId: 4297
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Tormented Demons Drop
+icon:
+  type: itemId
+  itemId: 29577
+expanded: false
+*/
+/*@ define:group
+---
+name: Fish
+icon:
+  type: itemId
+  itemId: 13441
+expanded: false
+*/
+/*@ define:group
+---
+name: Potato
+icon:
+  type: itemId
+  itemId: 7060
+expanded: false
+*/
+/*@ define:group
+---
+name: Pie
+icon:
+  type: itemId
+  itemId: 7218
+expanded: false
+*/
+/*@ define:group
+---
+name: Pizza
+icon:
+  type: itemId
+  itemId: 2289
+expanded: false
+*/
+/*@ define:group
+---
+name: Logs
+icon:
+  type: itemId
+  itemId: 1515
+expanded: false
+*/
+/*@ define:group
+---
+name: Ores
+icon:
+  type: itemId
+  itemId: 451
+expanded: false
+*/
+/*@ define:group
+---
+name: Bars
+icon:
+  type: itemId
+  itemId: 2363
+expanded: false
+*/
+/*@ define:group
+---
+name: Gems
+icon:
+  type: itemId
+  itemId: 1615
+expanded: false
+*/
+/*@ define:group
+---
+name: Herbs
+icon:
+  type: itemId
+  itemId: 257
+expanded: false
+*/
+/*@ define:group
+---
+name: Raw Fish
+icon:
+  type: itemId
+  itemId: 383
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing Bait
+icon:
+  type: itemId
+  itemId: 313
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing Equipment
+icon:
+  type: itemId
+  itemId: 307
+expanded: false
+*/
+/*@ define:group
+---
+name: Gauntlet
+icon:
+  type: sprite
+  spriteId: 4318
+  spriteIndex: 0
+expanded: false
+*/
+
 /*@ define:input:aisle
 type: style
 label: Currency Style

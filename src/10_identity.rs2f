@@ -46,6 +46,15 @@ apply (tradeable:false && !name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) {
     RAX_IDENTITY_UNTRADE
 }
 
+/*@ define:group
+---
+name: Prices
+icon:
+  type: itemId
+  itemId: 1004
+expanded: false
+*/
+
 /*@ define:input:identity
 type: boolean
 label: Show value on tradeables
@@ -90,6 +99,15 @@ apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && val
     showValue = false;
 }
 
+/*@ define:group
+---
+name: Icons
+icon:
+  type: itemId
+  itemId: 1050
+expanded: false
+*/
+
 /*@ define:input:identity
 type: number
 label: Hide icons below this value
@@ -115,6 +133,10 @@ apply (name:RAX_ICON_ALWAYS) {
 /*@ define:group
 ---
 name: Aisle icon policy
+icon:
+  type: sprite
+  spriteId: 3288
+  spriteIndex: 0
 expanded: false
 description: |
   One switch, one style. Changes the icon on every aisle chip.

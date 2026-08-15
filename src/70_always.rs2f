@@ -8,9 +8,19 @@ description: |
   Alchs lock gold by default so nothing restyles them. Uniques layer on top of heat.
 */
 
+/*@ define:group
+---
+name: Uniques
+icon:
+  type: itemId
+  itemId: 12922
+expanded: false
+*/
+
 /*@ define:input:always
 type: style
 label: Uniques
+group: Uniques
 exampleItem: Tanzanite fang
 exampleItemId: 12922
 */
@@ -51,6 +61,15 @@ group: Uniques
 
 rule (RAX_UNIQUE_LOCK && name:RAX_UNIQUES_LIST) {}
 
+/*@ define:group
+---
+name: Alchs
+icon:
+  type: itemId
+  itemId: 1079
+expanded: false
+*/
+
 /*@ define:input:always
 type: boolean
 label: Force-show alchs
@@ -90,6 +109,15 @@ group: Alchs
 #define RAX_ALCH_LOCK true
 
 rule (RAX_ALCH_LOCK && name:RAX_ALCHS_LIST) {}
+
+/*@ define:group
+---
+name: Rare drop table
+icon:
+  type: itemId
+  itemId: 1249
+expanded: false
+*/
 
 /*@ define:input:always
 type: style

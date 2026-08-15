@@ -1,3 +1,162 @@
+/*@ define:group
+---
+name: Individual Items
+icon:
+  type: itemId
+  itemId: 995
+expanded: false
+*/
+/*@ define:group
+---
+name: Value-Based
+icon:
+  type: itemId
+  itemId: 1004
+expanded: false
+*/
+/*@ define:group
+---
+name: Ownership
+icon:
+  type: itemId
+  itemId: 10593
+expanded: false
+*/
+/*@ define:group
+---
+name: Clue Scrolls
+icon:
+  type: itemId
+  itemId: 19835
+expanded: false
+*/
+/*@ define:group
+---
+name: Remains
+icon:
+  type: itemId
+  itemId: 536
+expanded: false
+*/
+/*@ define:group
+---
+name: Food
+icon:
+  type: sprite
+  spriteId: 3288
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Potions
+icon:
+  type: sprite
+  spriteId: 3231
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Ammo
+icon:
+  type: sprite
+  spriteId: 4239
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Gems
+icon:
+  type: itemId
+  itemId: 1615
+expanded: false
+*/
+/*@ define:group
+---
+name: Runes
+icon:
+  type: sprite
+  spriteId: 4241
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Herbs
+icon:
+  type: itemId
+  itemId: 257
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing
+icon:
+  type: sprite
+  spriteId: 4250
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Ores
+icon:
+  type: itemId
+  itemId: 451
+expanded: false
+*/
+/*@ define:group
+---
+name: Bars
+icon:
+  type: itemId
+  itemId: 2363
+expanded: false
+*/
+/*@ define:group
+---
+name: Logs
+icon:
+  type: itemId
+  itemId: 1515
+expanded: false
+*/
+/*@ define:group
+---
+name: Farming seeds
+icon:
+  type: itemId
+  itemId: 5295
+expanded: false
+*/
+/*@ define:group
+---
+name: Herblore secondaries
+icon:
+  type: itemId
+  itemId: 223
+expanded: false
+*/
+/*@ define:group
+---
+name: Currency
+icon:
+  type: sprite
+  spriteId: 1531
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Metal Equipment
+icon:
+  type: itemId
+  itemId: 21895
+expanded: false
+*/
+
 /*@ define:input:floor
 type: stringlist
 label: Items to hide

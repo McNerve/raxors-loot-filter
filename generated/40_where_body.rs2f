@@ -1,3 +1,160 @@
+/*@ define:group
+---
+name: Chambers of Xeric
+icon:
+  type: sprite
+  spriteId: 4328
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Tombs of Amascut
+icon:
+  type: sprite
+  spriteId: 4297
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Yama
+icon:
+  type: itemId
+  itemId: 20023
+expanded: false
+*/
+/*@ define:group
+---
+name: "Callisto / Artio"
+icon:
+  type: sprite
+  spriteId: 5622
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: "Venenatis / Spindel"
+icon:
+  type: sprite
+  spriteId: 5624
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: "Vet'ion / Calvar'ion"
+icon:
+  type: sprite
+  spriteId: 5623
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: God Wars Dungeon
+icon:
+  type: itemId
+  itemId: 11798
+expanded: false
+*/
+/*@ define:group
+---
+name: Commander Zilyana
+icon:
+  type: sprite
+  spriteId: 4284
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: General Graardor
+icon:
+  type: sprite
+  spriteId: 4322
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Kree'arra
+icon:
+  type: sprite
+  spriteId: 4325
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: K'ril Tsutsaroth
+icon:
+  type: sprite
+  spriteId: 4323
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Nex
+icon:
+  type: sprite
+  spriteId: 4331
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Wilderness Slayer
+icon:
+  type: itemId
+  itemId: 23494
+expanded: false
+*/
+/*@ define:group
+---
+name: Smoke Devils
+icon:
+  type: sprite
+  spriteId: 4277
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Ancient Guthixian Temple (Tormented Demons)
+icon:
+  type: itemId
+  itemId: 29577
+expanded: false
+*/
+/*@ define:group
+---
+name: The Gauntlet
+icon:
+  type: sprite
+  spriteId: 4318
+  spriteIndex: 0
+expanded: false
+*/
+/*@ define:group
+---
+name: Last Man Standing
+icon:
+  type: itemId
+  itemId: 24520
+expanded: false
+*/
+/*@ define:group
+---
+name: Bounty Hunter
+icon:
+  type: itemId
+  itemId: 27904
+expanded: false
+*/
+
 /*@ define:input:where
 type: enumlist
 label: Potions to force hidden

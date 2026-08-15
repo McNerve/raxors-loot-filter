@@ -10,6 +10,7 @@ names, VAR_ prefixes, or the 11-module warehouse.
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -58,6 +59,59 @@ def rewrite_inputs(body: str, namespace: str) -> str:
     return INPUT_NS.sub(f"define:input:{namespace}", body)
 
 
+def load_group_icons() -> dict:
+    raw = json.loads((SRC / "group_icons.json").read_text())
+    return {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, dict)}
+
+
+def emit_group_header(name: str, spec: dict) -> str:
+    quoted = name if name.startswith('"') else name
+    if any(c in name for c in ":/") and not name.startswith('"'):
+        quoted = json.dumps(name)
+    lines = [
+        "/*@ define:group",
+        "---",
+        f"name: {quoted}",
+    ]
+    kind = spec.get("type")
+    if kind == "sprite":
+        lines += [
+            "icon:",
+            "  type: sprite",
+            f"  spriteId: {spec['spriteId']}",
+            f"  spriteIndex: {spec.get('spriteIndex', 0)}",
+        ]
+    elif kind == "itemId":
+        lines += [
+            "icon:",
+            "  type: itemId",
+            f"  itemId: {spec['itemId']}",
+        ]
+    lines += ["expanded: false", "*/", ""]
+    return "\n".join(lines)
+
+
+def inject_group_icons(body: str, icons: dict) -> str:
+    found: list[str] = []
+    seen: set[str] = set()
+    for raw in re.findall(r"^group: (.+)$", body, re.M):
+        key = raw.strip().strip('"')
+        if key not in seen:
+            seen.add(key)
+            found.append(key)
+    headers = []
+    missing = []
+    for key in found:
+        spec = icons.get(key)
+        if not spec:
+            missing.append(key)
+            spec = {}
+        headers.append(emit_group_header(key, spec))
+    if missing:
+        print("note: no icon mapped for: " + ", ".join(missing))
+    return "".join(headers) + "\n" + body
+
+
 def collapse_groups(body: str) -> str:
     def inject(match: re.Match) -> str:
         block = match.group(0)
@@ -75,23 +129,25 @@ def write(path: Path, text: str) -> None:
     path.write_text(text)
 
 
-def emit_floor(mods: dict[str, str]) -> None:
+def emit_floor(mods: dict[str, str], icons: dict) -> None:
     body = strip_module_header(mods["filtering"])
     body = raxify(body)
     body = rewrite_inputs(body, "floor")
     body = collapse_groups(body)
+    body = inject_group_icons(body, icons)
     write(GEN / "30_floor_body.rs2f", body)
 
 
-def emit_where(mods: dict[str, str]) -> None:
+def emit_where(mods: dict[str, str], icons: dict) -> None:
     body = strip_module_header(mods["area_based_filtering"])
     body = raxify(body)
     body = rewrite_inputs(body, "where")
     body = collapse_groups(body)
+    body = inject_group_icons(body, icons)
     write(GEN / "40_where_body.rs2f", body)
 
 
-def emit_aisle(mods: dict[str, str]) -> list[str]:
+def emit_aisle(mods: dict[str, str], icons: dict) -> list[str]:
     cat = strip_module_header(mods["item_category_styles"])
     ind = strip_module_header(mods["individual_item_styles"])
     body = cat + "\n" + ind
@@ -99,6 +155,7 @@ def emit_aisle(mods: dict[str, str]) -> list[str]:
     body = rewrite_inputs(body, "aisle")
     body = GROUP_STYLES.sub(r"group: \1", body)
     body = collapse_groups(body)
+    body = inject_group_icons(body, icons)
 
     literals: list[str] = []
     seen: set[str] = set()
@@ -353,9 +410,10 @@ def main() -> None:
             die(f"Joe seed missing module {n}: {sorted(mods)}")
 
     GEN.mkdir(parents=True, exist_ok=True)
-    emit_floor(mods)
-    emit_where(mods)
-    emit_aisle(mods)
+    icons = load_group_icons()
+    emit_floor(mods, icons)
+    emit_where(mods, icons)
+    emit_aisle(mods, icons)
     emit_lists(mods)
     emit_final()
     emit_facts(mods)

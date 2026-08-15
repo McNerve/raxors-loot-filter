@@ -6,6 +6,15 @@ description: |
   Backpack ping when a single piece of ammo hits the floor. Mute deathpiles and LMS.
 */
 
+/*@ define:group
+---
+name: Backpack
+icon:
+  type: itemId
+  itemId: 22109
+expanded: false
+*/
+
 /*@ define:input:kits
 type: boolean
 label: Backpack reminder
@@ -23,6 +32,16 @@ group: Backpack
 apply ((name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST) && ownership:OWNERSHIP_SELF && quantity:==1 && RAX_AMMO_PING) {
     sound = RAX_AMMO_PING_SOUND;
 }
+
+/*@ define:group
+---
+name: Silence
+icon:
+  type: sprite
+  spriteId: 2929
+  spriteIndex: 0
+expanded: false
+*/
 
 /*@ define:input:kits
 type: boolean
