@@ -181,7 +181,7 @@ def items_from(raw: str) -> list[str]:
             continue
         if name.startswith("Collection log"):
             continue
-        if name in PETS or name.startswith("Pet "):
+        if name in PETS or name.startswith("Pet ") or name.endswith(" (pet)"):
             continue
         if name not in seen:
             seen.add(name)

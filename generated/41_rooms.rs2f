@@ -107,7 +107,7 @@ type: stringlist
 label: Doom of Mokhaiotl force shown
 group: Doom of Mokhaiotl
 */
-#define RAX_ROOM_DOOM_SHOW ["Mokhaiotl cloth", "Eye of ayak", "Avernic treads", "Demon tear*", "Dom"]
+#define RAX_ROOM_DOOM_SHOW ["Mokhaiotl cloth", "Eye of ayak", "Avernic treads", "Demon tear*"]
 
 /*@ define:input:locations
 type: stringlist
@@ -138,7 +138,7 @@ type: stringlist
 label: Royal Titans force shown
 group: Royal Titans
 */
-#define RAX_ROOM_TITANS_SHOW ["Fire element staff crown", "Ice element staff crown", "Giantsoul amulet*", "Desiccated page", "Mystic vigour prayer scroll", "Deadeye prayer scroll", "Bran"]
+#define RAX_ROOM_TITANS_SHOW ["Fire element staff crown", "Ice element staff crown", "Giantsoul amulet*", "Desiccated page", "Mystic vigour prayer scroll", "Deadeye prayer scroll"]
 
 /*@ define:input:locations
 type: stringlist
@@ -169,7 +169,7 @@ type: stringlist
 label: Maggot King force shown
 group: Maggot King
 */
-#define RAX_ROOM_MAGGOT_SHOW ["Elder venator fang", "Crimson kisten", "Maggot egg*", "Maggot marquess", "Stymphike tartare", "Dull ancient medal", "Venator fang", "Venator tooth", "Tarnished*", "Blood sac", "Letvek", "Orikalkum gravel"]
+#define RAX_ROOM_MAGGOT_SHOW ["Elder venator fang", "Crimson kisten", "Maggot egg*", "Stymphike tartare", "Dull ancient medal", "Venator fang", "Venator tooth", "Tarnished*", "Blood sac", "Letvek", "Orikalkum gravel"]
 
 /*@ define:input:locations
 type: stringlist
@@ -200,7 +200,7 @@ type: stringlist
 label: Fortis Colosseum force shown
 group: Fortis Colosseum
 */
-#define RAX_ROOM_COLOSSEUM_SHOW ["Dizana's quiver*", "Tonalztics of ralos*", "Sunfire fanatic helm", "Sunfire fanatic cuirass", "Sunfire fanatic chausses", "Echo crystal", "Sunfire splinters", "Smol heredit"]
+#define RAX_ROOM_COLOSSEUM_SHOW ["Dizana's quiver*", "Tonalztics of ralos*", "Sunfire fanatic helm", "Sunfire fanatic cuirass", "Sunfire fanatic chausses", "Echo crystal", "Sunfire splinters"]
 
 /*@ define:input:locations
 type: stringlist
@@ -324,7 +324,7 @@ type: stringlist
 label: Araxxor force shown
 group: Araxxor
 */
-#define RAX_ROOM_ARAXXOR_SHOW ["Araxyte fang", "Noxious point", "Noxious blade", "Noxious pommel", "Araxyte head", "Araxyte venom sack", "Nid"]
+#define RAX_ROOM_ARAXXOR_SHOW ["Araxyte fang", "Noxious point", "Noxious blade", "Noxious pommel", "Araxyte head", "Araxyte venom sack"]
 
 /*@ define:input:locations
 type: stringlist

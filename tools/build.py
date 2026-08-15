@@ -741,6 +741,18 @@ def validate(path: Path) -> None:
     ):
         if needle not in text:
             errors.append(f"missing {needle!r}")
+    for pet in (
+        "RAX_PET_LIST",
+        "Maggot marquess",
+        "Smol heredit",
+        "Callisto cub",
+        "Gull (pet)",
+        "Yami",
+        "Huberte",
+        "Baby mole",
+    ):
+        if pet in text:
+            errors.append(f"pet leaked: {pet!r}")
     if errors:
         die("validation failed:\n  " + "\n  ".join(errors))
 
