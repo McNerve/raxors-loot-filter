@@ -1,63 +1,82 @@
 /*@ define:module:rares
 ---
 name: Rares
-subtitle: Uniques, clues, alchs, RDT
+subtitle: Collection log, alchs, RDT
 description: |
-  Collection-log uniques, high alchs, rare drop table. Runs after Value.
+  One Filterscape group per collection log page. Only slots that can hit
+  the floor. Rare slots scream. Log slots (knives, pages, tears) just show.
 
-  Alchs lock gold by default. Uniques layer on top of Value.
+  Chest pages (raids, Colosseum, Gauntlet, Barrows, inferno) are omitted —
+  those items never land on the ground.
+
+  Runs after Value. Alchs lock gold by default.
 */
 
 /*@ define:group
 ---
-name: Uniques
-icon:
-  type: itemId
-  itemId: 12922
+name: Collection log
 expanded: false
+description: |
+  Master style for every page below. Turn a page off if you are camping it.
 */
 
 /*@ define:input:rares
+type: boolean
+label: Style rare slots
+group: Collection log
+*/
+#define RAX_UNIQUE_ENABLE true
+
+/*@ define:input:rares
 type: style
-label: Uniques
-group: Uniques
+label: Rare
+group: Collection log
 exampleItem: Tanzanite fang
 exampleItemId: 12922
 */
 #define RAX_UNIQUE_STYLE lootbeamColor = "#ff000000"; menuTextColor = "#ffff0084"; fontType = 3; showLootbeam = true; sound = "uniques.wav"; icon = CurrentItem();
 
-apply (name:RAX_UNIQUES_LIST) {
-    RAX_UNIQUE_STYLE
-}
+/*@ define:input:rares
+type: boolean
+label: Style log slots
+group: Collection log
+*/
+#define RAX_NOTABLE_ENABLE true
 
 /*@ define:input:rares
-type: stringlist
-label: Uniques
-group: Uniques
+type: style
+label: Log
+group: Collection log
+exampleItem: Dragon knife
+exampleItemId: 22804
 */
-#define RAX_UNIQUES_LIST /*{{RAX_UNIQUES_LIST}}*/
+#define RAX_NOTABLE_STYLE menuTextColor = "#ffff0084"; fontType = 1; icon = CurrentItem();
 
 /*@ define:input:rares
 type: boolean
-label: Silence unique sounds at bosses that already roar
-group: Uniques
+label: Silence rare sounds at bosses that already roar
+group: Collection log
 */
 #define RAX_UNIQUE_SILENCE_BOSS_SOUND false
+
+/*@ define:input:rares
+type: boolean
+label: Lock rare slots
+group: Collection log
+*/
+#define RAX_UNIQUE_LOCK false
+
+/*{{RAX_UNIQUES_BODY}}*/
 
 apply (RAX_UNIQUE_SILENCE_BOSS_SOUND && name:RAX_UNIQUES_LIST && (
     area:FACT_MUSPAH_AREA || area:FACT_THE_WHISPERER_AREA || area:FACT_VARDORVIS_AREA ||
     area:FACT_DUKE_SUCELLUS_AREA || area:FACT_THE_LEVIATHAN_AREA || area:FACT_YAMA_AREA ||
-    area:FACT_NEX_AREA || area:FACT_AMOXLIATL_AREA || area:FACT_HUEYCOATL_AREA
+    area:FACT_NEX_AREA || area:FACT_AMOXLIATL_AREA || area:FACT_HUEYCOATL_AREA ||
+    area:FACT_MAGGOT_KING_AREA || area:FACT_DOOM_MOKHAIOTL_AREA || area:FACT_ROYAL_TITANS_AREA ||
+    area:FACT_SLAYER_ARAXYTES_AREA || area:FACT_SLAYER_HYDRAS_AREA || area:FACT_COLOSSEUM_AREA
 )) {
     sound = 2411;
 }
-
-/*@ define:input:rares
-type: boolean
-label: Lock uniques
-group: Uniques
-*/
-#define RAX_UNIQUE_LOCK false
 
 rule (RAX_UNIQUE_LOCK && name:RAX_UNIQUES_LIST) {}
 

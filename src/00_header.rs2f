@@ -7,10 +7,10 @@ name: header
   Raxor's Loot Filter
   Later modules win (apply overwrites). rule is terminal.
 
-  display → loot_order → hide → locations → categories → value → rares → alerts → final
+  display → loot_order → hide → locations → kinds → value → clues → rares → alerts → final
 */
 
 meta {
     name = "Raxor's Loot Filter";
-    description = "OSRS ground loot. Categories, then value, then rares. Alerts last.";
+    description = "OSRS ground loot. Categories, clues, value, then collection-log rares.";
 }

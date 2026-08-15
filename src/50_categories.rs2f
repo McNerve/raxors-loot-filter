@@ -1,9 +1,10 @@
 /*@ define:module:categories
 ---
 name: Categories
-subtitle: Food, runes, herbs, raids supplies
+subtitle: Food, runes, herbs, armour, seeking
 description: |
-  How a *kind* of item looks. Value (below) overwrites this once the drop is worth real gp.
+  How a *kind* of item looks. Seeking arrows, herb tiers, and armour metals
+  sit under the same groups. Value (below) overwrites this once the drop is worth real gp.
 
   Groups start collapsed.
 */

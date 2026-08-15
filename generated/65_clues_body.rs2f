@@ -1,0 +1,97 @@
+// authored clue families — scroll/box/nest/bottle/geode/casket.
+
+/*@ define:input:clues
+type: style
+label: Beginner
+group: Trail
+exampleItem: Clue scroll (beginner)
+exampleItemId: 23182
+*/
+#define RAX_CLUE_BEGINNER_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FFCFC8C8"; textAccentColor = "#FF000000"; menuTextColor = "#FFCFC8C8"; sound = "clues.wav"; icon = CurrentItem();
+
+#define FACT_CLUE_BEGINNER ["Clue scroll (beginner)", "Scroll box (beginner)", "Clue nest (beginner)", "Clue bottle (beginner)", "Clue geode (beginner)", "Reward casket (beginner)"]
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_BEGINNER) {
+    hidden = false;
+    RAX_CLUE_BEGINNER_STYLE
+}
+
+/*@ define:input:clues
+type: style
+label: Easy
+group: Trail
+exampleItem: Clue scroll (easy)
+exampleItemId: 2677
+*/
+#define RAX_CLUE_EASY_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FF248F26"; textAccentColor = "#FF000000"; menuTextColor = "#FF248F26"; sound = "clues.wav"; icon = CurrentItem();
+
+#define FACT_CLUE_EASY ["Clue scroll (easy)", "Scroll box (easy)", "Clue nest (easy)", "Clue bottle (easy)", "Clue geode (easy)", "Reward casket (easy)"]
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_EASY) {
+    hidden = false;
+    RAX_CLUE_EASY_STYLE
+}
+
+/*@ define:input:clues
+type: style
+label: Medium
+group: Trail
+exampleItem: Clue scroll (medium)
+exampleItemId: 2801
+*/
+#define RAX_CLUE_MEDIUM_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FF6CBBBF"; textAccentColor = "#FF000000"; menuTextColor = "#FF6CBBBF"; sound = "clues.wav"; icon = CurrentItem();
+
+#define FACT_CLUE_MEDIUM ["Clue scroll (medium)", "Scroll box (medium)", "Clue nest (medium)", "Clue bottle (medium)", "Clue geode (medium)", "Reward casket (medium)", "Challenge scroll (medium)"]
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_MEDIUM) {
+    hidden = false;
+    RAX_CLUE_MEDIUM_STYLE
+}
+
+/*@ define:input:clues
+type: style
+label: Hard
+group: Trail
+exampleItem: Clue scroll (hard)
+exampleItemId: 2722
+*/
+#define RAX_CLUE_HARD_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FFA343BD"; textAccentColor = "#FF000000"; menuTextColor = "#FFA343BD"; sound = "clues.wav"; icon = CurrentItem();
+
+#define FACT_CLUE_HARD ["Clue scroll (hard)", "Scroll box (hard)", "Clue nest (hard)", "Clue bottle (hard)", "Clue geode (hard)", "Reward casket (hard)", "Challenge scroll (hard)"]
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_HARD) {
+    hidden = false;
+    RAX_CLUE_HARD_STYLE
+}
+
+/*@ define:input:clues
+type: style
+label: Elite
+group: Trail
+exampleItem: Clue scroll (elite)
+exampleItemId: 12073
+*/
+#define RAX_CLUE_ELITE_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FFEED11D"; textAccentColor = "#FF000000"; menuTextColor = "#FFEED11D"; sound = "clues.wav"; icon = CurrentItem();
+
+#define FACT_CLUE_ELITE ["Clue scroll (elite)", "Scroll box (elite)", "Clue nest (elite)", "Clue bottle (elite)", "Clue geode (elite)", "Reward casket (elite)", "Challenge scroll (elite)"]
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_ELITE) {
+    hidden = false;
+    RAX_CLUE_ELITE_STYLE
+}
+
+/*@ define:input:clues
+type: style
+label: Master
+group: Trail
+exampleItem: Clue scroll (master)
+exampleItemId: 19835
+*/
+#define RAX_CLUE_MASTER_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FFC33C30"; textAccentColor = "#FF000000"; menuTextColor = "#FFC33C30"; sound = "clues.wav"; icon = CurrentItem();
+
+#define FACT_CLUE_MASTER ["Clue scroll (master)", "Scroll box (master)", "Reward casket (master)", "Torn clue scroll (part 1)", "Torn clue scroll (part 2)", "Torn clue scroll (part 3)"]
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_MASTER) {
+    hidden = false;
+    RAX_CLUE_MASTER_STYLE
+}

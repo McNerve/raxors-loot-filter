@@ -209,11 +209,128 @@ def emit_categories(mods: dict[str, str], icons: dict) -> list[str]:
         + ") {\n    RAX_CATEGORY_ICON_STYLE\n}\n"
     )
     write(GEN / "50_categories_body.rs2f", banner + body + force)
+    emit_kinds(banner + body, force)
     return literals
 
 
+KINDS = [
+    ("food", "Food", "What you eat"),
+    ("potions", "Potions", "What you drink"),
+    ("runes", "Runes", "What you cast"),
+    ("ammo", "Ammo", "What you shoot"),
+    ("herbs", "Herbs", "Grimy, clean, secondaries"),
+    ("armour", "Armour", "Bronze to dragon"),
+    ("prayer", "Prayer", "Bones, ashes, heads"),
+    ("gathering", "Gathering", "Ores, bars, logs, seeds"),
+    ("raid_supplies", "Raid supplies", "Cox, ToB, ToA, Gauntlet"),
+    ("slayer_drops", "Slayer", "Task tokens and junk"),
+    ("currency", "Currency", "Coins and tokens"),
+]
+
+GROUP_KIND = {
+    "Food": "food",
+    "Fish": "food",
+    "Potato": "food",
+    "Pie": "food",
+    "Pizza": "food",
+    "Raw Fish": "food",
+    "Potions": "potions",
+    "Runes": "runes",
+    "Ammo": "ammo",
+    "Fletching": "ammo",
+    "Herblore": "herbs",
+    "Herbs": "herbs",
+    "Metal Equipment": "armour",
+    "Prayer": "prayer",
+    "Mining": "gathering",
+    "Smithing": "gathering",
+    "Woodcutting": "gathering",
+    "Fishing": "gathering",
+    "Farming": "gathering",
+    "Construction": "gathering",
+    "Logs": "gathering",
+    "Ores": "gathering",
+    "Bars": "gathering",
+    "Gems": "gathering",
+    "Fishing Bait": "gathering",
+    "Fishing Equipment": "gathering",
+    "Chambers of Xeric": "raid_supplies",
+    "Theatre of Blood": "raid_supplies",
+    "Tombs of Amascut": "raid_supplies",
+    "Tormented Demons Drop": "raid_supplies",
+    "Gauntlet": "raid_supplies",
+    "Slayer": "slayer_drops",
+    "Currency": "currency",
+    "Misc": "currency",
+    "Clue Scrolls": None,
+}
+
+
+def _input_chunks(text: str) -> list[str]:
+    starts = [m.start() for m in re.finditer(r"/\*@ define:input:", text)]
+    chunks = []
+    for i, start in enumerate(starts):
+        end = starts[i + 1] if i + 1 < len(starts) else len(text)
+        chunk = text[start:end]
+        cut = chunk.find("apply (RAX_SHOW_ICONS && RAX_FORCE_CATEGORY_ICON")
+        if cut != -1:
+            chunk = chunk[:cut]
+        chunks.append(chunk)
+    return chunks
+
+
+def emit_kinds(body: str, force: str) -> None:
+    extras = (SRC / "51_supplies.rs2f").read_text()
+    group_headers: dict[str, str] = {}
+    for block in re.findall(r"/\*@ define:group\n---.*?^\*/", body, flags=re.S | re.M):
+        nm = re.search(r"^name: (.+)$", block, re.M)
+        if nm:
+            group_headers[nm.group(1).strip().strip('"')] = block
+    buckets: dict[str, list[str]] = {kid: [] for kid, _, _ in KINDS}
+    skipped = []
+    for chunk in _input_chunks(body) + _input_chunks(extras):
+        gm = re.search(r"^group: (.+)$", chunk, re.M)
+        group = gm.group(1).strip().strip('"') if gm else ""
+        kind = GROUP_KIND.get(group)
+        if kind is None:
+            skipped.append(group or "(no group)")
+            continue
+        buckets[kind].append(rewrite_inputs(chunk, kind).rstrip() + "\n")
+    if skipped:
+        print("note: kind-split skipped groups: " + ", ".join(sorted(set(skipped))))
+
+    for i, (kid, name, subtitle) in enumerate(KINDS):
+        header = (
+            f"/*@ define:module:{kid}\n"
+            f"---\n"
+            f"name: {name}\n"
+            f"subtitle: {subtitle}\n"
+            f"description: |\n"
+            f"  How this kind looks. Value (below) overwrites once the drop is worth real gp.\n"
+            f"*/\n\n"
+        )
+        extra = ""
+        if i == 0:
+            extra += "// names used by the force-icon pass\n"
+            extra += re.search(r"#define RAX_CATEGORY_NAMES .+", body).group(0) + "\n\n"
+        if i == len(KINDS) - 1:
+            extra += force + "\n"
+        used = []
+        seen_g = set()
+        for chunk in buckets[kid]:
+            gm = re.search(r"^group: (.+)$", chunk, re.M)
+            if not gm:
+                continue
+            gname = gm.group(1).strip().strip('"')
+            if gname in seen_g:
+                continue
+            seen_g.add(gname)
+            if gname in group_headers:
+                used.append(group_headers[gname] + "\n")
+        write(GEN / f"5x_{kid}.rs2f", header + extra + "".join(used) + "".join(buckets[kid]))
+
+
 def emit_lists(mods: dict[str, str]) -> None:
-    uni = mods["uniques"]
     alch = mods["alchs"]
     rdt = mods["rare_drop_table"]
 
@@ -227,17 +344,13 @@ def emit_lists(mods: dict[str, str]) -> None:
             die(f"missing {old}")
         return f"#define {new} {m.group(1).strip()}\n"
 
-    uniques_body = raxify(grab_define(uni, "VAR_UNIQUES_LIST", "RAX_UNIQUES_LIST"))
     alchs_body = raxify(grab_define(alch, "VAR_ALCHS_ITEM_LIST", "RAX_ALCHS_LIST"))
-    # bodies include the #define line; stash values for marker splice
+
     def value_of(define_line: str) -> str:
         return define_line.split(" ", 2)[2].strip()
 
-    write(GEN / "69_lists.rs2f", uniques_body + "\n" + alchs_body + "\n")
-    write(
-        GEN / "69_list_values.txt",
-        value_of(uniques_body) + "\n---\n" + value_of(alchs_body) + "\n",
-    )
+    write(GEN / "69_lists.rs2f", alchs_body + "\n")
+    write(GEN / "69_list_values.txt", value_of(alchs_body) + "\n")
 
     applies = []
     for m in re.finditer(
@@ -257,6 +370,157 @@ def emit_lists(mods: dict[str, str]) -> None:
             seen.add(a)
             unique_applies.append(a)
     write(GEN / "71_rdt.rs2f", "// generated RDT quantity matches\n" + "".join(unique_applies))
+
+
+def _json_list(items: list[str]) -> str:
+    return json.dumps(items, ensure_ascii=False)
+
+
+def emit_rooms() -> None:
+    raw = json.loads((SRC / "rooms.json").read_text())
+    rooms = raw["rooms"]
+    icons = load_group_icons()
+    lines = ["// authored rooms — after Joe so these hide/show lists win.\n"]
+    for room in rooms:
+        gid = room["id"].upper()
+        group = room["group"]
+        quoted = json.dumps(group) if any(c in group for c in ":/") else group
+        spec = icons.get(group) or resolve_icon(room.get("icon", {}), load_sprite_catalog())
+        lines.append("\n" + emit_group_header(group, spec))
+        areas = " || ".join(f"area:{a}" for a in room["areas"])
+        show = _json_list(room.get("show", []))
+        hide = _json_list(room.get("hide", []))
+        lines.append(
+            f"""
+/*@ define:input:locations
+type: stringlist
+label: {group} force shown
+group: {quoted}
+*/
+#define RAX_ROOM_{gid}_SHOW {show}
+
+/*@ define:input:locations
+type: stringlist
+label: {group} force hidden
+group: {quoted}
+*/
+#define RAX_ROOM_{gid}_HIDE {hide}
+
+apply (({areas}) && name:RAX_ROOM_{gid}_HIDE) {{
+    hidden = true;
+}}
+
+apply (({areas}) && name:RAX_ROOM_{gid}_SHOW) {{
+    hidden = false;
+}}
+"""
+        )
+    write(GEN / "41_rooms.rs2f", "".join(lines))
+
+
+def emit_uniques() -> None:
+    raw = json.loads((SRC / "collection_log.json").read_text())
+    pages = raw["pages"]
+    icons = load_group_icons()
+    rare_union: list[str] = []
+    log_union: list[str] = []
+    rare_seen: set[str] = set()
+    log_seen: set[str] = set()
+    lines = [
+        "// collection log pages — ground slots only. rare screams, log is quiet.\n"
+    ]
+    for page in pages:
+        gid = page["id"].upper()
+        group = page["page"]
+        quoted = json.dumps(group) if any(c in group for c in ":'/") else group
+        spec = icons.get(group) or {}
+        lines.append("\n" + emit_group_header(group, spec))
+        rare = page.get("rare") or []
+        log = page.get("log") or []
+        for name in rare:
+            if name not in rare_seen:
+                rare_seen.add(name)
+                rare_union.append(name)
+        for name in log:
+            if name not in log_seen and name not in rare_seen:
+                log_seen.add(name)
+                log_union.append(name)
+        lines.append(
+            f"""
+/*@ define:input:rares
+type: boolean
+label: Highlight {group}
+group: {quoted}
+*/
+#define RAX_CLOG_{gid} true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: {quoted}
+*/
+#define RAX_CLOG_{gid}_RARE {_json_list(rare)}
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_{gid} && name:RAX_CLOG_{gid}_RARE) {{
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}}
+"""
+        )
+        if log:
+            lines.append(
+                f"""
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: {quoted}
+*/
+#define RAX_CLOG_{gid}_LOG {_json_list(log)}
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_{gid} && name:RAX_CLOG_{gid}_LOG) {{
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}}
+"""
+            )
+    lines.append(f"\n#define RAX_UNIQUES_LIST {_json_list(rare_union)}\n")
+    write(GEN / "70_uniques_body.rs2f", "".join(lines))
+    write(GEN / "70_notable.txt", _json_list(log_union) + "\n")
+    print(f"clog emit: {len(pages)} pages, {len(rare_union)} rare, {len(log_union)} log")
+
+
+def emit_clues() -> None:
+    raw = json.loads((SRC / "clues.json").read_text())
+    lines = ["// authored clue families — scroll/box/nest/bottle/geode/casket.\n"]
+    for tier in raw["tiers"]:
+        tid = tier["id"].upper()
+        label = tier["label"]
+        items = _json_list(tier["items"])
+        style = (
+            f'textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; '
+            f'borderColor = "{tier["border"]}"; textAccentColor = "#FF000000"; '
+            f'menuTextColor = "{tier["border"]}"; sound = "clues.wav"; icon = CurrentItem();'
+        )
+        lines.append(
+            f"""
+/*@ define:input:clues
+type: style
+label: {label}
+group: Trail
+exampleItem: {tier["example"]}
+exampleItemId: {tier["exampleId"]}
+*/
+#define RAX_CLUE_{tid}_STYLE {style}
+
+#define FACT_CLUE_{tid} {items}
+
+apply (RAX_CLUE_ENABLE && name:FACT_CLUE_{tid}) {{
+    hidden = false;
+    RAX_CLUE_{tid}_STYLE
+}}
+"""
+        )
+    write(GEN / "65_clues_body.rs2f", "".join(lines))
 
 
 def value_bands() -> list[tuple[int, int | None]]:
@@ -352,16 +616,19 @@ ORDER = [
     SRC / "20_loot_order.rs2f",
     SRC / "30_hide.rs2f",
     GEN / "30_hide_body.rs2f",
+    SRC / "31_hide_ext.rs2f",
     SRC / "40_locations.rs2f",
     GEN / "40_locations_body.rs2f",
-    SRC / "50_categories.rs2f",
-    GEN / "50_categories_body.rs2f",
+    GEN / "41_rooms.rs2f",
+    *[GEN / f"5x_{kid}.rs2f" for kid, _, _ in KINDS],
     SRC / "60_value.rs2f",
+    SRC / "65_clues.rs2f",
     SRC / "70_rares.rs2f",
     GEN / "71_rdt.rs2f",
     SRC / "80_alerts.rs2f",
     GEN / "90_final.rs2f",
     GEN / "99_facts.rs2f",
+    SRC / "91_facts_ext.rs2f",
 ]
 
 
@@ -369,15 +636,19 @@ def concat() -> Path:
     missing = [p for p in ORDER if not p.exists()]
     if missing:
         die("missing pieces:\n  " + "\n  ".join(str(p) for p in missing))
-    values = (GEN / "69_list_values.txt").read_text().split("\n---\n", 1)
-    uniques_val = values[0].strip()
-    alchs_val = values[1].strip()
+    alchs_val = (GEN / "69_list_values.txt").read_text().strip()
+    uniques_body = (GEN / "70_uniques_body.rs2f").read_text().rstrip()
+    notable_val = (GEN / "70_notable.txt").read_text().strip()
+    clues_body = (GEN / "65_clues_body.rs2f").read_text().rstrip()
 
     parts = []
     for p in ORDER:
         text = p.read_text()
+        if p.name == "65_clues.rs2f":
+            text = text.replace("/*{{RAX_CLUES_BODY}}*/", clues_body)
         if p.name == "70_rares.rs2f":
-            text = text.replace("/*{{RAX_UNIQUES_LIST}}*/", uniques_val)
+            text = text.replace("/*{{RAX_UNIQUES_BODY}}*/", uniques_body)
+            text = text.replace("/*{{RAX_NOTABLE_LIST}}*/", notable_val)
             text = text.replace("/*{{RAX_ALCHS_LIST}}*/", alchs_val)
         parts.append(text.rstrip() + "\n\n")
     DIST.mkdir(parents=True, exist_ok=True)
@@ -418,9 +689,9 @@ def validate(path: Path) -> None:
     errors: list[str] = []
     if text.count("{") != text.count("}"):
         errors.append(f"brace mismatch {{ {text.count('{')} }} {text.count('}')}")
-    if "VAR_" in text:
+    if re.search(r"(?<![A-Za-z])VAR_", text):
         errors.append("leaked VAR_ prefix")
-    if "CONST_" in text:
+    if re.search(r"(?<![A-Za-z])CONST_", text):
         errors.append("leaked CONST_ prefix")
     if 'name = "Raxor\'s Loot Filter"' not in text:
         errors.append("missing meta name")
@@ -431,8 +702,14 @@ def validate(path: Path) -> None:
         "define:module:loot_order",
         "define:module:hide",
         "define:module:locations",
-        "define:module:categories",
+        "define:module:food",
+        "define:module:runes",
+        "define:module:ammo",
+        "define:module:herbs",
+        "define:module:armour",
+        "define:module:clues",
         "define:module:value",
+        "define:module:clues",
         "define:module:rares",
         "define:module:alerts",
     ):
@@ -446,6 +723,24 @@ def validate(path: Path) -> None:
     for sid in joe_sprites:
         if re.search(rf"spriteId:\s*{sid}\b", text):
             errors.append(f"Joe skill-tab sprite {sid} leaked — use SpriteID names")
+    for needle in (
+        "Seeking dragon arrow",
+        "Elder venator fang",
+        "Crimson kisten",
+        "Hueycoatl hide",
+        "Mokhaiotl cloth",
+        "FACT_MAGGOT_KING_AREA",
+        "RAX_CLOG_MAGGOT_KING",
+        "RAX_CLOG_ALCHEMICAL_HYDRA",
+        "Collection log",
+        "RAX_CLUE_ELITE_STYLE",
+        "Clue nest (elite)",
+        "RAX_AMMO_SEEKING_STYLE",
+        "RAX_HERBS_HIGH_STYLE",
+        "RAX_HIDE_ARMOUR_LOW",
+    ):
+        if needle not in text:
+            errors.append(f"missing {needle!r}")
     if errors:
         die("validation failed:\n  " + "\n  ".join(errors))
 
@@ -460,7 +755,6 @@ def main() -> None:
         "area_based_filtering",
         "item_category_styles",
         "individual_item_styles",
-        "uniques",
         "alchs",
         "rare_drop_table",
         "constants",
@@ -473,8 +767,11 @@ def main() -> None:
     icons = load_group_icons()
     emit_hide(mods, icons)
     emit_locations(mods, icons)
+    emit_rooms()
     emit_categories(mods, icons)
     emit_lists(mods)
+    emit_uniques()
+    emit_clues()
     emit_final()
     emit_facts(mods)
     out = concat()

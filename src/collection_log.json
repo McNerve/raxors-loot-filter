@@ -1,0 +1,953 @@
+{
+  "pages": [
+    {
+      "id": "abyssal_sire",
+      "tab": "Bosses",
+      "page": "Abyssal Sire",
+      "rare": [
+        "Unsired",
+        "Abyssal head",
+        "Bludgeon spine",
+        "Bludgeon claw",
+        "Bludgeon axon",
+        "Jar of miasma",
+        "Abyssal dagger",
+        "Abyssal whip"
+      ],
+      "log": []
+    },
+    {
+      "id": "alchemical_hydra",
+      "tab": "Bosses",
+      "page": "Alchemical Hydra",
+      "rare": [
+        "Hydra's claw",
+        "Hydra tail",
+        "Hydra leather",
+        "Hydra's fang",
+        "Hydra's eye",
+        "Hydra's heart",
+        "Jar of chemicals",
+        "Alchemical hydra heads"
+      ],
+      "log": [
+        "Dragon knife",
+        "Dragon thrownaxe"
+      ]
+    },
+    {
+      "id": "amoxliatl",
+      "tab": "Bosses",
+      "page": "Amoxliatl",
+      "rare": [
+        "Glacial temotli",
+        "Pendant of ates (inert)",
+        "Pendant of ates"
+      ],
+      "log": [
+        "Frozen tear"
+      ]
+    },
+    {
+      "id": "araxxor",
+      "tab": "Bosses",
+      "page": "Araxxor",
+      "rare": [
+        "Araxyte fang",
+        "Noxious point",
+        "Noxious blade",
+        "Noxious pommel",
+        "Araxyte head",
+        "Jar of venom",
+        "Coagulated venom"
+      ],
+      "log": [
+        "Araxyte venom sac",
+        "Spider cave teleport"
+      ]
+    },
+    {
+      "id": "brutus",
+      "tab": "Bosses",
+      "page": "Brutus",
+      "rare": [
+        "Bottomless milk bucket (empty)",
+        "Bottomless milk bucket"
+      ],
+      "log": [
+        "Cow slippers"
+      ]
+    },
+    {
+      "id": "bryophyta",
+      "tab": "Bosses",
+      "page": "Bryophyta",
+      "rare": [
+        "Bryophyta's essence"
+      ],
+      "log": []
+    },
+    {
+      "id": "callisto_and_artio",
+      "tab": "Bosses",
+      "page": "Callisto and Artio",
+      "rare": [
+        "Tyrannical ring",
+        "Dragon pickaxe",
+        "Dragon 2h sword",
+        "Claws of callisto",
+        "Voidwaker hilt"
+      ],
+      "log": []
+    },
+    {
+      "id": "cerberus",
+      "tab": "Bosses",
+      "page": "Cerberus",
+      "rare": [
+        "Eternal crystal",
+        "Pegasian crystal",
+        "Primordial crystal",
+        "Jar of souls",
+        "Smouldering stone"
+      ],
+      "log": [
+        "Key master teleport"
+      ]
+    },
+    {
+      "id": "chaos_elemental",
+      "tab": "Bosses",
+      "page": "Chaos Elemental",
+      "rare": [
+        "Dragon pickaxe",
+        "Dragon 2h sword"
+      ],
+      "log": []
+    },
+    {
+      "id": "chaos_fanatic",
+      "tab": "Bosses",
+      "page": "Chaos Fanatic",
+      "rare": [
+        "Odium shard 1",
+        "Malediction shard 1"
+      ],
+      "log": []
+    },
+    {
+      "id": "commander_zilyana",
+      "tab": "Bosses",
+      "page": "Commander Zilyana",
+      "rare": [
+        "Armadyl crossbow",
+        "Saradomin hilt",
+        "Saradomin sword",
+        "Saradomin's light",
+        "Godsword shard 1",
+        "Godsword shard 2",
+        "Godsword shard 3"
+      ],
+      "log": []
+    },
+    {
+      "id": "corporeal_beast",
+      "tab": "Bosses",
+      "page": "Corporeal Beast",
+      "rare": [
+        "Elysian sigil",
+        "Spectral sigil",
+        "Arcane sigil",
+        "Holy elixir",
+        "Spirit shield",
+        "Jar of spirits"
+      ],
+      "log": []
+    },
+    {
+      "id": "crazy_archaeologist",
+      "tab": "Bosses",
+      "page": "Crazy archaeologist",
+      "rare": [
+        "Odium shard 2",
+        "Malediction shard 2",
+        "Fedora"
+      ],
+      "log": []
+    },
+    {
+      "id": "dagannoth_kings",
+      "tab": "Bosses",
+      "page": "Dagannoth Kings",
+      "rare": [
+        "Berserker ring",
+        "Archers ring",
+        "Seers ring",
+        "Warrior ring",
+        "Dragon axe",
+        "Seercull",
+        "Mud battlestaff"
+      ],
+      "log": []
+    },
+    {
+      "id": "deranged_archaeologist",
+      "tab": "Bosses",
+      "page": "Deranged Archaeologist",
+      "rare": [
+        "Steel ring"
+      ],
+      "log": []
+    },
+    {
+      "id": "doom_of_mokhaiotl",
+      "tab": "Bosses",
+      "page": "Doom of Mokhaiotl",
+      "rare": [
+        "Avernic treads",
+        "Eye of ayak (uncharged)",
+        "Eye of ayak",
+        "Mokhaiotl cloth"
+      ],
+      "log": [
+        "Mokhaiotl waystone",
+        "Demon tear"
+      ]
+    },
+    {
+      "id": "duke_sucellus",
+      "tab": "Bosses",
+      "page": "Duke Sucellus",
+      "rare": [
+        "Eye of the duke",
+        "Virtus mask",
+        "Virtus robe top",
+        "Virtus robe bottom",
+        "Magus vestige",
+        "Ice quartz",
+        "Frozen tablet",
+        "Awakener's orb"
+      ],
+      "log": [
+        "Chromium ingot"
+      ]
+    },
+    {
+      "id": "general_graardor",
+      "tab": "Bosses",
+      "page": "General Graardor",
+      "rare": [
+        "Bandos chestplate",
+        "Bandos tassets",
+        "Bandos boots",
+        "Bandos hilt",
+        "Godsword shard 1",
+        "Godsword shard 2",
+        "Godsword shard 3"
+      ],
+      "log": []
+    },
+    {
+      "id": "giant_mole",
+      "tab": "Bosses",
+      "page": "Giant Mole",
+      "rare": [],
+      "log": [
+        "Mole skin",
+        "Mole claw",
+        "Immaculate mole skin"
+      ]
+    },
+    {
+      "id": "grotesque_guardians",
+      "tab": "Bosses",
+      "page": "Grotesque Guardians",
+      "rare": [
+        "Black tourmaline core",
+        "Granite gloves",
+        "Granite ring",
+        "Granite hammer",
+        "Jar of stone"
+      ],
+      "log": [
+        "Granite dust"
+      ]
+    },
+    {
+      "id": "hespori",
+      "tab": "Bosses",
+      "page": "Hespori",
+      "rare": [
+        "Bottomless compost bucket"
+      ],
+      "log": [
+        "Iasor seed",
+        "Kronos seed",
+        "Attas seed"
+      ]
+    },
+    {
+      "id": "the_hueycoatl",
+      "tab": "Bosses",
+      "page": "The Hueycoatl",
+      "rare": [
+        "Dragon hunter wand",
+        "Tome of earth (empty)",
+        "Tome of earth",
+        "Hueycoatl hide"
+      ],
+      "log": [
+        "Soiled page",
+        "Huasca seed"
+      ]
+    },
+    {
+      "id": "kalphite_queen",
+      "tab": "Bosses",
+      "page": "Kalphite Queen",
+      "rare": [
+        "Kq head",
+        "Jar of sand",
+        "Dragon 2h sword",
+        "Dragon chainbody",
+        "Dragon pickaxe"
+      ],
+      "log": []
+    },
+    {
+      "id": "king_black_dragon",
+      "tab": "Bosses",
+      "page": "King Black Dragon",
+      "rare": [
+        "Kbd heads",
+        "Dragon pickaxe",
+        "Draconic visage"
+      ],
+      "log": []
+    },
+    {
+      "id": "kraken",
+      "tab": "Bosses",
+      "page": "Kraken",
+      "rare": [
+        "Kraken tentacle",
+        "Trident of the seas",
+        "Jar of dirt"
+      ],
+      "log": []
+    },
+    {
+      "id": "kree_arra",
+      "tab": "Bosses",
+      "page": "Kree'arra",
+      "rare": [
+        "Armadyl helmet",
+        "Armadyl chestplate",
+        "Armadyl chainskirt",
+        "Armadyl hilt",
+        "Godsword shard 1",
+        "Godsword shard 2",
+        "Godsword shard 3"
+      ],
+      "log": []
+    },
+    {
+      "id": "k_ril_tsutsaroth",
+      "tab": "Bosses",
+      "page": "K'ril Tsutsaroth",
+      "rare": [
+        "Staff of the Dead",
+        "Staff of the dead",
+        "Zamorakian spear",
+        "Steam battlestaff",
+        "Zamorak hilt",
+        "Godsword shard 1",
+        "Godsword shard 2",
+        "Godsword shard 3"
+      ],
+      "log": []
+    },
+    {
+      "id": "the_leviathan",
+      "tab": "Bosses",
+      "page": "The Leviathan",
+      "rare": [
+        "Leviathan's lure",
+        "Virtus mask",
+        "Virtus robe top",
+        "Virtus robe bottom",
+        "Venator vestige",
+        "Smoke quartz",
+        "Scarred tablet",
+        "Awakener's orb"
+      ],
+      "log": [
+        "Chromium ingot"
+      ]
+    },
+    {
+      "id": "the_mad_angel",
+      "tab": "Bosses",
+      "page": "The Mad Angel",
+      "rare": [
+        "Hallowfell",
+        "Jar of light"
+      ],
+      "log": [
+        "Ardeaglais teleport",
+        "Granite dust"
+      ]
+    },
+    {
+      "id": "maggot_king",
+      "tab": "Bosses",
+      "page": "Maggot King",
+      "rare": [
+        "Crimson kisten",
+        "Elder venator fang"
+      ],
+      "log": []
+    },
+    {
+      "id": "moons_of_peril",
+      "tab": "Bosses",
+      "page": "Moons of Peril",
+      "rare": [
+        "Eclipse moon chestplate",
+        "Eclipse moon tassets",
+        "Eclipse moon helm",
+        "Eclipse atlatl",
+        "Blue moon chestplate",
+        "Blue moon tassets",
+        "Blue moon helm",
+        "Blue moon spear",
+        "Blood moon chestplate",
+        "Blood moon tassets",
+        "Blood moon helm",
+        "Dual macuahuitl"
+      ],
+      "log": [
+        "Atlatl dart"
+      ]
+    },
+    {
+      "id": "nex",
+      "tab": "Bosses",
+      "page": "Nex",
+      "rare": [
+        "Ancient hilt",
+        "Nihil horn",
+        "Zaryte vambraces",
+        "Torva full helm (damaged)",
+        "Torva platebody (damaged)",
+        "Torva platelegs (damaged)"
+      ],
+      "log": [
+        "Nihil shard"
+      ]
+    },
+    {
+      "id": "the_nightmare",
+      "tab": "Bosses",
+      "page": "The Nightmare",
+      "rare": [
+        "Inquisitor's mace",
+        "Inquisitor's great helm",
+        "Inquisitor's hauberk",
+        "Inquisitor's plateskirt",
+        "Nightmare staff",
+        "Volatile orb",
+        "Harmonised orb",
+        "Eldritch orb",
+        "Jar of dreams",
+        "Slepey tablet",
+        "Parasitic egg"
+      ],
+      "log": []
+    },
+    {
+      "id": "obor",
+      "tab": "Bosses",
+      "page": "Obor",
+      "rare": [
+        "Hill giant club"
+      ],
+      "log": []
+    },
+    {
+      "id": "phantom_muspah",
+      "tab": "Bosses",
+      "page": "Phantom Muspah",
+      "rare": [
+        "Venator shard",
+        "Ancient icon",
+        "Frozen cache"
+      ],
+      "log": [
+        "Charged ice",
+        "Ancient essence"
+      ]
+    },
+    {
+      "id": "royal_titans",
+      "tab": "Bosses",
+      "page": "Royal Titans",
+      "rare": [
+        "Deadeye prayer scroll",
+        "Mystic vigour prayer scroll",
+        "Giantsoul amulet (uncharged)",
+        "Giantsoul amulet",
+        "Ice element staff crown",
+        "Fire element staff crown"
+      ],
+      "log": [
+        "Desiccated page"
+      ]
+    },
+    {
+      "id": "sarachnis",
+      "tab": "Bosses",
+      "page": "Sarachnis",
+      "rare": [
+        "Jar of eyes",
+        "Sarachnis cudgel"
+      ],
+      "log": [
+        "Giant egg sac(full)",
+        "Pristine spider silk"
+      ]
+    },
+    {
+      "id": "scorpia",
+      "tab": "Bosses",
+      "page": "Scorpia",
+      "rare": [
+        "Odium shard 3",
+        "Malediction shard 3",
+        "Dragon 2h sword"
+      ],
+      "log": []
+    },
+    {
+      "id": "scurrius",
+      "tab": "Bosses",
+      "page": "Scurrius",
+      "rare": [
+        "Scurrius' spine"
+      ],
+      "log": []
+    },
+    {
+      "id": "shellbane_gryphon",
+      "tab": "Bosses",
+      "page": "Shellbane Gryphon",
+      "rare": [
+        "Gull (pet)",
+        "Jar of feathers",
+        "Belle's folly (tarnished)"
+      ],
+      "log": [
+        "Gryphon feather"
+      ]
+    },
+    {
+      "id": "skotizo",
+      "tab": "Bosses",
+      "page": "Skotizo",
+      "rare": [
+        "Jar of darkness",
+        "Dark claw",
+        "Dark totem"
+      ],
+      "log": [
+        "Uncut onyx",
+        "Ancient shard"
+      ]
+    },
+    {
+      "id": "thermonuclear_smoke_devil",
+      "tab": "Bosses",
+      "page": "Thermonuclear smoke devil",
+      "rare": [
+        "Occult necklace",
+        "Smoke battlestaff",
+        "Dragon chainbody",
+        "Jar of smoke"
+      ],
+      "log": []
+    },
+    {
+      "id": "vardorvis",
+      "tab": "Bosses",
+      "page": "Vardorvis",
+      "rare": [
+        "Executioner's axe head",
+        "Virtus mask",
+        "Virtus robe top",
+        "Virtus robe bottom",
+        "Ultor vestige",
+        "Blood quartz",
+        "Strangled tablet",
+        "Awakener's orb"
+      ],
+      "log": [
+        "Chromium ingot"
+      ]
+    },
+    {
+      "id": "venenatis_and_spindel",
+      "tab": "Bosses",
+      "page": "Venenatis and Spindel",
+      "rare": [
+        "Treasonous ring",
+        "Dragon pickaxe",
+        "Dragon 2h sword",
+        "Fangs of venenatis",
+        "Voidwaker gem"
+      ],
+      "log": []
+    },
+    {
+      "id": "vet_ion_and_calvar_ion",
+      "tab": "Bosses",
+      "page": "Vet'ion and Calvar'ion",
+      "rare": [
+        "Ring of the gods",
+        "Dragon pickaxe",
+        "Dragon 2h sword",
+        "Skull of vet'ion",
+        "Voidwaker blade"
+      ],
+      "log": []
+    },
+    {
+      "id": "vorkath",
+      "tab": "Bosses",
+      "page": "Vorkath",
+      "rare": [
+        "Vorkath's head",
+        "Draconic visage",
+        "Skeletal visage",
+        "Jar of decay",
+        "Dragonbone necklace"
+      ],
+      "log": []
+    },
+    {
+      "id": "the_whisperer",
+      "tab": "Bosses",
+      "page": "The Whisperer",
+      "rare": [
+        "Siren's staff",
+        "Virtus mask",
+        "Virtus robe top",
+        "Virtus robe bottom",
+        "Bellator vestige",
+        "Shadow quartz",
+        "Sirenic tablet",
+        "Awakener's orb"
+      ],
+      "log": [
+        "Chromium ingot"
+      ]
+    },
+    {
+      "id": "yama",
+      "tab": "Bosses",
+      "page": "Yama",
+      "rare": [
+        "Oathplate helm",
+        "Oathplate chest",
+        "Oathplate legs",
+        "Soulflame horn",
+        "Rite of vile transference",
+        "Forgotten lockbox",
+        "Dossier"
+      ],
+      "log": [
+        "Chasm teleport scroll",
+        "Oathplate shards",
+        "Barrel of demonic tallow (full)",
+        "Barrel of demonic tallow"
+      ]
+    },
+    {
+      "id": "zalcano",
+      "tab": "Bosses",
+      "page": "Zalcano",
+      "rare": [
+        "Zalcano shard"
+      ],
+      "log": [
+        "Crystal tool seed",
+        "Uncut onyx"
+      ]
+    },
+    {
+      "id": "zulrah",
+      "tab": "Bosses",
+      "page": "Zulrah",
+      "rare": [
+        "Tanzanite mutagen",
+        "Magma mutagen",
+        "Jar of swamp",
+        "Magic fang",
+        "Serpentine visage",
+        "Tanzanite fang"
+      ],
+      "log": [
+        "Zul-andra teleport",
+        "Uncut onyx",
+        "Zulrah's scales"
+      ]
+    },
+    {
+      "id": "champion_s_challenge",
+      "tab": "Other",
+      "page": "Champion's Challenge",
+      "rare": [
+        "Earth warrior champion scroll",
+        "Ghoul champion scroll",
+        "Giant champion scroll",
+        "Goblin champion scroll",
+        "Hobgoblin champion scroll",
+        "Imp champion scroll",
+        "Jogre champion scroll",
+        "Lesser demon champion scroll",
+        "Skeleton champion scroll",
+        "Zombie champion scroll",
+        "Champion's cape"
+      ],
+      "log": []
+    },
+    {
+      "id": "cyclopes",
+      "tab": "Other",
+      "page": "Cyclopes",
+      "rare": [
+        "Bronze defender",
+        "Iron defender",
+        "Steel defender",
+        "Black defender",
+        "Mithril defender",
+        "Adamant defender",
+        "Rune defender",
+        "Dragon defender"
+      ],
+      "log": []
+    },
+    {
+      "id": "elder_chaos_druids",
+      "tab": "Other",
+      "page": "Elder Chaos Druids",
+      "rare": [
+        "Elder chaos top",
+        "Elder chaos robe",
+        "Elder chaos hood"
+      ],
+      "log": []
+    },
+    {
+      "id": "glough_s_experiments",
+      "tab": "Other",
+      "page": "Glough's Experiments",
+      "rare": [
+        "Zenyte shard",
+        "Light frame",
+        "Heavy frame",
+        "Ballista limbs",
+        "Monkey tail",
+        "Ballista spring"
+      ],
+      "log": []
+    },
+    {
+      "id": "revenants",
+      "tab": "Other",
+      "page": "Revenants",
+      "rare": [
+        "Viggora's chainmace (u)",
+        "Craw's bow (u)",
+        "Thammaron's sceptre (u)",
+        "Amulet of avarice",
+        "Bracelet of ethereum (uncharged)",
+        "Bracelet of ethereum",
+        "Ancient crystal",
+        "Ancient relic",
+        "Ancient effigy",
+        "Ancient medallion",
+        "Ancient statuette",
+        "Ancient totem",
+        "Ancient emblem",
+        "Revenant ether"
+      ],
+      "log": [
+        "Revenant cave teleport"
+      ]
+    },
+    {
+      "id": "slayer",
+      "tab": "Other",
+      "page": "Slayer",
+      "rare": [
+        "Crawling hand (item)",
+        "Cockatrice head",
+        "Basilisk head",
+        "Kurask head",
+        "Abyssal head",
+        "Imbued heart",
+        "Eternal gem",
+        "Dust battlestaff",
+        "Mist battlestaff",
+        "Abyssal whip",
+        "Granite maul",
+        "Mudskipper hat",
+        "Flippers",
+        "Brine sabre",
+        "Leaf-bladed sword",
+        "Leaf-bladed battleaxe",
+        "Black mask (10)",
+        "Granite longsword",
+        "Granite boots",
+        "Wyvern visage",
+        "Granite legs",
+        "Granite helm",
+        "Draconic visage",
+        "Bronze boots",
+        "Iron boots",
+        "Steel boots",
+        "Black boots",
+        "Mithril boots",
+        "Adamant boots",
+        "Rune boots",
+        "Dragon boots",
+        "Abyssal dagger",
+        "Uncharged trident",
+        "Kraken tentacle",
+        "Dark bow",
+        "Occult necklace",
+        "Dragon chainbody",
+        "Dragon harpoon",
+        "Dragon sword",
+        "Broken dragon hasta",
+        "Drake's tooth",
+        "Drake's claw",
+        "Hydra tail",
+        "Hydra's fang",
+        "Hydra's eye",
+        "Hydra's heart",
+        "Mystic hat (light)",
+        "Mystic robe top (light)",
+        "Mystic robe bottom (light)",
+        "Mystic gloves (light)",
+        "Mystic boots (light)",
+        "Mystic hat (dark)",
+        "Mystic robe top (dark)",
+        "Mystic robe bottom (dark)",
+        "Mystic gloves (dark)",
+        "Mystic boots (dark)",
+        "Mystic hat (dusk)",
+        "Mystic robe top (dusk)",
+        "Mystic robe bottom (dusk)",
+        "Mystic gloves (dusk)",
+        "Mystic boots (dusk)",
+        "Basilisk jaw",
+        "Aquanite tendon",
+        "Dagon'hai hat",
+        "Dagon'hai robe top",
+        "Dagon'hai robe bottom",
+        "Blood shard",
+        "Ancient ceremonial mask",
+        "Ancient ceremonial top",
+        "Ancient ceremonial legs",
+        "Ancient ceremonial gloves",
+        "Ancient ceremonial boots",
+        "Warped sceptre (uncharged)",
+        "Warped sceptre",
+        "Sulphur blades",
+        "Teleport anchoring scroll",
+        "Aranea boots",
+        "Glacial temotli",
+        "Pendant of ates (inert)",
+        "Pendant of ates",
+        "Earthbound tecpatl",
+        "Antler guard",
+        "Alchemist's signet",
+        "Broken antler",
+        "Dragon metal sheet",
+        "Horn of plenty (empty)",
+        "Horn of plenty",
+        "Venator tooth",
+        "Venator fang"
+      ],
+      "log": [
+        "Dragon thrownaxe",
+        "Dragon knife",
+        "Frozen tear",
+        "Gryphon feather"
+      ]
+    },
+    {
+      "id": "tormented_demons",
+      "tab": "Other",
+      "page": "Tormented Demons",
+      "rare": [
+        "Tormented synapse",
+        "Burning claw"
+      ],
+      "log": [
+        "Guthixian temple teleport"
+      ]
+    },
+    {
+      "id": "tzhaar",
+      "tab": "Other",
+      "page": "TzHaar",
+      "rare": [
+        "Obsidian cape",
+        "Toktz-ket-xil",
+        "Tzhaar-ket-om",
+        "Toktz-xil-ak",
+        "Toktz-xil-ek",
+        "Toktz-mej-tal",
+        "Toktz-xil-ul",
+        "Obsidian helmet",
+        "Obsidian platebody",
+        "Obsidian platelegs"
+      ],
+      "log": []
+    }
+  ],
+  "skipped": [
+    "Barrows Chests",
+    "The Fight Caves",
+    "Fortis Colosseum",
+    "The Gauntlet",
+    "The Inferno",
+    "Tempoross",
+    "Wintertodt",
+    "Aerial Fishing",
+    "All Pets",
+    "Boat Paints",
+    "Camdozaal",
+    "Chompy Bird Hunting",
+    "Colossal Wyrm Agility",
+    "Creature Creation",
+    "Forestry",
+    "Fossil Island Notes",
+    "Hunter Guild",
+    "Lost Schematics",
+    "Monkey Backpacks",
+    "Motherlode Mine",
+    "My Notes",
+    "Ocean Encounters",
+    "Random Events",
+    "Rooftop Agility",
+    "Sailing Miscellaneous",
+    "Sea Treasures",
+    "Shayzien Armour",
+    "Shooting Stars",
+    "Skilling Pets",
+    "Miscellaneous"
+  ]
+}

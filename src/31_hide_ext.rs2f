@@ -1,0 +1,85 @@
+// Authored hide extras. After Joe hide so these lists win.
+
+/*@ define:input:hide
+type: enumlist
+label: Seeking arrows to force hidden
+group: Ammo
+enum: [
+  { "value": "Seeking bronze arrow*", "label": "Seeking bronze" },
+  { "value": "Seeking iron arrow*", "label": "Seeking iron" },
+  { "value": "Seeking steel arrow*", "label": "Seeking steel" },
+  { "value": "Seeking mithril arrow*", "label": "Seeking mithril" },
+  { "value": "Seeking adamant arrow*", "label": "Seeking adamant" },
+  { "value": "Seeking rune arrow*", "label": "Seeking rune" },
+  { "value": "Seeking broad arrows*", "label": "Seeking broad" },
+  { "value": "Seeking amethyst arrow*", "label": "Seeking amethyst" },
+  { "value": "Seeking dragon arrow*", "label": "Seeking dragon" }
+]
+*/
+#define RAX_AMMO_SEEKING_HIDE ["Seeking bronze arrow*","Seeking iron arrow*","Seeking steel arrow*","Seeking mithril arrow*","Seeking adamant arrow*"]
+
+/*@ define:input:hide
+type: number
+label: Seeking arrows minimum value
+group: Ammo
+*/
+#define RAX_AMMO_SEEKING_MIN_VALUE 0
+
+apply (name:FACT_AMMO_SEEKING_ARROWS_LIST && (name:RAX_AMMO_SEEKING_HIDE || value:<RAX_AMMO_SEEKING_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:hide
+type: boolean
+label: Hide grimy low herbs (guam to harralander)
+group: Herbs
+*/
+#define RAX_HIDE_GRIMY_LOW_HERBS false
+
+apply (RAX_HIDE_GRIMY_LOW_HERBS && name:FACT_HERBS_LOW && name:FACT_HERBS_GRIMY) {
+    hidden = true;
+}
+
+/*@ define:input:hide
+type: boolean
+label: Hide low armour (bronze to mithril)
+group: Metal Equipment
+*/
+#define RAX_HIDE_ARMOUR_LOW true
+
+apply (RAX_HIDE_ARMOUR_LOW && (name:FACT_BRONZE_ARMOUR || name:FACT_IRON_ARMOUR || name:FACT_STEEL_ARMOUR || name:FACT_BLACK_ARMOUR || name:FACT_MITHRIL_ARMOUR) && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+
+/*@ define:input:hide
+type: boolean
+label: Hide adamant armour
+group: Metal Equipment
+*/
+#define RAX_HIDE_ARMOUR_MID false
+
+apply (RAX_HIDE_ARMOUR_MID && name:FACT_ADAMANT_ARMOUR && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+
+/*@ define:input:hide
+type: boolean
+label: Hide rune armour
+group: Metal Equipment
+*/
+#define RAX_HIDE_ARMOUR_HIGH false
+
+apply (RAX_HIDE_ARMOUR_HIGH && name:FACT_RUNE_ARMOUR && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+
+/*@ define:input:hide
+type: boolean
+label: Hide dragon armour
+group: Metal Equipment
+*/
+#define RAX_HIDE_ARMOUR_DRAGON false
+
+apply (RAX_HIDE_ARMOUR_DRAGON && name:FACT_DRAGON_ARMOUR && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}

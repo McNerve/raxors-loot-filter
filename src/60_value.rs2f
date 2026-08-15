@@ -138,7 +138,7 @@ type: stringlist
 label: Pin to Insane
 group: Insane
 */
-#define RAX_HEAT_4_PIN ["Venator vestige","Leviathan's lure","Bellator vestige","Siren's staff","Ultor vestige","Executioner's axe head","Magus vestige","Eye of the duke","Araxyte fang","Tanzanite mutagen","Magma mutagen","Earth Warrior champion scroll","Ghoul champion scroll","Giant champion scroll","Goblin champion scroll","Hobgoblin champion scroll","Imp champion scroll","Jogre champion scroll","Lesser Demon champion scroll","Skeleton champion scroll","Zombie champion scroll","Mokhaiotl cloth","Eye of ayak","Avernic treads"]
+#define RAX_HEAT_4_PIN ["Venator vestige","Leviathan's lure","Bellator vestige","Siren's staff","Ultor vestige","Executioner's axe head","Magus vestige","Eye of the duke","Araxyte fang","Tanzanite mutagen","Magma mutagen","Earth Warrior champion scroll","Ghoul champion scroll","Giant champion scroll","Goblin champion scroll","Hobgoblin champion scroll","Imp champion scroll","Jogre champion scroll","Lesser Demon champion scroll","Skeleton champion scroll","Zombie champion scroll","Mokhaiotl cloth","Eye of ayak","Avernic treads","Elder venator fang","Crimson kisten","Tonalztics of ralos (uncharged)","Dizana's quiver"]
 
 /*@ define:input:value
 type: style

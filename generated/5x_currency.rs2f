@@ -1,0 +1,509 @@
+/*@ define:module:currency
+---
+name: Currency
+subtitle: Coins and tokens
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+
+apply (RAX_SHOW_ICONS && RAX_FORCE_CATEGORY_ICON && (name:RAX_CATEGORY_NAMES || name:FACT_ADAMANT_AMMO || name:FACT_ADAMANT_ARMOUR || name:FACT_ADAMANT_GOLD_TRIMMED_ARMOUR || name:FACT_ADAMANT_HERALDIC_ARMOUR || name:FACT_ADAMANT_ONE_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_OTHER || name:FACT_ADAMANT_RANGED_WEAPONS || name:FACT_ADAMANT_TRIMMED_ARMOUR || name:FACT_ADAMANT_TWO_HANDED_MELEE_WEAPONS || name:FACT_ALL_HERBLORE_EQUIPMENT || name:FACT_ALL_HERBS || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_CHINCHOMPAS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_KNIVES_LIST || name:FACT_AMMO_MISC_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST || name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_THROWING_AXES_LIST || name:FACT_ASHES_LIST || name:FACT_BARB_POTIONS_LIST || name:FACT_BARS_LIST || name:FACT_BLACK_AMMO || name:FACT_BLACK_ARMOUR || name:FACT_BLACK_GOLD_TRIMMED_ARMOUR || name:FACT_BLACK_HERALDIC_ARMOUR || name:FACT_BLACK_ONE_HANDED_MELEE_WEAPONS || name:FACT_BLACK_OTHER || name:FACT_BLACK_RANGED_WEAPONS || name:FACT_BLACK_TRIMMED_ARMOUR || name:FACT_BLACK_TWO_HANDED_MELEE_WEAPONS || name:FACT_BONES_LIST || name:FACT_BRONZE_AMMO || name:FACT_BRONZE_ARMOUR || name:FACT_BRONZE_GOLD_TRIMMED_ARMOUR || name:FACT_BRONZE_ONE_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_OTHER || name:FACT_BRONZE_RANGED_WEAPONS || name:FACT_BRONZE_TRIMMED_ARMOUR || name:FACT_BRONZE_TWO_HANDED_MELEE_WEAPONS || name:FACT_CAKE_FOODS_LIST || name:FACT_CONSTRUCTION_MISC_LIST || name:FACT_CONSTRUCTION_NAILS_LIST || name:FACT_CONSTRUCTION_PLANKS_LIST || name:FACT_CONSTRUCTION_STONEMASON_LIST || name:FACT_CURRENCY_LIST || name:FACT_DRAGON_AMMO || name:FACT_DRAGON_ARMOUR || name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_RANGED_WEAPONS || name:FACT_DRAGON_TWO_HANDED_MELEE_WEAPONS || name:FACT_ENSOULED_HEAD_LIST || name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_ANIMA_LIST || name:FACT_FARMING_SEEDS_BUSH_LIST || name:FACT_FARMING_SEEDS_FLOWER_LIST || name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST || name:FACT_FARMING_SEEDS_HERB_LIST || name:FACT_FARMING_SEEDS_HOPS_LIST || name:FACT_FARMING_SEEDS_SPECIAL_LIST || name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST || name:FACT_FARMING_SEEDS_TREE_LIST || name:FACT_FISHING_BAIT_LIST || name:FACT_FISHING_EQUIPMENT_LIST || name:FACT_FISHING_RAW_FISH_LIST || name:FACT_FISH_FOODS_LIST || name:FACT_FLETCHING_ARROW_TIPS_LIST || name:FACT_FLETCHING_BOLT_TIPS_LIST || name:FACT_FLETCHING_CROSSBOW_LIMBS_LIST || name:FACT_FLETCHING_CROSSBOW_STOCK_LIST || name:FACT_FLETCHING_DART_TIP_LIST || name:FACT_FLETCHING_JAVELIN_HEADS_LIST || name:FACT_FLETCHING_MISC_LIST || name:FACT_FLETCHING_UNFINISHED_BOLTS_LIST || name:FACT_FLETCHING_UNSTRUNG_CROSSBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_LONGBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_HUNTER_FOODS_LIST || name:FACT_IRON_AMMO || name:FACT_IRON_ARMOUR || name:FACT_IRON_GOLD_TRIMMED_ARMOUR || name:FACT_IRON_ONE_HANDED_MELEE_WEAPONS || name:FACT_IRON_OTHER || name:FACT_IRON_RANGED_WEAPONS || name:FACT_IRON_TRIMMED_ARMOUR || name:FACT_IRON_TWO_HANDED_MELEE_WEAPONS || name:FACT_LAST_MAN_STANDING_AMMO_LIST || name:FACT_LOGS_LIST || name:FACT_MITHRIL_AMMO || name:FACT_MITHRIL_ARMOUR || name:FACT_MITHRIL_GOLD_TRIMMED_ARMOUR || name:FACT_MITHRIL_ONE_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_OTHER || name:FACT_MITHRIL_RANGED_WEAPONS || name:FACT_MITHRIL_TRIMMED_ARMOUR || name:FACT_MITHRIL_TWO_HANDED_MELEE_WEAPONS || name:FACT_ORES_LIST || name:FACT_PIE_FOODS_LIST || name:FACT_PIZZA_FOODS_LIST || name:FACT_POTATOES_FOODS_LIST || name:FACT_POTIONS_LIST || name:FACT_RUNES_CATALYTIC_LIST || name:FACT_RUNES_COMBINATION_LIST || name:FACT_RUNES_ELEMENTAL_LIST || name:FACT_RUNES_LIST || name:FACT_RUNE_AMMO || name:FACT_RUNE_ANCIENT_TRIMMED_ARMOUR || name:FACT_RUNE_ARMADYL_TRIMMED_ARMOUR || name:FACT_RUNE_ARMOUR || name:FACT_RUNE_BANDOS_TRIMMED_ARMOUR || name:FACT_RUNE_GILDED || name:FACT_RUNE_GOLD_TRIMMED_ARMOUR || name:FACT_RUNE_GUTHIX_TRIMMED_ARMOUR || name:FACT_RUNE_HERALDIC_ARMOUR || name:FACT_RUNE_ONE_HANDED_MELEE_WEAPONS || name:FACT_RUNE_OTHER || name:FACT_RUNE_RANGED_WEAPONS || name:FACT_RUNE_SARADOMIN_TRIMMED_ARMOUR || name:FACT_RUNE_TRIMMED_ARMOUR || name:FACT_RUNE_TWO_HANDED_MELEE_WEAPONS || name:FACT_RUNE_ZAMORAK_TRIMMED_ARMOUR || name:FACT_SECONDARIES_LIST || name:FACT_SHADES_REMAINS_LIST || name:FACT_STEEL_AMMO || name:FACT_STEEL_ARMOUR || name:FACT_STEEL_GOLD_TRIMMED_ARMOUR || name:FACT_STEEL_ONE_HANDED_MELEE_WEAPONS || name:FACT_STEEL_OTHER || name:FACT_STEEL_RANGED_WEAPONS || name:FACT_STEEL_TRIMMED_ARMOUR || name:FACT_STEEL_TWO_HANDED_MELEE_WEAPONS)) {
+    RAX_CATEGORY_ICON_STYLE
+}
+
+/*@ define:group
+---
+name: Currency
+icon:
+  type: itemId
+  itemId: 995
+expanded: false
+*/
+/*@ define:group
+---
+name: Misc
+icon:
+  type: itemId
+  itemId: 590
+expanded: false
+*/
+/*@ define:input:currency
+type: style
+label: Currency Style
+group: Currency
+exampleItem: Coins
+exampleItemId: 1004
+*/
+#define RAX_CURRENCY_CUSTOMSTYLE textColor = "#ffbdb97c";textAccentColor = "#47000000";textAccent = 4;icon = CurrentItem();
+
+apply (name:FACT_CURRENCY_LIST) {
+    RAX_CURRENCY_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: Ancient blood ornament kit custom style
+group: Misc
+exampleItem: Ancient blood ornament kit
+exampleItemId: 28336
+*/
+#define RAX_ANCIENT_BLOOD_ORNAMENT_KIT_CUSTOMSTYLE hidden = false;textColor = "#FFb02315";backgroundColor = "#901a1818";borderColor = "#FF1a1818";textAccentColor = "#FF000000";lootbeamColor = "#ffb02315";menuTextColor = "#FFb02315";fontType = 3;showLootbeam = true;icon = CurrentItem();
+
+apply (name:"Ancient blood ornament kit") {
+    RAX_ANCIENT_BLOOD_ORNAMENT_KIT_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: Purifying sigil custom style
+group: Misc
+exampleItem: Purifying sigil
+exampleItemId: 30793
+*/
+#define RAX_PURIFYING_SIGIL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#90d0d0d0";borderColor = "#FFFFFFFF";textAccentColor = "#FF000000";lootbeamColor = "#ffd0d0d0";menuTextColor = "#FFFFFFFF";fontType = 3;showLootbeam = true;icon = CurrentItem();
+
+apply (name:"Purifying sigil*") {
+    RAX_PURIFYING_SIGIL_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: "Avernic defender custom style"
+group: Misc
+exampleItem: "Avernic defender"
+exampleItemId: 24186
+*/
+#define RAX_AVERNIC_DEFENDER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#9077776e";borderColor = "#FF1f1c1c";textAccentColor = "#FF000000";lootbeamColor = "#FF1f1c1c";menuTextColor = "#FF000000";fontType = 3;showLootbeam = true;icon = CurrentItem();
+
+apply (name:"Avernic defender*") {
+  RAX_AVERNIC_DEFENDER_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: "Ghommal's avernic defender 5 custom style"
+group: Misc
+exampleItem: "Ghommal's avernic defender 5"
+exampleItemId: 27550
+*/
+#define RAX_GHOMMALS_AVERNIC_DEFENDER_5_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#9077776e";borderColor = "#FF4c0c08";textAccentColor = "#FF000000";lootbeamColor = "#FF4c0c08";menuTextColor = "#FF4c0c08";fontType = 3;showLootbeam = true;icon = CurrentItem();
+
+apply (name:"Ghommal's avernic defender 5*") {
+  RAX_GHOMMALS_AVERNIC_DEFENDER_5_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: "Ghommal's avernic defender 6 custom style"
+group: Misc
+exampleItem: "Ghommal's avernic defender 6"
+exampleItemId: 27552
+*/
+#define RAX_GHOMMALS_AVERNIC_DEFENDER_6_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#9077776e";borderColor = "#FFf6be3f";textAccentColor = "#FF000000";lootbeamColor = "#FFf6be3f";menuTextColor = "#FFf6be3f";fontType = 3;showLootbeam = true;icon = CurrentItem();
+
+apply (name:"Ghommal's avernic defender 6*") {
+  RAX_GHOMMALS_AVERNIC_DEFENDER_6_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: "DT2 Gold Ring Style"
+group: Misc
+exampleItem: "Gold ring"
+exampleItemId: 1635
+*/
+#define RAX_DT2_GOLD_RING_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50c6b120";borderColor = "#FFfce32e";textAccentColor = "#FF000000";lootbeamColor = "#FFfce32e";menuTextColor = "#FFfce32e";fontType = 3;showLootbeam = true;icon = CurrentItem();
+
+apply (name:"Gold ring" && (area:FACT_THE_WHISPERER_AREA || area:FACT_VARDORVIS_AREA || area:FACT_DUKE_SUCELLUS_AREA || area:FACT_THE_LEVIATHAN_AREA)) {
+  RAX_DT2_GOLD_RING_CUSTOMSTYLE 
+}
+/*@ define:input:currency
+type: style
+label: Abyssal pearls custom style
+group: Currency
+exampleItem: Abyssal pearls
+exampleItemId: 26792
+*/
+#define RAX_ABYSSAL_PEARLS_CUSTOMSTYLE 
+
+apply (name:"Abyssal pearls") {
+    RAX_ABYSSAL_PEARLS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Agility arena ticket custom style
+group: Currency
+exampleItem: Agility arena ticket
+exampleItemId: 29480
+*/
+#define RAX_AGILITY_ARENA_TICKET_CUSTOMSTYLE 
+
+apply (name:"Agility arena ticket") {
+    RAX_AGILITY_ARENA_TICKET_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Anima-infused bark custom style
+group: Currency
+exampleItem: Anima-infused bark
+exampleItemId: 28134
+*/
+#define RAX_ANIMA_INFUSED_BARK_CUSTOMSTYLE 
+
+apply (name:"Anima-infused bark") {
+    RAX_ANIMA_INFUSED_BARK_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Archery ticket custom style
+group: Currency
+exampleItem: Archery ticket
+exampleItemId: 1464
+*/
+#define RAX_ARCHERY_TICKET_CUSTOMSTYLE 
+
+apply (name:"Archery ticket") {
+    RAX_ARCHERY_TICKET_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Barronite shards custom style
+group: Currency
+exampleItem: Barronite shards
+exampleItemId: 25676
+*/
+#define RAX_BARRONITE_SHARDS_CUSTOMSTYLE 
+
+apply (name:"Barronite shards") {
+    RAX_BARRONITE_SHARDS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Blood money custom style
+group: Currency
+exampleItem: Blood money
+exampleItemId: 13307
+*/
+#define RAX_BLOOD_MONEY_CUSTOMSTYLE 
+
+apply (name:"Blood money") {
+    RAX_BLOOD_MONEY_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Brimhaven voucher custom style
+group: Currency
+exampleItem: Brimhaven voucher
+exampleItemId: 29482
+*/
+#define RAX_BRIMHAVEN_VOUCHER_CUSTOMSTYLE 
+
+apply (name:"Brimhaven voucher") {
+    RAX_BRIMHAVEN_VOUCHER_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Castle wars ticket custom style
+group: Currency
+exampleItem: Castle wars ticket
+exampleItemId: 4067
+*/
+#define RAX_CASTLE_WARS_TICKET_CUSTOMSTYLE 
+
+apply (name:"Castle wars ticket") {
+    RAX_CASTLE_WARS_TICKET_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Coins custom style
+group: Currency
+exampleItem: Coins
+exampleItemId: 1004
+*/
+#define RAX_COINS_CUSTOMSTYLE textAccent = 4;
+
+apply (name:"Coins") {
+    RAX_COINS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Ecto-token custom style
+group: Currency
+exampleItem: Ecto-token
+exampleItemId: 4278
+*/
+#define RAX_ECTO_TOKEN_CUSTOMSTYLE 
+
+apply (name:"Ecto-token") {
+    RAX_ECTO_TOKEN_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Frog token custom style
+group: Currency
+exampleItem: Frog token
+exampleItemId: 6183
+*/
+#define RAX_FROG_TOKEN_CUSTOMSTYLE 
+
+apply (name:"Frog token") {
+    RAX_FROG_TOKEN_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Glistening tear custom style
+group: Currency
+exampleItem: Glistening tear
+exampleItemId: 22207
+*/
+#define RAX_GLISTENING_TEAR_CUSTOMSTYLE 
+
+apply (name:"Glistening tear") {
+    RAX_GLISTENING_TEAR_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Golden nugget custom style
+group: Currency
+exampleItem: Golden nugget
+exampleItemId: 12012
+*/
+#define RAX_GOLDEN_NUGGET_CUSTOMSTYLE 
+
+apply (name:"Golden nugget") {
+    RAX_GOLDEN_NUGGET_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Hallowed mark custom style
+group: Currency
+exampleItem: Hallowed mark
+exampleItemId: 24711
+*/
+#define RAX_HALLOWED_MARK_CUSTOMSTYLE 
+
+apply (name:"Hallowed mark") {
+    RAX_HALLOWED_MARK_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Intelligence custom style
+group: Currency
+exampleItem: Intelligence
+exampleItemId: 13395
+*/
+#define RAX_INTELLIGENCE_CUSTOMSTYLE 
+
+apply (name:"Intelligence") {
+    RAX_INTELLIGENCE_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Mark of grace custom style
+group: Currency
+exampleItem: Mark of grace
+exampleItemId: 11849
+*/
+#define RAX_MARK_OF_GRACE_CUSTOMSTYLE 
+
+apply (name:"Mark of grace") {
+    RAX_MARK_OF_GRACE_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Mermaid's tear custom style
+group: Currency
+exampleItem: Mermaid's tear
+exampleItemId: 21656
+*/
+#define RAX_MERMAIDS_TEAR_CUSTOMSTYLE 
+
+apply (name:"Mermaid's tear") {
+    RAX_MERMAIDS_TEAR_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Minnow custom style
+group: Currency
+exampleItem: Minnow
+exampleItemId: 21356
+*/
+#define RAX_MINNOW_CUSTOMSTYLE 
+
+apply (name:"Minnow") {
+    RAX_MINNOW_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Molch pearl custom style
+group: Currency
+exampleItem: Molch pearl
+exampleItemId: 22820
+*/
+#define RAX_MOLCH_PEARL_CUSTOMSTYLE 
+
+apply (name:"Molch pearl") {
+    RAX_MOLCH_PEARL_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Mole claw custom style
+group: Currency
+exampleItem: Mole claw
+exampleItemId: 7416
+*/
+#define RAX_MOLE_CLAW_CUSTOMSTYLE 
+
+apply (name:"Mole claw") {
+    RAX_MOLE_CLAW_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Mole skin custom style
+group: Currency
+exampleItem: Mole skin
+exampleItemId: 7418
+*/
+#define RAX_MOLE_SKIN_CUSTOMSTYLE 
+
+apply (name:"Mole skin") {
+    RAX_MOLE_SKIN_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Nuggets custom style
+group: Currency
+exampleItem: Nuggets
+exampleItemId: 680
+*/
+#define RAX_NUGGETS_CUSTOMSTYLE 
+
+apply (name:"Nuggets") {
+    RAX_NUGGETS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Numulite custom style
+group: Currency
+exampleItem: Numulite
+exampleItemId: 21555
+*/
+#define RAX_NUMULITE_CUSTOMSTYLE 
+
+apply (name:"Numulite") {
+    RAX_NUMULITE_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Paramaya ticket custom style
+group: Currency
+exampleItem: Paramaya ticket
+exampleItemId: 619
+*/
+#define RAX_PARAMAYA_TICKET_CUSTOMSTYLE 
+
+apply (name:"Paramaya ticket") {
+    RAX_PARAMAYA_TICKET_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Platinum token custom style
+group: Currency
+exampleItem: Platinum token
+exampleItemId: 13204
+*/
+#define RAX_PLATINUM_TOKEN_CUSTOMSTYLE 
+
+apply (name:"Platinum token") {
+    RAX_PLATINUM_TOKEN_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Shantay pass custom style
+group: Currency
+exampleItem: Shantay pass
+exampleItemId: 1854
+*/
+#define RAX_SHANTAY_PASS_CUSTOMSTYLE 
+
+apply (name:"Shantay pass") {
+    RAX_SHANTAY_PASS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Ship ticket custom style
+group: Currency
+exampleItem: Ship ticket
+exampleItemId: 621
+*/
+#define RAX_SHIP_TICKET_CUSTOMSTYLE 
+
+apply (name:"Ship ticket") {
+    RAX_SHIP_TICKET_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Stardust custom style
+group: Currency
+exampleItem: Stardust
+exampleItemId: 25527
+*/
+#define RAX_STARDUST_CUSTOMSTYLE 
+
+apply (name:"Stardust") {
+    RAX_STARDUST_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Termites custom style
+group: Currency
+exampleItem: Termites
+exampleItemId: 30038
+*/
+#define RAX_TERMITES_CUSTOMSTYLE 
+
+apply (name:"Termites") {
+    RAX_TERMITES_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Tokkul custom style
+group: Currency
+exampleItem: Tokkul
+exampleItemId: 6529
+*/
+#define RAX_TOKKUL_CUSTOMSTYLE 
+
+apply (name:"Tokkul") {
+    RAX_TOKKUL_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Trading sticks custom style
+group: Currency
+exampleItem: Trading sticks
+exampleItemId: 6306
+*/
+#define RAX_TRADING_STICKS_CUSTOMSTYLE 
+
+apply (name:"Trading sticks") {
+    RAX_TRADING_STICKS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Unidentified minerals custom style
+group: Currency
+exampleItem: Unidentified minerals
+exampleItemId: 21341
+*/
+#define RAX_UNIDENTIFIED_MINERALS_CUSTOMSTYLE 
+
+apply (name:"Unidentified minerals") {
+    RAX_UNIDENTIFIED_MINERALS_CUSTOMSTYLE
+}
+/*@ define:input:currency
+type: style
+label: Warrior guild token custom style
+group: Currency
+exampleItem: Warrior guild token
+exampleItemId: 8851
+*/
+#define RAX_WARRIOR_GUILD_TOKEN_CUSTOMSTYLE 
+
+apply (name:"Warrior guild token") {
+    RAX_WARRIOR_GUILD_TOKEN_CUSTOMSTYLE
+}

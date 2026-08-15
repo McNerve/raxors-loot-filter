@@ -3,7 +3,7 @@
 name: Individual Items
 icon:
   type: itemId
-  itemId: 995
+  itemId: 2347
 expanded: false
 */
 /*@ define:group
@@ -18,9 +18,8 @@ expanded: false
 ---
 name: Ownership
 icon:
-  type: sprite
-  spriteId: 206
-  spriteIndex: 0
+  type: itemId
+  itemId: 1601
 expanded: false
 */
 /*@ define:group
@@ -35,117 +34,104 @@ expanded: false
 ---
 name: Remains
 icon:
-  type: sprite
-  spriteId: 201
-  spriteIndex: 0
+  type: itemId
+  itemId: 536
 expanded: false
 */
 /*@ define:group
 ---
 name: Food
 icon:
-  type: sprite
-  spriteId: 212
-  spriteIndex: 0
+  type: itemId
+  itemId: 13441
 expanded: false
 */
 /*@ define:group
 ---
 name: Potions
 icon:
-  type: sprite
-  spriteId: 205
-  spriteIndex: 0
+  type: itemId
+  itemId: 6685
 expanded: false
 */
 /*@ define:group
 ---
 name: Ammo
 icon:
-  type: sprite
-  spriteId: 200
-  spriteIndex: 0
+  type: itemId
+  itemId: 11212
 expanded: false
 */
 /*@ define:group
 ---
 name: Gems
 icon:
-  type: sprite
-  spriteId: 207
-  spriteIndex: 0
+  type: itemId
+  itemId: 1617
 expanded: false
 */
 /*@ define:group
 ---
 name: Runes
 icon:
-  type: sprite
-  spriteId: 215
-  spriteIndex: 0
+  type: itemId
+  itemId: 565
 expanded: false
 */
 /*@ define:group
 ---
 name: Herbs
 icon:
-  type: sprite
-  spriteId: 205
-  spriteIndex: 0
+  type: itemId
+  itemId: 207
 expanded: false
 */
 /*@ define:group
 ---
 name: Fishing
 icon:
-  type: sprite
-  spriteId: 211
-  spriteIndex: 0
+  type: itemId
+  itemId: 377
 expanded: false
 */
 /*@ define:group
 ---
 name: Ores
 icon:
-  type: sprite
-  spriteId: 209
-  spriteIndex: 0
+  type: itemId
+  itemId: 451
 expanded: false
 */
 /*@ define:group
 ---
 name: Bars
 icon:
-  type: sprite
-  spriteId: 210
-  spriteIndex: 0
+  type: itemId
+  itemId: 2363
 expanded: false
 */
 /*@ define:group
 ---
 name: Logs
 icon:
-  type: sprite
-  spriteId: 214
-  spriteIndex: 0
+  type: itemId
+  itemId: 1513
 expanded: false
 */
 /*@ define:group
 ---
 name: Farming seeds
 icon:
-  type: sprite
-  spriteId: 217
-  spriteIndex: 0
+  type: itemId
+  itemId: 5295
 expanded: false
 */
 /*@ define:group
 ---
 name: Herblore secondaries
 icon:
-  type: sprite
-  spriteId: 205
-  spriteIndex: 0
+  type: itemId
+  itemId: 221
 expanded: false
 */
 /*@ define:group
@@ -160,9 +146,8 @@ expanded: false
 ---
 name: Metal Equipment
 icon:
-  type: sprite
-  spriteId: 210
-  spriteIndex: 0
+  type: itemId
+  itemId: 1127
 expanded: false
 */
 

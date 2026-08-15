@@ -1,0 +1,528 @@
+// authored rooms — after Joe so these hide/show lists win.
+
+/*@ define:group
+---
+name: Theatre of Blood
+icon:
+  type: itemId
+  itemId: 22326
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Theatre of Blood force shown
+group: Theatre of Blood
+*/
+#define RAX_ROOM_TOB_SHOW ["Scythe of vitur (uncharged)", "Ghrazi rapier", "Sanguinesti staff (uncharged)", "Justiciar faceguard", "Justiciar chestguard", "Justiciar legguards", "Avernic defender hilt", "Holy ornament kit", "Sanguine ornament kit", "Sanguine dust"]
+
+/*@ define:input:locations
+type: stringlist
+label: Theatre of Blood force hidden
+group: Theatre of Blood
+*/
+#define RAX_ROOM_TOB_HIDE []
+
+apply ((area:FACT_TOB_AREA) && name:RAX_ROOM_TOB_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_TOB_AREA) && name:RAX_ROOM_TOB_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Hueycoatl
+icon:
+  type: itemId
+  itemId: 30085
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Hueycoatl force shown
+group: Hueycoatl
+*/
+#define RAX_ROOM_HUEYCOATL_SHOW ["Hueycoatl hide", "Tome of earth (empty)", "Tome of earth", "Dragon hunter wand", "Huasca seed", "Soiled page", "Sun-kissed bones"]
+
+/*@ define:input:locations
+type: stringlist
+label: Hueycoatl force hidden
+group: Hueycoatl
+*/
+#define RAX_ROOM_HUEYCOATL_HIDE []
+
+apply ((area:FACT_HUEYCOATL_AREA) && name:RAX_ROOM_HUEYCOATL_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_HUEYCOATL_AREA) && name:RAX_ROOM_HUEYCOATL_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Amoxliatl
+icon:
+  type: itemId
+  itemId: 29889
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Amoxliatl force shown
+group: Amoxliatl
+*/
+#define RAX_ROOM_AMOXLIATL_SHOW ["Glacial temotli", "Earthbound tecpatl", "Pendant of ates*", "Frozen tear*", "Tooth half of key (moon key)"]
+
+/*@ define:input:locations
+type: stringlist
+label: Amoxliatl force hidden
+group: Amoxliatl
+*/
+#define RAX_ROOM_AMOXLIATL_HIDE []
+
+apply ((area:FACT_AMOXLIATL_AREA) && name:RAX_ROOM_AMOXLIATL_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_AMOXLIATL_AREA) && name:RAX_ROOM_AMOXLIATL_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Doom of Mokhaiotl
+icon:
+  type: itemId
+  itemId: 30070
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Doom of Mokhaiotl force shown
+group: Doom of Mokhaiotl
+*/
+#define RAX_ROOM_DOOM_SHOW ["Mokhaiotl cloth", "Eye of ayak", "Avernic treads", "Demon tear*", "Dom"]
+
+/*@ define:input:locations
+type: stringlist
+label: Doom of Mokhaiotl force hidden
+group: Doom of Mokhaiotl
+*/
+#define RAX_ROOM_DOOM_HIDE []
+
+apply ((area:FACT_DOOM_MOKHAIOTL_AREA) && name:RAX_ROOM_DOOM_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_DOOM_MOKHAIOTL_AREA) && name:RAX_ROOM_DOOM_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Royal Titans
+icon:
+  type: itemId
+  itemId: 30638
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Royal Titans force shown
+group: Royal Titans
+*/
+#define RAX_ROOM_TITANS_SHOW ["Fire element staff crown", "Ice element staff crown", "Giantsoul amulet*", "Desiccated page", "Mystic vigour prayer scroll", "Deadeye prayer scroll", "Bran"]
+
+/*@ define:input:locations
+type: stringlist
+label: Royal Titans force hidden
+group: Royal Titans
+*/
+#define RAX_ROOM_TITANS_HIDE []
+
+apply ((area:FACT_ROYAL_TITANS_AREA) && name:RAX_ROOM_TITANS_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_ROYAL_TITANS_AREA) && name:RAX_ROOM_TITANS_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Maggot King
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Maggot King force shown
+group: Maggot King
+*/
+#define RAX_ROOM_MAGGOT_SHOW ["Elder venator fang", "Crimson kisten", "Maggot egg*", "Maggot marquess", "Stymphike tartare", "Dull ancient medal", "Venator fang", "Venator tooth", "Tarnished*", "Blood sac", "Letvek", "Orikalkum gravel"]
+
+/*@ define:input:locations
+type: stringlist
+label: Maggot King force hidden
+group: Maggot King
+*/
+#define RAX_ROOM_MAGGOT_HIDE []
+
+apply ((area:FACT_MAGGOT_KING_AREA) && name:RAX_ROOM_MAGGOT_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_MAGGOT_KING_AREA) && name:RAX_ROOM_MAGGOT_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Fortis Colosseum
+icon:
+  type: itemId
+  itemId: 28951
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Fortis Colosseum force shown
+group: Fortis Colosseum
+*/
+#define RAX_ROOM_COLOSSEUM_SHOW ["Dizana's quiver*", "Tonalztics of ralos*", "Sunfire fanatic helm", "Sunfire fanatic cuirass", "Sunfire fanatic chausses", "Echo crystal", "Sunfire splinters", "Smol heredit"]
+
+/*@ define:input:locations
+type: stringlist
+label: Fortis Colosseum force hidden
+group: Fortis Colosseum
+*/
+#define RAX_ROOM_COLOSSEUM_HIDE []
+
+apply ((area:FACT_COLOSSEUM_AREA || area:FACT_COLO_LOBBY_AREA) && name:RAX_ROOM_COLOSSEUM_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_COLOSSEUM_AREA || area:FACT_COLO_LOBBY_AREA) && name:RAX_ROOM_COLOSSEUM_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Phantom Muspah
+icon:
+  type: itemId
+  itemId: 27614
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Phantom Muspah force shown
+group: Phantom Muspah
+*/
+#define RAX_ROOM_MUSPAH_SHOW ["Venator shard", "Ancient essence", "Frozen cache", "Ancient icon"]
+
+/*@ define:input:locations
+type: stringlist
+label: Phantom Muspah force hidden
+group: Phantom Muspah
+*/
+#define RAX_ROOM_MUSPAH_HIDE []
+
+apply ((area:FACT_MUSPAH_AREA) && name:RAX_ROOM_MUSPAH_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_MUSPAH_AREA) && name:RAX_ROOM_MUSPAH_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Desert Treasure II
+icon:
+  type: itemId
+  itemId: 28325
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Desert Treasure II force shown
+group: Desert Treasure II
+*/
+#define RAX_ROOM_DT2_SHOW ["Magus vestige", "Eye of the duke", "Ice quartz", "Venator vestige", "Leviathan's lure", "Smoke quartz", "Bellator vestige", "Siren's staff", "Shadow quartz", "Ultor vestige", "Executioner's axe head", "Blood quartz", "Virtus mask", "Virtus robe top", "Virtus robe bottom", "Chromium ingot", "Awakener's orb"]
+
+/*@ define:input:locations
+type: stringlist
+label: Desert Treasure II force hidden
+group: Desert Treasure II
+*/
+#define RAX_ROOM_DT2_HIDE []
+
+apply ((area:FACT_DUKE_SUCELLUS_AREA || area:FACT_THE_LEVIATHAN_AREA || area:FACT_THE_WHISPERER_AREA || area:FACT_VARDORVIS_AREA) && name:RAX_ROOM_DT2_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_DUKE_SUCELLUS_AREA || area:FACT_THE_LEVIATHAN_AREA || area:FACT_THE_WHISPERER_AREA || area:FACT_VARDORVIS_AREA) && name:RAX_ROOM_DT2_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Alchemical Hydra
+icon:
+  type: itemId
+  itemId: 22983
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Alchemical Hydra force shown
+group: Alchemical Hydra
+*/
+#define RAX_ROOM_HYDRA_SHOW ["Hydra's claw", "Hydra tail", "Hydra leather", "Hydra's fang", "Hydra's eye", "Hydra's heart", "Alchemical hydra heads", "Brimstone key"]
+
+/*@ define:input:locations
+type: stringlist
+label: Alchemical Hydra force hidden
+group: Alchemical Hydra
+*/
+#define RAX_ROOM_HYDRA_HIDE []
+
+apply ((area:FACT_SLAYER_HYDRAS_AREA) && name:RAX_ROOM_HYDRA_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_HYDRAS_AREA) && name:RAX_ROOM_HYDRA_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Araxxor
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Araxxor force shown
+group: Araxxor
+*/
+#define RAX_ROOM_ARAXXOR_SHOW ["Araxyte fang", "Noxious point", "Noxious blade", "Noxious pommel", "Araxyte head", "Araxyte venom sack", "Nid"]
+
+/*@ define:input:locations
+type: stringlist
+label: Araxxor force hidden
+group: Araxxor
+*/
+#define RAX_ROOM_ARAXXOR_HIDE []
+
+apply ((area:FACT_SLAYER_ARAXYTES_AREA) && name:RAX_ROOM_ARAXXOR_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_ARAXYTES_AREA) && name:RAX_ROOM_ARAXXOR_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Kraken
+icon:
+  type: itemId
+  itemId: 12004
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Kraken force shown
+group: Kraken
+*/
+#define RAX_ROOM_KRAKEN_SHOW ["Kraken tentacle", "Trident of the seas", "Jar of dirt"]
+
+/*@ define:input:locations
+type: stringlist
+label: Kraken force hidden
+group: Kraken
+*/
+#define RAX_ROOM_KRAKEN_HIDE []
+
+apply ((area:FACT_SLAYER_CAVE_KRAKEN_AREA) && name:RAX_ROOM_KRAKEN_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_CAVE_KRAKEN_AREA) && name:RAX_ROOM_KRAKEN_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Abyssal demons
+icon:
+  type: itemId
+  itemId: 4151
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Abyssal demons force shown
+group: Abyssal demons
+*/
+#define RAX_ROOM_ABYSSAL_SHOW ["Abyssal whip", "Abyssal dagger", "Abyssal head", "Unsired", "Bludgeon spine", "Bludgeon claw", "Bludgeon axon"]
+
+/*@ define:input:locations
+type: stringlist
+label: Abyssal demons force hidden
+group: Abyssal demons
+*/
+#define RAX_ROOM_ABYSSAL_HIDE []
+
+apply ((area:FACT_SLAYER_ABYSSAL_DEMONS_ABYSSAL_AREA_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_CATACOMBS_CENTER_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_CATACOMBS_NORTH_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_SLAYER_TOWER_TOP_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_SLAYER_TOWER_BASEMENT_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_WILDERNESS_SLAYER_CAVE_AREA) && name:RAX_ROOM_ABYSSAL_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_ABYSSAL_DEMONS_ABYSSAL_AREA_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_CATACOMBS_CENTER_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_CATACOMBS_NORTH_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_SLAYER_TOWER_TOP_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_SLAYER_TOWER_BASEMENT_AREA || area:FACT_SLAYER_ABYSSAL_DEMONS_WILDERNESS_SLAYER_CAVE_AREA) && name:RAX_ROOM_ABYSSAL_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Dark beasts
+icon:
+  type: itemId
+  itemId: 11235
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Dark beasts force shown
+group: Dark beasts
+*/
+#define RAX_ROOM_DARK_BEASTS_SHOW ["Dark bow", "Death talisman"]
+
+/*@ define:input:locations
+type: stringlist
+label: Dark beasts force hidden
+group: Dark beasts
+*/
+#define RAX_ROOM_DARK_BEASTS_HIDE []
+
+apply ((area:FACT_SLAYER_DARK_BEASTS_MOURNER_TUNNELS_AREA || area:FACT_SLAYER_DARK_BEASTS_IORWERTH_DUNGEON_1_AREA || area:FACT_SLAYER_DARK_BEASTS_IORWERTH_DUNGEON_2_AREA) && name:RAX_ROOM_DARK_BEASTS_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_DARK_BEASTS_MOURNER_TUNNELS_AREA || area:FACT_SLAYER_DARK_BEASTS_IORWERTH_DUNGEON_1_AREA || area:FACT_SLAYER_DARK_BEASTS_IORWERTH_DUNGEON_2_AREA) && name:RAX_ROOM_DARK_BEASTS_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Drakes
+icon:
+  type: itemId
+  itemId: 22957
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Drakes force shown
+group: Drakes
+*/
+#define RAX_ROOM_DRAKES_SHOW ["Drake's claw", "Drake's tooth"]
+
+/*@ define:input:locations
+type: stringlist
+label: Drakes force hidden
+group: Drakes
+*/
+#define RAX_ROOM_DRAKES_HIDE []
+
+apply ((area:FACT_SLAYER_DRAKES_AREA) && name:RAX_ROOM_DRAKES_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_DRAKES_AREA) && name:RAX_ROOM_DRAKES_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Nechryael
+icon:
+  type: itemId
+  itemId: 20724
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Nechryael force shown
+group: Nechryael
+*/
+#define RAX_ROOM_NECHRYAEL_SHOW ["Rune boots", "Imbued heart", "Eternal gem"]
+
+/*@ define:input:locations
+type: stringlist
+label: Nechryael force hidden
+group: Nechryael
+*/
+#define RAX_ROOM_NECHRYAEL_HIDE []
+
+apply ((area:FACT_SLAYER_NECHRYAEL_SLAYER_TOWER_TOP_AREA || area:FACT_SLAYER_NECHRYAEL_SLAYER_TOWER_BASEMENT_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_CATACOMBS_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_IORWERTH_NORTH_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_IORWERTH_SOUTH_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_WILDERNESS_SLAYER_CAVE_AREA) && name:RAX_ROOM_NECHRYAEL_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_SLAYER_NECHRYAEL_SLAYER_TOWER_TOP_AREA || area:FACT_SLAYER_NECHRYAEL_SLAYER_TOWER_BASEMENT_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_CATACOMBS_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_IORWERTH_NORTH_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_IORWERTH_SOUTH_AREA || area:FACT_SLAYER_GREATER_NECHRYAEL_WILDERNESS_SLAYER_CAVE_AREA) && name:RAX_ROOM_NECHRYAEL_SHOW) {
+    hidden = false;
+}
+
+/*@ define:group
+---
+name: Venators
+icon:
+  type: itemId
+  itemId: 11212
+expanded: false
+*/
+
+/*@ define:input:locations
+type: stringlist
+label: Venators force shown
+group: Venators
+*/
+#define RAX_ROOM_VENATORS_SHOW ["Venator fang", "Venator tooth", "Elder venator fang", "Stymphike feather", "Blood sac"]
+
+/*@ define:input:locations
+type: stringlist
+label: Venators force hidden
+group: Venators
+*/
+#define RAX_ROOM_VENATORS_HIDE []
+
+apply ((area:FACT_VAMPYRIUM_AREA) && name:RAX_ROOM_VENATORS_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_VAMPYRIUM_AREA) && name:RAX_ROOM_VENATORS_SHOW) {
+    hidden = false;
+}

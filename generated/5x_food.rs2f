@@ -1,0 +1,1045 @@
+/*@ define:module:food
+---
+name: Food
+subtitle: What you eat
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+// names used by the force-icon pass
+#define RAX_CATEGORY_NAMES ["Ancient blood ornament kit", "Purifying sigil*", "Avernic defender*", "Ghommal's avernic defender 5*", "Ghommal's avernic defender 6*", "Gold ring", "Clue scroll (beginner)", "Scroll box (beginner)", "Clue scroll (easy)", "Scroll box (easy)", "Clue scroll (medium)", "Scroll box (medium)", "Challenge scroll (medium)", "Clue scroll (hard)", "Scroll box (hard)", "Challenge scroll (hard)", "Clue scroll (elite)", "Scroll box (elite)", "Challenge scroll (elite)", "Clue scroll (master)", "Scroll box (master)", "Larran's key", "Brimstone key", "Dust battlestaff", "Mist battlestaff", "Eternal gem", "Imbued heart", "Golpar seed", "Buchu seed", "Noxifer seed", "Grimy golpar", "Grimy buchu leaf", "Grimy noxifer", "golpar", "buchu leaf", "noxifer", "Endarkened juice", "Stinkhorn mushroom", "Cicely", "Mallignum root plank", "Cavern grubs", "Empty gourd vial", "Water-filled gourd vial", "Dawnbringer", "Salve amulet (e)", "Smelling salts (*", "Ambrosia (*", "Tears of Elidinis (*", "Nectar (*", "Liquid adrenaline (*", "Blessed crystal scarab (*", "Silk dressing (*", "Honey locust", "Neutralising potion", "Big banana", "Eldritch ashes", "Fang", "Scarab dung", "Smouldering gland", "Smouldering heart", "Smouldering pile of flesh", "Tormented synapse", "Burning claw", "Burning claws", "Emberlight", "Purging staff", "Scorching bow", "Attack potion(*", "Antipoison(*", "Strength potion(*", "Serum 207(*", "Compost potion(*", "Restore potion(*", "Energy potion(*", "Defence potion(*", "Agility potion(*", "Combat potion(*", "Prayer potion(*", "Super attack(*", "Superantipoison(*", "Fishing potion(*", "Super energy(*", "Hunter potion(*", "Goading potion(*", "Super strength(*", "Prayer regeneration potion(*", "Super restore(*", "Sanfew serum(*", "Super defence(*", "Antidote+(*", "Antifire potion(*", "Divine super attack potion(*", "Divine super defence potion(*", "Divine super strength potion(*", "Ranging potion(*", "Divine ranging potion(*", "Magic potion(*", "Stamina potion(*", "Zamorak brew(*", "Divine magic potion(*", "Antidote++(*", "Bastion potion(*", "Battlemage potion(*", "Saradomin brew(*", "Extended antifire(*", "Ancient brew(*", "Divine bastion potion(*", "Divine battlemage potion(*", "Anti-venom(*", "Menaphite remedy(*", "Super combat potion(*", "Forgotten brew(*", "Super antifire potion(*", "Anti-venom+(*", "Extended anti-venom+(*", "Divine super combat potion(*", "Extended super antifire(*", "Surge potion(*", "Blighted super restore(*", "Anglerfish", "Dark crab", "Manta ray", "Sea turtle", "Shark", "Cooked Karambwan", "Monkfish", "Lava eel", "Swordfish", "Bass", "Lobster", "Rainbow fish", "Cave eel", "Tuna", "Salmon", "Cooked slimy eel", "Pike", "Cod", "Trout", "Mackerel", "Anchovies", "Herring", "Karambwanji", "Sardine", "Shrimps", "Tuna potato", "Mushroom potato", "Egg potato", "Potato with cheese", "Chilli potato", "Potato with butter", "Baked potato", "Logs", "Oak logs", "Willow logs", "Maple logs", "Yew logs", "Magic logs", "Redwood logs", "Teak logs", "Mahogany logs", "Achey tree logs", "Arctic pine logs", "Scrapey tree logs", "Juniper logs", "Bark", "Blisterwood logs", "copper ore", "tin ore", "iron ore", "silver ore", "coal", "gold ore", "mithril ore", "adamantite ore", "runite ore", "daeyalt ore", "blasted ore", "blurite ore", "lovakite ore", "Bronze bar", "Iron bar", "Steel bar", "Mithril bar", "Adamantite bar", "Runite bar", "Silver bar", "Gold bar", "Elemental metal", "Primed bar", "Primed mind bar", "Blurite bar", "Enchanted bar", "Lovakite bar", "'Perfect' gold bar", "Air rune", "Water rune", "Earth rune", "Fire rune", "Mind rune", "Body rune", "Cosmic rune", "Chaos rune", "Nature rune", "Law rune", "Death rune", "Sunfire rune", "Astral rune", "Blood rune", "Soul rune", "Wrath rune", "Mist rune", "Dust rune", "Mud rune", "Smoke rune", "Steam rune", "Lava rune", "Aether rune", "*guam leaf", "*marrentill", "*tarromin", "*harralander", "*ranarr weed", "*toadflax", "*irit leaf", "*avantoe", "*kwuarm", "*huasca", "*snapdragon", "*cadantine", "*lantadyme", "*dwarf weed", "*torstol", "Raw shrimps", "Raw anchovies", "Raw guppy", "Raw cavefish", "Raw tetra", "Frog spawn", "Raw monkfish", "Minnow", "Raw mackerel", "Raw cod", "Raw bass", "Raw catfish", "Raw sardine", "Raw herring", "Raw pike", "Raw slimy eel", "Raw cave eel", "Raw anglerfish", "Sacred eel", "Raw trout", "Raw salmon", "Raw rainbow fish", "Raw lava eel", "Infernal eel", "Leaping trout", "Leaping salmon", "Leaping sturgeon", "Raw tuna", "Raw swordfish", "Raw shark", "Raw lobster", "Raw dark crab", "Bluegill", "Common tench", "Mottled eel", "Greater siren", "Raw karambwan", "Sandworms", "Fishing bait", "Feather", "Stripy feather", "Dark fishing bait", "King worm", "Fish chunks", "Raw karambwanji", "Diabolic worms", "Small fishing net", "Big fishing net", "Drift net", "Fishing rod", "Fly fishing rod", "Oily fishing rod", "Harpoon", "Lobster pot", "Karambwan vessel", "Abyssal pearls", "Agility arena ticket", "Anima-infused bark", "Archery ticket", "Barronite shards", "Blood money", "Brimhaven voucher", "Castle wars ticket", "Coins", "Ecto-token", "Frog token", "Glistening tear", "Golden nugget", "Hallowed mark", "Intelligence", "Mark of grace", "Mermaid's tear", "Molch pearl", "Mole claw", "Mole skin", "Nuggets", "Numulite", "Paramaya ticket", "Platinum token", "Shantay pass", "Ship ticket", "Stardust", "Termites", "Tokkul", "Trading sticks", "Unidentified minerals", "Warrior guild token", "* sceptre", "* axe", "* pickaxe", "* harpoon", "Pestle and mortar", "*teleport crystal", "*escape crystal", "* shards", "Crystal dust", "Vial", "Water-filled vial", "Grym leaf", "Grym potion (unf)", "Egniol potion (*", "Raw paddlefish", "Paddlefish", "Crystal paddlefish", "Corrupted paddlefish", "Weapon frame", "* spike", "* orb", "* bowstring", "* halberd *", "* bow *", "* staff *", "Linum tirinum*", "Phren bark*", "* ore", "* helm *", "* body *", "* legs *"]
+
+/*@ define:group
+---
+name: Food
+icon:
+  type: itemId
+  itemId: 13441
+expanded: false
+*/
+/*@ define:group
+---
+name: Fish
+icon:
+  type: itemId
+  itemId: 385
+expanded: false
+*/
+/*@ define:group
+---
+name: Potato
+icon:
+  type: itemId
+  itemId: 7060
+expanded: false
+*/
+/*@ define:group
+---
+name: Pie
+icon:
+  type: itemId
+  itemId: 7218
+expanded: false
+*/
+/*@ define:group
+---
+name: Pizza
+icon:
+  type: itemId
+  itemId: 2297
+expanded: false
+*/
+/*@ define:group
+---
+name: Raw Fish
+icon:
+  type: itemId
+  itemId: 383
+expanded: false
+*/
+/*@ define:input:food
+type: style
+label: All Food Items Style
+group: Food
+exampleItem: Anglerfish
+exampleItemId: 13441
+*/
+#define RAX_CATEGORY_FOOD_CUSTOMSTYLE icon = Sprite(3288, 0);
+
+apply(name:FACT_FISH_FOODS_LIST || name:FACT_POTATOES_FOODS_LIST || name:FACT_HUNTER_FOODS_LIST || name:FACT_PIE_FOODS_LIST || name:FACT_PIZZA_FOODS_LIST || name:FACT_CAKE_FOODS_LIST) {
+    RAX_CATEGORY_FOOD_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Fish Food Style
+group: Food
+exampleItem: Tuna
+exampleItemId: 361
+*/
+#define RAX_FOOD_FISH_CUSTOMSTYLE menuTextColor = "#BA6A29";menuSort = 0;icon = Sprite(3288, 0);
+
+apply (name:FACT_FISH_FOODS_LIST) {
+    RAX_FOOD_FISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Potatoes Food Style
+group: Food
+exampleItem: Tuna potato
+exampleItemId: 7060
+*/
+#define RAX_POTATOES_FOODS_CUSTOMSTYLE menuTextColor = "#BA6A29";icon = Sprite(3288, 0);
+
+apply (name:FACT_POTATOES_FOODS_LIST) {
+    RAX_POTATOES_FOODS_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Hunter Food Style
+group: Food
+exampleItem: Cooked moonlight antelope
+exampleItemId: 29143
+*/
+#define RAX_FOOD_HUNTER_CUSTOMSTYLE backgroundColor = "#7d877663";borderColor = "#423725";menuTextColor = "#BA6A29";icon = Sprite(3288, 0);
+
+apply (name:FACT_HUNTER_FOODS_LIST) {
+    RAX_FOOD_HUNTER_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Pie Food Style
+group: Food
+exampleItem: Summer pie
+exampleItemId: 7218
+*/
+#define RAX_PIE_FOODS_CUSTOMSTYLE menuTextColor = "#BA6A29";icon = Sprite(3288, 0);
+
+apply (name:FACT_PIE_FOODS_LIST) {
+    RAX_PIE_FOODS_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Pizza Food Style
+group: Food
+exampleItem: Pineapple pizza
+exampleItemId: 2301
+*/
+#define RAX_PIZZA_FOODS_CUSTOMSTYLE menuTextColor = "#BA6A29";icon = Sprite(3288, 0);
+
+apply (name:FACT_PIZZA_FOODS_LIST) {
+    RAX_PIZZA_FOODS_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Cake Food Style
+group: Food
+exampleItem: Chocolate cake
+exampleItemId: 1897
+*/
+#define RAX_CAKE_FOODS_CUSTOMSTYLE menuTextColor = "#BA6A29";icon = Sprite(3288, 0);
+
+apply (name:FACT_CAKE_FOODS_LIST) {
+    RAX_CAKE_FOODS_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Anglerfish custom style
+group: Fish
+exampleItem: Anglerfish
+*/
+#define RAX_ANGLERFISH_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50624b18";borderColor = "#FF624b18";textAccentColor = "#FF000000";menuTextColor = "#BA6A29";
+
+apply (name:"Anglerfish") {
+    RAX_ANGLERFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Dark crab custom style
+group: Fish
+exampleItem: Dark crab
+*/
+#define RAX_DARK_CRAB_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504a5e4b";borderColor = "#FF4a5e4b";textAccentColor = "#FF000000";menuTextColor = "#BA6A29";
+
+apply (name:"Dark crab") {
+    RAX_DARK_CRAB_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Manta ray custom style
+group: Fish
+exampleItem: Manta ray
+*/
+#define RAX_MANTA_RAY_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5069503a";borderColor = "#FF69503a";textAccentColor = "#FF000000";menuTextColor = "#BA6A29";
+
+apply (name:"Manta ray") {
+    RAX_MANTA_RAY_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Sea turtle custom style
+group: Fish
+exampleItem: Sea turtle
+*/
+#define RAX_SEA_TURTLE_CUSTOMSTYLE backgroundColor = "#40453c32";borderColor = "#ff6b4605";menuTextColor = "#BA6A29";
+
+apply (name:"Sea turtle") {
+    RAX_SEA_TURTLE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Shark custom style
+group: Fish
+exampleItem: Shark
+*/
+#define RAX_SHARK_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50b7977c";borderColor = "#FFb7977c";textAccentColor = "#FF000000";menuTextColor = "#BA6A29";
+
+apply (name:"Shark") {
+    RAX_SHARK_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Karambwan custom style
+group: Fish
+exampleItem: Karambwan
+*/
+#define RAX_KARAMBWAN_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50dad9d4";borderColor = "#ffd9d8d2";textAccentColor = "#FF000000";menuTextColor = "#BA6A29";
+
+apply (name:"Cooked Karambwan") {
+    RAX_KARAMBWAN_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Monkfish custom style
+group: Fish
+exampleItem: Monkfish
+*/
+#define RAX_MONKFISH_CUSTOMSTYLE backgroundColor = "#59403124";borderColor = "#ff52422f";
+
+apply (name:"Monkfish") {
+    RAX_MONKFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Lava eel custom style
+group: Fish
+exampleItem: Lava eel
+*/
+#define RAX_LAVA_EEL_CUSTOMSTYLE 
+
+apply (name:"Lava eel") {
+    RAX_LAVA_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Swordfish custom style
+group: Fish
+exampleItem: Swordfish
+*/
+#define RAX_SWORDFISH_CUSTOMSTYLE backgroundColor = "#54794d85";borderColor = "#ff724b89";
+
+apply (name:"Swordfish") {
+    RAX_SWORDFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Bass custom style
+group: Fish
+exampleItem: Bass
+*/
+#define RAX_BASS_CUSTOMSTYLE backgroundColor = "#5ecc7262";borderColor = "#ffeb7e69";
+
+apply (name:"Bass") {
+    RAX_BASS_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Lobster custom style
+group: Fish
+exampleItem: Lobster
+*/
+#define RAX_LOBSTER_CUSTOMSTYLE backgroundColor = "#33e35e0b";borderColor = "#ffd08c54";
+
+apply (name:"Lobster") {
+    RAX_LOBSTER_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Rainbow fish custom style
+group: Fish
+exampleItem: Rainbow fish
+*/
+#define RAX_RAINBOW_FISH_CUSTOMSTYLE backgroundColor = "#4d148b8f";borderColor = "#ffcbfa73";
+
+apply (name:"Rainbow fish") {
+    RAX_RAINBOW_FISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Cave eel custom style
+group: Fish
+exampleItem: Cave eel
+*/
+#define RAX_CAVE_EEL_CUSTOMSTYLE backgroundColor = "#2e1c0f00";borderColor = "#ff453d3c";
+
+apply (name:"Cave eel") {
+    RAX_CAVE_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Tuna custom style
+group: Fish
+exampleItem: Tuna
+*/
+#define RAX_TUNA_CUSTOMSTYLE backgroundColor = "#59916f6a";borderColor = "#ff694d49";
+
+apply (name:"Tuna") {
+    RAX_TUNA_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Salmon custom style
+group: Fish
+exampleItem: Salmon
+*/
+#define RAX_SALMON_CUSTOMSTYLE backgroundColor = "#6bc46e5e";borderColor = "#ffe28671";
+
+apply (name:"Salmon") {
+    RAX_SALMON_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Cooked slimy eel custom style
+group: Fish
+exampleItem: Cooked slimy eel
+*/
+#define RAX_SLIMY_EEL_CUSTOMSTYLE backgroundColor = "#4fa64737";borderColor = "#ff5e2f16";
+
+apply (name:"Cooked slimy eel") {
+    RAX_SLIMY_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Pike custom style
+group: Fish
+exampleItem: Pike
+*/
+#define RAX_PIKE_CUSTOMSTYLE backgroundColor = "#4f6c9c5a";borderColor = "#ff466b3e";
+
+apply (name:"Pike") {
+    RAX_PIKE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Cod custom style
+group: Fish
+exampleItem: Cod
+*/
+#define RAX_COD_CUSTOMSTYLE backgroundColor = "#4d4d5387";borderColor = "#ff585c87";
+
+apply (name:"Cod") {
+    RAX_COD_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Trout custom style
+group: Fish
+exampleItem: Trout
+*/
+#define RAX_TROUT_CUSTOMSTYLE backgroundColor = "#57916f6a";borderColor = "#ff66504a";
+
+apply (name:"Trout") {
+    RAX_TROUT_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Mackerel custom style
+group: Fish
+exampleItem: Mackerel
+*/
+#define RAX_MACKEREL_CUSTOMSTYLE backgroundColor = "#66a89128";borderColor = "#ff4f4411";
+
+apply (name:"Mackerel") {
+    RAX_MACKEREL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Anchovies custom style
+group: Fish
+exampleItem: Anchovies
+*/
+#define RAX_ANCHOVIES_CUSTOMSTYLE backgroundColor = "#474c4d85";borderColor = "#ff292f5c";
+
+apply (name:"Anchovies") {
+    RAX_ANCHOVIES_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Herring custom style
+group: Fish
+exampleItem: Herring
+*/
+#define RAX_HERRING_CUSTOMSTYLE backgroundColor = "#69a17b75";borderColor = "#523F3C";
+
+apply (name:"Herring") {
+    RAX_HERRING_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Karambwanji custom style
+group: Fish
+exampleItem: Karambwanji
+*/
+#define RAX_KARAMBWANJI_CUSTOMSTYLE 
+
+apply (name:"Karambwanji") {
+    RAX_KARAMBWANJI_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Sardine custom style
+group: Fish
+exampleItem: Sardine
+*/
+#define RAX_SARDINE_CUSTOMSTYLE backgroundColor = "#66ad8c86";borderColor = "#382A27";
+
+apply (name:"Sardine") {
+    RAX_SARDINE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Shrimps custom style
+group: Fish
+exampleItem: Shrimps
+*/
+#define RAX_SHRIMP_CUSTOMSTYLE backgroundColor = "#479e5c06";borderColor = "#582204";
+
+apply (name:"Shrimps") {
+    RAX_SHRIMP_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Tuna potato
+*/
+#define RAX_TUNA_POTATO_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#966E6F";
+apply (name:"Tuna potato") {
+    RAX_TUNA_POTATO_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Mushroom potato
+*/
+#define RAX_MUSHROOM_POTATO_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#81661E";
+apply (name:"Mushroom potato") {
+    RAX_MUSHROOM_POTATO_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Egg potato
+*/
+#define RAX_EGG_POTATO_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#CF7809";
+apply (name:"Egg potato") {
+    RAX_EGG_POTATO_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Potato with cheese
+*/
+#define RAX_POTATO_WITH_CHEESE_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#ffffdc26";
+apply (name:"Potato with cheese") {
+    RAX_POTATO_WITH_CHEESE_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Chilli potato
+*/
+#define RAX_CHILLI_POTATO_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#6D0D14";
+apply (name:"Chilli potato") {
+    RAX_CHILLI_POTATO_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Potato with butter
+*/
+#define RAX_POTATO_WITH_BUTTER_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#ffffdc26";
+apply (name:"Potato with butter") {
+    RAX_POTATO_WITH_BUTTER_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Baked potato custom style
+group: Potato
+exampleItem: Baked potato
+*/
+#define RAX_BAKED_POTATO_CUSTOMSTYLE backgroundColor = "#45523e04";borderColor = "#ff523e04";
+apply (name:"Baked potato") {
+    RAX_BAKED_POTATO_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Summer pie custom style
+group: Pie
+exampleItem: Summer pie
+*/
+#define RAX_SUMMER_PIE_CUSTOMSTYLE backgroundColor = "#4f5c4f2a";borderColor = "#5C2115";
+apply (name:["Summer pie", "Half a summer pie"]) {
+    RAX_SUMMER_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Wild pie custom style
+group: Pie
+exampleItem: Wild pie
+*/
+#define RAX_WILD_PIE_CUSTOMSTYLE backgroundColor = "#637a6847";borderColor = "#534C2F";
+apply (name:["Wild pie", "Half a wild pie"]) {
+    RAX_WILD_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Dragonfruit pie custom style
+group: Pie
+exampleItem: Dragonfruit pie
+*/
+#define RAX_DRAGONFRUIT_PIE_CUSTOMSTYLE backgroundColor = "#54b03219";borderColor = "#510C16";
+apply (name:["Dragonfruit pie", "Half a dragonfruit pie"]) {
+    RAX_DRAGONFRUIT_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Admiral pie custom style
+group: Pie
+exampleItem: Admiral pie
+*/
+#define RAX_ADMIRAL_PIE_CUSTOMSTYLE backgroundColor = "#637a6847";borderColor = "#BD6555";
+apply (name:["Admiral pie", "Half a admiral pie"]) {
+    RAX_ADMIRAL_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Mushroom pie custom style
+group: Pie
+exampleItem: Mushroom pie
+*/
+#define RAX_MUSHROOM_PIE_CUSTOMSTYLE backgroundColor = "#5ca16748";borderColor = "#53160C";
+apply (name:["Mushroom pie", "Half a mushroom pie"]) {
+    RAX_MUSHROOM_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Botanical pie custom style
+group: Pie
+exampleItem: Botanical pie
+*/
+#define RAX_BOTANICAL_PIE_CUSTOMSTYLE backgroundColor = "#5e544f26";borderColor = "#34451E";
+apply (name:["Botanical pie", "Half a botanical pie"]) {
+    RAX_BOTANICAL_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Fish pie custom style
+group: Pie
+exampleItem: Fish pie
+*/
+#define RAX_FISH_PIE_CUSTOMSTYLE backgroundColor = "#4f5c4a1d";borderColor = "#404885";
+apply (name:["Fish pie", "Half a fish pie"]) {
+    RAX_FISH_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Garden pie custom style
+group: Pie
+exampleItem: Garden pie
+*/
+#define RAX_GARDEN_PIE_CUSTOMSTYLE backgroundColor = "#5e4a4018";borderColor = "#6A6218";
+apply (name:["Garden pie", "Half a garden pie"]) {
+    RAX_GARDEN_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Apple pie custom style
+group: Pie
+exampleItem: Apple pie
+*/
+#define RAX_APPLE_PIE_CUSTOMSTYLE backgroundColor = "#5c7d5729";borderColor = "#734027";
+apply (name:["Apple pie", "Half a apple pie"]) {
+    RAX_APPLE_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Meat pie custom style
+group: Pie
+exampleItem: Meat pie
+*/
+#define RAX_MEAT_PIE_CUSTOMSTYLE backgroundColor = "#5c7d5729";borderColor = "#734027";
+apply (name:["Meat pie", "Half a meat pie"]) {
+    RAX_MEAT_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Redberry pie custom style
+group: Pie
+exampleItem: Redberry pie
+*/
+#define RAX_REDBERRY_PIE_CUSTOMSTYLE backgroundColor = "#5c7d5729";borderColor = "#734027";
+apply (name:["Redberry pie", "Half a redberry pie"]) {
+    RAX_REDBERRY_PIE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Pineapple pizza custom style
+group: Pizza
+exampleItem: Pineapple pizza
+*/
+#define RAX_PINEAPPLE_PIZZA_CUSTOMSTYLE backgroundColor = "#87c1b688";borderColor = "#ffa34d07";
+apply (name:["1/2 Pineapple pizza", "Pineapple pizza"]) {
+    RAX_PINEAPPLE_PIZZA_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Anchovy pizza custom style
+group: Pizza
+exampleItem: Anchovy pizza
+*/
+#define RAX_ANCHOVY_PIZZA_CUSTOMSTYLE backgroundColor = "#87c1b688";borderColor = "#ffa34d07";
+apply (name:["1/2 Anchovy pizza", "Anchovy pizza"]) {
+    RAX_ANCHOVY_PIZZA_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Meat pizza custom style
+group: Pizza
+exampleItem: Meat pizza
+*/
+#define RAX_MEAT_PIZZA_CUSTOMSTYLE backgroundColor = "#87c1b688";borderColor = "#ffa34d07";
+apply (name:["1/2 Meat pizza", "Meat pizza"]) {
+    RAX_MEAT_PIZZA_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Plain pizza custom style
+group: Pizza
+exampleItem: Plain pizza
+*/
+#define RAX_PLAIN_PIZZA_CUSTOMSTYLE backgroundColor = "#87c1b688";borderColor = "#ffa34d07";
+apply (name:["1/2 Plain pizza", "Plain pizza"]) {
+    RAX_PLAIN_PIZZA_CUSTOMSTYLE
+}
+/*@ define:input:food
+type: style
+label: Raw shrimps custom style
+group: Raw Fish
+exampleItem: Raw shrimps
+*/
+#define RAX_RAW_SHRIMPS_CUSTOMSTYLE 
+
+apply (name:"Raw shrimps") {
+    RAX_RAW_SHRIMPS_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw anchovies custom style
+group: Raw Fish
+exampleItem: Raw anchovies
+*/
+#define RAX_RAW_ANCHOVIES_CUSTOMSTYLE 
+
+apply (name:"Raw anchovies") {
+    RAX_RAW_ANCHOVIES_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw guppy custom style
+group: Raw Fish
+exampleItem: Raw guppy
+*/
+#define RAX_RAW_GUPPY_CUSTOMSTYLE 
+
+apply (name:"Raw guppy") {
+    RAX_RAW_GUPPY_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw cavefish custom style
+group: Raw Fish
+exampleItem: Raw cavefish
+*/
+#define RAX_RAW_CAVEFISH_CUSTOMSTYLE 
+
+apply (name:"Raw cavefish") {
+    RAX_RAW_CAVEFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw tetra custom style
+group: Raw Fish
+exampleItem: Raw tetra
+*/
+#define RAX_RAW_TETRA_CUSTOMSTYLE 
+
+apply (name:"Raw tetra") {
+    RAX_RAW_TETRA_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Frog spawn custom style
+group: Raw Fish
+exampleItem: Frog spawn
+*/
+#define RAX_FROG_SPAWN_CUSTOMSTYLE 
+
+apply (name:"Frog spawn") {
+    RAX_FROG_SPAWN_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw monkfish custom style
+group: Raw Fish
+exampleItem: Raw monkfish
+*/
+#define RAX_RAW_MONKFISH_CUSTOMSTYLE 
+
+apply (name:"Raw monkfish") {
+    RAX_RAW_MONKFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Minnow custom style
+group: Raw Fish
+exampleItem: Minnow
+*/
+#define RAX_MINNOW_CUSTOMSTYLE 
+
+apply (name:"Minnow") {
+    RAX_MINNOW_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw mackerel custom style
+group: Raw Fish
+exampleItem: Raw mackerel
+*/
+#define RAX_RAW_MACKEREL_CUSTOMSTYLE 
+
+apply (name:"Raw mackerel") {
+    RAX_RAW_MACKEREL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw cod custom style
+group: Raw Fish
+exampleItem: Raw cod
+*/
+#define RAX_RAW_COD_CUSTOMSTYLE 
+
+apply (name:"Raw cod") {
+    RAX_RAW_COD_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw bass custom style
+group: Raw Fish
+exampleItem: Raw bass
+*/
+#define RAX_RAW_BASS_CUSTOMSTYLE 
+
+apply (name:"Raw bass") {
+    RAX_RAW_BASS_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw catfish custom style
+group: Raw Fish
+exampleItem: Raw catfish
+*/
+#define RAX_RAW_CATFISH_CUSTOMSTYLE 
+
+apply (name:"Raw catfish") {
+    RAX_RAW_CATFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw sardine custom style
+group: Raw Fish
+exampleItem: Raw sardine
+*/
+#define RAX_RAW_SARDINE_CUSTOMSTYLE 
+
+apply (name:"Raw sardine") {
+    RAX_RAW_SARDINE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw herring custom style
+group: Raw Fish
+exampleItem: Raw herring
+*/
+#define RAX_RAW_HERRING_CUSTOMSTYLE 
+
+apply (name:"Raw herring") {
+    RAX_RAW_HERRING_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw pike custom style
+group: Raw Fish
+exampleItem: Raw pike
+*/
+#define RAX_RAW_PIKE_CUSTOMSTYLE 
+
+apply (name:"Raw pike") {
+    RAX_RAW_PIKE_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw slimy eel custom style
+group: Raw Fish
+exampleItem: Raw slimy eel
+*/
+#define RAX_RAW_SLIMY_EEL_CUSTOMSTYLE 
+
+apply (name:"Raw slimy eel") {
+    RAX_RAW_SLIMY_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw cave eel custom style
+group: Raw Fish
+exampleItem: Raw cave eel
+*/
+#define RAX_RAW_CAVE_EEL_CUSTOMSTYLE 
+
+apply (name:"Raw cave eel") {
+    RAX_RAW_CAVE_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw anglerfish custom style
+group: Raw Fish
+exampleItem: Raw anglerfish
+*/
+#define RAX_RAW_ANGLERFISH_CUSTOMSTYLE 
+
+apply (name:"Raw anglerfish") {
+    RAX_RAW_ANGLERFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Sacred eel custom style
+group: Raw Fish
+exampleItem: Sacred eel
+*/
+#define RAX_SACRED_EEL_CUSTOMSTYLE 
+
+apply (name:"Sacred eel") {
+    RAX_SACRED_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw trout custom style
+group: Raw Fish
+exampleItem: Raw trout
+*/
+#define RAX_RAW_TROUT_CUSTOMSTYLE 
+
+apply (name:"Raw trout") {
+    RAX_RAW_TROUT_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw salmon custom style
+group: Raw Fish
+exampleItem: Raw salmon
+*/
+#define RAX_RAW_SALMON_CUSTOMSTYLE 
+
+apply (name:"Raw salmon") {
+    RAX_RAW_SALMON_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw rainbow fish custom style
+group: Raw Fish
+exampleItem: Raw rainbow fish
+*/
+#define RAX_RAW_RAINBOW_FISH_CUSTOMSTYLE 
+
+apply (name:"Raw rainbow fish") {
+    RAX_RAW_RAINBOW_FISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw lava eel custom style
+group: Raw Fish
+exampleItem: Raw lava eel
+*/
+#define RAX_RAW_LAVA_EEL_CUSTOMSTYLE 
+
+apply (name:"Raw lava eel") {
+    RAX_RAW_LAVA_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Infernal eel custom style
+group: Raw Fish
+exampleItem: Infernal eel
+*/
+#define RAX_INFERNAL_EEL_CUSTOMSTYLE 
+
+apply (name:"Infernal eel") {
+    RAX_INFERNAL_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Leaping trout custom style
+group: Raw Fish
+exampleItem: Leaping trout
+*/
+#define RAX_LEAPING_TROUT_CUSTOMSTYLE 
+
+apply (name:"Leaping trout") {
+    RAX_LEAPING_TROUT_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Leaping salmon custom style
+group: Raw Fish
+exampleItem: Leaping salmon
+*/
+#define RAX_LEAPING_SALMON_CUSTOMSTYLE 
+
+apply (name:"Leaping salmon") {
+    RAX_LEAPING_SALMON_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Leaping sturgeon custom style
+group: Raw Fish
+exampleItem: Leaping sturgeon
+*/
+#define RAX_LEAPING_STURGEON_CUSTOMSTYLE 
+
+apply (name:"Leaping sturgeon") {
+    RAX_LEAPING_STURGEON_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw tuna custom style
+group: Raw Fish
+exampleItem: Raw tuna
+*/
+#define RAX_RAW_TUNA_CUSTOMSTYLE 
+
+apply (name:"Raw tuna") {
+    RAX_RAW_TUNA_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw swordfish custom style
+group: Raw Fish
+exampleItem: Raw swordfish
+*/
+#define RAX_RAW_SWORDFISH_CUSTOMSTYLE 
+
+apply (name:"Raw swordfish") {
+    RAX_RAW_SWORDFISH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw shark custom style
+group: Raw Fish
+exampleItem: Raw shark
+*/
+#define RAX_RAW_SHARK_CUSTOMSTYLE 
+
+apply (name:"Raw shark") {
+    RAX_RAW_SHARK_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw lobster custom style
+group: Raw Fish
+exampleItem: Raw lobster
+*/
+#define RAX_RAW_LOBSTER_CUSTOMSTYLE 
+
+apply (name:"Raw lobster") {
+    RAX_RAW_LOBSTER_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw dark crab custom style
+group: Raw Fish
+exampleItem: Raw dark crab
+*/
+#define RAX_RAW_DARK_CRAB_CUSTOMSTYLE 
+
+apply (name:"Raw dark crab") {
+    RAX_RAW_DARK_CRAB_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Bluegill custom style
+group: Raw Fish
+exampleItem: Bluegill
+*/
+#define RAX_BLUEGILL_CUSTOMSTYLE 
+
+apply (name:"Bluegill") {
+    RAX_BLUEGILL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Common tench custom style
+group: Raw Fish
+exampleItem: Common tench
+*/
+#define RAX_COMMON_TENCH_CUSTOMSTYLE 
+
+apply (name:"Common tench") {
+    RAX_COMMON_TENCH_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Mottled eel custom style
+group: Raw Fish
+exampleItem: Mottled eel
+*/
+#define RAX_MOTTLED_EEL_CUSTOMSTYLE 
+
+apply (name:"Mottled eel") {
+    RAX_MOTTLED_EEL_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Greater siren custom style
+group: Raw Fish
+exampleItem: Greater siren
+*/
+#define RAX_GREATER_SIREN_CUSTOMSTYLE 
+
+apply (name:"Greater siren") {
+    RAX_GREATER_SIREN_CUSTOMSTYLE 
+}
+/*@ define:input:food
+type: style
+label: Raw karambwan custom style
+group: Raw Fish
+exampleItem: Raw karambwan
+*/
+#define RAX_RAW_KARAMBWAN_CUSTOMSTYLE 
+
+apply (name:"Raw karambwan") {
+    RAX_RAW_KARAMBWAN_CUSTOMSTYLE 
+}

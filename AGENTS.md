@@ -10,18 +10,19 @@ OSRS words only. Not Aisle / Heat / Kits / Ember.
 
 `apply` overwrites earlier `apply`. `rule` is terminal.
 
-1. `display` — icons, prices, despawn, beam/sound masters
+1. `display` — Show masters, then identity styles
 2. `loot_order` — take-menu sort switches
 3. `hide` — junk, value floors, ownership
-4. `locations` — this room only (can force-show after hide)
-5. `categories` — food, runes, herbs, raid supplies
+4. `locations` — this room only (can force-show after hide). Authored rooms after Joe.
+5. kinds — `food` `potions` `runes` `ammo` `herbs` `armour` `prayer` `gathering` `raid_supplies` `slayer_drops` `currency`
 6. `value` — Low / Medium / High / Insane (Ground Items buckets)
-7. `rares` — uniques, alchs, RDT
-8. `alerts` — pets, keys, clues-in-containers, forgotten ammo/cannon, mutes
+7. `clues` — whole trail per tier (scroll/box/nest/bottle/geode/casket)
+8. `rares` — collection log pages (ground slots) + alchs + RDT
+9. `alerts` — pets, keys, forgotten ammo/cannon, mutes
 9. `final` — last hide/show + sort ladder
 10. `facts` — hidden. Areas, account types, item lists
 
-Value must stay below Categories. Rares below Value. Alerts last so mutes stick.
+Value must stay below Categories. Clues below Value so they don't become a gp chip. Rares below Clues. Alerts last so mutes stick.
 
 ## Conventions
 
@@ -37,6 +38,7 @@ Value must stay below Categories. Rares below Value. Alerts last so mutes stick.
 ## Commands
 
 ```bash
+python3 tools/clog.py   # refresh collection log from the wiki
 python3 tools/build.py
 ```
 

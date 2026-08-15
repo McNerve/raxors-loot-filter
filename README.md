@@ -10,10 +10,11 @@ Built for [FilterScape](https://filterscape.xyz/). Eight modules. Later modules 
 2. **Loot order** — take-menu
 3. **Hide** — junk and ownership
 4. **Locations** — this room only
-5. **Categories** — food, runes, herbs, raid supplies
+5. **Food / Potions / Runes / Ammo / Herbs / Armour / Prayer / Gathering / Raid supplies / Slayer / Currency** — one accordion row per kind
 6. **Value** — Low / Medium / High / Insane
-7. **Rares** — uniques, alchs, RDT
-8. **Alerts** — pets, keys, clue nests, forgotten ammo/cannon, mutes
+7. **Clues** — whole trail per tier
+8. **Rares** — collection log pages (ground slots), alchs, RDT
+9. **Alerts** — pets, keys, forgotten ammo/cannon, mutes
 
 ## Load it
 

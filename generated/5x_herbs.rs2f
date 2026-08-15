@@ -1,0 +1,285 @@
+/*@ define:module:herbs
+---
+name: Herbs
+subtitle: Grimy, clean, secondaries
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Herblore
+icon:
+  type: itemId
+  itemId: 207
+expanded: false
+*/
+/*@ define:group
+---
+name: Herbs
+icon:
+  type: itemId
+  itemId: 207
+expanded: false
+*/
+/*@ define:input:herbs
+type: style
+label: All Herblore Items Style
+group: Herblore
+exampleItem: Grimy ranarr weed
+exampleItemId: 207
+*/
+#define RAX_CATEGORY_HERBLORE_CUSTOMSTYLE icon = Sprite(3196, 0);
+
+apply (name:FACT_ALL_HERBS || name:FACT_SECONDARIES_LIST || name:FACT_ALL_HERBLORE_EQUIPMENT) {
+  RAX_CATEGORY_HERBLORE_CUSTOMSTYLE
+}
+/*@ define:input:herbs
+type: style
+label: Herbs Style
+group: Herblore
+exampleItem: Guam leaf
+exampleItemId: 249
+*/
+#define RAX_CATEGORY_HERBS_CUSTOMSTYLE
+
+apply (name:FACT_ALL_HERBS) {
+  RAX_CATEGORY_HERBS_CUSTOMSTYLE
+}
+/*@ define:input:herbs
+type: style
+label: Secondaries Style
+group: Herblore
+exampleItem: Eye of newt
+exampleItemId: 221
+*/
+#define RAX_CATEGORY_HERBLORE_SECONDARIES_CUSTOMSTYLE
+
+apply (name:FACT_SECONDARIES_LIST) {
+  RAX_CATEGORY_HERBLORE_SECONDARIES_CUSTOMSTYLE
+}
+/*@ define:input:herbs
+type: style
+label: "Herblore Equipment Style (pestle and mortar, vials, etc.)"
+group: Herblore
+exampleItem: Pestle and mortar
+exampleItemId: 233
+*/
+#define RAX_CATEGORY_HERBLORE_EQUIPMENT_CUSTOMSTYLE
+
+apply (name:FACT_ALL_HERBLORE_EQUIPMENT) {
+  RAX_CATEGORY_HERBLORE_EQUIPMENT_CUSTOMSTYLE
+}
+/*@ define:input:herbs
+type: style
+label: Guam leaf custom style
+group: Herbs
+exampleItem: Guam leaf
+*/
+#define RAX_HERBS_GUAM_LEAF_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5009550d";borderColor = "#FF09550d";textAccentColor = "#FF000000";menuTextColor = "#FF09550d";
+
+apply (name:"*guam leaf") {
+    RAX_HERBS_GUAM_LEAF_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Marrentill custom style
+group: Herbs
+exampleItem: Marrentill
+*/
+#define RAX_HERBS_MARRENTILL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#500c7610";borderColor = "#FF0c7610";textAccentColor = "#FF000000";menuTextColor = "#FF0c7610";
+
+apply (name:"*marrentill") {
+    RAX_HERBS_MARRENTILL_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Tarromin custom style
+group: Herbs
+exampleItem: Tarromin
+*/
+#define RAX_HERBS_TARROMIN_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#500c7138";borderColor = "#FF0c7138";textAccentColor = "#FF000000";menuTextColor = "#FF0c7138";
+
+apply (name:"*tarromin") {
+    RAX_HERBS_TARROMIN_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Harralander custom style
+group: Herbs
+exampleItem: Harralander
+*/
+#define RAX_HERBS_HARRALANDER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5054780c";borderColor = "#FF54780c";textAccentColor = "#FF000000";menuTextColor = "#FF54780c";
+
+apply (name:"*harralander") {
+    RAX_HERBS_HARRALANDER_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Ranarr weed custom style
+group: Herbs
+exampleItem: Ranarr weed
+*/
+#define RAX_HERBS_RANARR_WEED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#503c5f09";borderColor = "#FF3c5f09";textAccentColor = "#FF000000";menuTextColor = "#FF3c5f09";
+
+apply (name:"*ranarr weed") {
+    RAX_HERBS_RANARR_WEED_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Toadflax custom style
+group: Herbs
+exampleItem: Toadflax
+*/
+#define RAX_HERBS_TOADFLAX_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50002400";borderColor = "#FF002400";textAccentColor = "#FF000000";menuTextColor = "#FF002400";
+
+apply (name:"*toadflax") {
+    RAX_HERBS_TOADFLAX_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Irit leaf custom style
+group: Herbs
+exampleItem: Irit leaf
+*/
+#define RAX_HERBS_IRIT_LEAF_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50507436";borderColor = "#FF507436";textAccentColor = "#FF000000";menuTextColor = "#FF507436";
+
+apply (name:"*irit leaf") {
+    RAX_HERBS_IRIT_LEAF_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Avantoe custom style
+group: Herbs
+exampleItem: Avantoe
+*/
+#define RAX_HERBS_AVANTOE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50145326";borderColor = "#FF145326";textAccentColor = "#FF000000";menuTextColor = "#FF145326";
+
+apply (name:"*avantoe") {
+    RAX_HERBS_AVANTOE_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Kwuarm custom style
+group: Herbs
+exampleItem: Kwuarm
+*/
+#define RAX_HERBS_KWUARM_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504d5709";borderColor = "#FF4d5709";textAccentColor = "#FF000000";menuTextColor = "#FF4d5709";
+
+apply (name:"*kwuarm") {
+    RAX_HERBS_KWUARM_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Huasca custom style
+group: Herbs
+exampleItem: Huasca
+*/
+#define RAX_HERBS_HUASCA_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50513748";borderColor = "#FF513748";textAccentColor = "#FF000000";menuTextColor = "#FF513748";
+
+apply (name:"*huasca") {
+    RAX_HERBS_HUASCA_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Snapdragon custom style
+group: Herbs
+exampleItem: Snapdragon
+*/
+#define RAX_HERBS_SNAPDRAGON_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#503e4b08";borderColor = "#FF3e4b08";textAccentColor = "#FF000000";menuTextColor = "#FF3e4b08";
+
+apply (name:"*snapdragon") {
+    RAX_HERBS_SNAPDRAGON_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Cadantine custom style
+group: Herbs
+exampleItem: Cadantine
+*/
+#define RAX_HERBS_CADANTINE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5044501c";borderColor = "#FF44501c";textAccentColor = "#FF000000";menuTextColor = "#FF44501c";
+
+apply (name:"*cadantine") {
+    RAX_HERBS_CADANTINE_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Lantadyme custom style
+group: Herbs
+exampleItem: Lantadyme
+*/
+#define RAX_HERBS_LANTADYME_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5008473c";borderColor = "#FF08473c";textAccentColor = "#FF000000";menuTextColor = "#FF08473c";
+
+apply (name:"*lantadyme") {
+    RAX_HERBS_LANTADYME_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Dwarf weed custom style
+group: Herbs
+exampleItem: Dwarf weed
+*/
+#define RAX_HERBS_DWARF_WEED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50094809";borderColor = "#FF094809";textAccentColor = "#FF000000";menuTextColor = "#FF094809";
+
+apply (name:"*dwarf weed") {
+    RAX_HERBS_DWARF_WEED_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Torstol custom style
+group: Herbs
+exampleItem: Torstol
+*/
+#define RAX_HERBS_TORSTOL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5009570c";borderColor = "#FF09570c";textAccentColor = "#FF000000";menuTextColor = "#FF09570c";
+
+apply (name:"*torstol") {
+    RAX_HERBS_TORSTOL_CUSTOMSTYLE 
+}
+/*@ define:input:herbs
+type: style
+label: Low herbs (guam to harralander)
+group: Herbs
+exampleItem: Guam leaf
+exampleItemId: 249
+*/
+#define RAX_HERBS_LOW_STYLE
+
+apply (name:FACT_HERBS_LOW) {
+    RAX_HERBS_LOW_STYLE
+}
+/*@ define:input:herbs
+type: style
+label: Mid herbs (ranarr to kwuarm)
+group: Herbs
+exampleItem: Ranarr weed
+exampleItemId: 257
+*/
+#define RAX_HERBS_MID_STYLE
+
+apply (name:FACT_HERBS_MID) {
+    RAX_HERBS_MID_STYLE
+}
+/*@ define:input:herbs
+type: style
+label: High herbs (snapdragon to huasca)
+group: Herbs
+exampleItem: Torstol
+exampleItemId: 269
+*/
+#define RAX_HERBS_HIGH_STYLE
+
+apply (name:FACT_HERBS_HIGH) {
+    RAX_HERBS_HIGH_STYLE
+}
+/*@ define:input:herbs
+type: style
+label: Grimy herbs
+group: Herbs
+exampleItem: Grimy ranarr weed
+exampleItemId: 207
+*/
+#define RAX_HERBS_GRIMY_STYLE
+
+apply (name:FACT_HERBS_GRIMY) {
+    RAX_HERBS_GRIMY_STYLE
+}

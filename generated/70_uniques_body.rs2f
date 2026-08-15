@@ -1,0 +1,1954 @@
+// collection log pages — ground slots only. rare screams, log is quiet.
+
+/*@ define:group
+---
+name: Abyssal Sire
+icon:
+  type: itemId
+  itemId: 13265
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Abyssal Sire
+group: Abyssal Sire
+*/
+#define RAX_CLOG_ABYSSAL_SIRE true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Abyssal Sire
+*/
+#define RAX_CLOG_ABYSSAL_SIRE_RARE ["Unsired", "Abyssal head", "Bludgeon spine", "Bludgeon claw", "Bludgeon axon", "Jar of miasma", "Abyssal dagger", "Abyssal whip"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ABYSSAL_SIRE && name:RAX_CLOG_ABYSSAL_SIRE_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Alchemical Hydra
+icon:
+  type: itemId
+  itemId: 22983
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Alchemical Hydra
+group: Alchemical Hydra
+*/
+#define RAX_CLOG_ALCHEMICAL_HYDRA true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Alchemical Hydra
+*/
+#define RAX_CLOG_ALCHEMICAL_HYDRA_RARE ["Hydra's claw", "Hydra tail", "Hydra leather", "Hydra's fang", "Hydra's eye", "Hydra's heart", "Jar of chemicals", "Alchemical hydra heads"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ALCHEMICAL_HYDRA && name:RAX_CLOG_ALCHEMICAL_HYDRA_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Alchemical Hydra
+*/
+#define RAX_CLOG_ALCHEMICAL_HYDRA_LOG ["Dragon knife", "Dragon thrownaxe"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_ALCHEMICAL_HYDRA && name:RAX_CLOG_ALCHEMICAL_HYDRA_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Amoxliatl
+icon:
+  type: itemId
+  itemId: 29889
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Amoxliatl
+group: Amoxliatl
+*/
+#define RAX_CLOG_AMOXLIATL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Amoxliatl
+*/
+#define RAX_CLOG_AMOXLIATL_RARE ["Glacial temotli", "Pendant of ates (inert)", "Pendant of ates"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_AMOXLIATL && name:RAX_CLOG_AMOXLIATL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Amoxliatl
+*/
+#define RAX_CLOG_AMOXLIATL_LOG ["Frozen tear"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_AMOXLIATL && name:RAX_CLOG_AMOXLIATL_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Araxxor
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Araxxor
+group: Araxxor
+*/
+#define RAX_CLOG_ARAXXOR true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Araxxor
+*/
+#define RAX_CLOG_ARAXXOR_RARE ["Araxyte fang", "Noxious point", "Noxious blade", "Noxious pommel", "Araxyte head", "Jar of venom", "Coagulated venom"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ARAXXOR && name:RAX_CLOG_ARAXXOR_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Araxxor
+*/
+#define RAX_CLOG_ARAXXOR_LOG ["Araxyte venom sac", "Spider cave teleport"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_ARAXXOR && name:RAX_CLOG_ARAXXOR_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Brutus
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Brutus
+group: Brutus
+*/
+#define RAX_CLOG_BRUTUS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Brutus
+*/
+#define RAX_CLOG_BRUTUS_RARE ["Bottomless milk bucket (empty)", "Bottomless milk bucket"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_BRUTUS && name:RAX_CLOG_BRUTUS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Brutus
+*/
+#define RAX_CLOG_BRUTUS_LOG ["Cow slippers"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_BRUTUS && name:RAX_CLOG_BRUTUS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Bryophyta
+icon:
+  type: itemId
+  itemId: 22372
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Bryophyta
+group: Bryophyta
+*/
+#define RAX_CLOG_BRYOPHYTA true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Bryophyta
+*/
+#define RAX_CLOG_BRYOPHYTA_RARE ["Bryophyta's essence"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_BRYOPHYTA && name:RAX_CLOG_BRYOPHYTA_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Callisto and Artio
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Callisto and Artio
+group: Callisto and Artio
+*/
+#define RAX_CLOG_CALLISTO_AND_ARTIO true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Callisto and Artio
+*/
+#define RAX_CLOG_CALLISTO_AND_ARTIO_RARE ["Tyrannical ring", "Dragon pickaxe", "Dragon 2h sword", "Claws of callisto", "Voidwaker hilt"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CALLISTO_AND_ARTIO && name:RAX_CLOG_CALLISTO_AND_ARTIO_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Cerberus
+icon:
+  type: itemId
+  itemId: 13233
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Cerberus
+group: Cerberus
+*/
+#define RAX_CLOG_CERBERUS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Cerberus
+*/
+#define RAX_CLOG_CERBERUS_RARE ["Eternal crystal", "Pegasian crystal", "Primordial crystal", "Jar of souls", "Smouldering stone"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CERBERUS && name:RAX_CLOG_CERBERUS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Cerberus
+*/
+#define RAX_CLOG_CERBERUS_LOG ["Key master teleport"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_CERBERUS && name:RAX_CLOG_CERBERUS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Chaos Elemental
+icon:
+  type: itemId
+  itemId: 7158
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Chaos Elemental
+group: Chaos Elemental
+*/
+#define RAX_CLOG_CHAOS_ELEMENTAL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Chaos Elemental
+*/
+#define RAX_CLOG_CHAOS_ELEMENTAL_RARE ["Dragon pickaxe", "Dragon 2h sword"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CHAOS_ELEMENTAL && name:RAX_CLOG_CHAOS_ELEMENTAL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Chaos Fanatic
+icon:
+  type: itemId
+  itemId: 11928
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Chaos Fanatic
+group: Chaos Fanatic
+*/
+#define RAX_CLOG_CHAOS_FANATIC true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Chaos Fanatic
+*/
+#define RAX_CLOG_CHAOS_FANATIC_RARE ["Odium shard 1", "Malediction shard 1"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CHAOS_FANATIC && name:RAX_CLOG_CHAOS_FANATIC_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Commander Zilyana
+icon:
+  type: itemId
+  itemId: 11838
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Commander Zilyana
+group: Commander Zilyana
+*/
+#define RAX_CLOG_COMMANDER_ZILYANA true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Commander Zilyana
+*/
+#define RAX_CLOG_COMMANDER_ZILYANA_RARE ["Armadyl crossbow", "Saradomin hilt", "Saradomin sword", "Saradomin's light", "Godsword shard 1", "Godsword shard 2", "Godsword shard 3"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_COMMANDER_ZILYANA && name:RAX_CLOG_COMMANDER_ZILYANA_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Corporeal Beast
+icon:
+  type: itemId
+  itemId: 12819
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Corporeal Beast
+group: Corporeal Beast
+*/
+#define RAX_CLOG_CORPOREAL_BEAST true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Corporeal Beast
+*/
+#define RAX_CLOG_CORPOREAL_BEAST_RARE ["Elysian sigil", "Spectral sigil", "Arcane sigil", "Holy elixir", "Spirit shield", "Jar of spirits"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CORPOREAL_BEAST && name:RAX_CLOG_CORPOREAL_BEAST_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Crazy archaeologist
+icon:
+  type: itemId
+  itemId: 11929
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Crazy archaeologist
+group: Crazy archaeologist
+*/
+#define RAX_CLOG_CRAZY_ARCHAEOLOGIST true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Crazy archaeologist
+*/
+#define RAX_CLOG_CRAZY_ARCHAEOLOGIST_RARE ["Odium shard 2", "Malediction shard 2", "Fedora"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CRAZY_ARCHAEOLOGIST && name:RAX_CLOG_CRAZY_ARCHAEOLOGIST_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Dagannoth Kings
+icon:
+  type: itemId
+  itemId: 6737
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Dagannoth Kings
+group: Dagannoth Kings
+*/
+#define RAX_CLOG_DAGANNOTH_KINGS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Dagannoth Kings
+*/
+#define RAX_CLOG_DAGANNOTH_KINGS_RARE ["Berserker ring", "Archers ring", "Seers ring", "Warrior ring", "Dragon axe", "Seercull", "Mud battlestaff"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_DAGANNOTH_KINGS && name:RAX_CLOG_DAGANNOTH_KINGS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Deranged Archaeologist
+icon:
+  type: itemId
+  itemId: 25604
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Deranged Archaeologist
+group: Deranged Archaeologist
+*/
+#define RAX_CLOG_DERANGED_ARCHAEOLOGIST true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Deranged Archaeologist
+*/
+#define RAX_CLOG_DERANGED_ARCHAEOLOGIST_RARE ["Steel ring"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_DERANGED_ARCHAEOLOGIST && name:RAX_CLOG_DERANGED_ARCHAEOLOGIST_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Doom of Mokhaiotl
+icon:
+  type: itemId
+  itemId: 30070
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Doom of Mokhaiotl
+group: Doom of Mokhaiotl
+*/
+#define RAX_CLOG_DOOM_OF_MOKHAIOTL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Doom of Mokhaiotl
+*/
+#define RAX_CLOG_DOOM_OF_MOKHAIOTL_RARE ["Avernic treads", "Eye of ayak (uncharged)", "Eye of ayak", "Mokhaiotl cloth"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_DOOM_OF_MOKHAIOTL && name:RAX_CLOG_DOOM_OF_MOKHAIOTL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Doom of Mokhaiotl
+*/
+#define RAX_CLOG_DOOM_OF_MOKHAIOTL_LOG ["Mokhaiotl waystone", "Demon tear"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_DOOM_OF_MOKHAIOTL && name:RAX_CLOG_DOOM_OF_MOKHAIOTL_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Duke Sucellus
+icon:
+  type: itemId
+  itemId: 28321
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Duke Sucellus
+group: Duke Sucellus
+*/
+#define RAX_CLOG_DUKE_SUCELLUS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Duke Sucellus
+*/
+#define RAX_CLOG_DUKE_SUCELLUS_RARE ["Eye of the duke", "Virtus mask", "Virtus robe top", "Virtus robe bottom", "Magus vestige", "Ice quartz", "Frozen tablet", "Awakener's orb"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_DUKE_SUCELLUS && name:RAX_CLOG_DUKE_SUCELLUS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Duke Sucellus
+*/
+#define RAX_CLOG_DUKE_SUCELLUS_LOG ["Chromium ingot"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_DUKE_SUCELLUS && name:RAX_CLOG_DUKE_SUCELLUS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: General Graardor
+icon:
+  type: itemId
+  itemId: 11832
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight General Graardor
+group: General Graardor
+*/
+#define RAX_CLOG_GENERAL_GRAARDOR true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: General Graardor
+*/
+#define RAX_CLOG_GENERAL_GRAARDOR_RARE ["Bandos chestplate", "Bandos tassets", "Bandos boots", "Bandos hilt", "Godsword shard 1", "Godsword shard 2", "Godsword shard 3"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_GENERAL_GRAARDOR && name:RAX_CLOG_GENERAL_GRAARDOR_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Giant Mole
+icon:
+  type: itemId
+  itemId: 7416
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Giant Mole
+group: Giant Mole
+*/
+#define RAX_CLOG_GIANT_MOLE true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Giant Mole
+*/
+#define RAX_CLOG_GIANT_MOLE_RARE []
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_GIANT_MOLE && name:RAX_CLOG_GIANT_MOLE_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Giant Mole
+*/
+#define RAX_CLOG_GIANT_MOLE_LOG ["Mole skin", "Mole claw", "Immaculate mole skin"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_GIANT_MOLE && name:RAX_CLOG_GIANT_MOLE_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Grotesque Guardians
+icon:
+  type: itemId
+  itemId: 21736
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Grotesque Guardians
+group: Grotesque Guardians
+*/
+#define RAX_CLOG_GROTESQUE_GUARDIANS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Grotesque Guardians
+*/
+#define RAX_CLOG_GROTESQUE_GUARDIANS_RARE ["Black tourmaline core", "Granite gloves", "Granite ring", "Granite hammer", "Jar of stone"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_GROTESQUE_GUARDIANS && name:RAX_CLOG_GROTESQUE_GUARDIANS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Grotesque Guardians
+*/
+#define RAX_CLOG_GROTESQUE_GUARDIANS_LOG ["Granite dust"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_GROTESQUE_GUARDIANS && name:RAX_CLOG_GROTESQUE_GUARDIANS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Hespori
+icon:
+  type: itemId
+  itemId: 22994
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Hespori
+group: Hespori
+*/
+#define RAX_CLOG_HESPORI true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Hespori
+*/
+#define RAX_CLOG_HESPORI_RARE ["Bottomless compost bucket"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_HESPORI && name:RAX_CLOG_HESPORI_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Hespori
+*/
+#define RAX_CLOG_HESPORI_LOG ["Iasor seed", "Kronos seed", "Attas seed"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_HESPORI && name:RAX_CLOG_HESPORI_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: The Hueycoatl
+icon:
+  type: itemId
+  itemId: 30085
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight The Hueycoatl
+group: The Hueycoatl
+*/
+#define RAX_CLOG_THE_HUEYCOATL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: The Hueycoatl
+*/
+#define RAX_CLOG_THE_HUEYCOATL_RARE ["Dragon hunter wand", "Tome of earth (empty)", "Tome of earth", "Hueycoatl hide"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_THE_HUEYCOATL && name:RAX_CLOG_THE_HUEYCOATL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: The Hueycoatl
+*/
+#define RAX_CLOG_THE_HUEYCOATL_LOG ["Soiled page", "Huasca seed"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_THE_HUEYCOATL && name:RAX_CLOG_THE_HUEYCOATL_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Kalphite Queen
+icon:
+  type: itemId
+  itemId: 3140
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Kalphite Queen
+group: Kalphite Queen
+*/
+#define RAX_CLOG_KALPHITE_QUEEN true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Kalphite Queen
+*/
+#define RAX_CLOG_KALPHITE_QUEEN_RARE ["Kq head", "Jar of sand", "Dragon 2h sword", "Dragon chainbody", "Dragon pickaxe"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_KALPHITE_QUEEN && name:RAX_CLOG_KALPHITE_QUEEN_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: King Black Dragon
+icon:
+  type: itemId
+  itemId: 7981
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight King Black Dragon
+group: King Black Dragon
+*/
+#define RAX_CLOG_KING_BLACK_DRAGON true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: King Black Dragon
+*/
+#define RAX_CLOG_KING_BLACK_DRAGON_RARE ["Kbd heads", "Dragon pickaxe", "Draconic visage"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_KING_BLACK_DRAGON && name:RAX_CLOG_KING_BLACK_DRAGON_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Kraken
+icon:
+  type: itemId
+  itemId: 12004
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Kraken
+group: Kraken
+*/
+#define RAX_CLOG_KRAKEN true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Kraken
+*/
+#define RAX_CLOG_KRAKEN_RARE ["Kraken tentacle", "Trident of the seas", "Jar of dirt"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_KRAKEN && name:RAX_CLOG_KRAKEN_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Kree'arra
+icon:
+  type: itemId
+  itemId: 11826
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Kree'arra
+group: "Kree'arra"
+*/
+#define RAX_CLOG_KREE_ARRA true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: "Kree'arra"
+*/
+#define RAX_CLOG_KREE_ARRA_RARE ["Armadyl helmet", "Armadyl chestplate", "Armadyl chainskirt", "Armadyl hilt", "Godsword shard 1", "Godsword shard 2", "Godsword shard 3"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_KREE_ARRA && name:RAX_CLOG_KREE_ARRA_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: K'ril Tsutsaroth
+icon:
+  type: itemId
+  itemId: 11791
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight K'ril Tsutsaroth
+group: "K'ril Tsutsaroth"
+*/
+#define RAX_CLOG_K_RIL_TSUTSAROTH true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: "K'ril Tsutsaroth"
+*/
+#define RAX_CLOG_K_RIL_TSUTSAROTH_RARE ["Staff of the Dead", "Staff of the dead", "Zamorakian spear", "Steam battlestaff", "Zamorak hilt", "Godsword shard 1", "Godsword shard 2", "Godsword shard 3"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_K_RIL_TSUTSAROTH && name:RAX_CLOG_K_RIL_TSUTSAROTH_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: The Leviathan
+icon:
+  type: itemId
+  itemId: 28325
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight The Leviathan
+group: The Leviathan
+*/
+#define RAX_CLOG_THE_LEVIATHAN true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: The Leviathan
+*/
+#define RAX_CLOG_THE_LEVIATHAN_RARE ["Leviathan's lure", "Virtus mask", "Virtus robe top", "Virtus robe bottom", "Venator vestige", "Smoke quartz", "Scarred tablet", "Awakener's orb"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_THE_LEVIATHAN && name:RAX_CLOG_THE_LEVIATHAN_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: The Leviathan
+*/
+#define RAX_CLOG_THE_LEVIATHAN_LOG ["Chromium ingot"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_THE_LEVIATHAN && name:RAX_CLOG_THE_LEVIATHAN_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: The Mad Angel
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight The Mad Angel
+group: The Mad Angel
+*/
+#define RAX_CLOG_THE_MAD_ANGEL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: The Mad Angel
+*/
+#define RAX_CLOG_THE_MAD_ANGEL_RARE ["Hallowfell", "Jar of light"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_THE_MAD_ANGEL && name:RAX_CLOG_THE_MAD_ANGEL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: The Mad Angel
+*/
+#define RAX_CLOG_THE_MAD_ANGEL_LOG ["Ardeaglais teleport", "Granite dust"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_THE_MAD_ANGEL && name:RAX_CLOG_THE_MAD_ANGEL_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Maggot King
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Maggot King
+group: Maggot King
+*/
+#define RAX_CLOG_MAGGOT_KING true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Maggot King
+*/
+#define RAX_CLOG_MAGGOT_KING_RARE ["Crimson kisten", "Elder venator fang"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_MAGGOT_KING && name:RAX_CLOG_MAGGOT_KING_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Moons of Peril
+icon:
+  type: itemId
+  itemId: 28997
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Moons of Peril
+group: Moons of Peril
+*/
+#define RAX_CLOG_MOONS_OF_PERIL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Moons of Peril
+*/
+#define RAX_CLOG_MOONS_OF_PERIL_RARE ["Eclipse moon chestplate", "Eclipse moon tassets", "Eclipse moon helm", "Eclipse atlatl", "Blue moon chestplate", "Blue moon tassets", "Blue moon helm", "Blue moon spear", "Blood moon chestplate", "Blood moon tassets", "Blood moon helm", "Dual macuahuitl"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_MOONS_OF_PERIL && name:RAX_CLOG_MOONS_OF_PERIL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Moons of Peril
+*/
+#define RAX_CLOG_MOONS_OF_PERIL_LOG ["Atlatl dart"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_MOONS_OF_PERIL && name:RAX_CLOG_MOONS_OF_PERIL_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Nex
+icon:
+  type: itemId
+  itemId: 26370
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Nex
+group: Nex
+*/
+#define RAX_CLOG_NEX true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Nex
+*/
+#define RAX_CLOG_NEX_RARE ["Ancient hilt", "Nihil horn", "Zaryte vambraces", "Torva full helm (damaged)", "Torva platebody (damaged)", "Torva platelegs (damaged)"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_NEX && name:RAX_CLOG_NEX_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Nex
+*/
+#define RAX_CLOG_NEX_LOG ["Nihil shard"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_NEX && name:RAX_CLOG_NEX_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: The Nightmare
+icon:
+  type: itemId
+  itemId: 24417
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight The Nightmare
+group: The Nightmare
+*/
+#define RAX_CLOG_THE_NIGHTMARE true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: The Nightmare
+*/
+#define RAX_CLOG_THE_NIGHTMARE_RARE ["Inquisitor's mace", "Inquisitor's great helm", "Inquisitor's hauberk", "Inquisitor's plateskirt", "Nightmare staff", "Volatile orb", "Harmonised orb", "Eldritch orb", "Jar of dreams", "Slepey tablet", "Parasitic egg"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_THE_NIGHTMARE && name:RAX_CLOG_THE_NIGHTMARE_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Obor
+icon:
+  type: itemId
+  itemId: 20756
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Obor
+group: Obor
+*/
+#define RAX_CLOG_OBOR true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Obor
+*/
+#define RAX_CLOG_OBOR_RARE ["Hill giant club"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_OBOR && name:RAX_CLOG_OBOR_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Phantom Muspah
+icon:
+  type: itemId
+  itemId: 27614
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Phantom Muspah
+group: Phantom Muspah
+*/
+#define RAX_CLOG_PHANTOM_MUSPAH true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Phantom Muspah
+*/
+#define RAX_CLOG_PHANTOM_MUSPAH_RARE ["Venator shard", "Ancient icon", "Frozen cache"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_PHANTOM_MUSPAH && name:RAX_CLOG_PHANTOM_MUSPAH_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Phantom Muspah
+*/
+#define RAX_CLOG_PHANTOM_MUSPAH_LOG ["Charged ice", "Ancient essence"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_PHANTOM_MUSPAH && name:RAX_CLOG_PHANTOM_MUSPAH_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Royal Titans
+icon:
+  type: itemId
+  itemId: 30638
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Royal Titans
+group: Royal Titans
+*/
+#define RAX_CLOG_ROYAL_TITANS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Royal Titans
+*/
+#define RAX_CLOG_ROYAL_TITANS_RARE ["Deadeye prayer scroll", "Mystic vigour prayer scroll", "Giantsoul amulet (uncharged)", "Giantsoul amulet", "Ice element staff crown", "Fire element staff crown"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ROYAL_TITANS && name:RAX_CLOG_ROYAL_TITANS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Royal Titans
+*/
+#define RAX_CLOG_ROYAL_TITANS_LOG ["Desiccated page"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_ROYAL_TITANS && name:RAX_CLOG_ROYAL_TITANS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Sarachnis
+icon:
+  type: itemId
+  itemId: 23528
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Sarachnis
+group: Sarachnis
+*/
+#define RAX_CLOG_SARACHNIS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Sarachnis
+*/
+#define RAX_CLOG_SARACHNIS_RARE ["Jar of eyes", "Sarachnis cudgel"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_SARACHNIS && name:RAX_CLOG_SARACHNIS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Sarachnis
+*/
+#define RAX_CLOG_SARACHNIS_LOG ["Giant egg sac(full)", "Pristine spider silk"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_SARACHNIS && name:RAX_CLOG_SARACHNIS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Scorpia
+icon:
+  type: itemId
+  itemId: 11931
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Scorpia
+group: Scorpia
+*/
+#define RAX_CLOG_SCORPIA true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Scorpia
+*/
+#define RAX_CLOG_SCORPIA_RARE ["Odium shard 3", "Malediction shard 3", "Dragon 2h sword"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_SCORPIA && name:RAX_CLOG_SCORPIA_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Scurrius
+icon:
+  type: itemId
+  itemId: 28798
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Scurrius
+group: Scurrius
+*/
+#define RAX_CLOG_SCURRIUS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Scurrius
+*/
+#define RAX_CLOG_SCURRIUS_RARE ["Scurrius' spine"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_SCURRIUS && name:RAX_CLOG_SCURRIUS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Shellbane Gryphon
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Shellbane Gryphon
+group: Shellbane Gryphon
+*/
+#define RAX_CLOG_SHELLBANE_GRYPHON true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Shellbane Gryphon
+*/
+#define RAX_CLOG_SHELLBANE_GRYPHON_RARE ["Gull (pet)", "Jar of feathers", "Belle's folly (tarnished)"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_SHELLBANE_GRYPHON && name:RAX_CLOG_SHELLBANE_GRYPHON_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Shellbane Gryphon
+*/
+#define RAX_CLOG_SHELLBANE_GRYPHON_LOG ["Gryphon feather"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_SHELLBANE_GRYPHON && name:RAX_CLOG_SHELLBANE_GRYPHON_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Skotizo
+icon:
+  type: itemId
+  itemId: 19685
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Skotizo
+group: Skotizo
+*/
+#define RAX_CLOG_SKOTIZO true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Skotizo
+*/
+#define RAX_CLOG_SKOTIZO_RARE ["Jar of darkness", "Dark claw", "Dark totem"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_SKOTIZO && name:RAX_CLOG_SKOTIZO_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Skotizo
+*/
+#define RAX_CLOG_SKOTIZO_LOG ["Uncut onyx", "Ancient shard"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_SKOTIZO && name:RAX_CLOG_SKOTIZO_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Thermonuclear smoke devil
+icon:
+  type: itemId
+  itemId: 12002
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Thermonuclear smoke devil
+group: Thermonuclear smoke devil
+*/
+#define RAX_CLOG_THERMONUCLEAR_SMOKE_DEVIL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Thermonuclear smoke devil
+*/
+#define RAX_CLOG_THERMONUCLEAR_SMOKE_DEVIL_RARE ["Occult necklace", "Smoke battlestaff", "Dragon chainbody", "Jar of smoke"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_THERMONUCLEAR_SMOKE_DEVIL && name:RAX_CLOG_THERMONUCLEAR_SMOKE_DEVIL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Vardorvis
+icon:
+  type: itemId
+  itemId: 28307
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Vardorvis
+group: Vardorvis
+*/
+#define RAX_CLOG_VARDORVIS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Vardorvis
+*/
+#define RAX_CLOG_VARDORVIS_RARE ["Executioner's axe head", "Virtus mask", "Virtus robe top", "Virtus robe bottom", "Ultor vestige", "Blood quartz", "Strangled tablet", "Awakener's orb"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_VARDORVIS && name:RAX_CLOG_VARDORVIS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Vardorvis
+*/
+#define RAX_CLOG_VARDORVIS_LOG ["Chromium ingot"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_VARDORVIS && name:RAX_CLOG_VARDORVIS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Venenatis and Spindel
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Venenatis and Spindel
+group: Venenatis and Spindel
+*/
+#define RAX_CLOG_VENENATIS_AND_SPINDEL true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Venenatis and Spindel
+*/
+#define RAX_CLOG_VENENATIS_AND_SPINDEL_RARE ["Treasonous ring", "Dragon pickaxe", "Dragon 2h sword", "Fangs of venenatis", "Voidwaker gem"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_VENENATIS_AND_SPINDEL && name:RAX_CLOG_VENENATIS_AND_SPINDEL_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Vet'ion and Calvar'ion
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Vet'ion and Calvar'ion
+group: "Vet'ion and Calvar'ion"
+*/
+#define RAX_CLOG_VET_ION_AND_CALVAR_ION true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: "Vet'ion and Calvar'ion"
+*/
+#define RAX_CLOG_VET_ION_AND_CALVAR_ION_RARE ["Ring of the gods", "Dragon pickaxe", "Dragon 2h sword", "Skull of vet'ion", "Voidwaker blade"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_VET_ION_AND_CALVAR_ION && name:RAX_CLOG_VET_ION_AND_CALVAR_ION_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Vorkath
+icon:
+  type: itemId
+  itemId: 22006
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Vorkath
+group: Vorkath
+*/
+#define RAX_CLOG_VORKATH true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Vorkath
+*/
+#define RAX_CLOG_VORKATH_RARE ["Vorkath's head", "Draconic visage", "Skeletal visage", "Jar of decay", "Dragonbone necklace"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_VORKATH && name:RAX_CLOG_VORKATH_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: The Whisperer
+icon:
+  type: itemId
+  itemId: 28313
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight The Whisperer
+group: The Whisperer
+*/
+#define RAX_CLOG_THE_WHISPERER true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: The Whisperer
+*/
+#define RAX_CLOG_THE_WHISPERER_RARE ["Siren's staff", "Virtus mask", "Virtus robe top", "Virtus robe bottom", "Bellator vestige", "Shadow quartz", "Sirenic tablet", "Awakener's orb"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_THE_WHISPERER && name:RAX_CLOG_THE_WHISPERER_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: The Whisperer
+*/
+#define RAX_CLOG_THE_WHISPERER_LOG ["Chromium ingot"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_THE_WHISPERER && name:RAX_CLOG_THE_WHISPERER_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Yama
+icon:
+  type: itemId
+  itemId: 30759
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Yama
+group: Yama
+*/
+#define RAX_CLOG_YAMA true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Yama
+*/
+#define RAX_CLOG_YAMA_RARE ["Oathplate helm", "Oathplate chest", "Oathplate legs", "Soulflame horn", "Rite of vile transference", "Forgotten lockbox", "Dossier"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_YAMA && name:RAX_CLOG_YAMA_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Yama
+*/
+#define RAX_CLOG_YAMA_LOG ["Chasm teleport scroll", "Oathplate shards", "Barrel of demonic tallow (full)", "Barrel of demonic tallow"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_YAMA && name:RAX_CLOG_YAMA_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Zalcano
+icon:
+  type: itemId
+  itemId: 23908
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Zalcano
+group: Zalcano
+*/
+#define RAX_CLOG_ZALCANO true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Zalcano
+*/
+#define RAX_CLOG_ZALCANO_RARE ["Zalcano shard"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ZALCANO && name:RAX_CLOG_ZALCANO_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Zalcano
+*/
+#define RAX_CLOG_ZALCANO_LOG ["Crystal tool seed", "Uncut onyx"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_ZALCANO && name:RAX_CLOG_ZALCANO_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Zulrah
+icon:
+  type: itemId
+  itemId: 12922
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Zulrah
+group: Zulrah
+*/
+#define RAX_CLOG_ZULRAH true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Zulrah
+*/
+#define RAX_CLOG_ZULRAH_RARE ["Tanzanite mutagen", "Magma mutagen", "Jar of swamp", "Magic fang", "Serpentine visage", "Tanzanite fang"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ZULRAH && name:RAX_CLOG_ZULRAH_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Zulrah
+*/
+#define RAX_CLOG_ZULRAH_LOG ["Zul-andra teleport", "Uncut onyx", "Zulrah's scales"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_ZULRAH && name:RAX_CLOG_ZULRAH_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Champion's Challenge
+icon:
+  type: itemId
+  itemId: 6801
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Champion's Challenge
+group: "Champion's Challenge"
+*/
+#define RAX_CLOG_CHAMPION_S_CHALLENGE true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: "Champion's Challenge"
+*/
+#define RAX_CLOG_CHAMPION_S_CHALLENGE_RARE ["Earth warrior champion scroll", "Ghoul champion scroll", "Giant champion scroll", "Goblin champion scroll", "Hobgoblin champion scroll", "Imp champion scroll", "Jogre champion scroll", "Lesser demon champion scroll", "Skeleton champion scroll", "Zombie champion scroll", "Champion's cape"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CHAMPION_S_CHALLENGE && name:RAX_CLOG_CHAMPION_S_CHALLENGE_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Cyclopes
+icon:
+  type: itemId
+  itemId: 8850
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Cyclopes
+group: Cyclopes
+*/
+#define RAX_CLOG_CYCLOPES true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Cyclopes
+*/
+#define RAX_CLOG_CYCLOPES_RARE ["Bronze defender", "Iron defender", "Steel defender", "Black defender", "Mithril defender", "Adamant defender", "Rune defender", "Dragon defender"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_CYCLOPES && name:RAX_CLOG_CYCLOPES_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Elder Chaos Druids
+icon:
+  type: itemId
+  itemId: 20517
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Elder Chaos Druids
+group: Elder Chaos Druids
+*/
+#define RAX_CLOG_ELDER_CHAOS_DRUIDS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Elder Chaos Druids
+*/
+#define RAX_CLOG_ELDER_CHAOS_DRUIDS_RARE ["Elder chaos top", "Elder chaos robe", "Elder chaos hood"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_ELDER_CHAOS_DRUIDS && name:RAX_CLOG_ELDER_CHAOS_DRUIDS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Glough's Experiments
+icon:
+  type: itemId
+  itemId: 19529
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Glough's Experiments
+group: "Glough's Experiments"
+*/
+#define RAX_CLOG_GLOUGH_S_EXPERIMENTS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: "Glough's Experiments"
+*/
+#define RAX_CLOG_GLOUGH_S_EXPERIMENTS_RARE ["Zenyte shard", "Light frame", "Heavy frame", "Ballista limbs", "Monkey tail", "Ballista spring"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_GLOUGH_S_EXPERIMENTS && name:RAX_CLOG_GLOUGH_S_EXPERIMENTS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:group
+---
+name: Revenants
+icon:
+  type: itemId
+  itemId: 21817
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Revenants
+group: Revenants
+*/
+#define RAX_CLOG_REVENANTS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Revenants
+*/
+#define RAX_CLOG_REVENANTS_RARE ["Viggora's chainmace (u)", "Craw's bow (u)", "Thammaron's sceptre (u)", "Amulet of avarice", "Bracelet of ethereum (uncharged)", "Bracelet of ethereum", "Ancient crystal", "Ancient relic", "Ancient effigy", "Ancient medallion", "Ancient statuette", "Ancient totem", "Ancient emblem", "Revenant ether"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_REVENANTS && name:RAX_CLOG_REVENANTS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Revenants
+*/
+#define RAX_CLOG_REVENANTS_LOG ["Revenant cave teleport"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_REVENANTS && name:RAX_CLOG_REVENANTS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Slayer
+icon:
+  type: itemId
+  itemId: 4155
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Slayer
+group: Slayer
+*/
+#define RAX_CLOG_SLAYER true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Slayer
+*/
+#define RAX_CLOG_SLAYER_RARE ["Crawling hand (item)", "Cockatrice head", "Basilisk head", "Kurask head", "Abyssal head", "Imbued heart", "Eternal gem", "Dust battlestaff", "Mist battlestaff", "Abyssal whip", "Granite maul", "Mudskipper hat", "Flippers", "Brine sabre", "Leaf-bladed sword", "Leaf-bladed battleaxe", "Black mask (10)", "Granite longsword", "Granite boots", "Wyvern visage", "Granite legs", "Granite helm", "Draconic visage", "Bronze boots", "Iron boots", "Steel boots", "Black boots", "Mithril boots", "Adamant boots", "Rune boots", "Dragon boots", "Abyssal dagger", "Uncharged trident", "Kraken tentacle", "Dark bow", "Occult necklace", "Dragon chainbody", "Dragon harpoon", "Dragon sword", "Broken dragon hasta", "Drake's tooth", "Drake's claw", "Hydra tail", "Hydra's fang", "Hydra's eye", "Hydra's heart", "Mystic hat (light)", "Mystic robe top (light)", "Mystic robe bottom (light)", "Mystic gloves (light)", "Mystic boots (light)", "Mystic hat (dark)", "Mystic robe top (dark)", "Mystic robe bottom (dark)", "Mystic gloves (dark)", "Mystic boots (dark)", "Mystic hat (dusk)", "Mystic robe top (dusk)", "Mystic robe bottom (dusk)", "Mystic gloves (dusk)", "Mystic boots (dusk)", "Basilisk jaw", "Aquanite tendon", "Dagon'hai hat", "Dagon'hai robe top", "Dagon'hai robe bottom", "Blood shard", "Ancient ceremonial mask", "Ancient ceremonial top", "Ancient ceremonial legs", "Ancient ceremonial gloves", "Ancient ceremonial boots", "Warped sceptre (uncharged)", "Warped sceptre", "Sulphur blades", "Teleport anchoring scroll", "Aranea boots", "Glacial temotli", "Pendant of ates (inert)", "Pendant of ates", "Earthbound tecpatl", "Antler guard", "Alchemist's signet", "Broken antler", "Dragon metal sheet", "Horn of plenty (empty)", "Horn of plenty", "Venator tooth", "Venator fang"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_SLAYER && name:RAX_CLOG_SLAYER_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Slayer
+*/
+#define RAX_CLOG_SLAYER_LOG ["Dragon thrownaxe", "Dragon knife", "Frozen tear", "Gryphon feather"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_SLAYER && name:RAX_CLOG_SLAYER_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: Tormented Demons
+icon:
+  type: itemId
+  itemId: 29580
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight Tormented Demons
+group: Tormented Demons
+*/
+#define RAX_CLOG_TORMENTED_DEMONS true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: Tormented Demons
+*/
+#define RAX_CLOG_TORMENTED_DEMONS_RARE ["Tormented synapse", "Burning claw"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_TORMENTED_DEMONS && name:RAX_CLOG_TORMENTED_DEMONS_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:rares
+type: stringlist
+label: Log slots
+group: Tormented Demons
+*/
+#define RAX_CLOG_TORMENTED_DEMONS_LOG ["Guthixian temple teleport"]
+
+apply (RAX_NOTABLE_ENABLE && RAX_CLOG_TORMENTED_DEMONS && name:RAX_CLOG_TORMENTED_DEMONS_LOG) {
+    hidden = false;
+    RAX_NOTABLE_STYLE
+}
+
+/*@ define:group
+---
+name: TzHaar
+icon:
+  type: itemId
+  itemId: 6528
+expanded: false
+*/
+
+/*@ define:input:rares
+type: boolean
+label: Highlight TzHaar
+group: TzHaar
+*/
+#define RAX_CLOG_TZHAAR true
+
+/*@ define:input:rares
+type: stringlist
+label: Rare slots
+group: TzHaar
+*/
+#define RAX_CLOG_TZHAAR_RARE ["Obsidian cape", "Toktz-ket-xil", "Tzhaar-ket-om", "Toktz-xil-ak", "Toktz-xil-ek", "Toktz-mej-tal", "Toktz-xil-ul", "Obsidian helmet", "Obsidian platebody", "Obsidian platelegs"]
+
+apply (RAX_UNIQUE_ENABLE && RAX_CLOG_TZHAAR && name:RAX_CLOG_TZHAAR_RARE) {
+    hidden = false;
+    RAX_UNIQUE_STYLE
+}
+
+#define RAX_UNIQUES_LIST ["Unsired", "Abyssal head", "Bludgeon spine", "Bludgeon claw", "Bludgeon axon", "Jar of miasma", "Abyssal dagger", "Abyssal whip", "Hydra's claw", "Hydra tail", "Hydra leather", "Hydra's fang", "Hydra's eye", "Hydra's heart", "Jar of chemicals", "Alchemical hydra heads", "Glacial temotli", "Pendant of ates (inert)", "Pendant of ates", "Araxyte fang", "Noxious point", "Noxious blade", "Noxious pommel", "Araxyte head", "Jar of venom", "Coagulated venom", "Bottomless milk bucket (empty)", "Bottomless milk bucket", "Bryophyta's essence", "Tyrannical ring", "Dragon pickaxe", "Dragon 2h sword", "Claws of callisto", "Voidwaker hilt", "Eternal crystal", "Pegasian crystal", "Primordial crystal", "Jar of souls", "Smouldering stone", "Odium shard 1", "Malediction shard 1", "Armadyl crossbow", "Saradomin hilt", "Saradomin sword", "Saradomin's light", "Godsword shard 1", "Godsword shard 2", "Godsword shard 3", "Elysian sigil", "Spectral sigil", "Arcane sigil", "Holy elixir", "Spirit shield", "Jar of spirits", "Odium shard 2", "Malediction shard 2", "Fedora", "Berserker ring", "Archers ring", "Seers ring", "Warrior ring", "Dragon axe", "Seercull", "Mud battlestaff", "Steel ring", "Avernic treads", "Eye of ayak (uncharged)", "Eye of ayak", "Mokhaiotl cloth", "Eye of the duke", "Virtus mask", "Virtus robe top", "Virtus robe bottom", "Magus vestige", "Ice quartz", "Frozen tablet", "Awakener's orb", "Bandos chestplate", "Bandos tassets", "Bandos boots", "Bandos hilt", "Black tourmaline core", "Granite gloves", "Granite ring", "Granite hammer", "Jar of stone", "Bottomless compost bucket", "Dragon hunter wand", "Tome of earth (empty)", "Tome of earth", "Hueycoatl hide", "Kq head", "Jar of sand", "Dragon chainbody", "Kbd heads", "Draconic visage", "Kraken tentacle", "Trident of the seas", "Jar of dirt", "Armadyl helmet", "Armadyl chestplate", "Armadyl chainskirt", "Armadyl hilt", "Staff of the Dead", "Staff of the dead", "Zamorakian spear", "Steam battlestaff", "Zamorak hilt", "Leviathan's lure", "Venator vestige", "Smoke quartz", "Scarred tablet", "Hallowfell", "Jar of light", "Crimson kisten", "Elder venator fang", "Eclipse moon chestplate", "Eclipse moon tassets", "Eclipse moon helm", "Eclipse atlatl", "Blue moon chestplate", "Blue moon tassets", "Blue moon helm", "Blue moon spear", "Blood moon chestplate", "Blood moon tassets", "Blood moon helm", "Dual macuahuitl", "Ancient hilt", "Nihil horn", "Zaryte vambraces", "Torva full helm (damaged)", "Torva platebody (damaged)", "Torva platelegs (damaged)", "Inquisitor's mace", "Inquisitor's great helm", "Inquisitor's hauberk", "Inquisitor's plateskirt", "Nightmare staff", "Volatile orb", "Harmonised orb", "Eldritch orb", "Jar of dreams", "Slepey tablet", "Parasitic egg", "Hill giant club", "Venator shard", "Ancient icon", "Frozen cache", "Deadeye prayer scroll", "Mystic vigour prayer scroll", "Giantsoul amulet (uncharged)", "Giantsoul amulet", "Ice element staff crown", "Fire element staff crown", "Jar of eyes", "Sarachnis cudgel", "Odium shard 3", "Malediction shard 3", "Scurrius' spine", "Gull (pet)", "Jar of feathers", "Belle's folly (tarnished)", "Jar of darkness", "Dark claw", "Dark totem", "Occult necklace", "Smoke battlestaff", "Jar of smoke", "Executioner's axe head", "Ultor vestige", "Blood quartz", "Strangled tablet", "Treasonous ring", "Fangs of venenatis", "Voidwaker gem", "Ring of the gods", "Skull of vet'ion", "Voidwaker blade", "Vorkath's head", "Skeletal visage", "Jar of decay", "Dragonbone necklace", "Siren's staff", "Bellator vestige", "Shadow quartz", "Sirenic tablet", "Oathplate helm", "Oathplate chest", "Oathplate legs", "Soulflame horn", "Rite of vile transference", "Forgotten lockbox", "Dossier", "Zalcano shard", "Tanzanite mutagen", "Magma mutagen", "Jar of swamp", "Magic fang", "Serpentine visage", "Tanzanite fang", "Earth warrior champion scroll", "Ghoul champion scroll", "Giant champion scroll", "Goblin champion scroll", "Hobgoblin champion scroll", "Imp champion scroll", "Jogre champion scroll", "Lesser demon champion scroll", "Skeleton champion scroll", "Zombie champion scroll", "Champion's cape", "Bronze defender", "Iron defender", "Steel defender", "Black defender", "Mithril defender", "Adamant defender", "Rune defender", "Dragon defender", "Elder chaos top", "Elder chaos robe", "Elder chaos hood", "Zenyte shard", "Light frame", "Heavy frame", "Ballista limbs", "Monkey tail", "Ballista spring", "Viggora's chainmace (u)", "Craw's bow (u)", "Thammaron's sceptre (u)", "Amulet of avarice", "Bracelet of ethereum (uncharged)", "Bracelet of ethereum", "Ancient crystal", "Ancient relic", "Ancient effigy", "Ancient medallion", "Ancient statuette", "Ancient totem", "Ancient emblem", "Revenant ether", "Crawling hand (item)", "Cockatrice head", "Basilisk head", "Kurask head", "Imbued heart", "Eternal gem", "Dust battlestaff", "Mist battlestaff", "Granite maul", "Mudskipper hat", "Flippers", "Brine sabre", "Leaf-bladed sword", "Leaf-bladed battleaxe", "Black mask (10)", "Granite longsword", "Granite boots", "Wyvern visage", "Granite legs", "Granite helm", "Bronze boots", "Iron boots", "Steel boots", "Black boots", "Mithril boots", "Adamant boots", "Rune boots", "Dragon boots", "Uncharged trident", "Dark bow", "Dragon harpoon", "Dragon sword", "Broken dragon hasta", "Drake's tooth", "Drake's claw", "Mystic hat (light)", "Mystic robe top (light)", "Mystic robe bottom (light)", "Mystic gloves (light)", "Mystic boots (light)", "Mystic hat (dark)", "Mystic robe top (dark)", "Mystic robe bottom (dark)", "Mystic gloves (dark)", "Mystic boots (dark)", "Mystic hat (dusk)", "Mystic robe top (dusk)", "Mystic robe bottom (dusk)", "Mystic gloves (dusk)", "Mystic boots (dusk)", "Basilisk jaw", "Aquanite tendon", "Dagon'hai hat", "Dagon'hai robe top", "Dagon'hai robe bottom", "Blood shard", "Ancient ceremonial mask", "Ancient ceremonial top", "Ancient ceremonial legs", "Ancient ceremonial gloves", "Ancient ceremonial boots", "Warped sceptre (uncharged)", "Warped sceptre", "Sulphur blades", "Teleport anchoring scroll", "Aranea boots", "Earthbound tecpatl", "Antler guard", "Alchemist's signet", "Broken antler", "Dragon metal sheet", "Horn of plenty (empty)", "Horn of plenty", "Venator tooth", "Venator fang", "Tormented synapse", "Burning claw", "Obsidian cape", "Toktz-ket-xil", "Tzhaar-ket-om", "Toktz-xil-ak", "Toktz-xil-ek", "Toktz-mej-tal", "Toktz-xil-ul", "Obsidian helmet", "Obsidian platebody", "Obsidian platelegs"]

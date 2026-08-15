@@ -1,0 +1,78 @@
+/*@ define:module:clues
+---
+name: Clues
+subtitle: The whole trail, one tier
+description: |
+  Scroll, box, nest, bottle, geode, casket, challenge — same style.
+  Items are facts. You pick the look and which tiers to mute.
+
+  After Value so a clue never turns into a gp chip. Alerts can still ping.
+*/
+
+/*@ define:group
+---
+name: Trail
+expanded: false
+*/
+
+/*@ define:input:clues
+type: boolean
+label: Style clues
+group: Trail
+*/
+#define RAX_CLUE_ENABLE true
+
+/*@ define:input:clues
+type: enumlist
+label: Mute these tiers
+group: Trail
+enum: [
+  { "value": "* (beginner)", "label": "Beginner" },
+  { "value": "* (easy)", "label": "Easy" },
+  { "value": "* (medium)", "label": "Medium" },
+  { "value": "* (hard)", "label": "Hard" },
+  { "value": "* (elite)", "label": "Elite" },
+  { "value": "* (master)", "label": "Master" }
+]
+*/
+#define RAX_CLUE_MUTE []
+
+/*{{RAX_CLUES_BODY}}*/
+
+/*@ define:group
+---
+name: Wilderness step
+expanded: false
+description: |
+  Hard/elite clues that rolled a wilderness step. Overlay after the tier style.
+*/
+
+/*@ define:input:clues
+type: style
+label: Hard wilderness
+group: Wilderness step
+exampleItem: Clue scroll (hard)
+exampleItemId: 2722
+*/
+#define RAX_CLUE_HARD_WILDY_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FF000000"; textAccentColor = "#FF000000"; menuTextColor = "#FF000000"; sound = "clues.wav"; icon = CurrentItem();
+
+apply (RAX_CLUE_ENABLE && id:FACT_CLUE_HARD_WILDY_IDS) {
+    RAX_CLUE_HARD_WILDY_STYLE
+}
+
+/*@ define:input:clues
+type: style
+label: Elite wilderness
+group: Wilderness step
+exampleItem: Clue scroll (elite)
+exampleItemId: 12073
+*/
+#define RAX_CLUE_ELITE_WILDY_STYLE textColor = "#FFFFFFFF"; backgroundColor = "#80908062"; borderColor = "#FF000000"; textAccentColor = "#FF000000"; menuTextColor = "#FF000000"; sound = "clues.wav"; icon = CurrentItem();
+
+apply (RAX_CLUE_ENABLE && id:FACT_CLUE_ELITE_WILDY_IDS) {
+    RAX_CLUE_ELITE_WILDY_STYLE
+}
+
+apply (name:RAX_CLUE_MUTE) {
+    hidden = true;
+}

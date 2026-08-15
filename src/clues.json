@@ -1,0 +1,98 @@
+{
+  "_comment": "Every way a clue hits the floor, one family per tier. Items are facts. You style the tier.",
+  "tiers": [
+    {
+      "id": "beginner",
+      "label": "Beginner",
+      "example": "Clue scroll (beginner)",
+      "exampleId": 23182,
+      "border": "#FFCFC8C8",
+      "items": [
+        "Clue scroll (beginner)",
+        "Scroll box (beginner)",
+        "Clue nest (beginner)",
+        "Clue bottle (beginner)",
+        "Clue geode (beginner)",
+        "Reward casket (beginner)"
+      ]
+    },
+    {
+      "id": "easy",
+      "label": "Easy",
+      "example": "Clue scroll (easy)",
+      "exampleId": 2677,
+      "border": "#FF248F26",
+      "items": [
+        "Clue scroll (easy)",
+        "Scroll box (easy)",
+        "Clue nest (easy)",
+        "Clue bottle (easy)",
+        "Clue geode (easy)",
+        "Reward casket (easy)"
+      ]
+    },
+    {
+      "id": "medium",
+      "label": "Medium",
+      "example": "Clue scroll (medium)",
+      "exampleId": 2801,
+      "border": "#FF6CBBBF",
+      "items": [
+        "Clue scroll (medium)",
+        "Scroll box (medium)",
+        "Clue nest (medium)",
+        "Clue bottle (medium)",
+        "Clue geode (medium)",
+        "Reward casket (medium)",
+        "Challenge scroll (medium)"
+      ]
+    },
+    {
+      "id": "hard",
+      "label": "Hard",
+      "example": "Clue scroll (hard)",
+      "exampleId": 2722,
+      "border": "#FFA343BD",
+      "items": [
+        "Clue scroll (hard)",
+        "Scroll box (hard)",
+        "Clue nest (hard)",
+        "Clue bottle (hard)",
+        "Clue geode (hard)",
+        "Reward casket (hard)",
+        "Challenge scroll (hard)"
+      ]
+    },
+    {
+      "id": "elite",
+      "label": "Elite",
+      "example": "Clue scroll (elite)",
+      "exampleId": 12073,
+      "border": "#FFEED11D",
+      "items": [
+        "Clue scroll (elite)",
+        "Scroll box (elite)",
+        "Clue nest (elite)",
+        "Clue bottle (elite)",
+        "Clue geode (elite)",
+        "Reward casket (elite)",
+        "Challenge scroll (elite)"
+      ]
+    },
+    {
+      "id": "master",
+      "label": "Master",
+      "example": "Clue scroll (master)",
+      "exampleId": 19835,
+      "border": "#FFC33C30",
+      "items": [
+        "Clue scroll (master)",
+        "Scroll box (master)",
+        "Reward casket (master)",
+        "Torn clue scroll (part 1)",
+        "Torn clue scroll (part 2)",
+        "Torn clue scroll (part 3)"
+      ]
+    }
+  ]
+}

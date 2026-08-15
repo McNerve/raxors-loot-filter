@@ -1,0 +1,945 @@
+/*@ define:module:raid_supplies
+---
+name: Raid supplies
+subtitle: Cox, ToB, ToA, Gauntlet
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Chambers of Xeric
+icon:
+  type: itemId
+  itemId: 21003
+expanded: false
+*/
+/*@ define:group
+---
+name: Theatre of Blood
+icon:
+  type: itemId
+  itemId: 22326
+expanded: false
+*/
+/*@ define:group
+---
+name: Tombs of Amascut
+icon:
+  type: itemId
+  itemId: 25975
+expanded: false
+*/
+/*@ define:group
+---
+name: Tormented Demons Drop
+icon:
+  type: itemId
+  itemId: 29580
+expanded: false
+*/
+/*@ define:group
+---
+name: Gauntlet
+icon:
+  type: itemId
+  itemId: 23908
+expanded: false
+*/
+/*@ define:input:raid_supplies
+type: style
+label: Overload custom style
+group: Chambers of Xeric
+exampleItem: Overload
+exampleItemId: 20996
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_OVERLOAD_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50130F0F";borderColor = "#FF130F0F";textAccentColor = "#FF000000";menuTextColor = "#FF130F0F";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["overload (-)*",   "overload (4)",   "overload (3)",   "overload (2)",   "overload (1)",   "overload (+)*", ]) {
+    RAX_COX_OVERLOAD_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Xeric's aid custom style
+group: Chambers of Xeric
+exampleItem: Xeric's aid
+exampleItemId: 20984
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_XERICS_AID_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50AFAC73";borderColor = "#FFE7E6D5";textAccentColor = "#FF000000";menuTextColor = "#FFf7f84d";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["xeric's aid (-)*",   "xeric's aid (4)",   "xeric's aid (3)",   "xeric's aid (2)",   "xeric's aid (1)",   "xeric's aid (+)*", ]) {
+    RAX_COX_XERICS_AID_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Revitalisation potion custom style
+group: Chambers of Xeric
+exampleItem: Revitalisation potion
+exampleItemId: 20960
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_REVITALISATION_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A56785";borderColor = "#FFA56785";textAccentColor = "#FF000000";menuTextColor = "#FFed89b5";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["revitalisation (-)*",   "revitalisation potion*",   "revitalisation (+)*", ]) {
+    RAX_COX_REVITALISATION_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Prayer enhance custom style
+group: Chambers of Xeric
+exampleItem: Prayer enhance
+exampleItemId: 20972
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_PRAYER_ENHANCE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509257BA";borderColor = "#FF9257BA";textAccentColor = "#FF000000";menuTextColor = "#FF9257BA";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["prayer enhance (-)*",   "prayer enhance (4)",   "prayer enhance (3)",   "prayer enhance (2)",   "prayer enhance (1)",   "prayer enhance (+)*", ]) {
+    RAX_COX_PRAYER_ENHANCE_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Elder potion custom style
+group: Chambers of Xeric
+exampleItem: Elder potion
+exampleItemId: 20924
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_ELDER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50845B5C";borderColor = "#FF845B5C";textAccentColor = "#FF000000";menuTextColor = "#FF845B5C";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["elder (-)*",   "elder potion*",   "elder (+)*", ]) {
+    RAX_COX_ELDER_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Twisted potion custom style
+group: Chambers of Xeric
+exampleItem: Twisted potion
+exampleItemId: 20936
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_TWISTED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50657E69";borderColor = "#FF657E69";textAccentColor = "#FF000000";menuTextColor = "#FF657E69";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["twisted (-)*",   "twisted potion*",   "twisted (+)*", ]) {
+    RAX_COX_TWISTED_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Kodai potion custom style
+group: Chambers of Xeric
+exampleItem: Kodai potion
+exampleItemId: 20948
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_KODAI_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#507288A8";borderColor = "#FF7288A8";textAccentColor = "#FF000000";menuTextColor = "#FF7288A8";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["kodai (-)*",   "kodai potion*",   "kodai (+)*", ]) {
+    RAX_COX_KODAI_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Antipoison custom style
+group: Chambers of Xeric
+exampleItem: Antipoison
+exampleItemId: 25765
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_COX_ANTIPOISON_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A4D27E";borderColor = "#FFA4D27E";textAccentColor = "#FF000000";menuTextColor = "#FFA4D27E";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:["antipoison (-)*",   "antipoison (4)",   "antipoison (3)",   "antipoison (2)",   "antipoison (1)",   "antipoison (+)*", ]) {
+    RAX_COX_ANTIPOISON_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Golpar seed custom style
+group: Chambers of Xeric
+exampleItem: Golpar seed
+exampleItemId: 20906
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_GOLPAR_SEED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A6A1DE";borderColor = "#FFA6A1DE";textAccentColor = "#FF000000";menuTextColor = "#FFA6A1DE";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Golpar seed") {
+    RAX_GOLPAR_SEED_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Buchu seed custom style
+group: Chambers of Xeric
+exampleItem: Buchu seed
+exampleItemId: 20909
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_BUCHU_SEED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A5423C";borderColor = "#FFA5423C";textAccentColor = "#FF000000";menuTextColor = "#FFA5423C";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Buchu seed") {
+    RAX_BUCHU_SEED_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Noxifer seed custom style
+group: Chambers of Xeric
+exampleItem: Noxifer seed
+exampleItemId: 20903
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_NOXIFER_SEED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#503E348F";borderColor = "#FF3E348F";textAccentColor = "#FF000000";menuTextColor = "#FF3E348F";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Noxifer seed") {
+    RAX_NOXIFER_SEED_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Grimy golpar custom style
+group: Chambers of Xeric
+exampleItem: Grimy golpar
+exampleItemId: 20904
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_GRIMY_GOLPAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50836138";borderColor = "#FF1AE4A6";textAccentColor = "#FF000000";menuTextColor = "#FF1AE4A6";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Grimy golpar") {
+    RAX_GRIMY_GOLPAR_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Grimy buchu leaf custom style
+group: Chambers of Xeric
+exampleItem: Grimy buchu leaf
+exampleItemId: 20907
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_GRIMY_BUCHU_LEAF_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50856339";borderColor = "#FFD32C19";textAccentColor = "#FF000000";menuTextColor = "#FFD32C19";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Grimy buchu leaf") {
+    RAX_GRIMY_BUCHU_LEAF_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Grimy noxifer custom style
+group: Chambers of Xeric
+exampleItem: Grimy noxifer
+exampleItemId: 20901
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_GRIMY_NOXIFER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50805F38";borderColor = "#FFD3B4FC";textAccentColor = "#FF000000";menuTextColor = "#FFD3B4FC";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Grimy noxifer") {
+    RAX_GRIMY_NOXIFER_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Golpar custom style
+group: Chambers of Xeric
+exampleItem: Golpar
+exampleItemId: 20905
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_GOLPAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#505D4477";borderColor = "#FF1ADFA2";textAccentColor = "#FF000000";menuTextColor = "#FF1ADFA2";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"golpar") {
+    RAX_GOLPAR_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Buchu leaf custom style
+group: Chambers of Xeric
+exampleItem: Buchu leaf
+exampleItemId: 20908
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_BUCHU_LEAF_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#505A4173";borderColor = "#FFD12C18";textAccentColor = "#FF000000";menuTextColor = "#FFD12C18";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"buchu leaf") {
+    RAX_BUCHU_LEAF_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Noxifer custom style
+group: Chambers of Xeric
+exampleItem: Noxifer
+exampleItemId: 20902
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_NOXIFER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#505B4275";borderColor = "#FFD3B4FC";textAccentColor = "#FF000000";menuTextColor = "#FFD3B4FC";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"noxifer") {
+    RAX_NOXIFER_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Endarkened juice custom style
+group: Chambers of Xeric
+exampleItem: Endarkened juice
+exampleItemId: 20911
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_ENDARKENED_JUICE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#507539e0";borderColor = "#FF7539e0";textAccentColor = "#FF000000";menuTextColor = "#FF7539e0";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Endarkened juice") {
+    RAX_ENDARKENED_JUICE_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Stinkhorn mushroom custom style
+group: Chambers of Xeric
+exampleItem: Stinkhorn mushroom
+exampleItemId: 20910
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_STINKHORN_MUSHROOM_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#506d3532";borderColor = "#FF6d3532";textAccentColor = "#FF000000";menuTextColor = "#FF6d3532";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Stinkhorn mushroom") {
+    RAX_STINKHORN_MUSHROOM_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Cicely custom style
+group: Chambers of Xeric
+exampleItem: Cicely
+exampleItemId: 20912
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_CICELY_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50a48aa8";borderColor = "#FFa48aa8";textAccentColor = "#FF000000";menuTextColor = "#FFa48aa8";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Cicely") {
+    RAX_CICELY_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Mallignum root plank custom style
+group: Chambers of Xeric
+exampleItem: Mallignum root plank
+exampleItemId: 21036
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_MALLIGNUM_ROOT_PLANK_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50484320";borderColor = "#FF484320";textAccentColor = "#FF000000";menuTextColor = "#FFb2b099";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Mallignum root plank") {
+    RAX_MALLIGNUM_ROOT_PLANK_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Cavern grubs custom style
+group: Chambers of Xeric
+exampleItem: Cavern grubs
+exampleItemId: 20885
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_CAVERN_GRUBS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509f7756";borderColor = "#FF9f7756";textAccentColor = "#FF000000";menuTextColor = "#FFcfbbaa";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Cavern grubs") {
+    RAX_CAVERN_GRUBS_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Empty gourd vial custom style
+group: Chambers of Xeric
+exampleItem: Empty gourd vial
+exampleItemId: 20800
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_EMPTY_GOURD_VIAL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50636165";borderColor = "#FFbeb8c2";textAccentColor = "#FF000000";menuTextColor = "#FFbeb8c2";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Empty gourd vial") {
+    RAX_EMPTY_GOURD_VIAL_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Water-filled gourd vial custom style
+group: Chambers of Xeric
+exampleItem: Water-filled gourd vial
+exampleItemId: 20801
+backgroundImage: Chambers of Xeric
+*/
+#define RAX_WATER_FILLED_GOURD_VIAL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50a7a8c0";borderColor = "#FFb8b2bc";textAccentColor = "#FF000000";menuTextColor = "#FFa7a8c0";icon = CurrentItem();
+
+apply (area:FACT_COX_AREA && name:"Water-filled gourd vial") {
+    RAX_WATER_FILLED_GOURD_VIAL_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Dawnbringer custom style
+group: Theatre of Blood
+exampleItem: Dawnbringer
+backgroundImage: Verzik Vitur
+*/
+#define RAX_TOB_DAWNBRINGER_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ad62a7";borderColor = "#FFb8a22e";textAccentColor = "#FF000000";menuTextColor = "#FFad62a7";
+/*@ define:input:raid_supplies
+type: style
+label: Salve custom style
+group: Theatre of Blood
+exampleItem: Salve amulet (e)
+backgroundImage: Verzik Vitur
+*/
+#define RAX_TOB_SALVE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50e39cb1";borderColor = "#FFf5f3f3";textAccentColor = "#FF000000";menuTextColor = "#FFe39cb1";
+
+apply (name:"Dawnbringer") {
+    RAX_TOB_DAWNBRINGER_CUSTOMSTYLE 
+    hidden = false;
+}
+apply (name:"Salve amulet (e)") {
+    RAX_TOB_SALVE_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Smelling salts
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_SMELLING_SALTS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50e7cb1d";borderColor = "#FFe7cb1d";textAccentColor = "#FF000000";menuTextColor = "#FFe7cb1d";
+
+apply (area:FACT_TOA_AREA && name:"Smelling salts (*") {
+    RAX_SMELLING_SALTS_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Ambrosia
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_AMBROSIA_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50fcfdfc";borderColor = "#FFfcfdfc";textAccentColor = "#FF000000";menuTextColor = "#FFfcfdfc";
+
+apply (area:FACT_TOA_AREA && name:"Ambrosia (*") {
+    RAX_AMBROSIA_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Tears of Elidinis
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_TEARS_OF_ELIDINIS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50e285b9";borderColor = "#FFe285b9";textAccentColor = "#FF000000";menuTextColor = "#FFe285b9";
+
+apply (area:FACT_TOA_AREA && name:"Tears of Elidinis (*") {
+    RAX_TEARS_OF_ELIDINIS_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Nectar
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_NECTAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ad8f2a";borderColor = "#FFad8f2a";textAccentColor = "#FF000000";menuTextColor = "#FFad8f2a";
+
+apply (area:FACT_TOA_AREA && name:"Nectar (*") {
+    RAX_NECTAR_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Liquid adrenaline
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_LIQUID_ADRENALINE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5035c6d7";borderColor = "#FF35c6d7";textAccentColor = "#FF000000";menuTextColor = "#FF35c6d7";
+
+apply (area:FACT_TOA_AREA && name:"Liquid adrenaline (*") {
+    RAX_LIQUID_ADRENALINE_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Blessed crystal scarab
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_BLESSED_CRYSTAL_SCARAB_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50c8c1c1";borderColor = "#FFc8c1c1";textAccentColor = "#FF000000";menuTextColor = "#FFc8c1c1";
+
+apply (area:FACT_TOA_AREA && name:"Blessed crystal scarab (*") {
+    RAX_BLESSED_CRYSTAL_SCARAB_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Silk dressing
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_SILK_DRESSING_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ab9f9f";borderColor = "#FFab9f9f";textAccentColor = "#FF000000";menuTextColor = "#FFab9f9f";
+
+apply (area:FACT_TOA_AREA && name:"Silk dressing (*") {
+    RAX_SILK_DRESSING_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Honey locust
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_HONEY_LOCUST_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50d3b91a";borderColor = "#FF9b5826";textAccentColor = "#FF000000";menuTextColor = "#FFd3b91a";
+
+apply (area:FACT_TOA_AREA && name:"Honey locust") {
+    RAX_HONEY_LOCUST_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Neutralising potion
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_NEUTRALISING_POTION_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#500d8011";borderColor = "#FF0d8011";textAccentColor = "#FF000000";menuTextColor = "#FF0d8011";
+
+apply (area:FACT_TOA_AREA && name:"Neutralising potion") {
+    RAX_NEUTRALISING_POTION_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Big banana
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_BIG_BANANA_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50cbca49";borderColor = "#FFcbca49";textAccentColor = "#FF000000";menuTextColor = "#FFcbca49";showLootbeam = true;
+
+apply (area:FACT_TOA_AREA && name:"Big banana") {
+    RAX_BIG_BANANA_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Eldritch ashes
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_ELDRITCH_ASHES_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50acb6b7";borderColor = "#FFacb6b7";textAccentColor = "#FF000000";menuTextColor = "#FFacb6b7";showLootbeam = true;
+
+apply (area:FACT_TOA_AREA && name:"Eldritch ashes") {
+    RAX_ELDRITCH_ASHES_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Fang
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_FANG_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50c6c6be";borderColor = "#FF882a22";textAccentColor = "#FF000000";menuTextColor = "#FFc6c6be";showLootbeam = true;
+
+apply (area:FACT_TOA_AREA && name:"Fang") {
+    RAX_FANG_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Scarab dung
+group: Tombs of Amascut
+backgroundImage: Wardens
+*/
+#define RAX_SCARAB_DUNG_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50985d37";borderColor = "#FF985d37";textAccentColor = "#FF000000";menuTextColor = "#FF985d37";showLootbeam = true;
+
+apply (area:FACT_TOA_AREA && name:"Scarab dung") {
+    RAX_SCARAB_DUNG_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Smouldering gland
+group: Tormented Demons Drop
+exampleItem: Smouldering gland
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_GLAND_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5059D4A8";borderColor = "#FF59D4A8";textAccentColor = "#FF000000";menuTextColor = "#FF59D4A8";
+
+apply (name:"Smouldering gland") {
+    RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_GLAND_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Smouldering heart
+group: Tormented Demons Drop
+exampleItem: Smouldering heart
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_HEART_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5019640B";borderColor = "#FF19640B";textAccentColor = "#FF000000";menuTextColor = "#FF19640B";
+
+apply (name:"Smouldering heart") {
+    RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_HEART_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Smouldering pile of flesh
+group: Tormented Demons Drop
+exampleItem: Smouldering pile of flesh
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_PILE_OF_FLESH_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50624b18";borderColor = "#FF624b18";textAccentColor = "#FF000000";menuTextColor = "#FFffd480";
+
+apply (name:"Smouldering pile of flesh") {
+    RAX_MONSTERS_TORMENTED_DEMONS_SMOULDERING_PILE_OF_FLESH_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Tormented synapse
+group: Tormented Demons Drop
+exampleItem: Tormented synapse
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_TORMENTED_SYNAPSE_CUSTOMSTYLE
+
+apply (name:"Tormented synapse") {
+    RAX_MONSTERS_TORMENTED_DEMONS_TORMENTED_SYNAPSE_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Burning claws
+group: Tormented Demons Drop
+exampleItem: Burning claws
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_BURNING_CLAW_CUSTOMSTYLE
+
+apply (name:"Burning claw" || name:"Burning claws") {
+    RAX_MONSTERS_TORMENTED_DEMONS_BURNING_CLAW_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Emberlight
+group: Tormented Demons Drop
+exampleItem: Emberlight
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_EMBERLIGHT_CUSTOMSTYLE
+
+apply (name:"Emberlight") {
+  RAX_MONSTERS_TORMENTED_DEMONS_EMBERLIGHT_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Purging staff
+group: Tormented Demons Drop
+exampleItem: Purging staff
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_PURGING_STAFF_CUSTOMSTYLE
+
+apply (name:"Purging staff") {
+  RAX_MONSTERS_TORMENTED_DEMONS_PURGING_STAFF_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Scorching bow
+group: Tormented Demons Drop
+exampleItem: Scorching bow
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_SCORCHING_BOW_CUSTOMSTYLE
+
+apply (name:"Scorching bow") {
+  RAX_MONSTERS_TORMENTED_DEMONS_SCORCHING_BOW_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal sceptre custom style
+group: Gauntlet
+exampleItem: Crystal sceptre
+*/
+#define RAX_GAUNTLET_CRYSTAL_SCEPTRE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5087735b";borderColor = "#FF657e7f";textAccentColor = "#FF000000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* sceptre") {
+    RAX_GAUNTLET_CRYSTAL_SCEPTRE_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal axe custom style
+group: Gauntlet
+exampleItem: Crystal axe
+*/
+#define RAX_GAUNTLET_CRYSTAL_AXE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5087735b";borderColor = "#FF00ff00";textAccentColor = "#FF000000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* axe") {
+    RAX_GAUNTLET_CRYSTAL_AXE_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal pickaxe custom style
+group: Gauntlet
+exampleItem: Crystal pickaxe
+*/
+#define RAX_GAUNTLET_CRYSTAL_PICKAXE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5087735b";borderColor = "#FFff0000";textAccentColor = "#FF000000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* pickaxe") {
+    RAX_GAUNTLET_CRYSTAL_PICKAXE_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal harpoon custom style
+group: Gauntlet
+exampleItem: Crystal harpoon
+*/
+#define RAX_GAUNTLET_CRYSTAL_HARPOON_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5087735b";borderColor = "#FF00ffff";textAccentColor = "#FF000000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* harpoon") {
+    RAX_GAUNTLET_CRYSTAL_HARPOON_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Pestle and mortar custom style
+group: Gauntlet
+exampleItem: Pestle and mortar
+*/
+#define RAX_GAUNTLET_PESTLE_AND_MORTAR_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"Pestle and mortar") {
+    RAX_GAUNTLET_PESTLE_AND_MORTAR_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Teleport crystal custom style
+group: Gauntlet
+exampleItem: Teleport crystal
+*/
+#define RAX_GAUNTLET_TELEPORT_CRYSTAL_CUSTOMSTYLE textColor = "#FFFFFFFF";borderColor = "#FFFFFFFF";textAccentColor = "#FF000000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"*teleport crystal") {
+    RAX_GAUNTLET_TELEPORT_CRYSTAL_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Escape crystal custom style
+group: Gauntlet
+exampleItem: Escape crystal
+*/
+#define RAX_GAUNTLET_ESCAPE_CRYSTAL_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"*escape crystal") {
+    RAX_GAUNTLET_ESCAPE_CRYSTAL_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal shards custom style
+group: Gauntlet
+exampleItem: Crystal shards
+*/
+#define RAX_GAUNTLET_CRYSTAL_SHARDS_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"* shards") {
+    RAX_GAUNTLET_CRYSTAL_SHARDS_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal dust custom style
+group: Gauntlet
+exampleItem: Crystal dust
+*/
+#define RAX_GAUNTLET_CRYSTAL_DUST_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"Crystal dust") {
+    RAX_GAUNTLET_CRYSTAL_DUST_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Vial custom style
+group: Gauntlet
+exampleItem: Vial
+*/
+#define RAX_GAUNTLET_VIAL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50636165";borderColor = "#FFbeb8c2";textAccentColor = "#FF000000";menuTextColor = "#FFbeb8c2";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Vial") {
+    RAX_GAUNTLET_VIAL_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Water-filled vial custom style
+group: Gauntlet
+exampleItem: Water-filled vial
+*/
+#define RAX_GAUNTLET_WATER_FILLED_VIAL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50a7a8c0";borderColor = "#FFb8b2bc";textAccentColor = "#FF000000";menuTextColor = "#FFa7a8c0";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Water-filled vial") {
+    RAX_GAUNTLET_WATER_FILLED_VIAL_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Grym leaf custom style
+group: Gauntlet
+exampleItem: Grym leaf
+*/
+#define RAX_GAUNTLET_GRYM_LEAF_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ffff00";borderColor = "#FFffff00";textAccentColor = "#FF000000";menuTextColor = "#FFffff00";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Grym leaf") {
+    RAX_GAUNTLET_GRYM_LEAF_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Grym potion (unf) custom style
+group: Gauntlet
+exampleItem: Grym potion (unf)
+*/
+#define RAX_GAUNTLET_GRYM_POTION_UNF_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50bfbcbb";borderColor = "#FFffff00";textAccentColor = "#FF000000";menuTextColor = "#FFbfbcbb";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Grym potion (unf)") {
+    RAX_GAUNTLET_GRYM_POTION_UNF_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Raw paddlefish custom style
+group: Gauntlet
+exampleItem: Raw paddlefish
+*/
+#define RAX_GAUNTLET_RAW_PADDLEFISH_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5034cb7e";borderColor = "#FF34cb7e";textAccentColor = "#FF000000";menuTextColor = "#FF34cb7e";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Egniol potion (*") {
+    RAX_GAUNTLET_EGNIOL_POTION_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Weapon frame custom style
+group: Gauntlet
+exampleItem: Weapon frame
+*/
+#define RAX_GAUNTLET_WEAPON_FRAME_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50856190";borderColor = "#FF856190";textAccentColor = "#FF000000";menuTextColor = "#FFde70ff";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Raw paddlefish") {
+    RAX_GAUNTLET_RAW_PADDLEFISH_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal spike custom style
+group: Gauntlet
+exampleItem: Crystal spike
+*/
+#define RAX_GAUNTLET_CRYSTAL_SPIKE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ff0000";borderColor = "#FFff0000";textAccentColor = "#FF000000";menuTextColor = "#FFff0000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Paddlefish") {
+    RAX_GAUNTLET_PADDLEFISH_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal orb custom style
+group: Gauntlet
+exampleItem: Crystal orb
+*/
+#define RAX_GAUNTLET_CRYSTAL_ORB_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5000ffff";borderColor = "#FF00ffff";textAccentColor = "#FF000000";menuTextColor = "#FF00ffff";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Crystal paddlefish" || name:"Corrupted paddlefish") {
+     RAX_GAUNTLET_CRYSTAL_PADDLEFISH_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystalline bowstring custom style
+group: Gauntlet
+exampleItem: Crystalline bowstring
+*/
+#define RAX_GAUNTLET_CRYSTALLINE_BOWSTRING_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5000ff00";borderColor = "#FF00ff00";textAccentColor = "#FF000000";menuTextColor = "#FF00ff00";
+
+apply (area:FACT_GAUNTLET_AREA && name:"Weapon frame") {
+     RAX_GAUNTLET_WEAPON_FRAME_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Linum tirinum custom style
+group: Gauntlet
+exampleItem: Linum tirinum
+*/
+#define RAX_GAUNTLET_LINUM_TIRINUM_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ffffff";borderColor = "#FFffffff";textAccentColor = "#FF000000";menuTextColor = "#FFffffff";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* spike") {
+    RAX_GAUNTLET_CRYSTAL_SPIKE_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Phren bark custom style
+group: Gauntlet
+exampleItem: Phren bark
+*/
+#define RAX_GAUNTLET_PHREN_BARK_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5000ff00";borderColor = "#FF00ff00";textAccentColor = "#FF000000";menuTextColor = "#FF00ff00";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* orb") {
+    RAX_GAUNTLET_CRYSTAL_ORB_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal ore custom style
+group: Gauntlet
+exampleItem: Crystal ore
+*/
+#define RAX_GAUNTLET_CRYSTAL_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50ff0000";borderColor = "#FFff0000";textAccentColor = "#FF000000";menuTextColor = "#FFff0000";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* bowstring") {
+    RAX_GAUNTLET_CRYSTALLINE_BOWSTRING_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Egniol potion custom style
+group: Gauntlet
+exampleItem: Egniol potion (3)
+*/
+#define RAX_GAUNTLET_EGNIOL_POTION_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50c4aa96";borderColor = "#FFc4aa96";textAccentColor = "#FF000000";menuTextColor = "#FFc4aa96";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* halberd *") {
+    RAX_GAUNTLET_CRYSTAL_HALBERD_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Paddlefish custom style
+group: Gauntlet
+exampleItem: Paddlefish
+*/
+#define RAX_GAUNTLET_PADDLEFISH_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509d9d92";borderColor = "#FF9d9d92";textAccentColor = "#FF000000";menuTextColor = "#FF9d9d92";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* bow *") {
+    RAX_GAUNTLET_CRYSTAL_BOW_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal paddlefish custom style
+group: Gauntlet
+exampleItem: Crystal paddlefish
+*/
+#define RAX_GAUNTLET_CRYSTAL_PADDLEFISH_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509d9d92";borderColor = "#FFa3c1c2";textAccentColor = "#FF000000";menuTextColor = "#FF9d9d92";
+
+apply (area:FACT_GAUNTLET_AREA && name:"* staff *") {
+    RAX_GAUNTLET_CRYSTAL_STAFF_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal halberd custom style
+group: Gauntlet
+exampleItem: Crystal halberd
+*/
+#define RAX_GAUNTLET_CRYSTAL_HALBERD_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"Linum tirinum*") {
+    RAX_GAUNTLET_LINUM_TIRINUM_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal bow custom style
+group: Gauntlet
+exampleItem: Crystal bow
+*/
+#define RAX_GAUNTLET_CRYSTAL_BOW_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"Phren bark*") {
+    RAX_GAUNTLET_PHREN_BARK_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal staff custom style
+group: Gauntlet
+exampleItem: Crystal staff
+*/
+#define RAX_GAUNTLET_CRYSTAL_STAFF_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"* ore") {
+    RAX_GAUNTLET_CRYSTAL_ORE_CUSTOMSTYLE
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal helm custom style
+group: Gauntlet
+exampleItem: Crystal helm
+*/
+#define RAX_GAUNTLET_CRYSTAL_HELM_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"* helm *") {
+    RAX_GAUNTLET_CRYSTAL_HELM_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal body custom style
+group: Gauntlet
+exampleItem: Crystal body
+*/
+#define RAX_GAUNTLET_CRYSTAL_BODY_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"* body *") {
+    RAX_GAUNTLET_CRYSTAL_BODY_CUSTOMSTYLE 
+}
+/*@ define:input:raid_supplies
+type: style
+label: Crystal legs custom style
+group: Gauntlet
+exampleItem: Crystal legs
+*/
+#define RAX_GAUNTLET_CRYSTAL_LEGS_CUSTOMSTYLE 
+
+apply (area:FACT_GAUNTLET_AREA && name:"* legs *") {
+    RAX_GAUNTLET_CRYSTAL_LEGS_CUSTOMSTYLE 
+}

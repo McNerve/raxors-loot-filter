@@ -1,0 +1,254 @@
+/*@ define:module:ammo
+---
+name: Ammo
+subtitle: What you shoot
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Ammo
+icon:
+  type: itemId
+  itemId: 11212
+expanded: false
+*/
+/*@ define:group
+---
+name: Fletching
+icon:
+  type: itemId
+  itemId: 52
+expanded: false
+*/
+/*@ define:input:ammo
+type: style
+label: All Ammo Items Style
+group: Ammo
+exampleItem: Dragon arrow
+exampleItemId: 11212
+*/
+#define RAX_CATEGORY_AMMO_CUSTOMSTYLE icon = Sprite(3190, 0);
+
+apply (name:FACT_BRONZE_AMMO || name:FACT_IRON_AMMO || name:FACT_STEEL_AMMO || name:FACT_BLACK_AMMO || name:FACT_MITHRIL_AMMO || name:FACT_ADAMANT_AMMO || name:FACT_RUNE_AMMO || name:FACT_DRAGON_AMMO || name:FACT_LAST_MAN_STANDING_AMMO_LIST || name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_KNIVES_LIST || name:FACT_AMMO_THROWING_AXES_LIST || name:FACT_AMMO_CHINCHOMPAS_LIST || name:FACT_AMMO_MISC_LIST) {
+    RAX_CATEGORY_AMMO_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Arrows Style
+group: Ammo
+exampleItem: Bronze arrow
+exampleItemId: 882
+*/
+#define RAX_AMMO_ARROWS_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST) {
+  RAX_AMMO_ARROWS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Darts Style
+group: Ammo
+exampleItem: Bronze dart
+exampleItemId: 806
+*/
+#define RAX_AMMO_DARTS_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_DARTS_LIST) {
+  RAX_AMMO_DARTS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Bolts Style
+group: Ammo
+exampleItem: Bronze bolts
+exampleItemId: 877
+*/
+#define RAX_AMMO_BOLTS_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST) {
+  RAX_AMMO_BOLTS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Javelins Style
+group: Ammo
+exampleItem: Bronze javelin
+exampleItemId: 825
+*/
+#define RAX_AMMO_JAVELINS_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_JAVELINS_LIST) {
+  RAX_AMMO_JAVELINS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Knives Style
+group: Ammo
+exampleItem: Bronze knife
+exampleItemId: 864
+*/
+#define RAX_AMMO_KNIVES_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_KNIVES_LIST) {
+  RAX_AMMO_KNIVES_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Thowing Axes Style
+group: Ammo
+exampleItem: Bronze thrownaxe
+exampleItemId: 800
+*/
+#define RAX_AMMO_THROWING_AXES_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_THROWING_AXES_LIST) {
+  RAX_AMMO_THROWING_AXES_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Chinchompas Style
+group: Ammo
+exampleItem: Chinchompa
+exampleItemId: 10033
+*/
+#define RAX_AMMO_CHINCHOMPAS_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_CHINCHOMPAS_LIST) {
+  RAX_AMMO_CHINCHOMPAS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: "Misc Ammo Style (Atlatl dart, Toktz-xil-ul, etc.)"
+group: Ammo
+exampleItem: Toktz-xil-ul
+exampleItemId: 6522
+*/
+#define RAX_AMMO_MISC_CUSTOMSTYLE
+
+apply (name:FACT_AMMO_MISC_LIST) {
+  RAX_AMMO_MISC_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: All Fletching Items Style
+group: Fletching
+exampleItem: Magic longbow (u)
+exampleItemId: 70
+*/
+#define RAX_CATEGORY_FLETCHING_CUSTOMSTYLE icon = Sprite(3199, 0);
+
+apply (name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_LONGBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_CROSSBOW_LIST || name:FACT_FLETCHING_ARROW_TIPS_LIST || name:FACT_FLETCHING_DART_TIP_LIST || name:FACT_FLETCHING_JAVELIN_HEADS_LIST || name:FACT_FLETCHING_UNFINISHED_BOLTS_LIST || name:FACT_FLETCHING_BOLT_TIPS_LIST || name:FACT_FLETCHING_MISC_LIST || name:FACT_FLETCHING_CROSSBOW_LIMBS_LIST || name:FACT_FLETCHING_CROSSBOW_STOCK_LIST) {
+  RAX_CATEGORY_FLETCHING_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: "Unstrung Style (unstrung shortbows, longbows, and crossbows)"
+group: Fletching
+exampleItem: Shortbow (u)
+exampleItemId: 50
+*/
+#define RAX_CATEGORY_FLETCHING_UNSTRUNG_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_UNSTRUNG_SHORTBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_LONGBOW_LIST || name:FACT_FLETCHING_UNSTRUNG_CROSSBOW_LIST) {
+  RAX_CATEGORY_FLETCHING_UNSTRUNG_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Arrowtips Style
+group: Fletching
+exampleItem: Bronze arrowtips
+exampleItemId: 39
+*/
+#define RAX_CATEGORY_FLETCHING_ARROW_TIPS_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_ARROW_TIPS_LIST) {
+  RAX_CATEGORY_FLETCHING_ARROW_TIPS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Dart Tips Style
+group: Fletching
+exampleItem: Bronze dart tip
+exampleItemId: 819
+*/
+#define RAX_CATEGORY_FLETCHING_DART_TIP_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_DART_TIP_LIST) {
+  RAX_CATEGORY_FLETCHING_DART_TIP_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Javelin Heads Style
+group: Fletching
+exampleItem: Bronze javelin heads
+exampleItemId: 19570
+*/
+#define RAX_CATEGORY_FLETCHING_JAVELIN_HEADS_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_JAVELIN_HEADS_LIST) {
+  RAX_CATEGORY_FLETCHING_JAVELIN_HEADS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Unfinished Bolts Style
+group: Fletching
+exampleItem: Bronze bolts (unf)
+exampleItemId: 9375
+*/
+#define RAX_CATEGORY_FLETCHING_UNFINISHED_BOLTS_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_UNFINISHED_BOLTS_LIST) {
+  RAX_CATEGORY_FLETCHING_UNFINISHED_BOLTS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Bolt Tips Style
+group: Fletching
+exampleItem: Opal bolt tips
+exampleItemId: 45
+*/
+#define RAX_CATEGORY_FLETCHING_BOLT_TIPS_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_BOLT_TIPS_LIST) {
+  RAX_CATEGORY_FLETCHING_BOLT_TIPS_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: "Misc Style (arrow shafts, bow strings, etc.)"
+group: Fletching
+exampleItem: Javelin shaft
+exampleItemId: 19584
+*/
+#define RAX_CATEGORY_FLETCHING_MISC_CUSTOMSTYLE
+
+apply (name:FACT_FLETCHING_MISC_LIST || name:FACT_FLETCHING_CROSSBOW_LIMBS_LIST || name:FACT_FLETCHING_CROSSBOW_STOCK_LIST) {
+  RAX_CATEGORY_FLETCHING_MISC_CUSTOMSTYLE
+}
+/*@ define:input:ammo
+type: style
+label: Seeking arrows
+group: Ammo
+exampleItem: Seeking dragon arrow
+exampleItemId: 11212
+*/
+#define RAX_AMMO_SEEKING_STYLE
+
+apply (name:FACT_AMMO_SEEKING_ARROWS_LIST) {
+    RAX_CATEGORY_AMMO_CUSTOMSTYLE
+    RAX_AMMO_ARROWS_CUSTOMSTYLE
+    RAX_AMMO_SEEKING_STYLE
+}
+/*@ define:input:ammo
+type: style
+label: Bloodwood sap / seeking shafts
+group: Fletching
+exampleItem: Arrow shaft
+exampleItemId: 52
+*/
+#define RAX_BLOODWOOD_STYLE
+
+apply (name:FACT_BLOODWOOD_LIST) {
+    RAX_BLOODWOOD_STYLE
+}

@@ -1,0 +1,18 @@
+// Authored facts. New rooms, 2026 loot, supply bands. After Joe facts.
+
+#define FACT_MAGGOT_KING_AREA [2880, 8000, 0, 2950, 8080, 3]
+#define FACT_VAMPYRIUM_AREA [2500, 7700, 0, 3100, 8200, 3]
+#define FACT_DOOM_MOKHAIOTL_AREA [1280, 9480, 0, 1360, 9580, 3]
+#define FACT_ROYAL_TITANS_AREA [2960, 9520, 0, 3010, 9580, 3]
+#define FACT_COLOSSEUM_AREA [1780, 9460, 0, 1880, 9560, 3]
+
+#define FACT_AMMO_SEEKING_ARROWS_LIST [   "Seeking bronze arrow*",   "Seeking iron arrow*",   "Seeking steel arrow*",   "Seeking mithril arrow*",   "Seeking adamant arrow*",   "Seeking rune arrow*",   "Seeking broad arrows*",   "Seeking amethyst arrow*",   "Seeking dragon arrow*", ]
+
+#define FACT_BLOODWOOD_LIST [   "Bucket of bloodwood sap",   "Bloodwood sap",   "Seeking arrow shaft*",   "Sap-treated*", ]
+
+#define FACT_HERBS_LOW [   "*guam leaf",   "*marrentill",   "*tarromin",   "*harralander", ]
+#define FACT_HERBS_MID [   "*ranarr weed",   "*toadflax",   "*irit leaf",   "*avantoe",   "*kwuarm", ]
+#define FACT_HERBS_HIGH [   "*snapdragon",   "*cadantine",   "*lantadyme",   "*dwarf weed",   "*torstol",   "*huasca", ]
+#define FACT_HERBS_GRIMY [   "Grimy guam leaf",   "Grimy marrentill",   "Grimy tarromin",   "Grimy harralander",   "Grimy ranarr weed",   "Grimy toadflax",   "Grimy irit leaf",   "Grimy avantoe",   "Grimy kwuarm",   "Grimy snapdragon",   "Grimy cadantine",   "Grimy lantadyme",   "Grimy dwarf weed",   "Grimy torstol",   "Grimy huasca", ]
+
+#define FACT_RUNES_HIGH [   "Blood rune",   "Soul rune",   "Wrath rune",   "Sunfire rune",   "Aether rune", ]

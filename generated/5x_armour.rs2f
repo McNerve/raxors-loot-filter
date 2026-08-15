@@ -1,0 +1,424 @@
+/*@ define:module:armour
+---
+name: Armour
+subtitle: Bronze to dragon
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Metal Equipment
+icon:
+  type: itemId
+  itemId: 1127
+expanded: false
+*/
+/*@ define:input:armour
+type: style
+label: Bronze Armour and Weapons
+group: Metal Equipment
+exampleItem: Bronze platelegs
+exampleItemId: 1075
+*/
+#define RAX_BRONZE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#8043341d";borderColor = "#FF43341d";textAccentColor = "#FF000000";menuTextColor = "#FF6a5432";
+
+apply (name:FACT_BRONZE_ONE_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_TWO_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_RANGED_WEAPONS || name:FACT_BRONZE_AMMO || name:FACT_BRONZE_ARMOUR || name:FACT_BRONZE_OTHER) {
+    RAX_BRONZE_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Iron Armour and Weapons
+group: Metal Equipment
+exampleItem: Iron platelegs
+exampleItemId: 1067
+*/
+#define RAX_IRON_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#804f4948";borderColor = "#FF4f4948";textAccentColor = "#FF000000";menuTextColor = "#FF6b5f58";
+
+apply (name:FACT_IRON_ONE_HANDED_MELEE_WEAPONS || name:FACT_IRON_TWO_HANDED_MELEE_WEAPONS || name:FACT_IRON_RANGED_WEAPONS || name:FACT_IRON_AMMO || name:FACT_IRON_ARMOUR || name:FACT_IRON_OTHER) {
+    RAX_IRON_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Steel Armour and Weapons
+group: Metal Equipment
+exampleItem: Steel platelegs
+exampleItemId: 1069
+*/
+#define RAX_STEEL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80857c7b";borderColor = "#FF857c7b";textAccentColor = "#FF000000";menuTextColor = "#FFa09a8b";
+
+apply (name:FACT_STEEL_ONE_HANDED_MELEE_WEAPONS || name:FACT_STEEL_TWO_HANDED_MELEE_WEAPONS || name:FACT_STEEL_RANGED_WEAPONS || name:FACT_STEEL_AMMO || name:FACT_STEEL_ARMOUR || name:FACT_STEEL_OTHER) {
+    RAX_STEEL_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Black Armour and Weapons
+group: Metal Equipment
+exampleItem: Black platelegs
+exampleItemId: 1077
+*/
+#define RAX_BLACK_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#801d1b1b";borderColor = "#FF1d1b1b";textAccentColor = "#FF000000";menuTextColor = "#FF2b3a3a";
+
+apply (name:FACT_BLACK_ONE_HANDED_MELEE_WEAPONS || name:FACT_BLACK_TWO_HANDED_MELEE_WEAPONS || name:FACT_BLACK_RANGED_WEAPONS || name:FACT_BLACK_AMMO || name:FACT_BLACK_ARMOUR || name:FACT_BLACK_OTHER) {
+    RAX_BLACK_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Mithril Armour and Weapons
+group: Metal Equipment
+exampleItem: Mithril platelegs
+exampleItemId: 1071
+*/
+#define RAX_MITHRIL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80414161";borderColor = "#FF414161";textAccentColor = "#FF000000";menuTextColor = "#FF5a5a7a";
+
+apply (name:FACT_MITHRIL_ONE_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_TWO_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_RANGED_WEAPONS || name:FACT_MITHRIL_AMMO || name:FACT_MITHRIL_ARMOUR || name:FACT_MITHRIL_OTHER) {
+    RAX_MITHRIL_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Adamant Armour and Weapons
+group: Metal Equipment
+exampleItem: Adamant platelegs
+exampleItemId: 1073
+*/
+#define RAX_ADAMANT_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80405140";borderColor = "#FF405140";textAccentColor = "#FF000000";menuTextColor = "#FF5a7a5a";
+
+apply (name:FACT_ADAMANT_ONE_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_TWO_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_RANGED_WEAPONS || name:FACT_ADAMANT_AMMO || name:FACT_ADAMANT_ARMOUR || name:FACT_ADAMANT_OTHER) {
+    RAX_ADAMANT_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune Armour and Weapons
+group: Metal Equipment
+exampleItem: Rune platelegs
+exampleItemId: 1079
+*/
+#define RAX_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF415760";textAccentColor = "#FF000000";menuTextColor = "#FF5a7a90";
+
+apply (name:FACT_RUNE_ONE_HANDED_MELEE_WEAPONS || name:FACT_RUNE_TWO_HANDED_MELEE_WEAPONS || name:FACT_RUNE_RANGED_WEAPONS || name:FACT_RUNE_AMMO || name:FACT_RUNE_ARMOUR || name:FACT_RUNE_OTHER) {
+    RAX_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Dragon Armour and Weapons
+group: Metal Equipment
+exampleItem: Dragon platelegs
+exampleItemId: 4087
+*/
+#define RAX_DRAGON_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80541109";borderColor = "#FF541109";textAccentColor = "#FF000000";menuTextColor = "#FF7a3a19";
+
+apply (name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_TWO_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_RANGED_WEAPONS || name:FACT_DRAGON_AMMO || name:FACT_DRAGON_ARMOUR) {
+    RAX_DRAGON_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Bronze (t) Armour
+group: Metal Equipment
+exampleItem: Bronze platelegs (t)
+*/
+#define RAX_BRONZE_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#8043341d";borderColor = "#FF615c2d";textAccentColor = "#FF000000";menuTextColor = "#FF7a5a2d";
+
+apply (name:FACT_BRONZE_TRIMMED_ARMOUR) {
+    RAX_BRONZE_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Iron (t) Armour
+group: Metal Equipment
+exampleItem: Iron platelegs (t)
+*/
+#define RAX_IRON_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#804f4948";borderColor = "#FF151111";textAccentColor = "#FF000000";menuTextColor = "#FF7a6a68";
+
+apply (name:FACT_IRON_TRIMMED_ARMOUR) {
+    RAX_IRON_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Steel (t) Armour
+group: Metal Equipment
+exampleItem: Steel platelegs (t)
+*/
+#define RAX_STEEL_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80857c7b";borderColor = "#FFb1a6a6";textAccentColor = "#FF000000";menuTextColor = "#FFb0a09b";
+
+apply (name:FACT_STEEL_TRIMMED_ARMOUR) {
+    RAX_STEEL_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Black (t) Armour
+group: Metal Equipment
+exampleItem: Black platelegs (t)
+*/
+#define RAX_BLACK_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#801d1b1b";borderColor = "#FF423e3e";textAccentColor = "#FF000000";menuTextColor = "#FF3b4a4a";
+
+apply (name:FACT_BLACK_TRIMMED_ARMOUR) {
+    RAX_BLACK_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Mithril (t) Armour
+group: Metal Equipment
+exampleItem: Mithril platelegs (t)
+*/
+#define RAX_MITHRIL_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80414161";borderColor = "#FF6e8aa3";textAccentColor = "#FF000000";menuTextColor = "#FF6a6a8a";
+
+apply (name:FACT_MITHRIL_TRIMMED_ARMOUR) {
+    RAX_MITHRIL_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Adamant (t) Armour
+group: Metal Equipment
+exampleItem: Adamant platelegs (t)
+*/
+#define RAX_ADAMANT_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80405140";borderColor = "#FF6a725a";textAccentColor = "#FF000000";menuTextColor = "#FF6a8a6a";
+
+apply (name:FACT_ADAMANT_TRIMMED_ARMOUR) {
+    RAX_ADAMANT_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune (t) Armour
+group: Metal Equipment
+exampleItem: Rune platelegs (t)
+*/
+#define RAX_RUNE_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF6d88a1";textAccentColor = "#FF000000";menuTextColor = "#FF6a8a9a";
+
+apply (name:FACT_RUNE_TRIMMED_ARMOUR) {
+    RAX_RUNE_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Bronze (g) Armour
+group: Metal Equipment
+exampleItem: Bronze platelegs (g)
+*/
+#define RAX_BRONZE_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#8043341d";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FF7a6a2d";
+
+apply (name:FACT_BRONZE_GOLD_TRIMMED_ARMOUR) {
+    RAX_BRONZE_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Iron (g) Armour
+group: Metal Equipment
+exampleItem: Iron platelegs (g)
+*/
+#define RAX_IRON_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#804f4948";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FF7a7a58";
+
+apply (name:FACT_IRON_GOLD_TRIMMED_ARMOUR) {
+    RAX_IRON_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Steel (g) Armour
+group: Metal Equipment
+exampleItem: Steel platelegs (g)
+*/
+#define RAX_STEEL_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80857c7b";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FFb0b08b";
+
+apply (name:FACT_STEEL_GOLD_TRIMMED_ARMOUR) {
+    RAX_STEEL_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Black (g) Armour
+group: Metal Equipment
+exampleItem: Black platelegs (g)
+*/
+#define RAX_BLACK_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#801d1b1b";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FF2b4a4a";
+
+apply (name:FACT_BLACK_GOLD_TRIMMED_ARMOUR) {
+    RAX_BLACK_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Mithril (g) Armour
+group: Metal Equipment
+exampleItem: Mithril platelegs (g)
+*/
+#define RAX_MITHRIL_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80414161";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FF7a7a6a";
+
+apply (name:FACT_MITHRIL_GOLD_TRIMMED_ARMOUR) {
+    RAX_MITHRIL_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Adamant (g) Armour
+group: Metal Equipment
+exampleItem: Adamant platelegs (g)
+*/
+#define RAX_ADAMANT_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80405140";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FF7a8a6a";
+
+apply (name:FACT_ADAMANT_GOLD_TRIMMED_ARMOUR) {
+    RAX_ADAMANT_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune (g) Armour
+group: Metal Equipment
+exampleItem: Rune platelegs (g)
+*/
+#define RAX_RUNE_GOLD_TRIMMED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FFdea71a";textAccentColor = "#FF000000";menuTextColor = "#FF7a9a8a";
+
+apply (name:FACT_RUNE_GOLD_TRIMMED_ARMOUR) {
+    RAX_RUNE_GOLD_TRIMMED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Black heraldic Armour
+group: Metal Equipment
+exampleItem: Black helm (h1)
+*/
+#define RAX_BLACK_HERALDIC_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#801d1b1b";borderColor = "#FF1d1b1b";textAccentColor = "#FF000000";menuTextColor = "#FF2b3b3a";
+
+apply (name:FACT_BLACK_HERALDIC_ARMOUR) {
+    RAX_BLACK_HERALDIC_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Adamant heraldic Armour
+group: Metal Equipment
+exampleItem: Adamant helm (h1)
+*/
+#define RAX_ADAMANT_HERALDIC_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80405140";borderColor = "#FF405140";textAccentColor = "#FF000000";menuTextColor = "#FF5a7a6a";
+
+apply (name:FACT_ADAMANT_HERALDIC_ARMOUR) {
+    RAX_ADAMANT_HERALDIC_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune heraldic Armour
+group: Metal Equipment
+exampleItem: Rune helm (h1)
+*/
+#define RAX_RUNE_HERALDIC_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF415760";textAccentColor = "#FF000000";menuTextColor = "#FF5a7a8a";
+
+apply (name:FACT_RUNE_HERALDIC_ARMOUR) {
+    RAX_RUNE_HERALDIC_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune saradomin Armour
+group: Metal Equipment
+exampleItem: Saradomin platelegs
+*/
+#define RAX_RUNE_SARADOMIN_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FFacab88";textAccentColor = "#FF000000";menuTextColor = "#FFbcbba8";
+
+apply (name:FACT_RUNE_SARADOMIN_TRIMMED_ARMOUR) {
+    RAX_RUNE_SARADOMIN_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune guthix Armour
+group: Metal Equipment
+exampleItem: Guthix platelegs
+*/
+#define RAX_RUNE_GUTHIX_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF437745";textAccentColor = "#FF000000";menuTextColor = "#FF63a755";
+
+apply (name:FACT_RUNE_GUTHIX_TRIMMED_ARMOUR) {
+    RAX_RUNE_GUTHIX_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune zamorak Armour
+group: Metal Equipment
+exampleItem: Zamorak platelegs
+*/
+#define RAX_RUNE_ZAMORAK_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF801a0d";textAccentColor = "#FF000000";menuTextColor = "#FFa03a2d";
+
+apply (name:FACT_RUNE_ZAMORAK_TRIMMED_ARMOUR) {
+    RAX_RUNE_ZAMORAK_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune ancient Armour
+group: Metal Equipment
+exampleItem: Ancient platelegs
+*/
+#define RAX_RUNE_ANCIENT_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF552f53";textAccentColor = "#FF000000";menuTextColor = "#FF7a4f73";
+
+apply (name:FACT_RUNE_ANCIENT_TRIMMED_ARMOUR) {
+    RAX_RUNE_ANCIENT_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune armadyl Armour
+group: Metal Equipment
+exampleItem: Armadyl platelegs
+*/
+#define RAX_RUNE_ARMADYL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF706868";textAccentColor = "#FF000000";menuTextColor = "#FF908888";
+
+apply (name:FACT_RUNE_ARMADYL_TRIMMED_ARMOUR) {
+    RAX_RUNE_ARMADYL_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Rune bandos Armour
+group: Metal Equipment
+exampleItem: Bandos platelegs
+*/
+#define RAX_RUNE_BANDOS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80415760";borderColor = "#FF746228";textAccentColor = "#FF000000";menuTextColor = "#FFa48238";
+
+apply (name:FACT_RUNE_BANDOS_TRIMMED_ARMOUR) {
+    RAX_RUNE_BANDOS_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Gilded Armour and Weapons
+group: Metal Equipment
+exampleItem: Gilded platelegs
+*/
+#define RAX_RUNE_GILDED_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#80c39318";borderColor = "#FF7c540c";textAccentColor = "#FF000000";menuTextColor = "#FFbca41c";
+
+apply (name:FACT_RUNE_GILDED) {
+    RAX_RUNE_GILDED_CUSTOMSTYLE 
+}
+/*@ define:input:armour
+type: style
+label: Low armour (bronze to mithril)
+group: Metal Equipment
+exampleItem: Mithril platebody
+exampleItemId: 1121
+*/
+#define RAX_ARMOUR_LOW_STYLE
+
+apply (name:FACT_BRONZE_ARMOUR || name:FACT_IRON_ARMOUR || name:FACT_STEEL_ARMOUR || name:FACT_BLACK_ARMOUR || name:FACT_MITHRIL_ARMOUR) {
+    RAX_ARMOUR_LOW_STYLE
+}
+/*@ define:input:armour
+type: style
+label: Adamant armour
+group: Metal Equipment
+exampleItem: Adamant platebody
+exampleItemId: 1123
+*/
+#define RAX_ARMOUR_MID_STYLE
+
+apply (name:FACT_ADAMANT_ARMOUR) {
+    RAX_ARMOUR_MID_STYLE
+}
+/*@ define:input:armour
+type: style
+label: Rune armour
+group: Metal Equipment
+exampleItem: Rune platebody
+exampleItemId: 1127
+*/
+#define RAX_ARMOUR_HIGH_STYLE
+
+apply (name:FACT_RUNE_ARMOUR) {
+    RAX_ARMOUR_HIGH_STYLE
+}
+/*@ define:input:armour
+type: style
+label: Dragon armour
+group: Metal Equipment
+exampleItem: Dragon platebody
+exampleItemId: 21892
+*/
+#define RAX_ARMOUR_DRAGON_STYLE
+
+apply (name:FACT_DRAGON_ARMOUR) {
+    RAX_ARMOUR_DRAGON_STYLE
+}

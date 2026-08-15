@@ -1,0 +1,76 @@
+/*@ define:module:prayer
+---
+name: Prayer
+subtitle: Bones, ashes, heads
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Prayer
+icon:
+  type: itemId
+  itemId: 536
+expanded: false
+*/
+/*@ define:input:prayer
+type: style
+label: All Prayer Items Style
+group: Prayer
+exampleItem: Superior dragon bones
+exampleItemId: 22124
+*/
+#define RAX_CATEGORY_PRAYER_CUSTOMSTYLE icon = Sprite(3191, 0);
+
+apply (name:FACT_BONES_LIST || name:FACT_ASHES_LIST || name:FACT_SHADES_REMAINS_LIST || name:FACT_ENSOULED_HEAD_LIST) {
+  RAX_CATEGORY_PRAYER_CUSTOMSTYLE
+}
+/*@ define:input:prayer
+type: style
+label: Bones Style
+group: Prayer
+exampleItem: Bones
+exampleItemId: 526
+*/
+#define RAX_BONES_CUSTOMSTYLE 
+
+apply (name:FACT_BONES_LIST) {
+    RAX_BONES_CUSTOMSTYLE
+}
+/*@ define:input:prayer
+type: style
+label: Ashes Style
+group: Prayer
+exampleItem: Fiendish ashes
+exampleItemId: 25766
+*/
+#define RAX_ASHES_CUSTOMSTYLE
+
+apply (name:FACT_ASHES_LIST) {
+    RAX_ASHES_CUSTOMSTYLE
+}
+/*@ define:input:prayer
+type: style
+label: Shades Remains Style
+group: Prayer
+exampleItem: Loar remains
+exampleItemId: 3396
+*/
+#define RAX_SHADES_REMAINS_CUSTOMSTYLE
+
+apply (name:FACT_SHADES_REMAINS_LIST) {
+    RAX_SHADES_REMAINS_CUSTOMSTYLE
+}
+/*@ define:input:prayer
+type: style
+label: Ensouled Head Style
+group: Prayer
+exampleItem: Ensouled goblin head
+exampleItemId: 13448
+*/
+#define RAX_ENSOULED_HEAD_CUSTOMSTYLE
+
+apply (name:FACT_ENSOULED_HEAD_LIST) {
+    RAX_ENSOULED_HEAD_CUSTOMSTYLE
+}

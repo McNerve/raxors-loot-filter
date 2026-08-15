@@ -1,0 +1,1165 @@
+/*@ define:module:gathering
+---
+name: Gathering
+subtitle: Ores, bars, logs, seeds
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Mining
+icon:
+  type: itemId
+  itemId: 451
+expanded: false
+*/
+/*@ define:group
+---
+name: Smithing
+icon:
+  type: itemId
+  itemId: 2363
+expanded: false
+*/
+/*@ define:group
+---
+name: Woodcutting
+icon:
+  type: itemId
+  itemId: 1513
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing
+icon:
+  type: itemId
+  itemId: 377
+expanded: false
+*/
+/*@ define:group
+---
+name: Farming
+icon:
+  type: itemId
+  itemId: 5295
+expanded: false
+*/
+/*@ define:group
+---
+name: Construction
+icon:
+  type: itemId
+  itemId: 8782
+expanded: false
+*/
+/*@ define:group
+---
+name: Logs
+icon:
+  type: itemId
+  itemId: 1513
+expanded: false
+*/
+/*@ define:group
+---
+name: Ores
+icon:
+  type: itemId
+  itemId: 451
+expanded: false
+*/
+/*@ define:group
+---
+name: Bars
+icon:
+  type: itemId
+  itemId: 2363
+expanded: false
+*/
+/*@ define:group
+---
+name: Gems
+icon:
+  type: itemId
+  itemId: 1617
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing Bait
+icon:
+  type: itemId
+  itemId: 313
+expanded: false
+*/
+/*@ define:group
+---
+name: Fishing Equipment
+icon:
+  type: itemId
+  itemId: 301
+expanded: false
+*/
+/*@ define:input:gathering
+type: style
+label: Ores Style
+group: Mining
+exampleItem: Copper ore
+exampleItemId: 436
+*/
+#define RAX_CATEGORY_ORES_CUSTOMSTYLE icon = Sprite(3200, 0);
+
+apply (name:FACT_ORES_LIST) {
+    RAX_CATEGORY_ORES_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Bars Style
+group: Smithing
+exampleItem: Bronze bar
+exampleItemId: 2349
+*/
+#define RAX_CATEGORY_BARS_CUSTOMSTYLE icon = Sprite(3201, 0);
+
+apply (name:FACT_BARS_LIST) {
+    RAX_CATEGORY_BARS_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Logs Style
+group: Woodcutting
+exampleItem: Logs
+exampleItemId: 1511
+*/
+#define RAX_CATEGORY_LOGS_CUSTOMSTYLE icon = Sprite(3205, 0);
+
+apply (name:FACT_LOGS_LIST) {
+    RAX_CATEGORY_LOGS_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: All Fishing Items Style
+group: Fishing
+exampleItem: Raw anglerfish
+exampleItemId: 13439
+*/
+#define RAX_CATEGORY_STYLE_FISHING_CUSTOMSTYLE icon = Sprite(3202, 0);
+
+apply (name:FACT_FISHING_RAW_FISH_LIST || name:FACT_FISHING_EQUIPMENT_LIST || name:FACT_FISHING_BAIT_LIST) {
+  RAX_CATEGORY_STYLE_FISHING_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Raw fish Style
+group: Fishing
+exampleItem: Raw tuna
+exampleItemId: 359
+*/
+#define RAX_CATEGORY_STYLE_FISHING_RAW_FISH_CUSTOMSTYLE
+
+apply (name:FACT_FISHING_RAW_FISH_LIST) {
+  RAX_CATEGORY_STYLE_FISHING_RAW_FISH_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: "Fishing equipment Style (fishing rods, harpoons, etc.)"
+group: Fishing
+exampleItem: Fishing rod
+exampleItemId: 307
+*/
+#define RAX_CATEGORY_STYLE_FISHING_EQUIPMENT_CUSTOMSTYLE icon = CurrentItem();
+
+apply (name:FACT_FISHING_EQUIPMENT_LIST) {
+  RAX_CATEGORY_STYLE_FISHING_EQUIPMENT_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Fishing bait Style
+group: Fishing
+exampleItem: Fishing bait
+exampleItemId: 313
+*/
+#define RAX_CATEGORY_STYLE_FISHING_BAIT_CUSTOMSTYLE icon = CurrentItem();
+
+apply (name:FACT_FISHING_BAIT_LIST) {
+  RAX_CATEGORY_STYLE_FISHING_BAIT_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: All Farming Items Style
+group: Farming
+exampleItem: Torstol seed
+exampleItemId: 5304
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_CUSTOMSTYLE icon = Sprite(3207, 0);
+
+apply (name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_FLOWER_LIST || name:FACT_FARMING_SEEDS_HERB_LIST || name:FACT_FARMING_SEEDS_HOPS_LIST || name:FACT_FARMING_SEEDS_BUSH_LIST || name:FACT_FARMING_SEEDS_TREE_LIST || name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST || name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST || name:FACT_FARMING_SEEDS_SPECIAL_LIST || name:FACT_FARMING_SEEDS_ANIMA_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Allotment Seeds Style
+group: Farming
+exampleItem: Potato seed
+exampleItemId: 5318
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_ALLOTMENT_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_ALLOTMENT_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_ALLOTMENT_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Flower Seeds Style
+group: Farming
+exampleItem: Marigold seed
+exampleItemId: 5096
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_FLOWER_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_FLOWER_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_FLOWER_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Herb Seeds Style
+group: Farming
+exampleItem: Guam seed
+exampleItemId: 5291
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_HERB_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_HERB_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_HERB_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Hops Seeds Style
+group: Farming
+exampleItem: Barley seed
+exampleItemId: 5305
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_HOPS_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_HOPS_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_HOPS_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Bush Seeds Style
+group: Farming
+exampleItem: Redberry seed
+exampleItemId: 5101
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_BUSH_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_BUSH_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_BUSH_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Tree Seeds Style
+group: Farming
+exampleItem: Acorn
+exampleItemId: 5312
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_TREE_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_TREE_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_TREE_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Fruit Tree Seeds Style
+group: Farming
+exampleItem: Apple tree seed
+exampleItemId: 5283
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_FRUIT_TREE_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_FRUIT_TREE_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Special Tree Seeds Style
+group: Farming
+exampleItem: Teak seed
+exampleItemId: 21486
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_SPECIAL_TREE_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_SPECIAL_TREE_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Special Seeds Style
+group: Farming
+exampleItem: Seaweed spore
+exampleItemId: 21490
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_SPECIAL_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_SPECIAL_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_SPECIAL_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Anima Seeds Style
+group: Farming
+exampleItem: Attas seed
+exampleItemId: 22881
+*/
+#define RAX_CATEGORY_FARMING_SEEDS_ANIMA_CUSTOMSTYLE
+
+apply (name:FACT_FARMING_SEEDS_ANIMA_LIST) {
+  RAX_CATEGORY_FARMING_SEEDS_ANIMA_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: All Construction Items Style
+group: Construction
+exampleItem: Mahogany plank
+exampleItemId: 8782
+*/
+#define RAX_CATEGORY_CONSTRUCTION_CUSTOMSTYLE icon = Sprite(3208, 0);
+
+apply (name:FACT_CONSTRUCTION_PLANKS_LIST || name:FACT_CONSTRUCTION_NAILS_LIST || name:FACT_CONSTRUCTION_STONEMASON_LIST || name:FACT_CONSTRUCTION_MISC_LIST) {
+  RAX_CATEGORY_CONSTRUCTION_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Planks Style
+group: Construction
+exampleItem: Plank
+exampleItemId: 960
+*/
+#define RAX_CONSTRUCTION_PLANKS_CUSTOMSTYLE
+
+apply (name:FACT_CONSTRUCTION_PLANKS_LIST) {
+  RAX_CONSTRUCTION_PLANKS_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Nails Style
+group: Construction
+exampleItem: Bronze nails
+exampleItemId: 4819
+*/
+#define RAX_CONSTRUCTION_NAILS_CUSTOMSTYLE
+
+apply (name:FACT_CONSTRUCTION_NAILS_LIST) {
+  RAX_CONSTRUCTION_NAILS_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: "Stonemason Style (limestone brick, marble block, etc.)"
+group: Construction
+exampleItem: Limestone brick
+exampleItemId: 3420
+*/
+#define RAX_CONSTRUCTION_STONEMASON_CUSTOMSTYLE
+
+apply (name:FACT_CONSTRUCTION_STONEMASON_LIST) {
+  RAX_CONSTRUCTION_STONEMASON_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: "Misc Construction Style (bolt of cloth, saw)"
+group: Construction
+exampleItem: Bolt of cloth
+exampleItemId: 8790
+*/
+#define RAX_CONSTRUCTION_MISC_CUSTOMSTYLE
+
+apply (name:FACT_CONSTRUCTION_MISC_LIST) {
+  RAX_CONSTRUCTION_MISC_CUSTOMSTYLE
+}
+/*@ define:input:gathering
+type: style
+label: Logs custom style
+group: Logs
+exampleItem: Logs
+*/
+#define RAX_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50AF8F51";borderColor = "#FF7F623A";textAccentColor = "#FF000000";menuTextColor = "#FF7F623A";
+
+apply (name:"Logs") {
+    RAX_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Oak logs custom style
+group: Logs
+exampleItem: Oak logs
+*/
+#define RAX_OAK_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A7875E";borderColor = "#FF8B6B40";textAccentColor = "#FF000000";menuTextColor = "#FF8B6B40";
+
+apply (name:"Oak logs") {
+    RAX_OAK_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Willow logs custom style
+group: Logs
+exampleItem: Willow logs
+*/
+#define RAX_WILLOW_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5071673F";borderColor = "#FF564D20";textAccentColor = "#FF000000";menuTextColor = "#FF5A5028";
+
+apply (name:"Willow logs") {
+    RAX_WILLOW_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Maple logs custom style
+group: Logs
+exampleItem: Maple logs
+*/
+#define RAX_MAPLE_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50846230";borderColor = "#FF704C0D";textAccentColor = "#FF000000";menuTextColor = "#FF6A5528";
+
+apply (name:"Maple logs") {
+    RAX_MAPLE_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Yew logs custom style
+group: Logs
+exampleItem: Yew logs
+*/
+#define RAX_YEW_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50856D3D";borderColor = "#FF5C4409";textAccentColor = "#FF000000";menuTextColor = "#FF5C4409";
+
+apply (name:"Yew logs") {
+    RAX_YEW_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Magic logs custom style
+group: Logs
+exampleItem: Magic logs
+*/
+#define RAX_MAGIC_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#502AA79A";borderColor = "#FF8F8560";textAccentColor = "#FF000000";menuTextColor = "#FF8F8560";
+
+apply (name:"Magic logs") {
+    RAX_MAGIC_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Redwood logs custom style
+group: Logs
+exampleItem: Redwood logs
+*/
+#define RAX_REDWOOD_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50B87242";borderColor = "#FF73460D";textAccentColor = "#FF000000";menuTextColor = "#FF73460D";
+
+apply (name:"Redwood logs") {
+    RAX_REDWOOD_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Teak logs custom style
+group: Logs
+exampleItem: Teak logs
+*/
+#define RAX_TEAK_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50937243";borderColor = "#FFBFA26C";textAccentColor = "#FF000000";menuTextColor = "#FFBFA26C";
+
+apply (name:"Teak logs") {
+    RAX_TEAK_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Mahogany logs custom style
+group: Logs
+exampleItem: Mahogany logs
+*/
+#define RAX_MAHOGANY_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50693F09";borderColor = "#FFBEA16C";textAccentColor = "#FF000000";menuTextColor = "#FFBEA16C";
+
+apply (name:"Mahogany logs") {
+    RAX_MAHOGANY_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Achey tree logs custom style
+group: Logs
+exampleItem: Achey tree logs
+*/
+#define RAX_ACHEY_TREE_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#508C805E";borderColor = "#FF746642";textAccentColor = "#FF000000";menuTextColor = "#FF746642";
+
+apply (name:"Achey tree logs") {
+    RAX_ACHEY_TREE_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Arctic pine logs custom style
+group: Logs
+exampleItem: Arctic pine logs
+*/
+#define RAX_ARCTIC_PINE_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50CBAC73";borderColor = "#FFAB8C4E";textAccentColor = "#FF000000";menuTextColor = "#FFAB8C4E";
+
+apply (name:"Arctic pine logs") {
+    RAX_ARCTIC_PINE_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Scrapey tree logs custom style
+group: Logs
+exampleItem: Scrapey tree logs
+*/
+#define RAX_SCRAPEY_TREE_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#503F6409";borderColor = "#FF7F683A";textAccentColor = "#FF000000";menuTextColor = "#FF7F683A";
+
+apply (name:"Scrapey tree logs") {
+    RAX_SCRAPEY_TREE_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Juniper logs custom style
+group: Logs
+exampleItem: Juniper logs
+*/
+#define RAX_JUNIPER_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A28F6E";borderColor = "#FF988667";textAccentColor = "#FF000000";menuTextColor = "#FF988667";
+
+apply (name:"Juniper logs") {
+    RAX_JUNIPER_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Bark custom style
+group: Logs
+exampleItem: Bark
+*/
+#define RAX_BARK_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5087734B";borderColor = "#FF483A20";textAccentColor = "#FF000000";menuTextColor = "#FF483A20";
+
+apply (name:"Bark") {
+    RAX_BARK_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Blisterwood logs custom style
+group: Logs
+exampleItem: Blisterwood logs
+*/
+#define RAX_BLISTERWOOD_LOGS_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50923A34";borderColor = "#FFDFDBDB";textAccentColor = "#FF000000";menuTextColor = "#FFDFDBDB";
+
+apply (name:"Blisterwood logs") {
+    RAX_BLISTERWOOD_LOGS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Copper ore custom style
+group: Ores
+exampleItem: Copper ore
+*/
+#define RAX_COPPER_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50DA7D37";borderColor = "#FFDA7D37";textAccentColor = "#FF000000";menuTextColor = "#FFDA7D37";
+
+apply (name:"copper ore") {
+    RAX_COPPER_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Tin ore custom style
+group: Ores
+exampleItem: Tin ore
+*/
+#define RAX_TIN_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50887F7E";borderColor = "#FF887F7E";textAccentColor = "#FF000000";menuTextColor = "#FF887F7E";
+
+apply (name:"tin ore") {
+    RAX_TIN_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Iron ore custom style
+group: Ores
+exampleItem: Iron ore
+*/
+#define RAX_IRON_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504C2D22";borderColor = "#FF4C2D22";textAccentColor = "#FF000000";menuTextColor = "#FF4C2D22";
+
+apply (name:"iron ore") {
+    RAX_IRON_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Silver ore custom style
+group: Ores
+exampleItem: Silver ore
+*/
+#define RAX_SILVER_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509999A5";borderColor = "#FF9999A5";textAccentColor = "#FF000000";menuTextColor = "#FF9999A5";
+
+apply (name:"silver ore") {
+    RAX_SILVER_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Coal custom style
+group: Ores
+exampleItem: Coal
+*/
+#define RAX_COAL_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50383725";borderColor = "#FF383725";textAccentColor = "#FF000000";menuTextColor = "#FF383725";
+
+apply (name:"coal") {
+    RAX_COAL_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Gold ore custom style
+group: Ores
+exampleItem: Gold ore
+*/
+#define RAX_GOLD_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50C6A118";borderColor = "#FFC6A118";textAccentColor = "#FF000000";menuTextColor = "#FFC6A118";
+
+apply (name:"gold ore") {
+    RAX_GOLD_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Mithril ore custom style
+group: Ores
+exampleItem: Mithril ore
+*/
+#define RAX_MITHRIL_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#5048486A";borderColor = "#FF48486A";textAccentColor = "#FF000000";menuTextColor = "#FF48486A";
+
+apply (name:"mithril ore") {
+    RAX_MITHRIL_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Adamantite ore custom style
+group: Ores
+exampleItem: Adamantite ore
+*/
+#define RAX_ADAMANTITE_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50485B49";borderColor = "#FF485B49";textAccentColor = "#FF000000";menuTextColor = "#FF485B49";
+
+apply (name:"adamantite ore") {
+    RAX_ADAMANTITE_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Runite ore custom style
+group: Ores
+exampleItem: Runite ore
+*/
+#define RAX_RUNITE_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504D6671";borderColor = "#FF4D6671";textAccentColor = "#FF000000";menuTextColor = "#FF4D6671";
+
+apply (name:"runite ore") {
+    RAX_RUNITE_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Daeyalt ore custom style
+group: Ores
+exampleItem: Daeyalt ore
+*/
+#define RAX_DAEYALT_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#500A645B";borderColor = "#FF0A645B";textAccentColor = "#FF000000";menuTextColor = "#FF0A645B";
+
+apply (name:"daeyalt ore") {
+    RAX_DAEYALT_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Blasted ore custom style
+group: Ores
+exampleItem: Blasted ore
+*/
+#define RAX_BLASTED_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50515757";borderColor = "#FF515757";textAccentColor = "#FF000000";menuTextColor = "#FF515757";
+
+apply (name:"blasted ore") {
+    RAX_BLASTED_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Blurite ore custom style
+group: Ores
+exampleItem: Blurite ore
+*/
+#define RAX_BLURITE_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50787ACF";borderColor = "#FF787ACF";textAccentColor = "#FF000000";menuTextColor = "#FF787ACF";
+
+apply (name:"blurite ore") {
+    RAX_BLURITE_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Lovakite ore custom style
+group: Ores
+exampleItem: Lovakite ore
+*/
+#define RAX_LOVAKITE_ORE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#505C1009";borderColor = "#FF5C1009";textAccentColor = "#FF000000";menuTextColor = "#FF5C1009";
+
+apply (name:"lovakite ore") {
+    RAX_LOVAKITE_ORE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Bronze bar custom style
+group: Bars
+exampleItem: Bronze bar
+exampleItemId: 2349
+*/
+#define RAX_BRONZE_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50554127";borderColor = "#FF554127";textAccentColor = "#FF000000";menuTextColor = "#FF554127";
+
+apply (name:"Bronze bar") {
+    RAX_BRONZE_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Iron bar custom style
+group: Bars
+exampleItem: Iron bar
+exampleItemId: 2351
+*/
+#define RAX_IRON_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504C4545";borderColor = "#FF4C4545";textAccentColor = "#FF000000";menuTextColor = "#FF4C4545";
+
+apply (name:"Iron bar") {
+    RAX_IRON_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Steel bar custom style
+group: Bars
+exampleItem: Steel bar
+exampleItemId: 2353
+*/
+#define RAX_STEEL_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50887E7E";borderColor = "#FF887E7E";textAccentColor = "#FF000000";menuTextColor = "#FF887E7E";
+
+apply (name:"Steel bar") {
+    RAX_STEEL_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Mithril bar custom style
+group: Bars
+exampleItem: Mithril bar
+exampleItemId: 2359
+*/
+#define RAX_MITHRIL_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50484869";borderColor = "#FF484869";textAccentColor = "#FF000000";menuTextColor = "#FF484869";
+
+apply (name:"Mithril bar") {
+    RAX_MITHRIL_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Adamantite bar custom style
+group: Bars
+exampleItem: Adamantite bar
+exampleItemId: 2361
+*/
+#define RAX_ADAMANTITE_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50485A48";borderColor = "#FF485A48";textAccentColor = "#FF000000";menuTextColor = "#FF485A48";
+
+apply (name:"Adamantite bar") {
+    RAX_ADAMANTITE_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Runite bar custom style
+group: Bars
+exampleItem: Runite bar
+exampleItemId: 2363
+*/
+#define RAX_RUNITE_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504B6570";borderColor = "#FF4B6570";textAccentColor = "#FF000000";menuTextColor = "#FF4B6570";
+
+apply (name:"Runite bar") {
+    RAX_RUNITE_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Silver bar custom style
+group: Bars
+exampleItem: Silver bar
+exampleItemId: 2355
+*/
+#define RAX_SILVER_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509C9CA7";borderColor = "#FF9C9CA7";textAccentColor = "#FF000000";menuTextColor = "#FF9C9CA7";
+
+apply (name:"Silver bar") {
+    RAX_SILVER_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Gold bar custom style
+group: Bars
+exampleItem: Gold bar
+exampleItemId: 2357
+*/
+#define RAX_GOLD_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50CBA618";borderColor = "#FFCBA618";textAccentColor = "#FF000000";menuTextColor = "#FFCBA618";
+
+apply (name:"Gold bar") {
+    RAX_GOLD_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Elemental metal custom style
+group: Bars
+exampleItem: Elemental metal
+exampleItemId: 2893
+*/
+#define RAX_ELEMENTAL_METAL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50691094";borderColor = "#FF691094";textAccentColor = "#FF000000";menuTextColor = "#FF691094";
+
+apply (name:"Elemental metal") {
+    RAX_ELEMENTAL_METAL_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Primed bar custom style
+group: Bars
+exampleItem: Primed bar
+exampleItemId: 9727
+*/
+#define RAX_PRIMED_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509F9F93";borderColor = "#FF9F9F93";textAccentColor = "#FF000000";menuTextColor = "#FF9F9F93";
+
+apply (name:"Primed bar") {
+    RAX_PRIMED_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Primed mind bar custom style
+group: Bars
+exampleItem: Primed mind bar
+exampleItemId: 9728
+*/
+#define RAX_PRIMED_MIND_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509B6913";borderColor = "#FF9B6913";textAccentColor = "#FF000000";menuTextColor = "#FF9B6913";
+
+apply (name:"Primed mind bar") {
+    RAX_PRIMED_MIND_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Blurite bar custom style
+group: Bars
+exampleItem: Blurite bar
+exampleItemId: 9467
+*/
+#define RAX_BLURITE_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#508485C8";borderColor = "#FF8485C8";textAccentColor = "#FF000000";menuTextColor = "#FF8485C8";
+
+apply (name:"Blurite bar") {
+    RAX_BLURITE_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Enchanted bar custom style
+group: Bars
+exampleItem: Enchanted bar
+exampleItemId: 4007
+*/
+#define RAX_ENCHANTED_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#506F6E4B";borderColor = "#FF6F6E4B";textAccentColor = "#FF000000";menuTextColor = "#FF6F6E4B";
+
+apply (name:"Enchanted bar") {
+    RAX_ENCHANTED_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Lovakite bar custom style
+group: Bars
+exampleItem: Lovakite bar
+exampleItemId: 13354
+*/
+#define RAX_LOVAKITE_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#505E1409";borderColor = "#FF5E1409";textAccentColor = "#FF000000";menuTextColor = "#FF5E1409";
+
+apply (name:"Lovakite bar") {
+    RAX_LOVAKITE_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: "'Perfect' gold bar custom style"
+group: Bars
+exampleItem: "'Perfect' gold bar"
+exampleItemId: 2365
+*/
+#define RAX_PERFECT_GOLD_BAR_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50B79517";borderColor = "#FFB79517";textAccentColor = "#FF000000";menuTextColor = "#FFB79517";
+
+apply (name:"'Perfect' gold bar") {
+    RAX_PERFECT_GOLD_BAR_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Sapphire custom style
+group: Gems
+exampleItem: Sapphire
+*/
+#define RAX_SAPPHIRE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#500C1273";borderColor = "#FF0C1273";textAccentColor = "#FF000000";menuTextColor = "#FF0C1273";
+
+apply (name:["Uncut sapphire",   "Sapphire", ]) {
+    RAX_SAPPHIRE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Emerald custom style
+group: Gems
+exampleItem: Emerald
+*/
+#define RAX_EMERALD_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#500C6B0F";borderColor = "#FF0C6B0F";textAccentColor = "#FF000000";menuTextColor = "#FF0C6B0F";
+
+apply (name:["Uncut emerald",   "Emerald", ]) {
+    RAX_EMERALD_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Ruby custom style
+group: Gems
+exampleItem: Ruby
+*/
+#define RAX_RUBY_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504E0F08";borderColor = "#FF4E0F08";textAccentColor = "#FF000000";menuTextColor = "#FF4E0F08";
+
+apply (name:["Uncut ruby",   "Ruby", ]) {
+    RAX_RUBY_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Diamond custom style
+group: Gems
+exampleItem: Diamond
+*/
+#define RAX_DIAMOND_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50857D7D";borderColor = "#FF857D7D";textAccentColor = "#FF000000";menuTextColor = "#FF857D7D";
+
+apply (name:["Uncut diamond",   "Diamond", ]) {
+    RAX_DIAMOND_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Opal custom style
+group: Gems
+exampleItem: Opal
+*/
+#define RAX_OPAL_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#507E7D63";borderColor = "#FF7E7D63";textAccentColor = "#FF000000";menuTextColor = "#FF7E7D63";
+
+apply (name:["Uncut opal",   "Opal", ]) {
+    RAX_OPAL_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Jade custom style
+group: Gems
+exampleItem: Jade
+*/
+#define RAX_JADE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#506E7E64";borderColor = "#FF6E7E64";textAccentColor = "#FF000000";menuTextColor = "#FF6E7E64";
+
+apply (name:["Uncut jade",   "Jade", ]) {
+    RAX_JADE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Red topaz custom style
+group: Gems
+exampleItem: Red topaz
+*/
+#define RAX_RED_TOPAZ_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50830E4F";borderColor = "#FF830E4F";textAccentColor = "#FF000000";menuTextColor = "#FF830E4F";
+
+apply (name:["Uncut red topaz",   "Red topaz", ]) {
+    RAX_RED_TOPAZ_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Dragonstone custom style
+group: Gems
+exampleItem: Dragonstone
+*/
+#define RAX_DRAGONSTONE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#504C0B62";borderColor = "#FF4C0B62";textAccentColor = "#FF000000";menuTextColor = "#FF4C0B62";
+
+apply (name:["Uncut dragonstone",   "Dragonstone", ]) {
+    RAX_DRAGONSTONE_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Onyx custom style
+group: Gems
+exampleItem: Onyx
+*/
+#define RAX_ONYX_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#501C1A1A";borderColor = "#FF1C1A1A";textAccentColor = "#FF000000";menuTextColor = "#FF1C1A1A";
+
+apply (name:["Uncut onyx",   "Onyx", ]) {
+    RAX_ONYX_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Sandworms custom style
+group: Fishing Bait
+exampleItem: Sandworms
+*/
+#define RAX_SANDWORMS_CUSTOMSTYLE 
+
+apply (name:"Sandworms") {
+    RAX_SANDWORMS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Fishing bait custom style
+group: Fishing Bait
+exampleItem: Fishing bait
+*/
+#define RAX_FISHING_BAIT_CUSTOMSTYLE 
+
+apply (name:"Fishing bait") {
+    RAX_FISHING_BAIT_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Feather custom style
+group: Fishing Bait
+exampleItem: Feather
+*/
+#define RAX_FEATHER_CUSTOMSTYLE 
+
+apply (name:"Feather") {
+    RAX_FEATHER_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Stripy feather custom style
+group: Fishing Bait
+exampleItem: Stripy feather
+*/
+#define RAX_STRIPY_FEATHER_CUSTOMSTYLE 
+
+apply (name:"Stripy feather") {
+    RAX_STRIPY_FEATHER_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Dark fishing bait custom style
+group: Fishing Bait
+exampleItem: Dark fishing bait
+*/
+#define RAX_DARK_FISHING_BAIT_CUSTOMSTYLE 
+
+apply (name:"Dark fishing bait") {
+    RAX_DARK_FISHING_BAIT_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: King worm custom style
+group: Fishing Bait
+exampleItem: King worm
+*/
+#define RAX_KING_WORM_CUSTOMSTYLE 
+
+apply (name:"King worm") {
+    RAX_KING_WORM_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Fish chunks custom style
+group: Fishing Bait
+exampleItem: Fish chunks
+*/
+#define RAX_FISH_CHUNKS_CUSTOMSTYLE 
+
+apply (name:"Fish chunks") {
+    RAX_FISH_CHUNKS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Raw karambwanji custom style
+group: Fishing Bait
+exampleItem: Raw karambwanji
+*/
+#define RAX_RAW_KARAMBWANJI_CUSTOMSTYLE 
+
+apply (name:"Raw karambwanji") {
+    RAX_RAW_KARAMBWANJI_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Diabolic worms custom style
+group: Fishing Bait
+exampleItem: Diabolic worms
+*/
+#define RAX_DIABOLIC_WORMS_CUSTOMSTYLE 
+
+apply (name:"Diabolic worms") {
+    RAX_DIABOLIC_WORMS_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Small fishing net custom style
+group: Fishing Equipment
+exampleItem: Small fishing net
+*/
+#define RAX_SMALL_FISHING_NET_CUSTOMSTYLE 
+
+apply (name:"Small fishing net") {
+    RAX_SMALL_FISHING_NET_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Big fishing net custom style
+group: Fishing Equipment
+exampleItem: Big fishing net
+*/
+#define RAX_BIG_FISHING_NET_CUSTOMSTYLE 
+
+apply (name:"Big fishing net") {
+    RAX_BIG_FISHING_NET_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Drift net custom style
+group: Fishing Equipment
+exampleItem: Drift net
+*/
+#define RAX_DRIFT_NET_CUSTOMSTYLE 
+
+apply (name:"Drift net") {
+    RAX_DRIFT_NET_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Fishing rod custom style
+group: Fishing Equipment
+exampleItem: Fishing rod
+*/
+#define RAX_FISHING_ROD_CUSTOMSTYLE 
+
+apply (name:"Fishing rod") {
+    RAX_FISHING_ROD_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Fly fishing rod custom style
+group: Fishing Equipment
+exampleItem: Fly fishing rod
+*/
+#define RAX_FLY_FISHING_ROD_CUSTOMSTYLE 
+
+apply (name:"Fly fishing rod") {
+    RAX_FLY_FISHING_ROD_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Oily fishing rod custom style
+group: Fishing Equipment
+exampleItem: Oily fishing rod
+*/
+#define RAX_OILY_FISHING_ROD_CUSTOMSTYLE 
+
+apply (name:"Oily fishing rod") {
+    RAX_OILY_FISHING_ROD_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Harpoon custom style
+group: Fishing Equipment
+exampleItem: Harpoon
+*/
+#define RAX_HARPOON_CUSTOMSTYLE 
+
+apply (name:"Harpoon") {
+    RAX_HARPOON_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Lobster pot custom style
+group: Fishing Equipment
+exampleItem: Lobster pot
+*/
+#define RAX_LOBSTER_POT_CUSTOMSTYLE 
+
+apply (name:"Lobster pot") {
+    RAX_LOBSTER_POT_CUSTOMSTYLE 
+}
+/*@ define:input:gathering
+type: style
+label: Karambwan vessel custom style
+group: Fishing Equipment
+exampleItem: Karambwan vessel
+*/
+#define RAX_KARAMBWAN_VESSEL_CUSTOMSTYLE 
+
+apply (name:"Karambwan vessel") {
+    RAX_KARAMBWAN_VESSEL_CUSTOMSTYLE 
+}

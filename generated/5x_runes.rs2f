@@ -1,0 +1,330 @@
+/*@ define:module:runes
+---
+name: Runes
+subtitle: What you cast
+description: |
+  How this kind looks. Value (below) overwrites once the drop is worth real gp.
+*/
+
+/*@ define:group
+---
+name: Runes
+icon:
+  type: itemId
+  itemId: 565
+expanded: false
+*/
+/*@ define:input:runes
+type: style
+label: All Runes Items Style
+group: Runes
+exampleItem: Wrath rune
+exampleItemId: 21880
+*/
+#define RAX_CATEGORY_RUNES_CUSTOMSTYLE icon = Sprite(3192, 0);
+
+apply (name:FACT_RUNES_LIST) {
+    RAX_CATEGORY_RUNES_CUSTOMSTYLE
+}
+/*@ define:input:runes
+type: style
+label: Elemental Runes Style
+group: Runes
+exampleItem: Air rune
+exampleItemId: 556
+*/
+#define RAX_CATEGORY_ELEMENTAL_RUNES_CUSTOMSTYLE
+
+apply (name:FACT_RUNES_ELEMENTAL_LIST) {
+  RAX_CATEGORY_ELEMENTAL_RUNES_CUSTOMSTYLE
+}
+/*@ define:input:runes
+type: style
+label: Catalytic Runes Style
+group: Runes
+exampleItem: Mind rune
+exampleItemId: 558
+*/
+#define RAX_CATEGORY_CATALYTIC_RUNES_CUSTOMSTYLE
+
+apply (name:FACT_RUNES_CATALYTIC_LIST) {
+  RAX_CATEGORY_CATALYTIC_RUNES_CUSTOMSTYLE
+}
+/*@ define:input:runes
+type: style
+label: Combination Runes Style
+group: Runes
+exampleItem: Mist rune
+exampleItemId: 4695
+*/
+#define RAX_CATEGORY_COMBINATION_RUNES_CUSTOMSTYLE
+
+apply (name:FACT_RUNES_COMBINATION_LIST) {
+  RAX_CATEGORY_COMBINATION_RUNES_CUSTOMSTYLE
+}
+/*@ define:input:runes
+type: style
+label: Air rune custom style
+group: Runes
+exampleItem: Air rune
+*/
+#define RAX_AIR_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50E1DEDE";borderColor = "#FFE1DEDE";textAccentColor = "#FF000000";menuTextColor = "#FFE1DEDE";
+
+apply (name:"Air rune") {
+    RAX_AIR_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Water rune custom style
+group: Runes
+exampleItem: Water rune
+*/
+#define RAX_WATER_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50151AA7";borderColor = "#FF151AA7";textAccentColor = "#FF000000";menuTextColor = "#FF151AA7";
+
+apply (name:"Water rune") {
+    RAX_WATER_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Earth rune custom style
+group: Runes
+exampleItem: Earth rune
+*/
+#define RAX_EARTH_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#506D490D";borderColor = "#FF6D490D";textAccentColor = "#FF000000";menuTextColor = "#FF6D490D";
+
+apply (name:"Earth rune") {
+    RAX_EARTH_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Fire rune custom style
+group: Runes
+exampleItem: Fire rune
+*/
+#define RAX_FIRE_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50A72215";borderColor = "#FFA72215";textAccentColor = "#FF000000";menuTextColor = "#FFA72215";
+
+apply (name:"Fire rune") {
+    RAX_FIRE_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Mind rune custom style
+group: Runes
+exampleItem: Mind rune
+*/
+#define RAX_MIND_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50D58A2E";borderColor = "#FFD58A2E";textAccentColor = "#FF000000";menuTextColor = "#FFD58A2E";
+
+apply (name:"Mind rune") {
+    RAX_MIND_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Body rune custom style
+group: Runes
+exampleItem: Body rune
+*/
+#define RAX_BODY_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#501A21CF";borderColor = "#FF1A21CF";textAccentColor = "#FF000000";menuTextColor = "#FF1A21CF";
+
+apply (name:"Body rune") {
+    RAX_BODY_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Cosmic rune custom style
+group: Runes
+exampleItem: Cosmic rune
+*/
+#define RAX_COSMIC_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50E0DE1A";borderColor = "#FFE0DE1A";textAccentColor = "#FF000000";menuTextColor = "#FFE0DE1A";
+
+apply (name:"Cosmic rune") {
+    RAX_COSMIC_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Chaos rune custom style
+group: Runes
+exampleItem: Chaos rune
+*/
+#define RAX_CHAOS_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50E0A81A";borderColor = "#FFE0A81A";textAccentColor = "#FF000000";menuTextColor = "#FFE0A81A";
+
+apply (name:"Chaos rune") {
+    RAX_CHAOS_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Nature rune custom style
+group: Runes
+exampleItem: Nature rune
+*/
+#define RAX_NATURE_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50168B1A";borderColor = "#FF168B1A";textAccentColor = "#FF000000";menuTextColor = "#FF168B1A";
+
+apply (name:"Nature rune") {
+    RAX_NATURE_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Law rune custom style
+group: Runes
+exampleItem: Law rune
+*/
+#define RAX_LAW_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#501A22E0";borderColor = "#FF1A22E0";textAccentColor = "#FF000000";menuTextColor = "#FF1A22E0";
+
+apply (name:"Law rune") {
+    RAX_LAW_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Death rune custom style
+group: Runes
+exampleItem: Death rune
+*/
+#define RAX_DEATH_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50E4E1E1";borderColor = "#FFE4E1E1";textAccentColor = "#FF000000";menuTextColor = "#FFE4E1E1";
+
+apply (name:"Death rune") {
+    RAX_DEATH_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Sunfire rune custom style
+group: Runes
+exampleItem: Sunfire rune
+*/
+#define RAX_SUNFIRE_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50DFA81A";borderColor = "#FFDFA81A";textAccentColor = "#FF000000";menuTextColor = "#FFDFA81A";
+
+apply (name:"Sunfire rune") {
+    RAX_SUNFIRE_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Astral rune custom style
+group: Runes
+exampleItem: Astral rune
+*/
+#define RAX_ASTRAL_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50CDB5CD";borderColor = "#FFCDB5CD";textAccentColor = "#FF000000";menuTextColor = "#FFCDB5CD";
+
+apply (name:"Astral rune") {
+    RAX_ASTRAL_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Blood rune custom style
+group: Runes
+exampleItem: Blood rune
+*/
+#define RAX_BLOOD_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50891D11";borderColor = "#FF891D11";textAccentColor = "#FF000000";menuTextColor = "#FF891D11";
+
+apply (name:"Blood rune") {
+    RAX_BLOOD_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Soul rune custom style
+group: Runes
+exampleItem: Soul rune
+*/
+#define RAX_SOUL_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#509192D3";borderColor = "#FF9192D3";textAccentColor = "#FF000000";menuTextColor = "#FF9192D3";
+
+apply (name:"Soul rune") {
+    RAX_SOUL_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Wrath rune custom style
+group: Runes
+exampleItem: Wrath rune
+*/
+#define RAX_WRATH_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50353030";borderColor = "#FF353030";textAccentColor = "#FF000000";menuTextColor = "#FF353030";
+
+apply (name:"Wrath rune") {
+    RAX_WRATH_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Mist rune custom style
+group: Runes
+exampleItem: Mist rune
+*/
+#define RAX_MIST_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50C8C0C0";borderColor = "#FFC8C0C0";textAccentColor = "#FF000000";menuTextColor = "#FFC8C0C0";
+
+apply (name:"Mist rune") {
+    RAX_MIST_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Dust rune custom style
+group: Runes
+exampleItem: Dust rune
+*/
+#define RAX_DUST_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50746241";borderColor = "#FF746241";textAccentColor = "#FF000000";menuTextColor = "#FF746241";
+
+apply (name:"Dust rune") {
+    RAX_DUST_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Mud rune custom style
+group: Runes
+exampleItem: Mud rune
+*/
+#define RAX_MUD_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#505D3B17";borderColor = "#FF5D3B17";textAccentColor = "#FF000000";menuTextColor = "#FF5D3B17";
+
+apply (name:"Mud rune") {
+    RAX_MUD_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Smoke rune custom style
+group: Runes
+exampleItem: Smoke rune
+*/
+#define RAX_SMOKE_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50534D4D";borderColor = "#FF534D4D";textAccentColor = "#FF000000";menuTextColor = "#FF534D4D";
+
+apply (name:"Smoke rune") {
+    RAX_SMOKE_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Steam rune custom style
+group: Runes
+exampleItem: Steam rune
+*/
+#define RAX_STEAM_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50AEAEB7";borderColor = "#FFAEAEB7";textAccentColor = "#FF000000";menuTextColor = "#FFAEAEB7";
+
+apply (name:"Steam rune") {
+    RAX_STEAM_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Lava rune custom style
+group: Runes
+exampleItem: Lava rune
+*/
+#define RAX_LAVA_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50D28019";borderColor = "#FFD28019";textAccentColor = "#FF000000";menuTextColor = "#FFD28019";
+
+apply (name:"Lava rune") {
+    RAX_LAVA_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: Aether rune custom style
+group: Runes
+exampleItem: Aether rune
+exampleItemId: 30843
+*/
+#define RAX_AETHER_RUNE_CUSTOMSTYLE textColor = "#FFFFFFFF";backgroundColor = "#50d8d68d";borderColor = "#FFa4d2bb";textAccentColor = "#FF000000";menuTextColor = "#FFd8d68d";
+
+apply (name:"Aether rune") {
+  RAX_AETHER_RUNE_CUSTOMSTYLE 
+}
+/*@ define:input:runes
+type: style
+label: High runes (blood, soul, wrath, sunfire, aether)
+group: Runes
+exampleItem: Blood rune
+exampleItemId: 565
+*/
+#define RAX_RUNES_HIGH_STYLE
+
+apply (name:FACT_RUNES_HIGH) {
+    RAX_RUNES_HIGH_STYLE
+}

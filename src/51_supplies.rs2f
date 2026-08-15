@@ -1,0 +1,146 @@
+// Authored category extras. After Joe categories so these styles win.
+
+/*@ define:input:categories
+type: style
+label: Seeking arrows
+group: Ammo
+exampleItem: Seeking dragon arrow
+exampleItemId: 11212
+*/
+#define RAX_AMMO_SEEKING_STYLE
+
+apply (name:FACT_AMMO_SEEKING_ARROWS_LIST) {
+    RAX_CATEGORY_AMMO_CUSTOMSTYLE
+    RAX_AMMO_ARROWS_CUSTOMSTYLE
+    RAX_AMMO_SEEKING_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Bloodwood sap / seeking shafts
+group: Fletching
+exampleItem: Arrow shaft
+exampleItemId: 52
+*/
+#define RAX_BLOODWOOD_STYLE
+
+apply (name:FACT_BLOODWOOD_LIST) {
+    RAX_BLOODWOOD_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: High runes (blood, soul, wrath, sunfire, aether)
+group: Runes
+exampleItem: Blood rune
+exampleItemId: 565
+*/
+#define RAX_RUNES_HIGH_STYLE
+
+apply (name:FACT_RUNES_HIGH) {
+    RAX_RUNES_HIGH_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Low herbs (guam to harralander)
+group: Herbs
+exampleItem: Guam leaf
+exampleItemId: 249
+*/
+#define RAX_HERBS_LOW_STYLE
+
+apply (name:FACT_HERBS_LOW) {
+    RAX_HERBS_LOW_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Mid herbs (ranarr to kwuarm)
+group: Herbs
+exampleItem: Ranarr weed
+exampleItemId: 257
+*/
+#define RAX_HERBS_MID_STYLE
+
+apply (name:FACT_HERBS_MID) {
+    RAX_HERBS_MID_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: High herbs (snapdragon to huasca)
+group: Herbs
+exampleItem: Torstol
+exampleItemId: 269
+*/
+#define RAX_HERBS_HIGH_STYLE
+
+apply (name:FACT_HERBS_HIGH) {
+    RAX_HERBS_HIGH_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Grimy herbs
+group: Herbs
+exampleItem: Grimy ranarr weed
+exampleItemId: 207
+*/
+#define RAX_HERBS_GRIMY_STYLE
+
+apply (name:FACT_HERBS_GRIMY) {
+    RAX_HERBS_GRIMY_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Low armour (bronze to mithril)
+group: Metal Equipment
+exampleItem: Mithril platebody
+exampleItemId: 1121
+*/
+#define RAX_ARMOUR_LOW_STYLE
+
+apply (name:FACT_BRONZE_ARMOUR || name:FACT_IRON_ARMOUR || name:FACT_STEEL_ARMOUR || name:FACT_BLACK_ARMOUR || name:FACT_MITHRIL_ARMOUR) {
+    RAX_ARMOUR_LOW_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Adamant armour
+group: Metal Equipment
+exampleItem: Adamant platebody
+exampleItemId: 1123
+*/
+#define RAX_ARMOUR_MID_STYLE
+
+apply (name:FACT_ADAMANT_ARMOUR) {
+    RAX_ARMOUR_MID_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Rune armour
+group: Metal Equipment
+exampleItem: Rune platebody
+exampleItemId: 1127
+*/
+#define RAX_ARMOUR_HIGH_STYLE
+
+apply (name:FACT_RUNE_ARMOUR) {
+    RAX_ARMOUR_HIGH_STYLE
+}
+
+/*@ define:input:categories
+type: style
+label: Dragon armour
+group: Metal Equipment
+exampleItem: Dragon platebody
+exampleItemId: 21892
+*/
+#define RAX_ARMOUR_DRAGON_STYLE
+
+apply (name:FACT_DRAGON_ARMOUR) {
+    RAX_ARMOUR_DRAGON_STYLE
+}

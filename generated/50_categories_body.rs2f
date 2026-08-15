@@ -13,126 +13,112 @@ expanded: false
 ---
 name: Food
 icon:
-  type: sprite
-  spriteId: 212
-  spriteIndex: 0
+  type: itemId
+  itemId: 13441
 expanded: false
 */
 /*@ define:group
 ---
 name: Potions
 icon:
-  type: sprite
-  spriteId: 205
-  spriteIndex: 0
+  type: itemId
+  itemId: 6685
 expanded: false
 */
 /*@ define:group
 ---
 name: Prayer
 icon:
-  type: sprite
-  spriteId: 201
-  spriteIndex: 0
+  type: itemId
+  itemId: 536
 expanded: false
 */
 /*@ define:group
 ---
 name: Ammo
 icon:
-  type: sprite
-  spriteId: 200
-  spriteIndex: 0
+  type: itemId
+  itemId: 11212
 expanded: false
 */
 /*@ define:group
 ---
 name: Runes
 icon:
-  type: sprite
-  spriteId: 215
-  spriteIndex: 0
+  type: itemId
+  itemId: 565
 expanded: false
 */
 /*@ define:group
 ---
 name: Mining
 icon:
-  type: sprite
-  spriteId: 209
-  spriteIndex: 0
+  type: itemId
+  itemId: 451
 expanded: false
 */
 /*@ define:group
 ---
 name: Smithing
 icon:
-  type: sprite
-  spriteId: 210
-  spriteIndex: 0
+  type: itemId
+  itemId: 2363
 expanded: false
 */
 /*@ define:group
 ---
 name: Herblore
 icon:
-  type: sprite
-  spriteId: 205
-  spriteIndex: 0
+  type: itemId
+  itemId: 207
 expanded: false
 */
 /*@ define:group
 ---
 name: Woodcutting
 icon:
-  type: sprite
-  spriteId: 214
-  spriteIndex: 0
+  type: itemId
+  itemId: 1513
 expanded: false
 */
 /*@ define:group
 ---
 name: Fishing
 icon:
-  type: sprite
-  spriteId: 211
-  spriteIndex: 0
+  type: itemId
+  itemId: 377
 expanded: false
 */
 /*@ define:group
 ---
 name: Farming
 icon:
-  type: sprite
-  spriteId: 217
-  spriteIndex: 0
+  type: itemId
+  itemId: 5295
 expanded: false
 */
 /*@ define:group
 ---
 name: Fletching
 icon:
-  type: sprite
-  spriteId: 208
-  spriteIndex: 0
+  type: itemId
+  itemId: 52
 expanded: false
 */
 /*@ define:group
 ---
 name: Construction
 icon:
-  type: sprite
-  spriteId: 221
-  spriteIndex: 0
+  type: itemId
+  itemId: 8782
 expanded: false
 */
 /*@ define:group
 ---
 name: Metal Equipment
 icon:
-  type: sprite
-  spriteId: 210
-  spriteIndex: 0
+  type: itemId
+  itemId: 1127
 expanded: false
 */
 /*@ define:group
@@ -140,7 +126,7 @@ expanded: false
 name: Misc
 icon:
   type: itemId
-  itemId: 1050
+  itemId: 590
 expanded: false
 */
 /*@ define:group
@@ -155,9 +141,8 @@ expanded: false
 ---
 name: Slayer
 icon:
-  type: sprite
-  spriteId: 216
-  spriteIndex: 0
+  type: itemId
+  itemId: 4155
 expanded: false
 */
 /*@ define:group
@@ -165,7 +150,7 @@ expanded: false
 name: Chambers of Xeric
 icon:
   type: itemId
-  itemId: 20997
+  itemId: 21003
 expanded: false
 */
 /*@ define:group
@@ -173,7 +158,7 @@ expanded: false
 name: Theatre of Blood
 icon:
   type: itemId
-  itemId: 22486
+  itemId: 22326
 expanded: false
 */
 /*@ define:group
@@ -181,7 +166,7 @@ expanded: false
 name: Tombs of Amascut
 icon:
   type: itemId
-  itemId: 26219
+  itemId: 25975
 expanded: false
 */
 /*@ define:group
@@ -196,9 +181,8 @@ expanded: false
 ---
 name: Fish
 icon:
-  type: sprite
-  spriteId: 212
-  spriteIndex: 0
+  type: itemId
+  itemId: 385
 expanded: false
 */
 /*@ define:group
@@ -222,79 +206,71 @@ expanded: false
 name: Pizza
 icon:
   type: itemId
-  itemId: 2289
+  itemId: 2297
 expanded: false
 */
 /*@ define:group
 ---
 name: Logs
 icon:
-  type: sprite
-  spriteId: 214
-  spriteIndex: 0
+  type: itemId
+  itemId: 1513
 expanded: false
 */
 /*@ define:group
 ---
 name: Ores
 icon:
-  type: sprite
-  spriteId: 209
-  spriteIndex: 0
+  type: itemId
+  itemId: 451
 expanded: false
 */
 /*@ define:group
 ---
 name: Bars
 icon:
-  type: sprite
-  spriteId: 210
-  spriteIndex: 0
+  type: itemId
+  itemId: 2363
 expanded: false
 */
 /*@ define:group
 ---
 name: Gems
 icon:
-  type: sprite
-  spriteId: 207
-  spriteIndex: 0
+  type: itemId
+  itemId: 1617
 expanded: false
 */
 /*@ define:group
 ---
 name: Herbs
 icon:
-  type: sprite
-  spriteId: 205
-  spriteIndex: 0
+  type: itemId
+  itemId: 207
 expanded: false
 */
 /*@ define:group
 ---
 name: Raw Fish
 icon:
-  type: sprite
-  spriteId: 211
-  spriteIndex: 0
+  type: itemId
+  itemId: 383
 expanded: false
 */
 /*@ define:group
 ---
 name: Fishing Bait
 icon:
-  type: sprite
-  spriteId: 211
-  spriteIndex: 0
+  type: itemId
+  itemId: 313
 expanded: false
 */
 /*@ define:group
 ---
 name: Fishing Equipment
 icon:
-  type: sprite
-  spriteId: 211
-  spriteIndex: 0
+  type: itemId
+  itemId: 301
 expanded: false
 */
 /*@ define:group
@@ -302,7 +278,7 @@ expanded: false
 name: Gauntlet
 icon:
   type: itemId
-  itemId: 23971
+  itemId: 23908
 expanded: false
 */
 

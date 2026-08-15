@@ -1,0 +1,283 @@
+{
+  "_comment": "Authored location rooms. Later than Joe so these hide/show lists win. Areas must exist in facts.",
+  "rooms": [
+    {
+      "id": "tob",
+      "group": "Theatre of Blood",
+      "areas": ["FACT_TOB_AREA"],
+      "icon": {"item": 22486},
+      "show": [
+        "Scythe of vitur (uncharged)",
+        "Ghrazi rapier",
+        "Sanguinesti staff (uncharged)",
+        "Justiciar faceguard",
+        "Justiciar chestguard",
+        "Justiciar legguards",
+        "Avernic defender hilt",
+        "Holy ornament kit",
+        "Sanguine ornament kit",
+        "Sanguine dust"
+      ],
+      "hide": []
+    },
+    {
+      "id": "hueycoatl",
+      "group": "Hueycoatl",
+      "areas": ["FACT_HUEYCOATL_AREA"],
+      "icon": {"item": 30085},
+      "show": [
+        "Hueycoatl hide",
+        "Tome of earth (empty)",
+        "Tome of earth",
+        "Dragon hunter wand",
+        "Huasca seed",
+        "Soiled page",
+        "Sun-kissed bones"
+      ],
+      "hide": []
+    },
+    {
+      "id": "amoxliatl",
+      "group": "Amoxliatl",
+      "areas": ["FACT_AMOXLIATL_AREA"],
+      "icon": {"item": 29889},
+      "show": [
+        "Glacial temotli",
+        "Earthbound tecpatl",
+        "Pendant of ates*",
+        "Frozen tear*",
+        "Tooth half of key (moon key)"
+      ],
+      "hide": []
+    },
+    {
+      "id": "doom",
+      "group": "Doom of Mokhaiotl",
+      "areas": ["FACT_DOOM_MOKHAIOTL_AREA"],
+      "icon": {"item": 30070},
+      "show": [
+        "Mokhaiotl cloth",
+        "Eye of ayak",
+        "Avernic treads",
+        "Demon tear*",
+        "Dom"
+      ],
+      "hide": []
+    },
+    {
+      "id": "titans",
+      "group": "Royal Titans",
+      "areas": ["FACT_ROYAL_TITANS_AREA"],
+      "icon": {"item": 30638},
+      "show": [
+        "Fire element staff crown",
+        "Ice element staff crown",
+        "Giantsoul amulet*",
+        "Desiccated page",
+        "Mystic vigour prayer scroll",
+        "Deadeye prayer scroll",
+        "Bran"
+      ],
+      "hide": []
+    },
+    {
+      "id": "maggot",
+      "group": "Maggot King",
+      "areas": ["FACT_MAGGOT_KING_AREA"],
+      "icon": {"item": 4155},
+      "show": [
+        "Elder venator fang",
+        "Crimson kisten",
+        "Maggot egg*",
+        "Maggot marquess",
+        "Stymphike tartare",
+        "Dull ancient medal",
+        "Venator fang",
+        "Venator tooth",
+        "Tarnished*",
+        "Blood sac",
+        "Letvek",
+        "Orikalkum gravel"
+      ],
+      "hide": []
+    },
+    {
+      "id": "colosseum",
+      "group": "Fortis Colosseum",
+      "areas": ["FACT_COLOSSEUM_AREA", "FACT_COLO_LOBBY_AREA"],
+      "icon": {"item": 28951},
+      "show": [
+        "Dizana's quiver*",
+        "Tonalztics of ralos*",
+        "Sunfire fanatic helm",
+        "Sunfire fanatic cuirass",
+        "Sunfire fanatic chausses",
+        "Echo crystal",
+        "Sunfire splinters",
+        "Smol heredit"
+      ],
+      "hide": []
+    },
+    {
+      "id": "muspah",
+      "group": "Phantom Muspah",
+      "areas": ["FACT_MUSPAH_AREA"],
+      "icon": {"sprite": "SKILL_RANGED"},
+      "show": [
+        "Venator shard",
+        "Ancient essence",
+        "Frozen cache",
+        "Ancient icon"
+      ],
+      "hide": []
+    },
+    {
+      "id": "dt2",
+      "group": "Desert Treasure II",
+      "areas": [
+        "FACT_DUKE_SUCELLUS_AREA",
+        "FACT_THE_LEVIATHAN_AREA",
+        "FACT_THE_WHISPERER_AREA",
+        "FACT_VARDORVIS_AREA"
+      ],
+      "icon": {"sprite": "SKILL_MAGIC"},
+      "show": [
+        "Magus vestige",
+        "Eye of the duke",
+        "Ice quartz",
+        "Venator vestige",
+        "Leviathan's lure",
+        "Smoke quartz",
+        "Bellator vestige",
+        "Siren's staff",
+        "Shadow quartz",
+        "Ultor vestige",
+        "Executioner's axe head",
+        "Blood quartz",
+        "Virtus mask",
+        "Virtus robe top",
+        "Virtus robe bottom",
+        "Chromium ingot",
+        "Awakener's orb"
+      ],
+      "hide": []
+    },
+    {
+      "id": "hydra",
+      "group": "Alchemical Hydra",
+      "areas": ["FACT_SLAYER_HYDRAS_AREA"],
+      "icon": {"item": 4155},
+      "show": [
+        "Hydra's claw",
+        "Hydra tail",
+        "Hydra leather",
+        "Hydra's fang",
+        "Hydra's eye",
+        "Hydra's heart",
+        "Alchemical hydra heads",
+        "Brimstone key"
+      ],
+      "hide": []
+    },
+    {
+      "id": "araxxor",
+      "group": "Araxxor",
+      "areas": ["FACT_SLAYER_ARAXYTES_AREA"],
+      "icon": {"item": 4155},
+      "show": [
+        "Araxyte fang",
+        "Noxious point",
+        "Noxious blade",
+        "Noxious pommel",
+        "Araxyte head",
+        "Araxyte venom sack",
+        "Nid"
+      ],
+      "hide": []
+    },
+    {
+      "id": "kraken",
+      "group": "Kraken",
+      "areas": ["FACT_SLAYER_CAVE_KRAKEN_AREA"],
+      "icon": {"item": 12004},
+      "show": [
+        "Kraken tentacle",
+        "Trident of the seas",
+        "Jar of dirt"
+      ],
+      "hide": []
+    },
+    {
+      "id": "abyssal",
+      "group": "Abyssal demons",
+      "areas": [
+        "FACT_SLAYER_ABYSSAL_DEMONS_ABYSSAL_AREA_AREA",
+        "FACT_SLAYER_ABYSSAL_DEMONS_CATACOMBS_CENTER_AREA",
+        "FACT_SLAYER_ABYSSAL_DEMONS_CATACOMBS_NORTH_AREA",
+        "FACT_SLAYER_ABYSSAL_DEMONS_SLAYER_TOWER_TOP_AREA",
+        "FACT_SLAYER_ABYSSAL_DEMONS_SLAYER_TOWER_BASEMENT_AREA",
+        "FACT_SLAYER_ABYSSAL_DEMONS_WILDERNESS_SLAYER_CAVE_AREA"
+      ],
+      "icon": {"item": 4151},
+      "show": [
+        "Abyssal whip",
+        "Abyssal dagger",
+        "Abyssal head",
+        "Unsired",
+        "Bludgeon spine",
+        "Bludgeon claw",
+        "Bludgeon axon"
+      ],
+      "hide": []
+    },
+    {
+      "id": "dark_beasts",
+      "group": "Dark beasts",
+      "areas": [
+        "FACT_SLAYER_DARK_BEASTS_MOURNER_TUNNELS_AREA",
+        "FACT_SLAYER_DARK_BEASTS_IORWERTH_DUNGEON_1_AREA",
+        "FACT_SLAYER_DARK_BEASTS_IORWERTH_DUNGEON_2_AREA"
+      ],
+      "icon": {"item": 11235},
+      "show": ["Dark bow", "Death talisman"],
+      "hide": []
+    },
+    {
+      "id": "drakes",
+      "group": "Drakes",
+      "areas": ["FACT_SLAYER_DRAKES_AREA"],
+      "icon": {"item": 4155},
+      "show": ["Drake's claw", "Drake's tooth"],
+      "hide": []
+    },
+    {
+      "id": "nechryael",
+      "group": "Nechryael",
+      "areas": [
+        "FACT_SLAYER_NECHRYAEL_SLAYER_TOWER_TOP_AREA",
+        "FACT_SLAYER_NECHRYAEL_SLAYER_TOWER_BASEMENT_AREA",
+        "FACT_SLAYER_GREATER_NECHRYAEL_CATACOMBS_AREA",
+        "FACT_SLAYER_GREATER_NECHRYAEL_IORWERTH_NORTH_AREA",
+        "FACT_SLAYER_GREATER_NECHRYAEL_IORWERTH_SOUTH_AREA",
+        "FACT_SLAYER_GREATER_NECHRYAEL_WILDERNESS_SLAYER_CAVE_AREA"
+      ],
+      "icon": {"item": 4155},
+      "show": ["Rune boots", "Imbued heart", "Eternal gem"],
+      "hide": []
+    },
+    {
+      "id": "venators",
+      "group": "Venators",
+      "areas": ["FACT_VAMPYRIUM_AREA"],
+      "icon": {"sprite": "SKILL_HUNTER"},
+      "show": [
+        "Venator fang",
+        "Venator tooth",
+        "Elder venator fang",
+        "Stymphike feather",
+        "Blood sac"
+      ],
+      "hide": []
+    }
+  ]
+}

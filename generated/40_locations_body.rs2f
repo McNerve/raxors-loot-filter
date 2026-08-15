@@ -3,7 +3,7 @@
 name: Chambers of Xeric
 icon:
   type: itemId
-  itemId: 20997
+  itemId: 21003
 expanded: false
 */
 /*@ define:group
@@ -11,7 +11,7 @@ expanded: false
 name: Tombs of Amascut
 icon:
   type: itemId
-  itemId: 26219
+  itemId: 25975
 expanded: false
 */
 /*@ define:group
@@ -19,7 +19,7 @@ expanded: false
 name: Yama
 icon:
   type: itemId
-  itemId: 30750
+  itemId: 30759
 expanded: false
 */
 /*@ define:group
@@ -27,7 +27,7 @@ expanded: false
 name: "Callisto / Artio"
 icon:
   type: itemId
-  itemId: 13178
+  itemId: 27667
 expanded: false
 */
 /*@ define:group
@@ -35,7 +35,7 @@ expanded: false
 name: "Venenatis / Spindel"
 icon:
   type: itemId
-  itemId: 13177
+  itemId: 27670
 expanded: false
 */
 /*@ define:group
@@ -43,7 +43,7 @@ expanded: false
 name: "Vet'ion / Calvar'ion"
 icon:
   type: itemId
-  itemId: 13179
+  itemId: 27673
 expanded: false
 */
 /*@ define:group
@@ -51,7 +51,7 @@ expanded: false
 name: God Wars Dungeon
 icon:
   type: itemId
-  itemId: 11804
+  itemId: 11832
 expanded: false
 */
 /*@ define:group
@@ -59,7 +59,7 @@ expanded: false
 name: Commander Zilyana
 icon:
   type: itemId
-  itemId: 11806
+  itemId: 11838
 expanded: false
 */
 /*@ define:group
@@ -67,7 +67,7 @@ expanded: false
 name: General Graardor
 icon:
   type: itemId
-  itemId: 11808
+  itemId: 11832
 expanded: false
 */
 /*@ define:group
@@ -75,7 +75,7 @@ expanded: false
 name: Kree'arra
 icon:
   type: itemId
-  itemId: 11802
+  itemId: 11826
 expanded: false
 */
 /*@ define:group
@@ -83,7 +83,7 @@ expanded: false
 name: K'ril Tsutsaroth
 icon:
   type: itemId
-  itemId: 11816
+  itemId: 11791
 expanded: false
 */
 /*@ define:group
@@ -98,9 +98,8 @@ expanded: false
 ---
 name: Wilderness Slayer
 icon:
-  type: sprite
-  spriteId: 216
-  spriteIndex: 0
+  type: itemId
+  itemId: 23083
 expanded: false
 */
 /*@ define:group
@@ -124,7 +123,7 @@ expanded: false
 name: The Gauntlet
 icon:
   type: itemId
-  itemId: 23971
+  itemId: 23908
 expanded: false
 */
 /*@ define:group
@@ -132,7 +131,7 @@ expanded: false
 name: Last Man Standing
 icon:
   type: itemId
-  itemId: 24520
+  itemId: 13307
 expanded: false
 */
 /*@ define:group
@@ -140,7 +139,7 @@ expanded: false
 name: Bounty Hunter
 icon:
   type: itemId
-  itemId: 27904
+  itemId: 13307
 expanded: false
 */
 

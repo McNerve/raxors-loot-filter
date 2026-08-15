@@ -1,13 +1,51 @@
 /*@ define:module:display
 ---
 name: Display
-subtitle: Icons, prices, timers, beams
+subtitle: What the floor shows
 description: |
-  How every ground item looks before anything else runs.
-
-  Later modules (Categories, Value, Rares) overwrite these. Turn a switch
-  off here if you want less noise everywhere.
+  Masters first. Later modules overwrite the look, not these switches.
 */
+
+/*@ define:group
+---
+name: Show
+expanded: true
+*/
+
+/*@ define:input:display
+type: boolean
+label: Despawn
+group: Show
+*/
+#define RAX_SHOW_DESPAWN true
+
+/*@ define:input:display
+type: boolean
+label: Prices
+group: Show
+*/
+#define RAX_SHOW_TRADEABLE_VALUE true
+
+/*@ define:input:display
+type: boolean
+label: Icons
+group: Show
+*/
+#define RAX_SHOW_ICONS true
+
+/*@ define:input:display
+type: boolean
+label: Beams
+group: Show
+*/
+#define RAX_ALLOW_LOOTBEAMS true
+
+/*@ define:input:display
+type: boolean
+label: Sounds
+group: Show
+*/
+#define RAX_ALLOW_SOUNDS true
 
 /*@ define:input:display
 type: style
@@ -51,13 +89,6 @@ name: Prices
 expanded: false
 */
 
-/*@ define:input:display
-type: boolean
-label: Show prices on tradeables
-group: Prices
-*/
-#define RAX_SHOW_TRADEABLE_VALUE true
-
 apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && RAX_SHOW_TRADEABLE_VALUE) {
     showValue = true;
 }
@@ -90,13 +121,6 @@ name: Timers
 expanded: false
 */
 
-/*@ define:input:display
-type: boolean
-label: Show despawn timers
-group: Timers
-*/
-#define RAX_SHOW_DESPAWN true
-
 apply (RAX_SHOW_DESPAWN) {
     showDespawn = true;
 }
@@ -121,13 +145,6 @@ apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && val
 name: Icons
 expanded: false
 */
-
-/*@ define:input:display
-type: boolean
-label: Show item icons
-group: Icons
-*/
-#define RAX_SHOW_ICONS true
 
 apply (!RAX_SHOW_ICONS) {
     icon = Sprite(9000000, 0);
@@ -179,20 +196,6 @@ description: |
   Masters. Value and Rares can still turn beams/sounds back on for those drops
   unless you also disable them there.
 */
-
-/*@ define:input:display
-type: boolean
-label: Allow lootbeams
-group: Beams and sounds
-*/
-#define RAX_ALLOW_LOOTBEAMS true
-
-/*@ define:input:display
-type: boolean
-label: Allow drop sounds
-group: Beams and sounds
-*/
-#define RAX_ALLOW_SOUNDS true
 
 /*@ define:input:display
 type: boolean

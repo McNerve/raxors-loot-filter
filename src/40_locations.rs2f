@@ -3,7 +3,8 @@
 name: Locations
 subtitle: This room only
 description: |
-  Hide and force-show inside a room. Cox, ToA, Yama, GWD, wildy bosses, Gauntlet, LMS, BH.
+  Hide and force-show inside a room. Raids, GWD, wildy, Varlamore, Vampyrium,
+  DT2, slayer caves. New rooms sit below the older Cox/ToA/GWD set.
 
   Runs after Hide so a room can put an item back. Categories/Value/Rares still style it.
 */

@@ -1,12 +1,12 @@
 /*@ define:module:alerts
 ---
 name: Alerts
-subtitle: Pets, keys, clues, forgotten gear
+subtitle: Keys, forgotten gear, mutes
 description: |
   Last visible module. Sounds and mutes run after every style so they stick.
 
-  Forgotten gear = you dropped one ammo or a cannon piece. Pets, keys,
-  champion scrolls, and clue nests/bottles/geodes get their own ping.
+  Pets are not here. They follow you — they do not hit the floor.
+  Clue look lives in the Clues module.
 */
 
 /*@ define:group
@@ -32,7 +32,7 @@ group: Forgotten gear
 */
 #define RAX_AMMO_PING_SOUND 933
 
-apply (RAX_ALLOW_SOUNDS && RAX_AMMO_PING && ownership:OWNERSHIP_SELF && quantity:==1 && (name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST)) {
+apply (RAX_ALLOW_SOUNDS && RAX_AMMO_PING && ownership:OWNERSHIP_SELF && quantity:==1 && (name:FACT_AMMO_STANDARD_ARROWS_LIST || name:FACT_AMMO_SEEKING_ARROWS_LIST || name:FACT_AMMO_BRUTAL_ARROWS_LIST || name:FACT_AMMO_SPECIAL_ARROWS_LIST || name:FACT_AMMO_DARTS_LIST || name:FACT_AMMO_JAVELINS_LIST || name:FACT_AMMO_BOLTS_LIST || name:FACT_AMMO_BOLTS_E_LIST || name:FACT_AMMO_DRAGON_BOLTS_E_LIST || name:FACT_AMMO_SPECIAL_BOLTS_LIST)) {
     sound = RAX_AMMO_PING_SOUND;
 }
 
@@ -69,39 +69,6 @@ apply (RAX_CANNON_PIECES && name:["Cannon barrels","Cannon base","Cannon stand",
 
 /*@ define:group
 ---
-name: Pets
-expanded: false
-*/
-
-/*@ define:input:alerts
-type: boolean
-label: Highlight pets
-group: Pets
-*/
-#define RAX_PETS true
-
-/*@ define:input:alerts
-type: style
-label: Pet style
-group: Pets
-exampleItem: Baby mole
-exampleItemId: 12646
-*/
-#define RAX_PET_STYLE fontType = 3; showLootbeam = true; notify = true; sound = "uniques.wav"; icon = CurrentItem();
-
-/*@ define:input:alerts
-type: stringlist
-label: Pets
-group: Pets
-*/
-#define RAX_PET_LIST ["Abyssal orphan","Baby mole","Kalphite princess","Pet smoke devil","Skotos","Venenatis spiderling","Callisto cub","Vet'ion jr.","Scorpia's offspring","Prince black dragon","Pet snakeling","Pet kree'arra","Pet general graardor","Pet zilyana","Pet k'ril tsutsaroth","Pet kraken","Hellpuppy","Pet dark core","Pet penance queen","Heron","Rock golem","Beaver","Baby chinchompha","Giant squirrel","Tangleroot","Rift guardian","Rocky","Herbi","Chompy chick","Pet chaos elemental","Pet dagannoth supreme","Pet dagannoth prime","Pet dagannoth rex","Pet penance queen","Noon","Midnight","Ikkle hydra","Sarachnis cub","Youngllef","Corrupted youngllef","Little nightmare","Lil' zik","Tumeken's guardian","Nexling","Wisp","Butch","Lil'viathan","Baron","Muphin","Quetzin","Smol heredit","Nid","Huberte","Moxi","Yami"]
-
-apply (RAX_PETS && name:RAX_PET_LIST) {
-    RAX_PET_STYLE
-}
-
-/*@ define:group
----
 name: Keys
 expanded: false
 */
@@ -131,35 +98,6 @@ group: Keys
 
 apply (RAX_KEYS && name:RAX_KEY_LIST) {
     RAX_KEY_STYLE
-}
-
-/*@ define:group
----
-name: Clue containers
-expanded: false
-description: |
-  Nests, bottles, geodes, scroll boxes — the thing that *becomes* a clue.
-  Clue scrolls themselves are styled under Categories.
-*/
-
-/*@ define:input:alerts
-type: boolean
-label: Highlight clue nests, bottles, geodes, scroll boxes
-group: Clue containers
-*/
-#define RAX_CLUE_CONTAINERS true
-
-/*@ define:input:alerts
-type: style
-label: Clue container style
-group: Clue containers
-exampleItem: Clue nest (elite)
-exampleItemId: 19712
-*/
-#define RAX_CLUE_CONTAINER_STYLE sound = "clues.wav"; icon = CurrentItem();
-
-apply (RAX_CLUE_CONTAINERS && name:["Clue nest*","Clue bottle*","Clue geode*","Scroll box*","Reward casket*"]) {
-    RAX_CLUE_CONTAINER_STYLE
 }
 
 /*@ define:group
