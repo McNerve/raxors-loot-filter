@@ -1,0 +1,138 @@
+/*@ define:module:identity
+---
+name: Identity
+subtitle: Base paint, prices, icons
+description: |
+  First layer. Everything else stacks on top.
+
+  Icons: aisle chips use the item sprite by default. Turn on "Force aisle icon"
+  and change the style below to swap every chip at once (sprite, file, or off).
+  Per-item aisle styles still exist — disable the force switch to let those win.
+*/
+
+/*@ define:input:identity
+type: style
+label: Default
+exampleItem: Santa hat
+exampleItemId: 1050
+*/
+#define RAX_IDENTITY_DEFAULT textColor = "#FFFFFFFF"; textAccentColor = "#ff000000"; textAccent = 1; showDespawn = true; menuSort = 0; icon = CurrentItem();
+
+apply (true) {
+    RAX_IDENTITY_DEFAULT
+}
+
+/*@ define:input:identity
+type: style
+label: Stackable / noted
+exampleItem: Magic shortbow (u)
+exampleItemId: 73
+*/
+#define RAX_IDENTITY_STACK textColor = "#ffd7b3e8"; textAccentColor = "#ff000000"; menuTextColor = "#ffd7b3e8"; textAccent = 1; showDespawn = true; icon = CurrentItem();
+
+apply (stackable:true || noted:true) {
+    RAX_IDENTITY_STACK
+}
+
+/*@ define:input:identity
+type: style
+label: Untradeable
+exampleItem: Long bone
+exampleItemId: 10976
+*/
+#define RAX_IDENTITY_UNTRADE textColor = "#fff79e9e"; textAccentColor = "#ff000000"; menuTextColor = "#fff79e9e"; showDespawn = true; icon = CurrentItem();
+
+apply (tradeable:false && !name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) {
+    RAX_IDENTITY_UNTRADE
+}
+
+/*@ define:input:identity
+type: boolean
+label: Show value on tradeables
+group: Prices
+*/
+#define RAX_SHOW_TRADEABLE_VALUE true
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && RAX_SHOW_TRADEABLE_VALUE) {
+    showValue = true;
+}
+
+/*@ define:input:identity
+type: boolean
+label: Show value on untradeables
+group: Prices
+*/
+#define RAX_SHOW_UNTRADEABLE_VALUE false
+
+apply (tradeable:false && RAX_SHOW_UNTRADEABLE_VALUE) {
+    showValue = true;
+}
+
+/*@ define:input:identity
+type: number
+label: Hide despawn timer below this value
+group: Prices
+*/
+#define RAX_DESPAWN_MIN_VALUE 0
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_DESPAWN_MIN_VALUE) {
+    showDespawn = false;
+}
+
+/*@ define:input:identity
+type: number
+label: Hide prices below this value
+group: Prices
+*/
+#define RAX_PRICE_MIN_VALUE 20000
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_PRICE_MIN_VALUE) {
+    showValue = false;
+}
+
+/*@ define:input:identity
+type: number
+label: Hide icons below this value
+group: Icons
+*/
+#define RAX_ICON_MIN_VALUE 0
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_ICON_MIN_VALUE) {
+    icon = Sprite(9000000, 0);
+}
+
+/*@ define:input:identity
+type: stringlist
+label: Always show an icon for these
+group: Icons
+*/
+#define RAX_ICON_ALWAYS []
+
+apply (name:RAX_ICON_ALWAYS) {
+    icon = CurrentItem();
+}
+
+/*@ define:group
+---
+name: Aisle icon policy
+expanded: false
+description: |
+  One switch, one style. Changes the icon on every aisle chip.
+  Turn it off if you want per-item icons from the Aisle module to win.
+*/
+
+/*@ define:input:identity
+type: boolean
+label: Force one icon onto every aisle chip
+group: Aisle icon policy
+*/
+#define RAX_FORCE_AISLE_ICON true
+
+/*@ define:input:identity
+type: style
+label: Forced aisle icon
+group: Aisle icon policy
+exampleItem: Santa hat
+exampleItemId: 1050
+*/
+#define RAX_AISLE_ICON_STYLE icon = CurrentItem();

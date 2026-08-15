@@ -1,0 +1,38 @@
+/*@ define:module:tokens
+hidden: true
+name: tokens
+*/
+
+// Visual language. Style inputs below still expand to raw properties so
+// Filterscape's editor works. These tokens are the source of truth for
+// anything that is not a style input.
+
+#define RAX_INK            "#ff000000"
+#define RAX_INK_WHITE      "#FFFFFFFF"
+#define RAX_INK_SOFT       "#47000000"
+#define RAX_INK_HARD       "#87000000"
+
+#define RAX_HEAT_1_FILL    "#9945dc32"
+#define RAX_HEAT_2_FILL    "#9966b2ff"
+#define RAX_HEAT_3_FILL    "#99f29b4b"
+#define RAX_HEAT_4_FILL    "#99c30000"
+#define RAX_ALCH_FILL      "#a1fadb3e"
+#define RAX_UNIQUE_ACCENT  "#ffff0084"
+#define RAX_RDT_GOLD       "#FFdea71a"
+#define RAX_STACK_LILAC    "#ffd7b3e8"
+#define RAX_UNTRADE_ROSE   "#fff79e9e"
+
+#define RAX_ICON_ITEM      CurrentItem()
+#define RAX_ICON_OFF       Sprite(9000000, 0)
+#define RAX_ICON_ALCH      File("alch.png")
+#define RAX_ICON_FOOD      Sprite(3288, 0)
+
+#define RAX_SOUND_HEAT_3   "tier3.wav"
+#define RAX_SOUND_HEAT_4   "tier4.wav"
+#define RAX_SOUND_UNIQUE   "uniques.wav"
+#define RAX_SOUND_CLUE     "clues.wav"
+#define RAX_SOUND_SILENCE  2411
+
+#define RAX_FONT_SMALL     1
+#define RAX_FONT_BOLD      3
+#define RAX_ACCENT_SHADOW  1

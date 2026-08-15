@@ -1,0 +1,1897 @@
+/*@ define:input:where
+type: enumlist
+label: Potions to force hidden
+group: Chambers of Xeric
+enum: [
+  {
+    "value": "Elder*",
+    "label": "Elder potion"
+  },
+  {
+    "value": "Twisted*",
+    "label": "Twisted potion"
+  },
+  {
+    "value": "Kodai*",
+    "label": "Kodai potion"
+  },
+  {
+    "value": "Revitalisation*",
+    "label": "Revitalisation potion"
+  },
+  {
+    "value": "Prayer enhance*",
+    "label": "Prayer enhance"
+  },
+  {
+    "value": "Xeric's aid*",
+    "label": "Xeric's aid"
+  },
+  {
+    "value": "Antipoison*",
+    "label": "Antipoison potion"
+  },
+  {
+    "value": "Overload*",
+    "label": "Overload"
+  }
+]
+*/
+#define RAX_COX_POTIONS_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Fish to force hidden
+group: Chambers of Xeric
+enum: [
+  {
+    "value": "Pysk fish (0)",
+    "label": "Pysk fish"
+  },
+  {
+    "value": "Suphi fish (1)",
+    "label": "Suphi fish"
+  },
+  {
+    "value": "Leckish fish (2)",
+    "label": "Leckish fish"
+  },
+  {
+    "value": "Brawk fish (3)",
+    "label": "Brawk fish"
+  },
+  {
+    "value": "Mycil fish (4)",
+    "label": "Mycil fish"
+  },
+  {
+    "value": "Roqed fish (5)",
+    "label": "Roqed fish"
+  },
+  {
+    "value": "Kyren fish (6)",
+    "label": "Kyren fish"
+  }
+]
+*/
+#define RAX_COX_FISH_HIDE ["Pysk fish (0)","Suphi fish (1)","Leckish fish (2)","Brawk fish (3)","Mycil fish (4)","Roqed fish (5)","Kyren fish (6)"]
+
+/*@ define:input:where
+type: enumlist
+label: Bats to force hidden
+group: Chambers of Xeric
+enum: [
+  {
+    "value": "Guanic bat (0)",
+    "label": "Guanic bat (0)"
+  },
+  {
+    "value": "Prael bat (1)",
+    "label": "Prael bat (1)"
+  },
+  {
+    "value": "Giral bat (2)",
+    "label": "Giral bat (2)"
+  },
+  {
+    "value": "Phluxia bat (3)",
+    "label": "Phluxia bat (3)"
+  },
+  {
+    "value": "Kryket bat (4)",
+    "label": "Kryket bat (4)"
+  },
+  {
+    "value": "Murng bat (5)",
+    "label": "Murng bat (5)"
+  },
+  {
+    "value": "Psykk bat (6)",
+    "label": "Psykk bat (6)"
+  }
+]
+*/
+#define RAX_COX_BATS_HIDE ["Guanic bat (0)","Prael bat (1)","Giral bat (2)","Phluxia bat (3)","Kryket bat (4)","Murng bat (5)","Psykk bat (6)"]
+
+/*@ define:input:where
+type: enumlist
+label: Seeds to force hidden
+group: Chambers of Xeric
+enum: [
+  "Golpar seed",
+  "Buchu seed",
+  "Noxifer seed"
+]
+*/
+#define RAX_COX_SEEDS_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Misc drops to force hidden
+group: Chambers of Xeric
+enum: [
+  "Bones",
+  "Big bones",
+  "Lockpick",
+  "Fishing rod",
+  "Iron pickaxe",
+  "Iron axe",
+  "Butterfly net",
+  "Hammer",
+  "Tinderbox",
+  "Cave worms",
+  "Endarkened juice",
+  "Stinkhorn mushroom",
+  "Cicely",
+  "Mallignum root plank",
+  "Cavern grubs",
+  "Empty gourd vial",
+  "Water-filled gourd vial",
+  "Spade",
+  "Seed dipper",
+  "Rake"
+]
+*/
+#define RAX_COX_MISC_DROPS_HIDE ["Bones","Big bones","Fishing rod","Iron pickaxe","Iron axe","Butterfly net","Hammer","Tinderbox","Cave worms"]
+
+apply (area:FACT_COX_AREA && name:RAX_COX_FISH_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:RAX_COX_BATS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:RAX_COX_SEEDS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:RAX_COX_MISC_DROPS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["elder (-)*",   "elder potion*",   "elder (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["twisted (-)*",   "twisted potion*",   "twisted (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["kodai (-)*",   "kodai potion*",   "kodai (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["revitalisation (-)*",   "revitalisation potion*",   "revitalisation (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["prayer enhance (-)*",   "prayer enhance (4)",   "prayer enhance (3)",   "prayer enhance (2)",   "prayer enhance (1)",   "prayer enhance (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["xeric's aid (-)*",   "xeric's aid (4)",   "xeric's aid (3)",   "xeric's aid (2)",   "xeric's aid (1)",   "xeric's aid (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["antipoison (-)*",   "antipoison (4)",   "antipoison (3)",   "antipoison (2)",   "antipoison (1)",   "antipoison (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COX_AREA && name:["overload (-)*",   "overload (4)",   "overload (3)",   "overload (2)",   "overload (1)",   "overload (+)*", ] && name:RAX_COX_POTIONS_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:where
+type: enumlist
+label: Supplies to force shown
+group: Tombs of Amascut
+enum: [
+  {
+    "value": "Honey locust (*",
+    "label": "Honey locust"
+  },
+  {
+    "value": "Ambrosia (*",
+    "label": "Ambrosia"
+  },
+  {
+    "value": "Blessed crystal scarab (*",
+    "label": "Blessed crystal scarab"
+  },
+  {
+    "value": "Liquid adrenaline (*",
+    "label": "Liquid adrenaline"
+  },
+  {
+    "value": "Nectar (*",
+    "label": "Nectar"
+  },
+  {
+    "value": "Silk dressing (*",
+    "label": "Silk dressing"
+  },
+  {
+    "value": "Smelling salts (*",
+    "label": "Smelling salts"
+  },
+  {
+    "value": "Tears of Elidinis (*",
+    "label": "Tears of Elidinis"
+  }
+]
+*/
+#define RAX_TOA_SUPPLIES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Supplies to force hidden
+group: Tombs of Amascut
+enum: [
+  {
+    "value": "Honey locust (*",
+    "label": "Honey locust"
+  },
+  {
+    "value": "Ambrosia (*",
+    "label": "Ambrosia"
+  },
+  {
+    "value": "Blessed crystal scarab (*",
+    "label": "Blessed crystal scarab"
+  },
+  {
+    "value": "Liquid adrenaline (*",
+    "label": "Liquid adrenaline"
+  },
+  {
+    "value": "Nectar (*",
+    "label": "Nectar"
+  },
+  {
+    "value": "Silk dressing (*",
+    "label": "Silk dressing"
+  },
+  {
+    "value": "Smelling salts (*",
+    "label": "Smelling salts"
+  },
+  {
+    "value": "Tears of Elidinis (*",
+    "label": "Tears of Elidinis"
+  }
+]
+*/
+#define RAX_TOA_SUPPLIES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Room items to force shown
+group: Tombs of Amascut
+enum: [
+  "Neutralising potion",
+  "Water container"
+]
+*/
+#define RAX_TOA_ROOM_ITEMS_SHOW ["Water container"]
+
+/*@ define:input:where
+type: enumlist
+label: Room items to force hidden
+group: Tombs of Amascut
+enum: [
+  "Neutralising potion",
+  "Water container"
+]
+*/
+#define RAX_TOA_ROOM_ITEMS_HIDE ["Neutralising potion"]
+
+/*@ define:input:where
+type: enumlist
+label: MVP items to force shown
+group: Tombs of Amascut
+enum: [
+  "Big banana",
+  "Eldritch ashes",
+  "Fang",
+  "Scarab dung"
+]
+*/
+#define RAX_TOA_MVP_ITEMS_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: MVP items to force hidden
+group: Tombs of Amascut
+enum: [
+  "Big banana",
+  "Eldritch ashes",
+  "Fang",
+  "Scarab dung"
+]
+*/
+#define RAX_TOA_MVP_ITEMS_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Books to force shown
+group: Tombs of Amascut
+enum: [
+  "Akila's journal",
+  "Apmeken's Capture",
+  "Crondis' Capture",
+  "Het's Capture",
+  "Scabaras' Capture",
+  "The Wardens",
+  "The Jackal's Torch"
+]
+*/
+#define RAX_TOA_BOOKS_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Books to force hidden
+group: Tombs of Amascut
+enum: [
+  "Akila's journal",
+  "Apmeken's Capture",
+  "Crondis' Capture",
+  "Het's Capture",
+  "Scabaras' Capture",
+  "The Wardens",
+  "The Jackal's Torch"
+]
+*/
+#define RAX_TOA_BOOKS_HIDE ["Akila's journal","Apmeken's Capture","Crondis' Capture","Het's Capture","Scabaras' Capture","The Wardens","The Jackal's Torch"]
+
+apply (area:FACT_TOA_AREA && name:RAX_TOA_SUPPLIES_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_SUPPLIES_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_ROOM_ITEMS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_ROOM_ITEMS_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_MVP_ITEMS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_MVP_ITEMS_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_BOOKS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_TOA_AREA && name:RAX_TOA_BOOKS_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: stringlist
+label: Yama force shown
+group: Yama
+*/
+#define RAX_BOSSING_YAMA_SHOW ["Chasm teleport scroll","Oathplate shards","Aether catalyst","Diabolic worms","Barrel of demonic tallow (full)","Forgotten lockbox","Rite of vile transference","Soulflame horn","Dossier","Oathplate helm","Oathplate chest","Oathplate legs","Pineapple pizza","Wild pie","Prayer potion(3)","Super combat potion(1)","Super restore mix(2)"]
+
+/*@ define:input:where
+type: stringlist
+label: Yama force hidden
+group: Yama
+*/
+#define RAX_BOSSING_YAMA_HIDE []
+
+apply (area:FACT_YAMA_AREA && name:RAX_BOSSING_YAMA_HIDE) {
+    hidden = true;
+}
+
+apply (area:FACT_YAMA_AREA && name:RAX_BOSSING_YAMA_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: stringlist
+label: "Callisto / Artio Items to show"
+group: "Callisto / Artio"
+*/
+#define RAX_BOSSING_CALLISTO_SHOW ["Blighted anglerfish","Blighted karambwan","Blighted super restore(3)","Blighted super restore(4)","Super restore(4)","Dark crab","Strange fruit","Dark fishing bait"]
+
+/*@ define:input:where
+type: stringlist
+label: "Callisto / Artio Items to hide"
+group: "Callisto / Artio"
+*/
+#define RAX_BOSSING_CALLISTO_HIDE []
+
+apply ((area:FACT_CALLISTO_AREA || area:FACT_ARTIO_AREA) && name:RAX_BOSSING_CALLISTO_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_CALLISTO_AREA || area:FACT_ARTIO_AREA) && name:RAX_BOSSING_CALLISTO_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: stringlist
+label: "Venenatis / Spindel Items to show"
+group: "Venenatis / Spindel"
+*/
+#define RAX_BOSSING_VENENATIS_SHOW ["Blighted anglerfish","Blighted karambwan","Blighted super restore(3)","Blighted super restore(4)","Super restore(4)","Dark crab","Strange fruit","Dark fishing bait"]
+
+/*@ define:input:where
+type: stringlist
+label: "Venenatis / Spindel Items to hide"
+group: "Venenatis / Spindel"
+*/
+#define RAX_BOSSING_VENENATIS_HIDE []
+
+apply ((area:FACT_VENENATIS_AREA || area:FACT_SPINDEL_AREA) && name:RAX_BOSSING_VENENATIS_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_VENENATIS_AREA || area:FACT_SPINDEL_AREA) && name:RAX_BOSSING_VENENATIS_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: stringlist
+label: "Vet'ion / Calvar'ion Items to show"
+group: "Vet'ion / Calvar'ion"
+*/
+#define RAX_BOSSING_VETION_SHOW ["Blighted anglerfish","Blighted karambwan","Blighted super restore(3)","Blighted super restore(4)","Super restore(4)","Dark crab","Strange fruit","Dark fishing bait"]
+
+/*@ define:input:where
+type: stringlist
+label: "Vet'ion / Calvar'ion Items to hide"
+group: "Vet'ion / Calvar'ion"
+*/
+#define RAX_BOSSING_VETION_HIDE []
+
+apply ((area:FACT_VETION_AREA || area:FACT_CALVARION_AREA) && name:RAX_BOSSING_VETION_HIDE) {
+    hidden = true;
+}
+
+apply ((area:FACT_VETION_AREA || area:FACT_CALVARION_AREA) && name:RAX_BOSSING_VETION_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: stringlist
+label: God Wars Dungeon force shown
+group: God Wars Dungeon
+*/
+#define RAX_BOSSING_GOD_WARS_DUNGEON_SHOW ["Hammer"]
+
+/*@ define:input:where
+type: stringlist
+label: God Wars Dungeon force hidden
+group: God Wars Dungeon
+*/
+#define RAX_BOSSING_GOD_WARS_DUNGEON_HIDE []
+
+apply (area:FACT_GOD_WARS_DUNGEON_AREA && name:RAX_BOSSING_GOD_WARS_DUNGEON_HIDE) {
+    hidden = true;
+}
+
+apply (area:FACT_GOD_WARS_DUNGEON_AREA && name:RAX_BOSSING_GOD_WARS_DUNGEON_SHOW) {
+    hidden = false;
+}
+
+
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force hidden
+group: Commander Zilyana
+enum: [
+  "Saradomin sword",
+  "Saradomin's light",
+  "Armadyl crossbow",
+  "Saradomin hilt"
+]
+*/
+#define RAX_BOSSING_COMMANDER_ZILYANA_UNIQUES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force shown
+group: Commander Zilyana
+enum: [
+  "Saradomin sword",
+  "Saradomin's light",
+  "Armadyl crossbow",
+  "Saradomin hilt"
+]
+*/
+#define RAX_BOSSING_COMMANDER_ZILYANA_UNIQUES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force hidden
+group: Commander Zilyana
+enum: [
+  "Coins",
+  "Grimy ranarr weed",
+  "Ranarr seed",
+  "Magic seed",
+  "Adamant platebody",
+  "Rune dart",
+  "Rune kiteshield",
+  "Rune plateskirt",
+  "Law rune",
+  "Diamond",
+  "Snape grass",
+  "Steel arrow",
+  "Steel dart",
+  "Unicorn horn"
+]
+*/
+#define RAX_BOSSING_COMMANDER_ZILYANA_COMMON_HIDE ["Steel arrow","Steel dart","Unicorn horn"]
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force shown
+group: Commander Zilyana
+enum: [
+  "Coins",
+  "Grimy ranarr weed",
+  "Ranarr seed",
+  "Magic seed",
+  "Adamant platebody",
+  "Rune dart",
+  "Rune kiteshield",
+  "Rune plateskirt",
+  "Law rune",
+  "Diamond",
+  "Snape grass",
+  "Steel arrow",
+  "Steel dart",
+  "Unicorn horn"
+]
+*/
+#define RAX_BOSSING_COMMANDER_ZILYANA_COMMON_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force hidden
+group: Commander Zilyana
+enum: [
+  "Prayer potion(4)",
+  "Super defence(3)",
+  "Magic potion(3)",
+  "Saradomin brew(3)",
+  "Super restore(4)",
+  "Summer pie",
+  "Monkfish",
+  "Bones"
+]
+*/
+#define RAX_BOSSING_COMMANDER_ZILYANA_SUPPLY_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force shown
+group: Commander Zilyana
+enum: [
+  "Prayer potion(4)",
+  "Super defence(3)",
+  "Magic potion(3)",
+  "Saradomin brew(3)",
+  "Super restore(4)",
+  "Summer pie",
+  "Monkfish",
+  "Bones"
+]
+*/
+#define RAX_BOSSING_COMMANDER_ZILYANA_SUPPLY_SHOW []
+
+apply (area:FACT_COMMANDER_ZILYANA_AREA && name:RAX_BOSSING_COMMANDER_ZILYANA_UNIQUES_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COMMANDER_ZILYANA_AREA && name:RAX_BOSSING_COMMANDER_ZILYANA_COMMON_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COMMANDER_ZILYANA_AREA && name:RAX_BOSSING_COMMANDER_ZILYANA_SUPPLY_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_COMMANDER_ZILYANA_AREA && name:RAX_BOSSING_COMMANDER_ZILYANA_UNIQUES_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_COMMANDER_ZILYANA_AREA && name:RAX_BOSSING_COMMANDER_ZILYANA_COMMON_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_COMMANDER_ZILYANA_AREA && name:RAX_BOSSING_COMMANDER_ZILYANA_SUPPLY_SHOW) {
+    hidden = false;
+}
+
+
+
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force hidden
+group: General Graardor
+enum: [
+  "Bandos chestplate",
+  "Bandos tassets",
+  "Bandos boots",
+  "Bandos hilt"
+]
+*/
+#define RAX_BOSSING_GENERAL_GRAARDOR_UNIQUES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force shown
+group: General Graardor
+enum: [
+  "Bandos chestplate",
+  "Bandos tassets",
+  "Bandos boots",
+  "Bandos hilt"
+]
+*/
+#define RAX_BOSSING_GENERAL_GRAARDOR_UNIQUES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force hidden
+group: General Graardor
+enum: [
+  "Coins",
+  "Grimy snapdragon",
+  "Snapdragon seed",
+  "Adamantite ore",
+  "Coal",
+  "Nature rune",
+  "Cosmic rune",
+  "Magic logs",
+  "Limpwurt root",
+  "Rune longsword",
+  "Rune 2h sword",
+  "Rune platebody",
+  "Rune pickaxe",
+  "Steel arrow",
+  "Steel dart",
+  "Right eye patch"
+]
+*/
+#define RAX_BOSSING_GENERAL_GRAARDOR_COMMON_HIDE ["Steel arrow","Steel dart","Right eye patch"]
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force shown
+group: General Graardor
+enum: [
+  "Coins",
+  "Grimy snapdragon",
+  "Snapdragon seed",
+  "Adamantite ore",
+  "Coal",
+  "Nature rune",
+  "Cosmic rune",
+  "Magic logs",
+  "Limpwurt root",
+  "Rune longsword",
+  "Rune 2h sword",
+  "Rune platebody",
+  "Rune pickaxe",
+  "Steel arrow",
+  "Steel dart",
+  "Right eye patch"
+]
+*/
+#define RAX_BOSSING_GENERAL_GRAARDOR_COMMON_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force hidden
+group: General Graardor
+enum: [
+  "Bones",
+  "Big bones",
+  "Super restore(4)",
+  "Shark",
+  "Chilli potato",
+  "Kebab",
+  "Combat potion(3)",
+  "Super strength(3)",
+  "Beer"
+]
+*/
+#define RAX_BOSSING_GENERAL_GRAARDOR_SUPPLY_HIDE ["Combat potion(3)","Super strength(3)","Beer","Kebab"]
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force shown
+group: General Graardor
+enum: [
+  "Bones",
+  "Big bones",
+  "Super restore(4)",
+  "Shark",
+  "Chilli potato",
+  "Kebab",
+  "Combat potion(3)",
+  "Super strength(3)",
+  "Beer"
+]
+*/
+#define RAX_BOSSING_GENERAL_GRAARDOR_SUPPLY_SHOW ["Bones","Big bones","Super restore(4)","Shark","Chilli potato"]
+
+apply (area:FACT_GENERAL_GRAARDOR_AREA && name:RAX_BOSSING_GENERAL_GRAARDOR_UNIQUES_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_GENERAL_GRAARDOR_AREA && name:RAX_BOSSING_GENERAL_GRAARDOR_COMMON_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_GENERAL_GRAARDOR_AREA && name:RAX_BOSSING_GENERAL_GRAARDOR_SUPPLY_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_GENERAL_GRAARDOR_AREA && name:RAX_BOSSING_GENERAL_GRAARDOR_UNIQUES_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_GENERAL_GRAARDOR_AREA && name:RAX_BOSSING_GENERAL_GRAARDOR_COMMON_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_GENERAL_GRAARDOR_AREA && name:RAX_BOSSING_GENERAL_GRAARDOR_SUPPLY_SHOW) {
+    hidden = false;
+}
+
+
+
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force hidden
+group: Kree'arra
+enum: [
+  "Armadyl helmet",
+  "Armadyl chestplate",
+  "Armadyl chainskirt",
+  "Armadyl hilt"
+]
+*/
+#define RAX_BOSSING_KREEARRA_UNIQUES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force shown
+group: Kree'arra
+enum: [
+  "Armadyl helmet",
+  "Armadyl chestplate",
+  "Armadyl chainskirt",
+  "Armadyl hilt"
+]
+*/
+#define RAX_BOSSING_KREEARRA_UNIQUES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force hidden
+group: Kree'arra
+enum: [
+  "Coins",
+  "Grimy dwarf weed",
+  "Dwarf weed seed",
+  "Dragonstone bolts (e)",
+  "Smoke rune",
+  "Yew seed",
+  "Crushed nest",
+  "Grimy kwuarm",
+  "Feather",
+  "Black d'hide body",
+  "Rune crossbow",
+  "Mind rune",
+  "Rune arrow",
+  "Runite bolts",
+  "Crystal key",
+  "Steel dart",
+  "Steel arrow"
+]
+*/
+#define RAX_BOSSING_KREEARRA_COMMON_HIDE ["Feather","Black d'hide body","Rune crossbow","Mind rune","Rune arrow","Runite bolts","Crystal key","Steel dart","Steel arrow"]
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force shown
+group: Kree'arra
+enum: [
+  "Coins",
+  "Grimy dwarf weed",
+  "Dwarf weed seed",
+  "Dragonstone bolts (e)",
+  "Smoke rune",
+  "Yew seed",
+  "Crushed nest",
+  "Grimy kwuarm",
+  "Feather",
+  "Black d'hide body",
+  "Rune crossbow",
+  "Mind rune",
+  "Rune arrow",
+  "Runite bolts",
+  "Crystal key",
+  "Steel dart",
+  "Steel arrow"
+]
+*/
+#define RAX_BOSSING_KREEARRA_COMMON_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force hidden
+group: Kree'arra
+enum: [
+  "Bones",
+  "Big bones",
+  "Ranging potion(3)",
+  "Super defence(3)",
+  "Manta ray",
+  "Mushroom potato"
+]
+*/
+#define RAX_BOSSING_KREEARRA_SUPPLY_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force shown
+group: Kree'arra
+enum: [
+  "Bones",
+  "Big bones",
+  "Ranging potion(3)",
+  "Super defence(3)",
+  "Manta ray",
+  "Mushroom potato"
+]
+*/
+#define RAX_BOSSING_KREEARRA_SUPPLY_SHOW ["Bones","Big bones","Ranging potion(3)","Super defence(3)","Manta ray","Mushroom potato"]
+
+apply (area:FACT_KREEARRA_AREA && name:RAX_BOSSING_KREEARRA_UNIQUES_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_KREEARRA_AREA && name:RAX_BOSSING_KREEARRA_COMMON_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_KREEARRA_AREA && name:RAX_BOSSING_KREEARRA_SUPPLY_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_KREEARRA_AREA && name:RAX_BOSSING_KREEARRA_UNIQUES_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_KREEARRA_AREA && name:RAX_BOSSING_KREEARRA_COMMON_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_KREEARRA_AREA && name:RAX_BOSSING_KREEARRA_SUPPLY_SHOW) {
+    hidden = false;
+}
+
+
+
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force hidden
+group: K'ril Tsutsaroth
+enum: [
+  "Steam battlestaff",
+  "Zamorakian spear",
+  "Staff of the dead",
+  "Zamorak hilt"
+]
+*/
+#define RAX_BOSSING_KRIL_TSUTSAROTH_UNIQUES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force shown
+group: K'ril Tsutsaroth
+enum: [
+  "Steam battlestaff",
+  "Zamorakian spear",
+  "Staff of the dead",
+  "Zamorak hilt"
+]
+*/
+#define RAX_BOSSING_KRIL_TSUTSAROTH_UNIQUES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force hidden
+group: K'ril Tsutsaroth
+enum: [
+  "Coins",
+  "Rune platelegs",
+  "Grimy lantadyme",
+  "Lantadyme seed",
+  "Death rune",
+  "Blood rune",
+  "Wine of zamorak",
+  "Rune scimitar",
+  "Adamant platebody",
+  "Dragon dagger(p++)",
+  "Infernal ashes",
+  "Malicious ashes",
+  "Adamant arrow(p++)",
+  "Steel dart",
+  "Steel arrow"
+]
+*/
+#define RAX_BOSSING_KRIL_TSUTSAROTH_COMMON_HIDE ["Infernal ashes","Malicious ashes","Adamant arrow(p++)","Steel dart","Steel arrow"]
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force shown
+group: K'ril Tsutsaroth
+enum: [
+  "Coins",
+  "Rune platelegs",
+  "Grimy lantadyme",
+  "Lantadyme seed",
+  "Death rune",
+  "Blood rune",
+  "Wine of zamorak",
+  "Rune scimitar",
+  "Adamant platebody",
+  "Dragon dagger(p++)",
+  "Infernal ashes",
+  "Malicious ashes",
+  "Adamant arrow(p++)",
+  "Steel dart",
+  "Steel arrow"
+]
+*/
+#define RAX_BOSSING_KRIL_TSUTSAROTH_COMMON_SHOW ["Death rune","Blood rune"]
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force hidden
+group: K'ril Tsutsaroth
+enum: [
+  "Shark",
+  "Tuna potato",
+  "Super restore(3)",
+  "Zamorak brew(3)",
+  "Super attack(3)",
+  "Super strength(3)"
+]
+*/
+#define RAX_BOSSING_KRIL_TSUTSAROTH_SUPPLY_HIDE ["Zamorak brew(3)","Super attack(3)","Super strength(3)"]
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force shown
+group: K'ril Tsutsaroth
+enum: [
+  "Shark",
+  "Tuna potato",
+  "Super restore(3)",
+  "Zamorak brew(3)",
+  "Super attack(3)",
+  "Super strength(3)"
+]
+*/
+#define RAX_BOSSING_KRIL_TSUTSAROTH_SUPPLY_SHOW []
+
+apply (area:FACT_KRIL_TSUTSAROTH_AREA && name:RAX_BOSSING_KRIL_TSUTSAROTH_UNIQUES_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_KRIL_TSUTSAROTH_AREA && name:RAX_BOSSING_KRIL_TSUTSAROTH_COMMON_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_KRIL_TSUTSAROTH_AREA && name:RAX_BOSSING_KRIL_TSUTSAROTH_SUPPLY_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_KRIL_TSUTSAROTH_AREA && name:RAX_BOSSING_KRIL_TSUTSAROTH_UNIQUES_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_KRIL_TSUTSAROTH_AREA && name:RAX_BOSSING_KRIL_TSUTSAROTH_COMMON_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_KRIL_TSUTSAROTH_AREA && name:RAX_BOSSING_KRIL_TSUTSAROTH_SUPPLY_SHOW) {
+    hidden = false;
+}
+
+
+
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force hidden
+group: Nex
+enum: [
+  "Zaryte vambraces",
+  "Nihil horn",
+  "Torva full helm (damaged)",
+  "Torva platebody (damaged)",
+  "Torva platelegs (damaged)",
+  "Ancient hilt",
+  "Ancient ceremonial mask",
+  "Ancient ceremonial top",
+  "Ancient ceremonial legs",
+  "Ancient ceremonial gloves",
+  "Ancient ceremonial boots"
+]
+*/
+#define RAX_BOSSING_NEX_UNIQUES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Unique drops force shown
+group: Nex
+enum: [
+  "Zaryte vambraces",
+  "Nihil horn",
+  "Torva full helm (damaged)",
+  "Torva platebody (damaged)",
+  "Torva platelegs (damaged)",
+  "Ancient hilt",
+  "Ancient ceremonial mask",
+  "Ancient ceremonial top",
+  "Ancient ceremonial legs",
+  "Ancient ceremonial gloves",
+  "Ancient ceremonial boots"
+]
+*/
+#define RAX_BOSSING_NEX_UNIQUES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force hidden
+group: Nex
+enum: [
+  "Rune sword",
+  "Runite ore",
+  "Ecumenical key shard",
+  "Nihil shard",
+  "Blood essence",
+  "Onyx bolts (e)",
+  "Dragon bolts (unf)",
+  "Coins",
+  "Blood rune",
+  "Death rune",
+  "Soul rune",
+  "Cannonball",
+  "Uncut ruby",
+  "Uncut diamond",
+  "Wine of zamorak",
+  "Air rune",
+  "Fire rune",
+  "Water rune",
+  "Air orb",
+  "Coal"
+]
+*/
+#define RAX_BOSSING_NEX_COMMON_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Common drops force shown
+group: Nex
+enum: [
+  "Rune sword",
+  "Runite ore",
+  "Ecumenical key shard",
+  "Nihil shard",
+  "Blood essence",
+  "Onyx bolts (e)",
+  "Dragon bolts (unf)",
+  "Coins",
+  "Blood rune",
+  "Death rune",
+  "Soul rune",
+  "Cannonball",
+  "Uncut ruby",
+  "Uncut diamond",
+  "Wine of zamorak",
+  "Air rune",
+  "Fire rune",
+  "Water rune",
+  "Air orb",
+  "Coal"
+]
+*/
+#define RAX_BOSSING_NEX_COMMON_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force hidden
+group: Nex
+enum: [
+  "Shark",
+  "Prayer potion(4)",
+  "Saradomin brew(4)",
+  "Super restore(4)"
+]
+*/
+#define RAX_BOSSING_NEX_SUPPLY_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Supply drops force shown
+group: Nex
+enum: [
+  "Shark",
+  "Prayer potion(4)",
+  "Saradomin brew(4)",
+  "Super restore(4)"
+]
+*/
+#define RAX_BOSSING_NEX_SUPPLY_SHOW []
+
+apply (area:FACT_NEX_AREA && name:RAX_BOSSING_NEX_UNIQUES_HIDE) {
+    hidden = true;
+}
+
+apply (area:FACT_NEX_AREA && name:RAX_BOSSING_NEX_COMMON_HIDE) {
+    hidden = true;
+}
+
+apply (area:FACT_NEX_AREA && name:RAX_BOSSING_NEX_SUPPLY_HIDE) {
+    hidden = true;
+}
+
+apply (area:FACT_NEX_AREA && name:RAX_BOSSING_NEX_UNIQUES_SHOW) {
+    hidden = false;
+}
+
+apply (area:FACT_NEX_AREA && name:RAX_BOSSING_NEX_COMMON_SHOW) {
+    hidden = false;
+}
+
+apply (area:FACT_NEX_AREA && name:RAX_BOSSING_NEX_SUPPLY_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: enumlist
+label: Wilderness slayer drops force hidden
+group: Wilderness Slayer
+enum: [
+  "Slayer's enchantment"
+]
+*/
+#define RAX_SLAYER_WILDERNESS_SLAYER_HIDE ["Slayer's enchantment"]
+
+/*@ define:input:where
+type: enumlist
+label: Wilderness slayer drops force shown
+group: Wilderness Slayer
+enum: [
+  "Slayer's enchantment"
+]
+*/
+#define RAX_SLAYER_WILDERNESS_SLAYER_SHOW []
+
+apply (name:RAX_SLAYER_WILDERNESS_SLAYER_HIDE) {
+    hidden = true;
+}
+
+apply (name:RAX_SLAYER_WILDERNESS_SLAYER_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:where
+type: enumlist
+label: Wilderness slayer cave drops force hidden
+group: Wilderness Slayer
+enum: [
+  "Blighted entangle sack",
+  "Blighted anglerfish",
+  "Blighted manta ray",
+  "Blighted karambwan",
+  "Blighted teleport spell sack",
+  "Blighted ancient ice sack",
+  "Blighted vengeance sack",
+  "Blighted super restore(4)",
+  "Revenant cave teleport",
+  "Dareeyak teleport (tablet)",
+  "Wilderness crabs teleport",
+  "Carrallanger teleport (tablet)",
+  "Paddewwa teleport (tablet)",
+  "Annakarl teleport (tablet)",
+  "Lassar teleport (tablet)",
+  "Kharyrll teleport (tablet)",
+  "Senntisten teleport (tablet)",
+  "Ghorrock teleport (tablet)",
+  "Target teleport",
+  "Magic shortbow scroll",
+  "Ring of wealth scroll",
+  "Trouver parchment",
+  "Looting bag note"
+]
+*/
+#define RAX_SLAYER_WILDERNESS_SLAYER_CAVE_HIDE ["Blighted entangle sack","Blighted karambwan","Blighted teleport spell sack"]
+
+/*@ define:input:where
+type: enumlist
+label: Wilderness slayer cave drops force shown
+group: Wilderness Slayer
+enum: [
+  "Blighted entangle sack",
+  "Blighted anglerfish",
+  "Blighted manta ray",
+  "Blighted karambwan",
+  "Blighted teleport spell sack",
+  "Blighted ancient ice sack",
+  "Blighted vengeance sack",
+  "Blighted super restore(4)",
+  "Revenant cave teleport",
+  "Dareeyak teleport (tablet)",
+  "Wilderness crabs teleport",
+  "Carrallanger teleport (tablet)",
+  "Paddewwa teleport (tablet)",
+  "Annakarl teleport (tablet)",
+  "Lassar teleport (tablet)",
+  "Kharyrll teleport (tablet)",
+  "Senntisten teleport (tablet)",
+  "Ghorrock teleport (tablet)",
+  "Target teleport",
+  "Magic shortbow scroll",
+  "Ring of wealth scroll",
+  "Trouver parchment",
+  "Looting bag note"
+]
+*/
+#define RAX_SLAYER_WILDERNESS_SLAYER_CAVE_SHOW []
+
+apply (area:FACT_SLAYER_WILDERNESS_SLAYER_CAVE_AREA && name:RAX_SLAYER_WILDERNESS_SLAYER_CAVE_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_SLAYER_WILDERNESS_SLAYER_CAVE_AREA && name:RAX_SLAYER_WILDERNESS_SLAYER_CAVE_SHOW) {
+    hidden = false;
+}
+
+
+
+/*@ define:input:where
+type: enumlist
+label: Unique drop force hidden
+group: Smoke Devils
+enum: [
+  "Occult necklace",
+  "Dragon chainbody"
+]
+*/
+#define RAX_SLAYER_SMOKE_DEVIL_UNIQUES_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Unique drop force shown
+group: Smoke Devils
+enum: [
+  "Occult necklace",
+  "Dragon chainbody"
+]
+*/
+#define RAX_SLAYER_SMOKE_DEVIL_UNIQUES_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Common drop force hidden
+group: Smoke Devils
+enum: [
+  "Adamant battleaxe",
+  "Adamantite bar",
+  "Air battlestaff",
+  "Air rune",
+  "Ashes",
+  "Black d'hide vambraces",
+  "Coal",
+  "Coins",
+  "Crossbow string",
+  "Fire battlestaff",
+  "Fire rune",
+  "Magic logs",
+  "Mithril plateskirt",
+  "Red d'hide body",
+  "Rune arrow",
+  "Rune chainbody",
+  "Rune dagger",
+  "Rune full helm",
+  "Runite bolts",
+  "Shark",
+  "Smoke rune",
+  "Soul rune",
+  "Steel bar",
+  "Ugthanki kebab"
+]
+*/
+#define RAX_SLAYER_SMOKE_DEVIL_COMMON_HIDE ["Adamant battleaxe","Adamantite bar","Air rune","Ashes","Coal","Coins","Crossbow string","Fire rune","Mithril plateskirt","Red d'hide body","Rune arrow","Runite bolts","Shark","Steel bar","Ugthanki kebab"]
+
+/*@ define:input:where
+type: enumlist
+label: Common drop force shown
+group: Smoke Devils
+enum: [
+  "Adamant battleaxe",
+  "Adamantite bar",
+  "Air battlestaff",
+  "Air rune",
+  "Ashes",
+  "Black d'hide vambraces",
+  "Coal",
+  "Coins",
+  "Crossbow string",
+  "Fire battlestaff",
+  "Fire rune",
+  "Magic logs",
+  "Mithril plateskirt",
+  "Red d'hide body",
+  "Rune arrow",
+  "Rune chainbody",
+  "Rune dagger",
+  "Rune full helm",
+  "Runite bolts",
+  "Shark",
+  "Smoke rune",
+  "Soul rune",
+  "Steel bar",
+  "Ugthanki kebab"
+]
+*/
+#define RAX_SLAYER_SMOKE_DEVIL_COMMON_SHOW []
+
+/*@ define:input:where
+type: enumlist
+label: Herb drop force hidden
+group: Smoke Devils
+enum: [
+  "Grimy guam leaf",
+  "Grimy marrentill",
+  "Grimy tarromin",
+  "Grimy harralander",
+  "Grimy ranarr weed",
+  "Grimy irit leaf",
+  "Grimy avantoe",
+  "Grimy kwuarm",
+  "Grimy cadantine",
+  "Grimy lantadyme",
+  "Grimy dwarf weed"
+]
+*/
+#define RAX_SLAYER_SMOKE_DEVIL_HERBS_HIDE []
+
+/*@ define:input:where
+type: enumlist
+label: Herb drop force shown
+group: Smoke Devils
+enum: [
+  "Grimy guam leaf",
+  "Grimy marrentill",
+  "Grimy tarromin",
+  "Grimy harralander",
+  "Grimy ranarr weed",
+  "Grimy irit leaf",
+  "Grimy avantoe",
+  "Grimy kwuarm",
+  "Grimy cadantine",
+  "Grimy lantadyme",
+  "Grimy dwarf weed"
+]
+*/
+#define RAX_SLAYER_SMOKE_DEVIL_HERBS_SHOW []
+
+apply (area:FACT_SLAYER_SMOKE_DEVILS_AREA && name:RAX_SLAYER_SMOKE_DEVIL_UNIQUES_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_SLAYER_SMOKE_DEVILS_AREA && name:RAX_SLAYER_SMOKE_DEVIL_UNIQUES_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_SLAYER_SMOKE_DEVILS_AREA && name:RAX_SLAYER_SMOKE_DEVIL_COMMON_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_SLAYER_SMOKE_DEVILS_AREA && name:RAX_SLAYER_SMOKE_DEVIL_COMMON_SHOW) {
+    hidden = false;
+}
+apply (area:FACT_SLAYER_SMOKE_DEVILS_AREA && name:RAX_SLAYER_SMOKE_DEVIL_HERBS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_SLAYER_SMOKE_DEVILS_AREA && name:RAX_SLAYER_SMOKE_DEVIL_HERBS_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: stringlist
+label: List of items to force hidden at tormented demons
+group: "Ancient Guthixian Temple (Tormented Demons)"
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_HIDE []
+
+apply (area:FACT_ANCIENT_GUTHIXIAN_TEMPLE_AREA && name:RAX_MONSTERS_TORMENTED_DEMONS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: stringlist
+label: List of items to force shown at tormented demons
+group: "Ancient Guthixian Temple (Tormented Demons)"
+*/
+#define RAX_MONSTERS_TORMENTED_DEMONS_SHOW ["Smouldering gland","Smouldering heart","Smouldering pile of flesh"]
+
+apply (area:FACT_ANCIENT_GUTHIXIAN_TEMPLE_AREA && name:RAX_MONSTERS_TORMENTED_DEMONS_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:where
+type: enumlist
+label: Tools to force hidden
+group: The Gauntlet
+enum: [
+  {
+    "value": "* sceptre",
+    "label": "Crystal sceptre"
+  },
+  {
+    "value": "* harpoon",
+    "label": "Crystal harpoon"
+  },
+  {
+    "value": "* axe",
+    "label": "Crystal axe"
+  },
+  {
+    "value": "* pickaxe",
+    "label": "Crystal pickaxe"
+  },
+  {
+    "value": "Pestle and mortar",
+    "label": "Pestle and mortar"
+  },
+  {
+    "value": "*teleport crystal",
+    "label": "Teleport crystal"
+  },
+  {
+    "value": "*escape crystal",
+    "label": "Escape crystal"
+  }
+]
+*/
+#define RAX_GAUNTLET_TOOLS_HIDE ["* sceptre","* harpoon","* axe","* pickaxe","Pestle and mortar"]
+
+apply (area:FACT_GAUNTLET_AREA && name:RAX_GAUNTLET_TOOLS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: enumlist
+label: Resources to force hidden
+group: The Gauntlet
+enum: [
+  {
+    "value": "* shards",
+    "label": "Crystal shards"
+  },
+  {
+    "value": "Crystal dust",
+    "label": "Crystal dust"
+  },
+  {
+    "value": "Vial",
+    "label": "Vial"
+  },
+  {
+    "value": "Water-filled vial",
+    "label": "Water-filled vial"
+  },
+  {
+    "value": "Grym leaf",
+    "label": "Grym leaf"
+  },
+  {
+    "value": "Grym potion (unf)",
+    "label": "Grym potion (unf)"
+  },
+  {
+    "value": "Raw paddlefish",
+    "label": "Raw paddlefish"
+  },
+  {
+    "value": "Weapon frame",
+    "label": "Weapon frame"
+  },
+  {
+    "value": "* spike",
+    "label": "Crystal spike"
+  },
+  {
+    "value": "* orb",
+    "label": "Crystal orb"
+  },
+  {
+    "value": "* bowstring",
+    "label": "Crystalline bowstring"
+  },
+  {
+    "value": "Linum tirinum*",
+    "label": "Linum tirinum"
+  },
+  {
+    "value": "Phren bark*",
+    "label": "Phren bark"
+  },
+  {
+    "value": "* ore",
+    "label": "Crystal ore"
+  }
+]
+*/
+#define RAX_GAUNTLET_RESOURCES_HIDE []
+
+apply (area:FACT_GAUNTLET_AREA && name:RAX_GAUNTLET_RESOURCES_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: enumlist
+label: Supplies to force hidden
+group: The Gauntlet
+enum: [
+  {
+    "value": "Egniol potion (*",
+    "label": "Egniol potion"
+  },
+  {
+    "value": "Paddlefish",
+    "label": "Paddlefish"
+  },
+  {
+    "value": "Crystal paddlefish",
+    "label": "Crystal paddlefish"
+  },
+  {
+    "value": "Corrupted paddlefish",
+    "label": "Corrupted paddlefish"
+  }
+]
+*/
+#define RAX_GAUNTLET_SUPPLIES_HIDE []
+
+apply (area:FACT_GAUNTLET_AREA && name:RAX_GAUNTLET_SUPPLIES_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: enumlist
+label: Equipment to force hidden
+group: The Gauntlet
+enum: [
+  {
+    "value": "* halberd *",
+    "label": "Crystal halberd"
+  },
+  {
+    "value": "* bow *",
+    "label": "Crystal bow"
+  },
+  {
+    "value": "* staff *",
+    "label": "Crystal staff"
+  },
+  {
+    "value": "* helm *",
+    "label": "Crystal helm"
+  },
+  {
+    "value": "* body *",
+    "label": "Crystal body"
+  },
+  {
+    "value": "* legs *",
+    "label": "Crystal legs"
+  }
+]
+*/
+#define RAX_GAUNTLET_EQUIPMENT_HIDE []
+
+apply (area:FACT_GAUNTLET_AREA && name:RAX_GAUNTLET_EQUIPMENT_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:where
+type: boolean
+label: Hide starting gear
+group: Last Man Standing
+*/
+#define RAX_LAST_MAN_STANDING_STARTER_GEAR_HIDE true
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:FACT_LAST_MAN_STANDING_STARTER_GEAR_LIST && RAX_LAST_MAN_STANDING_STARTER_GEAR_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:FACT_LAST_MAN_STANDING_STARTER_GEAR_LIST && RAX_LAST_MAN_STANDING_STARTER_GEAR_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: number
+label: Hide ammo under this quantity
+group: Last Man Standing
+*/
+#define RAX_LAST_MAN_STANDING_AMMO_MIN_QUANTITY 100
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:FACT_LAST_MAN_STANDING_AMMO_LIST && quantity:<RAX_LAST_MAN_STANDING_AMMO_MIN_QUANTITY) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:FACT_LAST_MAN_STANDING_AMMO_LIST && quantity:<RAX_LAST_MAN_STANDING_AMMO_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: enumlist
+label: Misc Hidden Items
+group: Last Man Standing
+enum: [
+  "Mithril seeds"
+]
+*/
+#define RAX_LAST_MAN_STANDING_MISC_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_MISC_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_MISC_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Weapons Hidden Items
+group: Last Man Standing
+enum: [
+  "Ancient godsword",
+  "Armadyl godsword",
+  "Dharok's greataxe",
+  "Dragon claws",
+  "Dual macuahuitl",
+  "Elder maul",
+  "Ghrazi rapier",
+  "Granite maul",
+  "Inquisitor's mace",
+  "Statius's warhammer",
+  "Verac's flail",
+  "Vesta's longsword",
+  "Voidwaker"
+]
+*/
+#define RAX_LAST_MAN_STANDING_MELEE_WEAPONS_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_MELEE_WEAPONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_MELEE_WEAPONS_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Armour Hidden Items
+group: Last Man Standing
+enum: [
+  "Amulet of fury",
+  "Amulet of torture",
+  "Bandos tassets",
+  "Blessed spirit shield",
+  "Blood moon chestplate",
+  "Blood moon helm",
+  "Blood moon tassets",
+  "Dharok's helm",
+  "Dharok's platebody",
+  "Dharok's platelegs",
+  "Fremennik kilt",
+  "Guthan's helm",
+  "Guthix halo",
+  "Infernal cape",
+  "Inquisitor's great helm",
+  "Inquisitor's hauberk",
+  "Inquisitor's plateskirt",
+  "Lightbearer",
+  "Saradomin halo",
+  "Spiked manacles",
+  "Torag's helm",
+  "Torag's platelegs",
+  "Verac's brassard",
+  "Verac's helm",
+  "Verac's plateskirt",
+  "Zamorak halo"
+]
+*/
+#define RAX_LAST_MAN_STANDING_MELEE_ARMOUR_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_MELEE_ARMOUR_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_MELEE_ARMOUR_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Weapons Hidden Items
+group: Last Man Standing
+enum: [
+  "Armadyl crossbow",
+  "Dark bow",
+  "Dragon knife",
+  "Eclipse atlatl",
+  "Heavy ballista",
+  "Light ballista",
+  "Morrigan's javelin",
+  "Zaryte crossbow"
+]
+*/
+#define RAX_LAST_MAN_STANDING_RANGED_WEAPONS_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_RANGED_WEAPONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_RANGED_WEAPONS_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Armour Hidden Items
+group: Last Man Standing
+enum: [
+  "3rd age range coif",
+  "3rd age range legs",
+  "3rd age range top",
+  "Eclipse moon chestplate",
+  "Eclipse moon helm",
+  "Eclipse moon tassets",
+  "Guthix chaps",
+  "Karil's leathertop",
+  "Necklace of anguish",
+  "Rangers' tunic",
+  "Saradomin chaps",
+  "Zamorak chaps"
+]
+*/
+#define RAX_LAST_MAN_STANDING_RANGED_ARMOUR_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_RANGED_ARMOUR_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_RANGED_ARMOUR_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Ammo Hidden Items
+group: Last Man Standing
+enum: [
+  "Atlatl dart",
+  "Dragon arrows",
+  "Dragon javelins",
+  "Opal dragon bolts (e)"
+]
+*/
+#define RAX_LAST_MAN_STANDING_RANGED_AMMO_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_RANGED_AMMO_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_RANGED_AMMO_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Weapons Hidden Items
+group: Last Man Standing
+enum: [
+  "Blue moon spear",
+  "Kodai wand",
+  "Staff of the dead",
+  "Volatile nightmare staff",
+  "Zuriel's staff"
+]
+*/
+#define RAX_LAST_MAN_STANDING_MAGIC_WEAPONS_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_MAGIC_WEAPONS_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_MAGIC_WEAPONS_HIDE) {
+    hidden = true;
+}
+/*@ define:input:where
+type: enumlist
+label: Armour Hidden Items
+group: Last Man Standing
+enum: [
+  "3rd age mage hat",
+  "3rd age robe",
+  "3rd age robe top",
+  "Ahrim's robetop",
+  "Ahrim's robeskirt",
+  "Ancestral hat",
+  "Ancestral robe bottom",
+  "Ancestral robe top",
+  "Blue moon chestplate",
+  "Blue moon helm",
+  "Blue moon tassets",
+  "Elder chaos hood",
+  "Elder chaos robe",
+  "Elder chaos top",
+  "Eternal boots",
+  "Infinity boots",
+  "Mage's book",
+  "Occult necklace",
+  "Seers ring (i)",
+  "Tormented bracelet",
+  "Wizard boots"
+]
+*/
+#define RAX_LAST_MAN_STANDING_MAGIC_ARMOUR_HIDE []
+
+apply (area:FACT_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:RAX_LAST_MAN_STANDING_MAGIC_ARMOUR_HIDE) {
+    hidden = true;
+}
+apply (area:FACT_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:RAX_LAST_MAN_STANDING_MAGIC_ARMOUR_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:where
+type: number
+label: Hide items below this value
+group: Bounty Hunter
+*/
+#define RAX_BOUNTY_HUNTER_MINIMUM_VALUE 0
+
+apply (area:FACT_BOUNTY_HUNTER_AREA && (tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_BOUNTY_HUNTER_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: number
+label: Hide stackable items below this value
+group: Bounty Hunter
+*/
+#define RAX_BOUNTY_HUNTER_STACKABLE_MINIMUM_VALUE 0
+
+apply (area:FACT_BOUNTY_HUNTER_AREA && (tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && (stackable:true || noted:true) && value:<RAX_BOUNTY_HUNTER_STACKABLE_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: number
+label: Hide non-stackable items below this value
+group: Bounty Hunter
+*/
+#define RAX_BOUNTY_HUNTER_NON_STACKABLE_MINIMUM_VALUE 0
+
+apply (area:FACT_BOUNTY_HUNTER_AREA && (tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && stackable:false && noted:false && value:<RAX_BOUNTY_HUNTER_NON_STACKABLE_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:where
+type: stringlist
+label: Items to hide in Bounty Hunter
+group: Bounty Hunter
+*/
+#define RAX_BOUNTY_HUNTER_HIDDEN_LIST []
+
+apply (area:FACT_BOUNTY_HUNTER_AREA && name:RAX_BOUNTY_HUNTER_HIDDEN_LIST) {
+    hidden = true;
+}

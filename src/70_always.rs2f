@@ -1,0 +1,103 @@
+/*@ define:module:always
+---
+name: Always
+subtitle: Never silent
+description: |
+  Uniques, clues, alchs, rare drop table. Runs after heat.
+
+  Alchs lock gold by default so nothing restyles them. Uniques layer on top of heat.
+*/
+
+/*@ define:input:always
+type: style
+label: Uniques
+exampleItem: Tanzanite fang
+exampleItemId: 12922
+*/
+#define RAX_UNIQUE_STYLE lootbeamColor = "#ff000000"; menuTextColor = "#ffff0084"; fontType = 3; showLootbeam = true; sound = "uniques.wav"; icon = CurrentItem();
+
+apply (name:RAX_UNIQUES_LIST) {
+    RAX_UNIQUE_STYLE
+}
+
+/*@ define:input:always
+type: stringlist
+label: Uniques
+group: Uniques
+*/
+#define RAX_UNIQUES_LIST /*{{RAX_UNIQUES_LIST}}*/
+
+/*@ define:input:always
+type: boolean
+label: Silence unique sounds at bosses that already roar
+group: Uniques
+*/
+#define RAX_UNIQUE_SILENCE_BOSS_SOUND false
+
+apply (RAX_UNIQUE_SILENCE_BOSS_SOUND && name:RAX_UNIQUES_LIST && (
+    area:FACT_MUSPAH_AREA || area:FACT_THE_WHISPERER_AREA || area:FACT_VARDORVIS_AREA ||
+    area:FACT_DUKE_SUCELLUS_AREA || area:FACT_THE_LEVIATHAN_AREA || area:FACT_YAMA_AREA ||
+    area:FACT_NEX_AREA || area:FACT_AMOXLIATL_AREA || area:FACT_HUEYCOATL_AREA
+)) {
+    sound = 2411;
+}
+
+/*@ define:input:always
+type: boolean
+label: Lock uniques
+group: Uniques
+*/
+#define RAX_UNIQUE_LOCK false
+
+rule (RAX_UNIQUE_LOCK && name:RAX_UNIQUES_LIST) {}
+
+/*@ define:input:always
+type: boolean
+label: Force-show alchs
+group: Alchs
+*/
+#define RAX_ALCH_FORCE_SHOW true
+
+apply (RAX_ALCH_FORCE_SHOW && name:RAX_ALCHS_LIST) {
+    hidden = false;
+}
+
+/*@ define:input:always
+type: style
+label: Alchs
+group: Alchs
+exampleItem: Rune platelegs
+exampleItemId: 1079
+*/
+#define RAX_ALCH_STYLE textColor = "#ff000000"; backgroundColor = "#a1fadb3e"; borderColor = "#ff000000"; textAccentColor = "#47000000"; menuTextColor = "#a1fadb3e"; textAccent = 1; fontType = 1; showValue = true; showDespawn = true; icon = File("alch.png");
+
+apply (name:RAX_ALCHS_LIST) {
+    RAX_ALCH_STYLE
+}
+
+/*@ define:input:always
+type: stringlist
+label: Alch list
+group: Alchs
+*/
+#define RAX_ALCHS_LIST /*{{RAX_ALCHS_LIST}}*/
+
+/*@ define:input:always
+type: boolean
+label: Lock alchs
+group: Alchs
+*/
+#define RAX_ALCH_LOCK true
+
+rule (RAX_ALCH_LOCK && name:RAX_ALCHS_LIST) {}
+
+/*@ define:input:always
+type: style
+label: Rare drop table
+group: Rare drop table
+exampleItem: Dragon spear
+exampleItemId: 1249
+*/
+#define RAX_RDT_STYLE borderColor = "#FFdea71a"; textAccentColor = "#47000000"; menuTextColor = "#FFdea71a"; icon = CurrentItem();
+
+// RDT quantity matches are injected by tools/build.py

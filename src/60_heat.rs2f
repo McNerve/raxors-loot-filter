@@ -1,0 +1,194 @@
+/*@ define:module:heat
+---
+name: Heat
+subtitle: How loud is this drop
+description: |
+  Ink-on-pill temperature. Runs after aisle, so a 2m shark is amber — not a food chip.
+
+  20k green · 100k blue · 1m amber + beam + sound · 10m crimson + beam + sound
+*/
+
+/*@ define:group
+---
+name: Ember
+icon:
+  type: itemId
+  itemId: 10828
+expanded: false
+*/
+
+/*@ define:input:heat
+type: number
+label: Ember starts at
+group: Ember
+*/
+#define RAX_HEAT_1_VALUE 20000
+
+/*@ define:input:heat
+type: stringlist
+label: Pin to Ember
+group: Ember
+*/
+#define RAX_HEAT_1_PIN ["Vorkath's head","Giantsoul amulet","Desiccated page","Pendant of ates","Long bone","Scurrius' spine","Alchemist's signet","unidentified*"]
+
+/*@ define:input:heat
+type: style
+label: Ember
+group: Ember
+exampleItem: Helm of neitiznot
+exampleItemId: 10828
+*/
+#define RAX_HEAT_1_STYLE textColor = "#ff000000"; backgroundColor = "#9945dc32"; borderColor = "#ff000000"; textAccentColor = "#47000000"; menuTextColor = "#9945dc32"; textAccent = 1; icon = CurrentItem();
+
+apply ((value:>=RAX_HEAT_1_VALUE && value:<RAX_HEAT_2_VALUE) || name:RAX_HEAT_1_PIN) {
+    RAX_HEAT_1_STYLE
+}
+
+/*@ define:group
+---
+name: Glow
+icon:
+  type: itemId
+  itemId: 6920
+expanded: false
+*/
+
+/*@ define:input:heat
+type: number
+label: Glow starts at
+group: Glow
+*/
+#define RAX_HEAT_2_VALUE 100000
+
+/*@ define:input:heat
+type: stringlist
+label: Pin to Glow
+group: Glow
+*/
+#define RAX_HEAT_2_PIN ["Dossier","Ice quartz","Frozen tablet","Blood quartz","Strangled tablet","Shadow quartz","Sirenic tablet","Smoke quartz","Scarred tablet","Dark claw","Frozen cache","Ancient icon","Curved bone","Kq head"]
+
+/*@ define:input:heat
+type: style
+label: Glow
+group: Glow
+exampleItem: Infinity boots
+exampleItemId: 6920
+*/
+#define RAX_HEAT_2_STYLE textColor = "#ff000000"; backgroundColor = "#9966b2ff"; borderColor = "#ff000000"; textAccentColor = "#47000000"; menuTextColor = "#9966b2ff"; textAccent = 1; fontType = 1; icon = CurrentItem();
+
+apply ((value:>=RAX_HEAT_2_VALUE && value:<RAX_HEAT_3_VALUE) || name:RAX_HEAT_2_PIN) {
+    RAX_HEAT_2_STYLE
+}
+
+/*@ define:group
+---
+name: Blaze
+icon:
+  type: itemId
+  itemId: 4151
+expanded: false
+*/
+
+/*@ define:input:heat
+type: number
+label: Blaze starts at
+group: Blaze
+*/
+#define RAX_HEAT_3_VALUE 1000000
+
+/*@ define:input:heat
+type: stringlist
+label: Pin to Blaze
+group: Blaze
+*/
+#define RAX_HEAT_3_PIN ["Forgotten lockbox","Noxious pommel","Noxious point","Noxious blade","Hydra's eye","Hydra's fang","Hydra's heart","Unsired","Bludgeon claw","Bludgeon spine","Bludgeon axon","Dark totem","Slepey tablet","Parasitic egg","Mystic vigour prayer scroll","Deadeye prayer scroll","Kq head (tattered)"]
+
+/*@ define:input:heat
+type: style
+label: Blaze
+group: Blaze
+exampleItem: Abyssal whip
+exampleItemId: 4151
+*/
+#define RAX_HEAT_3_STYLE textColor = "#ff000000"; backgroundColor = "#99f29b4b"; borderColor = "#ff000000"; textAccentColor = "#87000000"; lootbeamColor = "#f2000000"; menuTextColor = "#99f29b4b"; textAccent = 1; fontType = 1; showLootbeam = true; sound = "tier3.wav"; menuSort = 0; icon = CurrentItem();
+
+apply ((value:>=RAX_HEAT_3_VALUE && value:<RAX_HEAT_4_VALUE) || name:RAX_HEAT_3_PIN) {
+    RAX_HEAT_3_STYLE
+}
+
+/*@ define:group
+---
+name: Inferno
+icon:
+  type: itemId
+  itemId: 20997
+expanded: false
+*/
+
+/*@ define:input:heat
+type: number
+label: Inferno starts at
+group: Inferno
+*/
+#define RAX_HEAT_4_VALUE 10000000
+
+/*@ define:input:heat
+type: stringlist
+label: Pin to Inferno
+group: Inferno
+*/
+#define RAX_HEAT_4_PIN ["Venator vestige","Leviathan's lure","Bellator vestige","Siren's staff","Ultor vestige","Executioner's axe head","Magus vestige","Eye of the duke","Araxyte fang","Tanzanite mutagen","Magma mutagen","Earth Warrior champion scroll","Ghoul champion scroll","Giant champion scroll","Goblin champion scroll","Hobgoblin champion scroll","Imp champion scroll","Jogre champion scroll","Lesser Demon champion scroll","Skeleton champion scroll","Zombie champion scroll","Mokhaiotl cloth","Eye of ayak","Avernic treads"]
+
+/*@ define:input:heat
+type: style
+label: Inferno
+group: Inferno
+exampleItem: Twisted bow
+exampleItemId: 20997
+*/
+#define RAX_HEAT_4_STYLE textColor = "#ff000000"; backgroundColor = "#99c30000"; borderColor = "#ff000000"; textAccentColor = "#47000000"; lootbeamColor = "#ff000000"; menuTextColor = "#99c30000"; textAccent = 1; fontType = 1; showLootbeam = true; sound = "tier4.wav"; menuSort = 0; icon = CurrentItem();
+
+apply (value:>=RAX_HEAT_4_VALUE || name:RAX_HEAT_4_PIN) {
+    RAX_HEAT_4_STYLE
+}
+
+/*@ define:group
+---
+name: Locks
+expanded: false
+description: |
+  Stop later modules from restyling a heat band. Off by default — Always (uniques / alchs) should still win.
+*/
+
+/*@ define:input:heat
+type: boolean
+label: Lock Ember
+group: Locks
+*/
+#define RAX_HEAT_1_LOCK false
+
+/*@ define:input:heat
+type: boolean
+label: Lock Glow
+group: Locks
+*/
+#define RAX_HEAT_2_LOCK false
+
+/*@ define:input:heat
+type: boolean
+label: Lock Blaze
+group: Locks
+*/
+#define RAX_HEAT_3_LOCK false
+
+/*@ define:input:heat
+type: boolean
+label: Lock Inferno
+group: Locks
+*/
+#define RAX_HEAT_4_LOCK false
+
+rule (RAX_HEAT_1_LOCK && ((value:>=RAX_HEAT_1_VALUE && value:<RAX_HEAT_2_VALUE) || name:RAX_HEAT_1_PIN)) {}
+rule (RAX_HEAT_2_LOCK && ((value:>=RAX_HEAT_2_VALUE && value:<RAX_HEAT_3_VALUE) || name:RAX_HEAT_2_PIN)) {}
+rule (RAX_HEAT_3_LOCK && ((value:>=RAX_HEAT_3_VALUE && value:<RAX_HEAT_4_VALUE) || name:RAX_HEAT_3_PIN)) {}
+rule (RAX_HEAT_4_LOCK && (value:>=RAX_HEAT_4_VALUE || name:RAX_HEAT_4_PIN)) {}

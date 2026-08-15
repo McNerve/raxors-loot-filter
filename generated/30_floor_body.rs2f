@@ -1,0 +1,3765 @@
+/*@ define:input:floor
+type: stringlist
+label: Items to hide
+group: Individual Items
+*/
+#define RAX_GLOBAL_HIDE ["broken arrow","old boot","crushed gem","burnt*","half pie*","*talisman","rotten*","waterskin(1)","waterskin(2)","waterskin(3)","flyer","*bead","potion","vampyre dust","pirate boots","oyster pearls","ugthanki kebab","unholy symbol"]
+
+apply (name:RAX_GLOBAL_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: stringlist
+label: Items to show
+group: Individual Items
+*/
+#define RAX_GLOBAL_SHOW ["Loop half of key","Tooth half of key","Rune spear","Shield left half","Dragon spear"]
+
+apply (name:RAX_GLOBAL_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:floor
+type: number
+label: Hide items below this value
+group: Value-Based
+*/
+#define RAX_GLOBAL_MINIMUM_VALUE 0
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && value:<RAX_GLOBAL_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Hide stackable items below this value
+group: Value-Based
+*/
+#define RAX_GLOBAL_STACKABLE_MINIMUM_VALUE 250
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && (stackable:true || noted:true) && value:<RAX_GLOBAL_STACKABLE_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Hide non-stackable items below this value
+group: Value-Based
+*/
+#define RAX_GLOBAL_NON_STACKABLE_MINIMUM_VALUE 1000
+
+apply ((tradeable:true || name:FACT_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && stackable:false && noted:false && value:<RAX_GLOBAL_NON_STACKABLE_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: boolean
+label: Hide others' drops
+group: Ownership
+*/
+#define RAX_GLOBAL_HIDE_OTHER_PLAYERS_ITEMS false
+
+/*@ define:input:floor
+type: boolean
+label: Hide world spawns
+group: Ownership
+*/
+#define RAX_GLOBAL_HIDE_SPAWN_ITEMS true
+
+/*@ define:input:floor
+type: stringlist
+label: Exceptions to ownership
+group: Ownership
+*/
+#define RAX_OWNERSHIP_FILTERING_EXCEPTIONS ["Water container","Dawnbringer","Elder*","Twisted*","Kodai*","Revitalisation*","Prayer enhance*","Xeric's aid*","Antipoison*","Overload*","Golpar seed","Buchu seed","Noxifer seed","Endarkened juice","Stinkhorn mushroom","Cicely","Mallignum root plank"]
+
+rule (RAX_GLOBAL_HIDE_SPAWN_ITEMS && ownership:OWNERSHIP_NONE && !name:RAX_OWNERSHIP_FILTERING_EXCEPTIONS) {
+    hidden = true;
+    sound = 2411; // sound name: silence
+    notify = false;
+}
+
+rule (RAX_GLOBAL_HIDE_OTHER_PLAYERS_ITEMS && ownership:OWNERSHIP_OTHER && !name:RAX_OWNERSHIP_FILTERING_EXCEPTIONS) {
+    hidden = true;
+    sound = 2411; // sound name: silence
+    notify = false;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Clue tiers to force hidden
+group: Clue Scrolls
+enum: [
+  {
+    "value": "Clue scroll (beginner)",
+    "label": "Beginner"
+  },
+  {
+    "value": "Clue scroll (easy)",
+    "label": "Easy"
+  },
+  {
+    "value": "Clue scroll (medium)",
+    "label": "Medium"
+  },
+  {
+    "value": "Clue scroll (hard)",
+    "label": "Hard"
+  },
+  {
+    "value": "Clue scroll (elite)",
+    "label": "Elite"
+  },
+  {
+    "value": "Clue scroll (master)",
+    "label": "Master"
+  }
+]
+*/
+#define RAX_CLUE_SCROLLS_HIDE []
+
+apply (name:RAX_CLUE_SCROLLS_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: number
+label: Minimum value to display remains at
+group: Remains
+*/
+#define RAX_REMAINS_MINIMUM_VALUE 0
+
+apply (name:FACT_BONES_LIST && value:<RAX_REMAINS_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+apply (name:FACT_ASHES_LIST && value:<RAX_REMAINS_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+apply (name:FACT_SHADES_REMAINS_LIST && value:<RAX_REMAINS_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+apply (name:FACT_ENSOULED_HEAD_LIST && value:<RAX_REMAINS_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Bones to force hidden
+group: Remains
+enum: [
+  "Bones",
+  "Wolf bones",
+  "Burnt bones",
+  "Monkey bones",
+  "Bat bones",
+  "Big bones",
+  "Jogre bones",
+  "Wyrmling bones",
+  "Zogre bones",
+  "Shaikahan bones",
+  "Babydragon bones",
+  "Wyrm bones",
+  "Wyvern bones",
+  "Dragon bones",
+  "Drake bones",
+  "Fayrg bones",
+  "Lava dragon bones",
+  "Raurg bones",
+  "Hydra bones",
+  "Dagannoth bones",
+  "Ourg bones",
+  "Superior dragon bones",
+  "Bleached bones",
+  "Small zombie monkey bones",
+  "Large zombie monkey bones",
+  "Small ninja monkey bones",
+  "Medium ninja monkey bones",
+  "Gorilla bones",
+  "Bearded gorilla bones"
+]
+*/
+#define RAX_BONES_HIDE ["Bones","Wolf bones","Burnt bones","Monkey bones","Bat bones","Big bones","Jogre bones","Wyrmling bones","Zogre bones","Babydragon bones"]
+
+apply (name:RAX_BONES_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Ashes to force hidden
+group: Remains
+enum: [
+  "Fiendish ashes",
+  "Vile ashes",
+  "Malicious ashes",
+  "Abyssal ashes",
+  "Infernal ashes"
+]
+*/
+#define RAX_ASHES_HIDE ["Fiendish ashes","Vile ashes","Malicious ashes","Abyssal ashes","Infernal ashes"]
+
+apply (name:RAX_ASHES_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Shades of morton remains to force hidden
+group: Remains
+enum: [
+  "Loar remains",
+  "Phrin remains",
+  "Riyl remains",
+  "Asyn remains",
+  "Fiyr remains",
+  "Urium remains"
+]
+*/
+#define RAX_SHADES_REMAINS_HIDE []
+
+apply (name:RAX_SHADES_REMAINS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Ensouled heads to force hidden
+group: Remains
+enum: [
+  "Ensouled goblin head",
+  "Ensouled monkey head",
+  "Ensouled imp head",
+  "Ensouled minotaur head",
+  "Ensouled scorpion head",
+  "Ensouled bear head",
+  "Ensouled unicorn head",
+  "Ensouled dog head",
+  "Ensouled chaos druid head",
+  "Ensouled giant head",
+  "Ensouled ogre head",
+  "Ensouled elf head",
+  "Ensouled troll head",
+  "Ensouled horror head",
+  "Ensouled kalphite head",
+  "Ensouled dagannoth head",
+  "Ensouled bloodveld head",
+  "Ensouled tzHaar head",
+  "Ensouled demon head",
+  "Ensouled hellhound head",
+  "Ensouled aviansie head",
+  "Ensouled abyssal head",
+  "Ensouled dragon head"
+]
+*/
+#define RAX_ENSOULED_HEADS_HIDE ["Ensouled goblin head","Ensouled monkey head","Ensouled imp head","Ensouled minotaur head","Ensouled scorpion head","Ensouled bear head","Ensouled unicorn head","Ensouled dog head","Ensouled chaos druid head","Ensouled giant head"]
+
+apply (name:RAX_ENSOULED_HEADS_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: stringlist
+label: Food to hide
+group: Food
+*/
+#define RAX_FOOD_HIDE ["Cooked wild kebbit","Cooked larupia","Cooked barb-tailed kebbit","Cooked graahk","Shrimps","Sardine","Herring","Anchovies","Mackerel","Trout","Cod","Pike","Salmon","Tuna"]
+
+apply (name:RAX_FOOD_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: stringlist
+label: Food to show
+group: Food
+*/
+#define RAX_FOOD_SHOW ["Cooked dashing kebbit","Cooked moonlight antelope","Swordfish","Lava eel","Monkfish","Cooked karambwan","Shark","Sea turtle","Manta ray","Anglerfish","Dark crab","Pineapple pizza","1/2 pineapple pizza","Summer pie","Half a summer pie","Wild pie","Half a wild pie","Tuna potato","Mushroom potato","lobster","bass","rainbow fish","cave eel","pike","salmon","cod","shrimps","anchovies","trout","sardine","herring","mackeral","tuna*","*eel","*potato","potato*","*pie","*pizza"]
+
+apply (name:RAX_FOOD_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Potions to force hidden
+group: Potions
+enum: [
+  {
+    "value": "Attack potion(*",
+    "label": "Attack potion"
+  },
+  {
+    "value": "Antipoison(*",
+    "label": "Antipoison"
+  },
+  {
+    "value": "Strength potion(*",
+    "label": "Strength potion"
+  },
+  {
+    "value": "Serum 207(*",
+    "label": "Serum 207"
+  },
+  {
+    "value": "Compost potion(*",
+    "label": "Compost potion"
+  },
+  {
+    "value": "Restore potion(*",
+    "label": "Restore potion"
+  },
+  {
+    "value": "Energy potion(*",
+    "label": "Energy potion"
+  },
+  {
+    "value": "Defence potion(*",
+    "label": "Defence potion"
+  },
+  {
+    "value": "Agility potion(*",
+    "label": "Agility potion"
+  },
+  {
+    "value": "Combat potion(*",
+    "label": "Combat potion"
+  },
+  {
+    "value": "Prayer potion(*",
+    "label": "Prayer potion"
+  },
+  {
+    "value": "Super attack(*",
+    "label": "Super attack"
+  },
+  {
+    "value": "Superantipoison(*",
+    "label": "Superantipoison"
+  },
+  {
+    "value": "Fishing potion(*",
+    "label": "Fishing potion"
+  },
+  {
+    "value": "Super energy(*",
+    "label": "Super energy"
+  },
+  {
+    "value": "Hunter potion(*",
+    "label": "Hunter potion"
+  },
+  {
+    "value": "Goading potion(*",
+    "label": "Goading potion"
+  },
+  {
+    "value": "Super strength(*",
+    "label": "Super strength"
+  },
+  {
+    "value": "Prayer regeneration potion(*",
+    "label": "Prayer regeneration potion"
+  },
+  {
+    "value": "Super restore(*",
+    "label": "Super restore"
+  },
+  {
+    "value": "Sanfew serum(*",
+    "label": "Sanfew serum"
+  },
+  {
+    "value": "Super defence(*",
+    "label": "Super defence"
+  },
+  {
+    "value": "Antidote+(*",
+    "label": "Antidote+"
+  },
+  {
+    "value": "Antifire potion(*",
+    "label": "Antifire potion"
+  },
+  {
+    "value": "Divine super attack potion(*",
+    "label": "Divine super attack potion"
+  },
+  {
+    "value": "Divine super defence potion(*",
+    "label": "Divine super defence potion"
+  },
+  {
+    "value": "Divine super strength potion(*",
+    "label": "Divine super strength potion"
+  },
+  {
+    "value": "Ranging potion(*",
+    "label": "Ranging potion"
+  },
+  {
+    "value": "Divine ranging potion(*",
+    "label": "Divine ranging potion"
+  },
+  {
+    "value": "Magic potion(*",
+    "label": "Magic potion"
+  },
+  {
+    "value": "Stamina potion(*",
+    "label": "Stamina potion"
+  },
+  {
+    "value": "Zamorak brew(*",
+    "label": "Zamorak brew"
+  },
+  {
+    "value": "Divine magic potion(*",
+    "label": "Divine magic potion"
+  },
+  {
+    "value": "Antidote++(*",
+    "label": "Antidote++"
+  },
+  {
+    "value": "Bastion potion(*",
+    "label": "Bastion potion"
+  },
+  {
+    "value": "Battlemage potion(*",
+    "label": "Battlemage potion"
+  },
+  {
+    "value": "Saradomin brew(*",
+    "label": "Saradomin brew"
+  },
+  {
+    "value": "Extended antifire(*",
+    "label": "Extended antifire"
+  },
+  {
+    "value": "Ancient brew(*",
+    "label": "Ancient brew"
+  },
+  {
+    "value": "Divine bastion potion(*",
+    "label": "Divine bastion potion"
+  },
+  {
+    "value": "Divine battlemage potion(*",
+    "label": "Divine battlemage potion"
+  },
+  {
+    "value": "Anti-venom(*",
+    "label": "Anti-venom"
+  },
+  {
+    "value": "Menaphite remedy(*",
+    "label": "Menaphite remedy"
+  },
+  {
+    "value": "Super combat potion(*",
+    "label": "Super combat potion"
+  },
+  {
+    "value": "Forgotten brew(*",
+    "label": "Forgotten brew"
+  },
+  {
+    "value": "Super antifire potion(*",
+    "label": "Super antifire potion"
+  },
+  {
+    "value": "Anti-venom+(*",
+    "label": "Anti-venom+"
+  },
+  {
+    "value": "Extended anti-venom+(*",
+    "label": "Extended anti-venom+"
+  },
+  {
+    "value": "Divine super combat potion(*",
+    "label": "Divine super combat potion"
+  },
+  {
+    "value": "Extended super antifire(*",
+    "label": "Extended super antifire"
+  },
+  {
+    "value": "Surge potion(*",
+    "label": "Surge potion"
+  }
+]
+*/
+#define RAX_POTIONS_HIDE ["Attack potion(*","Strength potion(*","Serum 207(*","Compost potion(*","Restore potion(*","Energy potion(*","Defence potion(*","Agility potion(*","Combat potion(*","Fishing potion(*","Hunter potion(*","Antidote+(*"]
+
+apply (name:RAX_POTIONS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Potions to force shown
+group: Potions
+enum: [
+  {
+    "value": "Attack potion(*",
+    "label": "Attack potion"
+  },
+  {
+    "value": "Antipoison(*",
+    "label": "Antipoison"
+  },
+  {
+    "value": "Strength potion(*",
+    "label": "Strength potion"
+  },
+  {
+    "value": "Serum 207(*",
+    "label": "Serum 207"
+  },
+  {
+    "value": "Compost potion(*",
+    "label": "Compost potion"
+  },
+  {
+    "value": "Restore potion(*",
+    "label": "Restore potion"
+  },
+  {
+    "value": "Energy potion(*",
+    "label": "Energy potion"
+  },
+  {
+    "value": "Defence potion(*",
+    "label": "Defence potion"
+  },
+  {
+    "value": "Agility potion(*",
+    "label": "Agility potion"
+  },
+  {
+    "value": "Combat potion(*",
+    "label": "Combat potion"
+  },
+  {
+    "value": "Prayer potion(*",
+    "label": "Prayer potion"
+  },
+  {
+    "value": "Super attack(*",
+    "label": "Super attack"
+  },
+  {
+    "value": "Superantipoison(*",
+    "label": "Superantipoison"
+  },
+  {
+    "value": "Fishing potion(*",
+    "label": "Fishing potion"
+  },
+  {
+    "value": "Super energy(*",
+    "label": "Super energy"
+  },
+  {
+    "value": "Hunter potion(*",
+    "label": "Hunter potion"
+  },
+  {
+    "value": "Goading potion(*",
+    "label": "Goading potion"
+  },
+  {
+    "value": "Super strength(*",
+    "label": "Super strength"
+  },
+  {
+    "value": "Prayer regeneration potion(*",
+    "label": "Prayer regeneration potion"
+  },
+  {
+    "value": "Super restore(*",
+    "label": "Super restore"
+  },
+  {
+    "value": "Sanfew serum(*",
+    "label": "Sanfew serum"
+  },
+  {
+    "value": "Super defence(*",
+    "label": "Super defence"
+  },
+  {
+    "value": "Antidote+(*",
+    "label": "Antidote+"
+  },
+  {
+    "value": "Antifire potion(*",
+    "label": "Antifire potion"
+  },
+  {
+    "value": "Divine super attack potion(*",
+    "label": "Divine super attack potion"
+  },
+  {
+    "value": "Divine super defence potion(*",
+    "label": "Divine super defence potion"
+  },
+  {
+    "value": "Divine super strength potion(*",
+    "label": "Divine super strength potion"
+  },
+  {
+    "value": "Ranging potion(*",
+    "label": "Ranging potion"
+  },
+  {
+    "value": "Divine ranging potion(*",
+    "label": "Divine ranging potion"
+  },
+  {
+    "value": "Magic potion(*",
+    "label": "Magic potion"
+  },
+  {
+    "value": "Stamina potion(*",
+    "label": "Stamina potion"
+  },
+  {
+    "value": "Zamorak brew(*",
+    "label": "Zamorak brew"
+  },
+  {
+    "value": "Divine magic potion(*",
+    "label": "Divine magic potion"
+  },
+  {
+    "value": "Antidote++(*",
+    "label": "Antidote++"
+  },
+  {
+    "value": "Bastion potion(*",
+    "label": "Bastion potion"
+  },
+  {
+    "value": "Battlemage potion(*",
+    "label": "Battlemage potion"
+  },
+  {
+    "value": "Saradomin brew(*",
+    "label": "Saradomin brew"
+  },
+  {
+    "value": "Extended antifire(*",
+    "label": "Extended antifire"
+  },
+  {
+    "value": "Ancient brew(*",
+    "label": "Ancient brew"
+  },
+  {
+    "value": "Divine bastion potion(*",
+    "label": "Divine bastion potion"
+  },
+  {
+    "value": "Divine battlemage potion(*",
+    "label": "Divine battlemage potion"
+  },
+  {
+    "value": "Anti-venom(*",
+    "label": "Anti-venom"
+  },
+  {
+    "value": "Menaphite remedy(*",
+    "label": "Menaphite remedy"
+  },
+  {
+    "value": "Super combat potion(*",
+    "label": "Super combat potion"
+  },
+  {
+    "value": "Forgotten brew(*",
+    "label": "Forgotten brew"
+  },
+  {
+    "value": "Super antifire potion(*",
+    "label": "Super antifire potion"
+  },
+  {
+    "value": "Anti-venom+(*",
+    "label": "Anti-venom+"
+  },
+  {
+    "value": "Extended anti-venom+(*",
+    "label": "Extended anti-venom+"
+  },
+  {
+    "value": "Divine super combat potion(*",
+    "label": "Divine super combat potion"
+  },
+  {
+    "value": "Extended super antifire(*",
+    "label": "Extended super antifire"
+  },
+  {
+    "value": "Surge potion(*",
+    "label": "Surge potion"
+  }
+]
+*/
+#define RAX_POTIONS_SHOW ["Anti-venom(*","Anti-venom+(*","Antidote++(*","Antifire potion(*","Bastion potion(*","Battlemage potion(*","Divine bastion potion(*","Divine battlemage potion(*","Divine magic potion(*","Divine ranging potion(*","Divine super attack potion(*","Divine super combat potion(*","Divine super defence potion(*","Divine super strength potion(*","Extended anti-venom+(*","Extended antifire(*","Extended super antifire(*","Forgotten brew(*","Goading potion(*","Menaphite remedy(*","Prayer regeneration potion(*","Ranging potion(*","Sanfew serum(*","Saradomin brew(*","Stamina potion(*","Super antifire potion(*","Super combat potion(*","Super restore(*","Surge potion(*"]
+
+apply (name:RAX_POTIONS_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Standard arrows to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Bronze*",
+    "label": "Bronze Arrows"
+  },
+  {
+    "value": "Iron*",
+    "label": "Iron Arrows"
+  },
+  {
+    "value": "Steel*",
+    "label": "Steel Arrows"
+  },
+  {
+    "value": "Mithril*",
+    "label": "Mithril Arrows"
+  },
+  {
+    "value": "Adamant*",
+    "label": "Adamant Arrows"
+  },
+  {
+    "value": "Rune*",
+    "label": "Rune Arrows"
+  },
+  {
+    "value": "Amethyst*",
+    "label": "Amethyst Arrows"
+  },
+  {
+    "value": "Dragon*",
+    "label": "Dragon Arrows"
+  }
+]
+*/
+#define RAX_AMMO_STANDARD_ARROWS_HIDE ["Bronze*","Iron*","Steel*","Mithril*","Adamant*","Rune*"]
+
+/*@ define:input:floor
+type: number
+label: Standard Arrows minimum value
+group: Ammo
+*/
+#define RAX_AMMO_STANDARD_ARROWS_MIN_VALUE 3500
+
+apply (name:FACT_AMMO_STANDARD_ARROWS_LIST && (name:RAX_AMMO_STANDARD_ARROWS_HIDE || value:<RAX_AMMO_STANDARD_ARROWS_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Darts to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Bronze dart*",
+    "label": "Bronze darts"
+  },
+  {
+    "value": "Iron dart*",
+    "label": "Iron darts"
+  },
+  {
+    "value": "Steel dart*",
+    "label": "Steel darts"
+  },
+  {
+    "value": "Black dart*",
+    "label": "Black darts"
+  },
+  {
+    "value": "Mithril dart*",
+    "label": "Mithril darts"
+  },
+  {
+    "value": "Adamant dart*",
+    "label": "Adamant darts"
+  },
+  {
+    "value": "Rune dart*",
+    "label": "Rune darts"
+  },
+  {
+    "value": "Amethyst dart*",
+    "label": "Amethyst darts"
+  },
+  {
+    "value": "Dragon dart*",
+    "label": "Dragon darts"
+  },
+  {
+    "value": "Atlatl dart",
+    "label": "Atlatl darts"
+  }
+]
+*/
+#define RAX_AMMO_DARTS_HIDE ["Bronze dart*","Iron dart*","Steel dart*","Black dart*","Mithril dart*","Adamant dart*"]
+
+/*@ define:input:floor
+type: number
+label: Darts minimum value
+group: Ammo
+*/
+#define RAX_AMMO_DARTS_MIN_VALUE 2300
+
+apply (name:FACT_AMMO_DARTS_LIST && (name:RAX_AMMO_DARTS_HIDE || value:<RAX_AMMO_DARTS_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Bolts to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Bronze bolts*",
+    "label": "Bronze bolts"
+  },
+  {
+    "value": "Blurite bolts*",
+    "label": "Blurite bolts"
+  },
+  {
+    "value": "Silver bolts*",
+    "label": "Silver bolts"
+  },
+  {
+    "value": "Iron bolts*",
+    "label": "Iron bolts"
+  },
+  {
+    "value": "Steel bolts*",
+    "label": "Steel bolts"
+  },
+  {
+    "value": "Mithril bolts*",
+    "label": "Mithril bolts"
+  },
+  {
+    "value": "Adamant bolts*",
+    "label": "Adamant bolts"
+  },
+  {
+    "value": "Runite bolts*",
+    "label": "Runite bolts"
+  },
+  {
+    "value": "Dragon bolts*",
+    "label": "Dragon bolts"
+  }
+]
+*/
+#define RAX_AMMO_BOLTS_HIDE ["Bronze bolts*","Blurite bolts*","Silver bolts*","Iron bolts*","Steel bolts*","Mithril bolts*"]
+
+/*@ define:input:floor
+type: number
+label: Bolts minimum value
+group: Ammo
+*/
+#define RAX_AMMO_BOLTS_MIN_VALUE 5700
+
+apply (name:FACT_AMMO_BOLTS_LIST && (name:RAX_AMMO_BOLTS_HIDE || value:<RAX_AMMO_BOLTS_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Enchanted bolts to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Opal bolts (e)",
+    "label": "Opal bolts (e)"
+  },
+  {
+    "value": "Jade bolts (e)",
+    "label": "Jade bolts (e)"
+  },
+  {
+    "value": "Pearl bolts (e)",
+    "label": "Pearl bolts (e)"
+  },
+  {
+    "value": "Topaz bolts (e)",
+    "label": "Topaz bolts (e)"
+  },
+  {
+    "value": "Sapphire bolts (e)",
+    "label": "Sapphire bolts (e)"
+  },
+  {
+    "value": "Emerald bolts (e)",
+    "label": "Emerald bolts (e)"
+  },
+  {
+    "value": "Ruby bolts (e)",
+    "label": "Ruby bolts (e)"
+  },
+  {
+    "value": "Diamond bolts (e)",
+    "label": "Diamond bolts (e)"
+  },
+  {
+    "value": "Dragonstone bolts (e)",
+    "label": "Dragonstone bolts (e)"
+  },
+  {
+    "value": "Onyx bolts (e)",
+    "label": "Onyx bolts (e)"
+  }
+]
+*/
+#define RAX_AMMO_BOLTS_E_HIDE []
+
+/*@ define:input:floor
+type: number
+label: Enchanted bolts minimum value
+group: Ammo
+*/
+#define RAX_AMMO_BOLTS_E_MIN_VALUE 500
+
+apply (name:FACT_AMMO_BOLTS_E_LIST && (name:RAX_AMMO_BOLTS_E_HIDE || value:<RAX_AMMO_BOLTS_E_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Dragon enchanted bolts to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Opal dragon bolts (e)",
+    "label": "Opal dragon bolts (e)"
+  },
+  {
+    "value": "Jade dragon bolts (e)",
+    "label": "Jade dragon bolts (e)"
+  },
+  {
+    "value": "Pearl dragon bolts (e)",
+    "label": "Pearl dragon bolts (e)"
+  },
+  {
+    "value": "Topaz dragon bolts (e)",
+    "label": "Topaz dragon bolts (e)"
+  },
+  {
+    "value": "Sapphire dragon bolts (e)",
+    "label": "Sapphire dragon bolts (e)"
+  },
+  {
+    "value": "Emerald dragon bolts (e)",
+    "label": "Emerald dragon bolts (e)"
+  },
+  {
+    "value": "Ruby dragon bolts (e)",
+    "label": "Ruby dragon bolts (e)"
+  },
+  {
+    "value": "Diamond dragon bolts (e)",
+    "label": "Diamond dragon bolts (e)"
+  },
+  {
+    "value": "Dragonstone dragon bolts (e)",
+    "label": "Dragonstone dragon bolts (e)"
+  },
+  {
+    "value": "Onyx dragon bolts (e)",
+    "label": "Onyx dragon bolts (e)"
+  }
+]
+*/
+#define RAX_AMMO_DRAGON_BOLTS_E_HIDE []
+
+/*@ define:input:floor
+type: number
+label: Dragon enchanted bolts minimum value
+group: Ammo
+*/
+#define RAX_AMMO_DRAGON_BOLTS_E_MIN_VALUE 500
+
+apply (name:FACT_AMMO_DRAGON_BOLTS_E_LIST && (name:RAX_AMMO_DRAGON_BOLTS_E_HIDE || value:<RAX_AMMO_DRAGON_BOLTS_E_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Javelins to force hidden
+group: Ammo
+enum: [
+  "Bronze javelin",
+  "Iron javelin",
+  "Steel javelin",
+  "Mithril javelin",
+  "Adamant javelin",
+  "Rune javelin",
+  "Dragon javelin",
+]
+*/
+#define RAX_AMMO_JAVELINS_HIDE ["Bronze javelin","Iron javelin","Steel javelin","Mithril javelin","Adamant javelin","Rune javelin"]
+
+/*@ define:input:floor
+type: number
+label: Javelins minimum value
+group: Ammo
+*/
+#define RAX_AMMO_JAVELINS_MIN_VALUE 500
+
+apply (name:FACT_AMMO_JAVELINS_LIST && (name:RAX_AMMO_JAVELINS_HIDE || value:<RAX_AMMO_JAVELINS_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Special bolts to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Sunlight antler bolts",
+    "label": "Sunlight antler bolts"
+  },
+  {
+    "value": "Moonlight antler bolts",
+    "label": "Moonlight antler bolts"
+  },
+  {
+    "value": "Kebbit bolts",
+    "label": "Kebbit bolts"
+  },
+  {
+    "value": "Long kebbit bolts",
+    "label": "Long kebbit bolts"
+  },
+  {
+    "value": "Broad bolts",
+    "label": "Broad bolts"
+  },
+  {
+    "value": "Amethyst broad bolts",
+    "label": "Amethyst broad bolts"
+  },
+  {
+    "value": "Barbed bolts",
+    "label": "Barbed bolts"
+  },
+  {
+    "value": "Bone bolts",
+    "label": "Bone bolts"
+  }
+]
+*/
+#define RAX_AMMO_SPECIAL_BOLTS_HIDE []
+
+/*@ define:input:floor
+type: number
+label: Special bolts minimum value
+group: Ammo
+*/
+#define RAX_AMMO_SPECIAL_BOLTS_MIN_VALUE 500
+
+apply (name:FACT_AMMO_SPECIAL_BOLTS_LIST && (name:RAX_AMMO_SPECIAL_BOLTS_HIDE || value:<RAX_AMMO_SPECIAL_BOLTS_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Brutal arrows to force hidden
+group: Ammo
+enum: [
+  {
+    "value": "Bronze brutal",
+    "label": "Bronze brutal arrows"
+  },
+  {
+    "value": "Iron brutal",
+    "label": "Iron brutal arrows"
+  },
+  {
+    "value": "Steel brutal",
+    "label": "Steel brutal arrows"
+  },
+  {
+    "value": "Black brutal",
+    "label": "Black brutal arrows"
+  },
+  {
+    "value": "Mithril brutal",
+    "label": "Mithril brutal arrows"
+  },
+  {
+    "value": "Adamant brutal",
+    "label": "Adamant brutal arrows"
+  },
+  {
+    "value": "Rune brutal",
+    "label": "Rune brutal arrows"
+  }
+]
+*/
+#define RAX_AMMO_BRUTAL_ARROWS_HIDE ["Bronze brutal","Iron brutal","Steel brutal","Black brutal","Mithril brutal"]
+
+/*@ define:input:floor
+type: number
+label: Brutal Arrows minimum value
+group: Ammo
+*/
+#define RAX_AMMO_BRUTAL_ARROWS_MIN_VALUE 500
+
+apply (name:FACT_AMMO_BRUTAL_ARROWS_LIST && (name:RAX_AMMO_BRUTAL_ARROWS_HIDE || value:<RAX_AMMO_BRUTAL_ARROWS_MIN_VALUE)) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Special arrows to force hidden
+group: Ammo
+enum: [
+  "Training Arrows",
+  "Ogre Arrow",
+  "Ice Arrows",
+  "Broad Arrows"
+]
+*/
+#define RAX_AMMO_SPECIAL_ARROWS_HIDE ["Training Arrows","Ogre Arrow","Broad Arrows"]
+
+/*@ define:input:floor
+type: number
+label: Special Arrows minimum value
+group: Ammo
+*/
+#define RAX_AMMO_SPECIAL_ARROWS_MIN_VALUE 500
+
+apply (name:FACT_AMMO_SPECIAL_ARROWS_LIST && (name:RAX_AMMO_SPECIAL_ARROWS_HIDE || value:<RAX_AMMO_SPECIAL_ARROWS_MIN_VALUE)) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Gems to force hidden
+group: Gems
+enum: [
+  {
+    "value": "*Sapphire",
+    "label": "Sapphire"
+  },
+  {
+    "value": "*Emerald",
+    "label": "Emerald"
+  },
+  {
+    "value": "*Ruby",
+    "label": "Ruby"
+  },
+  {
+    "value": "*Diamond",
+    "label": "Diamond"
+  },
+  {
+    "value": "*Opal",
+    "label": "Opal"
+  },
+  {
+    "value": "*Jade",
+    "label": "Jade"
+  },
+  {
+    "value": "*Red topaz",
+    "label": "Red topaz"
+  },
+  {
+    "value": "*Dragonstone",
+    "label": "Dragonstone"
+  },
+  {
+    "value": "*Onyx",
+    "label": "Onyx"
+  }
+]
+*/
+#define RAX_GEMS_HIDE []
+
+apply (name:RAX_GEMS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Sapphire minimum quantity
+group: Gems
+*/
+#define RAX_SAPPHIRE_MIN_QUANTITY 0
+
+apply (name:["Uncut sapphire",   "Sapphire", ] && quantity:<RAX_SAPPHIRE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Emerald minimum quantity
+group: Gems
+*/
+#define RAX_EMERALD_MIN_QUANTITY 0
+
+apply (name:["Uncut emerald",   "Emerald", ] && quantity:<RAX_EMERALD_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Ruby minimum quantity
+group: Gems
+*/
+#define RAX_RUBY_MIN_QUANTITY 0
+
+apply (name:["Uncut ruby",   "Ruby", ] && quantity:<RAX_RUBY_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Diamond minimum quantity
+group: Gems
+*/
+#define RAX_DIAMOND_MIN_QUANTITY 0
+
+apply (name:["Uncut diamond",   "Diamond", ] && quantity:<RAX_DIAMOND_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Opal minimum quantity
+group: Gems
+*/
+#define RAX_OPAL_MIN_QUANTITY 0
+
+apply (name:["Uncut opal",   "Opal", ] && quantity:<RAX_OPAL_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Jade minimum quantity
+group: Gems
+*/
+#define RAX_JADE_MIN_QUANTITY 0
+
+apply (name:["Uncut jade",   "Jade", ] && quantity:<RAX_JADE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Red topaz minimum quantity
+group: Gems
+*/
+#define RAX_RED_TOPAZ_MIN_QUANTITY 0
+
+apply (name:["Uncut red topaz",   "Red topaz", ] && quantity:<RAX_RED_TOPAZ_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Dragonstone minimum quantity
+group: Gems
+*/
+#define RAX_DRAGONSTONE_MIN_QUANTITY 0
+
+apply (name:["Uncut dragonstone",   "Dragonstone", ] && quantity:<RAX_DRAGONSTONE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Onyx minimum quantity
+group: Gems
+*/
+#define RAX_ONYX_MIN_QUANTITY 0
+
+apply (name:["Uncut onyx",   "Onyx", ] && quantity:<RAX_ONYX_MIN_QUANTITY) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Runes to force hidden
+group: Runes
+enum: [
+  "Air rune",
+  "Mind rune",
+  "Water rune",
+  "Earth rune",
+  "Fire rune",
+  "Body rune",
+  "Cosmic rune",
+  "Chaos rune",
+  "Nature rune",
+  "Law rune",
+  "Death rune",
+  "Sunfire rune",
+  "Astral rune",
+  "Blood rune",
+  "Soul rune",
+  "Wrath rune",
+  "Mist rune",
+  "Dust rune",
+  "Mud rune",
+  "Smoke rune",
+  "Steam rune",
+  "Lava rune",
+  "Aether rune"
+]
+*/
+#define RAX_RUNES_HIDE []
+
+/*@ define:input:floor
+type: boolean
+label: Force runes to be shown if they're above min quantity
+group: Runes
+*/
+#define RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY true
+
+/*@ define:input:floor
+type: number
+label: Air rune minimum quantity
+group: Runes
+*/
+#define RAX_AIR_RUNE_MIN_QUANTITY 500
+
+/*@ define:input:floor
+type: number
+label: Water rune minimum quantity
+group: Runes
+*/
+#define RAX_WATER_RUNE_MIN_QUANTITY 500
+
+/*@ define:input:floor
+type: number
+label: Earth rune minimum quantity
+group: Runes
+*/
+#define RAX_EARTH_RUNE_MIN_QUANTITY 500
+
+/*@ define:input:floor
+type: number
+label: Fire rune minimum quantity
+group: Runes
+*/
+#define RAX_FIRE_RUNE_MIN_QUANTITY 500
+
+/*@ define:input:floor
+type: number
+label: Mind rune minimum quantity
+group: Runes
+*/
+#define RAX_MIND_RUNE_MIN_QUANTITY 500
+
+/*@ define:input:floor
+type: number
+label: Body rune minimum quantity
+group: Runes
+*/
+#define RAX_BODY_RUNE_MIN_QUANTITY 500
+
+/*@ define:input:floor
+type: number
+label: Cosmic rune minimum quantity
+group: Runes
+*/
+#define RAX_COSMIC_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Chaos rune minimum quantity
+group: Runes
+*/
+#define RAX_CHAOS_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Nature rune minimum quantity
+group: Runes
+*/
+#define RAX_NATURE_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Law rune minimum quantity
+group: Runes
+*/
+#define RAX_LAW_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Death rune minimum quantity
+group: Runes
+*/
+#define RAX_DEATH_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Sunfire rune minimum quantity
+group: Runes
+*/
+#define RAX_SUNFIRE_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Astral rune minimum quantity
+group: Runes
+*/
+#define RAX_ASTRAL_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Blood rune minimum quantity
+group: Runes
+*/
+#define RAX_BLOOD_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Soul rune minimum quantity
+group: Runes
+*/
+#define RAX_SOUL_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Wrath rune minimum quantity
+group: Runes
+*/
+#define RAX_WRATH_RUNE_MIN_QUANTITY 10
+
+/*@ define:input:floor
+type: number
+label: Mist rune minimum quantity
+group: Runes
+*/
+#define RAX_MIST_RUNE_MIN_QUANTITY 50
+
+/*@ define:input:floor
+type: number
+label: Dust rune minimum quantity
+group: Runes
+*/
+#define RAX_DUST_RUNE_MIN_QUANTITY 50
+
+/*@ define:input:floor
+type: number
+label: Mud rune minimum quantity
+group: Runes
+*/
+#define RAX_MUD_RUNE_MIN_QUANTITY 50
+
+/*@ define:input:floor
+type: number
+label: Smoke rune minimum quantity
+group: Runes
+*/
+#define RAX_SMOKE_RUNE_MIN_QUANTITY 50
+
+/*@ define:input:floor
+type: number
+label: Steam rune minimum quantity
+group: Runes
+*/
+#define RAX_STEAM_RUNE_MIN_QUANTITY 50
+
+/*@ define:input:floor
+type: number
+label: Lava rune minimum quantity
+group: Runes
+*/
+#define RAX_LAVA_RUNE_MIN_QUANTITY 50
+
+/*@ define:input:floor
+type: number
+label: Aether rune minimum quantity
+group: Runes
+*/
+#define RAX_AETHER_RUNE_MIN_QUANTITY 0
+
+apply (name:RAX_RUNES_HIDE) {
+    hidden = true;
+}
+
+apply (name:"Air rune" && quantity:<RAX_AIR_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Mind rune" && quantity:<RAX_MIND_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Water rune" && quantity:<RAX_WATER_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Earth rune" && quantity:<RAX_EARTH_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Fire rune" && quantity:<RAX_FIRE_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Body rune" && quantity:<RAX_BODY_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Cosmic rune" && quantity:<RAX_COSMIC_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Chaos rune" && quantity:<RAX_CHAOS_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Nature rune" && quantity:<RAX_NATURE_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Law rune" && quantity:<RAX_LAW_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Death rune" && quantity:<RAX_DEATH_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Sunfire rune" && quantity:<RAX_SUNFIRE_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Astral rune" && quantity:<RAX_ASTRAL_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Blood rune" && quantity:<RAX_BLOOD_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Soul rune" && quantity:<RAX_SOUL_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Wrath rune" && quantity:<RAX_WRATH_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Mist rune" && quantity:<RAX_MIST_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Dust rune" && quantity:<RAX_DUST_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Mud rune" && quantity:<RAX_MUD_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Smoke rune" && quantity:<RAX_SMOKE_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Steam rune" && quantity:<RAX_STEAM_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Lava rune" && quantity:<RAX_LAVA_RUNE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Aether rune" && quantity:<RAX_LAVA_RUNE_MIN_QUANTITY) {
+  hidden = true;
+}
+
+apply (name:"Air rune" && quantity:>=RAX_AIR_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Mind rune" && quantity:>=RAX_MIND_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Water rune" && quantity:>=RAX_WATER_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Earth rune" && quantity:>=RAX_EARTH_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Fire rune" && quantity:>=RAX_FIRE_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Body rune" && quantity:>=RAX_BODY_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Cosmic rune" && quantity:>=RAX_COSMIC_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Chaos rune" && quantity:>=RAX_CHAOS_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Nature rune" && quantity:>=RAX_NATURE_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Law rune" && quantity:>=RAX_LAW_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Death rune" && quantity:>=RAX_DEATH_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Sunfire rune" && quantity:>=RAX_SUNFIRE_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Astral rune" && quantity:>=RAX_ASTRAL_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Blood rune" && quantity:>=RAX_BLOOD_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Soul rune" && quantity:>=RAX_SOUL_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Wrath rune" && quantity:>=RAX_WRATH_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Mist rune" && quantity:>=RAX_MIST_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Dust rune" && quantity:>=RAX_DUST_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Mud rune" && quantity:>=RAX_MUD_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Smoke rune" && quantity:>=RAX_SMOKE_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Steam rune" && quantity:>=RAX_STEAM_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Lava rune" && quantity:>=RAX_LAVA_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+apply (name:"Aether rune" && quantity:<RAX_LAVA_RUNE_MIN_QUANTITY && RAX_RUNES_SHOW_ABOVE_MIN_QUANTITY) {
+  hidden = false;
+}
+
+
+/*@ define:input:floor
+type: number
+label: Hide herbs below this value
+group: Herbs
+*/
+#define RAX_HERBS_MINIMUM_VALUE 0
+
+apply (name:FACT_ALL_HERBS && value:<RAX_HERBS_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Herbs to force hidden
+group: Herbs
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  },
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  },
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  },
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  },
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  },
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  },
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  },
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  },
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
+*/
+#define RAX_HERBS_HIDE ["*Tarromin","*Harralander"]
+
+apply (name:RAX_HERBS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Herbs to force shown
+group: Herbs
+enum: [
+  {
+    "value": "*Guam leaf",
+    "label": "Guam leaf"
+  },
+  {
+    "value": "*Marrentill",
+    "label": "Marrentill"
+  },
+  {
+    "value": "*Tarromin",
+    "label": "Tarromin"
+  },
+  {
+    "value": "*Harralander",
+    "label": "Harralander"
+  },
+  {
+    "value": "*Ranarr weed",
+    "label": "Ranarr weed"
+  },
+  {
+    "value": "*Toadflax",
+    "label": "Toadflax"
+  },
+  {
+    "value": "*Irit leaf",
+    "label": "Irit leaf"
+  },
+  {
+    "value": "*Avantoe",
+    "label": "Avantoe"
+  },
+  {
+    "value": "*Kwuarm",
+    "label": "Kwuarm"
+  },
+  {
+    "value": "*Huasca",
+    "label": "Huasca"
+  },
+  {
+    "value": "*Snapdragon",
+    "label": "Snapdragon"
+  },
+  {
+    "value": "*Cadantine",
+    "label": "Cadantine"
+  },
+  {
+    "value": "*Lantadyme",
+    "label": "Lantadyme"
+  },
+  {
+    "value": "*Dwarf weed",
+    "label": "Dwarf weed"
+  },
+  {
+    "value": "*Torstol",
+    "label": "Torstol"
+  }
+]
+*/
+#define RAX_HERBS_SHOW ["*Ranarr weed","*Huasca","*Snapdragon","*Torstol"]
+
+apply (name:RAX_HERBS_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: number
+label: Guam leaf minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_GUAM_LEAF_MIN_QUANTITY 0
+
+apply (name:"*guam leaf" && quantity:<RAX_HERBS_GUAM_LEAF_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Guam leaf noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_GUAM_LEAF_NOTED_MIN_QUANTITY 0
+
+apply (name:"*guam leaf" && noted:true && quantity:<RAX_HERBS_GUAM_LEAF_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Marrentill minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_MARRENTILL_MIN_QUANTITY 0
+
+apply (name:"*marrentill" && quantity:<RAX_HERBS_MARRENTILL_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Marrentill noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_MARRENTILL_NOTED_MIN_QUANTITY 0
+
+apply (name:"*marrentill" && noted:true && quantity:<RAX_HERBS_MARRENTILL_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Tarromin minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_TARROMIN_MIN_QUANTITY 0
+
+apply (name:"*tarromin" && quantity:<RAX_HERBS_TARROMIN_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Tarromin noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_TARROMIN_NOTED_MIN_QUANTITY 0
+
+apply (name:"*tarromin" && noted:true && quantity:<RAX_HERBS_TARROMIN_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Harralander minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_HARRALANDER_MIN_QUANTITY 0
+
+apply (name:"*harralander" && quantity:<RAX_HERBS_HARRALANDER_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Harralander noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_HARRALANDER_NOTED_MIN_QUANTITY 0
+
+apply (name:"*harralander" && noted:true && quantity:<RAX_HERBS_HARRALANDER_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Ranarr weed minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_RANARR_WEED_MIN_QUANTITY 0
+
+apply (name:"*ranarr weed" && quantity:<RAX_HERBS_RANARR_WEED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Ranarr weed noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_RANARR_WEED_NOTED_MIN_QUANTITY 0
+
+apply (name:"*ranarr weed" && noted:true && quantity:<RAX_HERBS_RANARR_WEED_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Toadflax minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_TOADFLAX_MIN_QUANTITY 0
+
+apply (name:"*toadflax" && quantity:<RAX_HERBS_TOADFLAX_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Toadflax noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_TOADFLAX_NOTED_MIN_QUANTITY 0
+
+apply (name:"*toadflax" && noted:true && quantity:<RAX_HERBS_TOADFLAX_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Irit leaf minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_IRIT_LEAF_MIN_QUANTITY 0
+
+apply (name:"*irit leaf" && quantity:<RAX_HERBS_IRIT_LEAF_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Irit leaf noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_IRIT_LEAF_NOTED_MIN_QUANTITY 0
+
+apply (name:"*irit leaf" && noted:true && quantity:<RAX_HERBS_IRIT_LEAF_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Avantoe minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_AVANTOE_MIN_QUANTITY 0
+
+apply (name:"*avantoe" && quantity:<RAX_HERBS_AVANTOE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Avantoe noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_AVANTOE_NOTED_MIN_QUANTITY 0
+
+apply (name:"*avantoe" && noted:true && quantity:<RAX_HERBS_AVANTOE_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Kwuarm minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_KWUARM_MIN_QUANTITY 0
+
+apply (name:"*kwuarm" && quantity:<RAX_HERBS_KWUARM_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Kwuarm noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_KWUARM_NOTED_MIN_QUANTITY 0
+
+apply (name:"*kwuarm" && noted:true && quantity:<RAX_HERBS_KWUARM_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Huasca minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_HUASCA_MIN_QUANTITY 0
+
+apply (name:"*huasca" && quantity:<RAX_HERBS_HUASCA_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Huasca noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_HUASCA_NOTED_MIN_QUANTITY 0
+
+apply (name:"*huasca" && noted:true && quantity:<RAX_HERBS_HUASCA_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Snapdragon minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_SNAPDRAGON_MIN_QUANTITY 0
+
+apply (name:"*snapdragon" && quantity:<RAX_HERBS_SNAPDRAGON_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Snapdragon noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_SNAPDRAGON_NOTED_MIN_QUANTITY 0
+
+apply (name:"*snapdragon" && noted:true && quantity:<RAX_HERBS_SNAPDRAGON_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Cadantine minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_CADANTINE_MIN_QUANTITY 0
+
+apply (name:"*cadantine" && quantity:<RAX_HERBS_CADANTINE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Cadantine noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_CADANTINE_NOTED_MIN_QUANTITY 0
+
+apply (name:"*cadantine" && noted:true && quantity:<RAX_HERBS_CADANTINE_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Lantadyme minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_LANTADYME_MIN_QUANTITY 0
+
+apply (name:"*lantadyme" && quantity:<RAX_HERBS_LANTADYME_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Lantadyme noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_LANTADYME_NOTED_MIN_QUANTITY 0
+
+apply (name:"*lantadyme" && noted:true && quantity:<RAX_HERBS_LANTADYME_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Dwarf weed minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_DWARF_WEED_MIN_QUANTITY 0
+
+apply (name:"*dwarf weed" && quantity:<RAX_HERBS_DWARF_WEED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Dwarf weed noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_DWARF_WEED_NOTED_MIN_QUANTITY 0
+
+apply (name:"*dwarf weed" && noted:true && quantity:<RAX_HERBS_DWARF_WEED_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Torstol minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_TORSTOL_MIN_QUANTITY 0
+
+apply (name:"*torstol" && quantity:<RAX_HERBS_TORSTOL_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Torstol noted minimum quantity
+group: Herbs
+*/
+#define RAX_HERBS_TORSTOL_NOTED_MIN_QUANTITY 0
+
+apply (name:"*torstol" && noted:true && quantity:<RAX_HERBS_TORSTOL_NOTED_MIN_QUANTITY) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Fishing equipment to force hidden
+group: Fishing
+enum: [
+  "Small fishing net",
+  "Big fishing net",
+  "Drift net",
+  "Fishing rod",
+  "Fly fishing rod",
+  "Oily fishing rod",
+  "Harpoon",
+  "Lobster pot",
+  "Karambwan vessel"
+]
+*/
+#define RAX_FISHING_EQUIPMENT_HIDE ["Small fishing net","Big fishing net","Fishing rod","Fly fishing rod","Harpoon","Lobster pot","Karambwan vessel"]
+
+apply (name:RAX_FISHING_EQUIPMENT_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Fishing bait to force hidden
+group: Fishing
+enum: [
+  "Sandworms",
+  "Fishing bait",
+  "Feather",
+  "Stripy feather",
+  "Dark fishing bait",
+  "King worm",
+  "Fish chunks",
+  "Raw karambwanji"
+]
+*/
+#define RAX_FISHING_BAIT_HIDE ["Fishing bait","Feather","Stripy feather","King worm","Fish chunks"]
+
+apply (name:RAX_FISHING_BAIT_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Raw fish to force hidden
+group: Fishing
+enum: [
+  "Raw shrimps",
+  "Raw anchovies",
+  "Raw guppy",
+  "Raw cavefish",
+  "Raw tetra",
+  "Frog spawn",
+  "Raw monkfish",
+  "Minnow",
+  "Raw mackerel",
+  "Raw cod",
+  "Raw bass",
+  "Raw catfish",
+  "Raw sardine",
+  "Raw herring",
+  "Raw pike",
+  "Raw slimy eel",
+  "Raw cave eel",
+  "Raw anglerfish",
+  "Sacred eel",
+  "Raw trout",
+  "Raw salmon",
+  "Raw rainbow fish",
+  "Raw lava eel",
+  "Infernal eel",
+  "Leaping trout",
+  "Leaping salmon",
+  "Leaping sturgeon",
+  "Raw tuna",
+  "Raw swordfish",
+  "Raw shark",
+  "Raw lobster",
+  "Raw dark crab",
+  "Bluegill",
+  "Common tench",
+  "Mottled eel",
+  "Greater siren",
+  "Raw karambwan"
+]
+*/
+#define RAX_FISHING_RAW_FISH_HIDE ["Raw shrimps","Raw anchovies","Raw guppy","Raw cavefish","Raw tetra","Frog spawn","Raw mackerel","Raw cod","Raw bass","Raw sardine","Raw herring","Raw pike","Raw trout","Raw salmon","Raw rainbow fish","Leaping trout","Leaping salmon","Leaping sturgeon","Raw tuna","Bluegill","Common tench","Mottled eel","Greater siren"]
+
+apply (name:RAX_FISHING_RAW_FISH_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Ores to force hidden
+group: Ores
+enum: [
+  "Copper ore",
+  "Tin ore",
+  "Iron ore",
+  "Silver ore",
+  "Coal",
+  "Gold ore",
+  "Mithril ore",
+  "Adamantite ore",
+  "Runite ore",
+  "Daeyalt ore",
+  "Blasted ore",
+  "Blurite ore",
+  "Lovakite ore"
+]
+*/
+#define RAX_ORES_HIDE []
+
+apply (name:RAX_ORES_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Copper ore minimum quantity
+group: Ores
+*/
+#define RAX_COPPER_ORE_MIN_QUANTITY 0
+
+apply (name:"copper ore" && quantity:<RAX_COPPER_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Tin ore minimum quantity
+group: Ores
+*/
+#define RAX_TIN_ORE_MIN_QUANTITY 0
+
+apply (name:"tin ore" && quantity:<RAX_TIN_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Iron ore minimum quantity
+group: Ores
+*/
+#define RAX_IRON_ORE_MIN_QUANTITY 0
+
+apply (name:"iron ore" && quantity:<RAX_IRON_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Silver ore minimum quantity
+group: Ores
+*/
+#define RAX_SILVER_ORE_MIN_QUANTITY 0
+
+apply (name:"silver ore" && quantity:<RAX_SILVER_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Coal minimum quantity
+group: Ores
+*/
+#define RAX_COAL_ORE_MIN_QUANTITY 0
+
+apply (name:"coal" && quantity:<RAX_COAL_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Gold ore minimum quantity
+group: Ores
+*/
+#define RAX_GOLD_ORE_MIN_QUANTITY 0
+
+apply (name:"gold ore" && quantity:<RAX_GOLD_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Mithril ore minimum quantity
+group: Ores
+*/
+#define RAX_MITHRIL_ORE_MIN_QUANTITY 0
+
+apply (name:"mithril ore" && quantity:<RAX_MITHRIL_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Adamantite ore minimum quantity
+group: Ores
+*/
+#define RAX_ADAMANTITE_ORE_MIN_QUANTITY 0
+
+apply (name:"adamantite ore" && quantity:<RAX_ADAMANTITE_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Runite ore minimum quantity
+group: Ores
+*/
+#define RAX_RUNITE_ORE_MIN_QUANTITY 0
+
+apply (name:"runite ore" && quantity:<RAX_RUNITE_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Daeyalt ore minimum quantity
+group: Ores
+*/
+#define RAX_DAEYALT_ORE_MIN_QUANTITY 0
+
+apply (name:"daeyalt ore" && quantity:<RAX_DAEYALT_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Blasted ore minimum quantity
+group: Ores
+*/
+#define RAX_BLASTED_ORE_MIN_QUANTITY 0
+
+apply (name:"blasted ore" && quantity:<RAX_BLASTED_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Blurite ore minimum quantity
+group: Ores
+*/
+#define RAX_BLURITE_ORE_MIN_QUANTITY 0
+
+apply (name:"blurite ore" && quantity:<RAX_BLURITE_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Lovakite ore minimum quantity
+group: Ores
+*/
+#define RAX_LOVAKITE_ORE_MIN_QUANTITY 0
+
+apply (name:"lovakite ore" && quantity:<RAX_LOVAKITE_ORE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Bars to force hidden
+group: Bars
+enum: [
+  "Bronze bar",
+  "Iron bar",
+  "Silver bar",
+  "Steel bar",
+  "Gold bar",
+  "Mithril bar",
+  "Adamantite bar",
+  "Runite bar",
+  "Elemental metal",
+  "Primed bar",
+  "Primed mind bar",
+  "Blurite bar",
+  "Enchanted bar",
+  "Lovakite bar",
+  "'Perfect' gold bar"
+]
+*/
+#define RAX_BARS_HIDE ["Bronze bar","Iron bar","Silver bar","Gold bar"]
+
+apply (name:RAX_BARS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Bronze bar minimum quantity
+group: Bars
+*/
+#define RAX_BRONZE_BAR_MIN_QUANTITY 0
+
+apply (name:"Bronze bar" && quantity:<RAX_BRONZE_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Iron bar minimum quantity
+group: Bars
+*/
+#define RAX_IRON_BAR_MIN_QUANTITY 0
+
+apply (name:"Iron bar" && quantity:<RAX_IRON_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Silver bar minimum quantity
+group: Bars
+*/
+#define RAX_SILVER_BAR_MIN_QUANTITY 0
+
+apply (name:"Silver bar" && quantity:<RAX_SILVER_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Steel bar minimum quantity
+group: Bars
+*/
+#define RAX_STEEL_BAR_MIN_QUANTITY 0
+
+apply (name:"Steel bar" && quantity:<RAX_STEEL_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Gold bar minimum quantity
+group: Bars
+*/
+#define RAX_GOLD_BAR_MIN_QUANTITY 0
+
+apply (name:"Gold bar" && quantity:<RAX_GOLD_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Mithril bar minimum quantity
+group: Bars
+*/
+#define RAX_MITHRIL_BAR_MIN_QUANTITY 0
+
+apply (name:"Mithril bar" && quantity:<RAX_MITHRIL_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Adamantite bar minimum quantity
+group: Bars
+*/
+#define RAX_ADAMANTITE_BAR_MIN_QUANTITY 0
+
+apply (name:"Adamantite bar" && quantity:<RAX_ADAMANTITE_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Runite bar minimum quantity
+group: Bars
+*/
+#define RAX_RUNITE_BAR_MIN_QUANTITY 0
+
+apply (name:"Runite bar" && quantity:<RAX_RUNITE_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Elemental metal minimum quantity
+group: Bars
+*/
+#define RAX_ELEMENTAL_METAL_MIN_QUANTITY 0
+
+apply (name:"Elemental metal" && quantity:<RAX_ELEMENTAL_METAL_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Primed bar minimum quantity
+group: Bars
+*/
+#define RAX_PRIMED_BAR_MIN_QUANTITY 0
+
+apply (name:"Primed bar" && quantity:<RAX_PRIMED_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Primed mind bar minimum quantity
+group: Bars
+*/
+#define RAX_PRIMED_MIND_BAR_MIN_QUANTITY 0
+
+apply (name:"Primed mind bar" && quantity:<RAX_PRIMED_MIND_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Blurite bar minimum quantity
+group: Bars
+*/
+#define RAX_BLURITE_BAR_MIN_QUANTITY 0
+
+apply (name:"Blurite bar" && quantity:<RAX_BLURITE_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Enchanted bar minimum quantity
+group: Bars
+*/
+#define RAX_ENCHANTED_BAR_MIN_QUANTITY 0
+
+apply (name:"Enchanted bar" && quantity:<RAX_ENCHANTED_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Lovakite bar minimum quantity
+group: Bars
+*/
+#define RAX_LOVAKITE_BAR_MIN_QUANTITY 0
+
+apply (name:"Lovakite bar" && quantity:<RAX_LOVAKITE_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: "'Perfect' gold bar minimum quantity"
+group: Bars
+*/
+#define RAX_PERFECT_GOLD_BAR_MIN_QUANTITY 0
+
+apply (name:"'Perfect' gold bar" && quantity:<RAX_PERFECT_GOLD_BAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Logs to force hidden
+group: Logs
+enum: [
+  "Logs",
+  "Oak logs",
+  "Willow logs",
+  "Maple logs",
+  "Yew logs",
+  "Magic logs",
+  "Redwood logs",
+  "Teak logs",
+  "Mahogany logs",
+  "Achey tree logs",
+  "Arctic pine logs",
+  "Scrapey tree logs",
+  "Juniper logs",
+  "Bark",
+  "Blisterwood logs"
+]
+*/
+#define RAX_LOGS_HIDE []
+
+/*@ define:input:floor
+type: number
+label: Logs minimum quantity
+group: Logs
+*/
+#define RAX_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Oak logs minimum quantity
+group: Logs
+*/
+#define RAX_OAK_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Willow logs minimum quantity
+group: Logs
+*/
+#define RAX_WILLOW_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Maple logs minimum quantity
+group: Logs
+*/
+#define RAX_MAPLE_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Yew logs minimum quantity
+group: Logs
+*/
+#define RAX_YEW_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Magic logs minimum quantity
+group: Logs
+*/
+#define RAX_MAGIC_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Redwood logs minimum quantity
+group: Logs
+*/
+#define RAX_REDWOOD_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Teak logs minimum quantity
+group: Logs
+*/
+#define RAX_TEAK_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Mahogany logs minimum quantity
+group: Logs
+*/
+#define RAX_MAHOGANY_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Achey tree logs minimum quantity
+group: Logs
+*/
+#define RAX_ACHEY_TREE_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Arctic pine logs minimum quantity
+group: Logs
+*/
+#define RAX_ARCTIC_PINE_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Scrapey tree logs minimum quantity
+group: Logs
+*/
+#define RAX_SCRAPEY_TREE_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Juniper logs minimum quantity
+group: Logs
+*/
+#define RAX_JUNIPER_LOGS_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Bark minimum quantity
+group: Logs
+*/
+#define RAX_BARK_MIN_QUANTITY 0
+
+/*@ define:input:floor
+type: number
+label: Blisterwood logs minimum quantity
+group: Logs
+*/
+#define RAX_BLISTERWOOD_LOGS_MIN_QUANTITY 0
+
+apply (name:RAX_LOGS_HIDE) {
+    hidden = true;
+}
+
+apply (name:"Logs" && quantity:<RAX_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Oak logs" && quantity:<RAX_OAK_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Willow logs" && quantity:<RAX_WILLOW_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Maple logs" && quantity:<RAX_MAPLE_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Yew logs" && quantity:<RAX_YEW_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Magic logs" && quantity:<RAX_MAGIC_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Redwood logs" && quantity:<RAX_REDWOOD_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Teak logs" && quantity:<RAX_TEAK_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Mahogany logs" && quantity:<RAX_MAHOGANY_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Achey tree logs" && quantity:<RAX_ACHEY_TREE_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Arctic pine logs" && quantity:<RAX_ARCTIC_PINE_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Scrapey tree logs" && quantity:<RAX_SCRAPEY_TREE_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Juniper logs" && quantity:<RAX_JUNIPER_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Bark" && quantity:<RAX_BARK_MIN_QUANTITY) {
+    hidden = true;
+}
+
+apply (name:"Blisterwood logs" && quantity:<RAX_BLISTERWOOD_LOGS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: number
+label: Hide seeds below this value
+group: Farming seeds
+*/
+#define RAX_FARMING_SEEDS_MINIMUM_VALUE 0
+
+apply ((name:FACT_FARMING_SEEDS_ALLOTMENT_LIST || name:FACT_FARMING_SEEDS_FLOWER_LIST || name:FACT_FARMING_SEEDS_HERB_LIST || name:FACT_FARMING_SEEDS_HOPS_LIST || name:FACT_FARMING_SEEDS_BUSH_LIST || name:FACT_FARMING_SEEDS_TREE_LIST || name:FACT_FARMING_SEEDS_FRUIT_TREE_LIST || name:FACT_FARMING_SEEDS_SPECIAL_TREE_LIST || name:FACT_FARMING_SEEDS_SPECIAL_LIST || name:FACT_FARMING_SEEDS_ANIMA_LIST) && value:<RAX_FARMING_SEEDS_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Allotment seeds to force hidden
+group: Farming seeds
+enum: [
+  "Potato seed",
+  "Onion seed",
+  "Cabbage seed",
+  "Tomato seed",
+  "Sweetcorn seed",
+  "Strawberry seed",
+  "Watermelon seed",
+  "Snape grass seed"
+]
+*/
+#define RAX_FARMING_SEEDS_ALLOTMENT_HIDE ["Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed"]
+
+apply (name:RAX_FARMING_SEEDS_ALLOTMENT_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Flower seeds to force hidden
+group: Farming seeds
+enum: [
+  "Marigold seed",
+  "Rosemary seed",
+  "Nasturtium seed",
+  "Woad seed",
+  "Limpwurt seed",
+  "White lily seed"
+]
+*/
+#define RAX_FARMING_SEEDS_FLOWER_HIDE ["Marigold seed","Rosemary seed","Nasturtium seed","Woad seed","Limpwurt seed"]
+
+apply (name:RAX_FARMING_SEEDS_FLOWER_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Herb seeds to force hidden
+group: Farming seeds
+enum: [
+  "Guam seed",
+  "Marrentill seed",
+  "Tarromin seed",
+  "Harralander seed",
+  "Ranarr seed",
+  "Toadflax seed",
+  "Irit seed",
+  "Avantoe seed",
+  "Kwuarm seed",
+  "Snapdragon seed",
+  "Huasca seed",
+  "Cadantine seed",
+  "Lantadyme seed",
+  "Dwarf weed seed",
+  "Torstol seed"
+]
+*/
+#define RAX_FARMING_SEEDS_HERB_HIDE ["Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Irit seed","Avantoe seed","Lantadyme seed"]
+
+apply (name:RAX_FARMING_SEEDS_HERB_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Hops seeds to force hidden
+group: Farming seeds
+enum: [
+  "Barley seed",
+  "Hammerstone seed",
+  "Asgarnian seed",
+  "Jute seed",
+  "Yanillian seed",
+  "Krandorian seed",
+  "Wildblood seed"
+]
+*/
+#define RAX_FARMING_SEEDS_HOPS_HIDE ["Barley seed","Hammerstone seed","Asgarnian seed","Jute seed","Yanillian seed","Krandorian seed","Wildblood seed"]
+
+apply (name:RAX_FARMING_SEEDS_HOPS_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Bush seeds to force hidden
+group: Farming seeds
+enum: [
+  "Redberry seed",
+  "Cadavaberry seed",
+  "Dwellberry seed",
+  "Jangerberry seed",
+  "Whiteberry seed",
+  "Poison ivy seed"
+]
+*/
+#define RAX_FARMING_SEEDS_BUSH_HIDE ["Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Poison ivy seed","Whiteberry seed"]
+
+apply (name:RAX_FARMING_SEEDS_BUSH_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Tree seeds to force hidden
+group: Farming seeds
+enum: [
+  "Acorn",
+  "Willow seed",
+  "Maple seed",
+  "Yew seed",
+  "Magic seed"
+]
+*/
+#define RAX_FARMING_SEEDS_TREE_HIDE ["Acorn","Willow seed"]
+
+apply (name:RAX_FARMING_SEEDS_TREE_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Fruit tree seeds to force hidden
+group: Farming seeds
+enum: [
+  "Apple tree seed",
+  "Banana tree seed",
+  "Orange tree seed",
+  "Curry tree seed",
+  "Pineapple seed",
+  "Papaya tree seed",
+  "Palm tree seed",
+  "Dragonfruit tree seed"
+]
+*/
+#define RAX_FARMING_SEEDS_FRUIT_TREE_HIDE ["Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed"]
+
+apply (name:RAX_FARMING_SEEDS_FRUIT_TREE_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Hardwood tree seeds to force hidden
+group: Farming seeds
+enum: [
+  "Teak seed",
+  "Mahogany seed",
+  "Calquat tree seed",
+  "Crystal acorn",
+  "Spirit seed",
+  "Celastrus seed",
+  "Redwood tree seed"
+]
+*/
+#define RAX_FARMING_SEEDS_SPECIAL_TREE_HIDE ["Teak seed","Mahogany seed","Calquat tree seed"]
+
+apply (name:RAX_FARMING_SEEDS_SPECIAL_TREE_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Special seeds to force hidden
+group: Farming seeds
+enum: [
+  "Seaweed spore",
+  "Grape seed",
+  "Mushroom spore",
+  "Belladonna seed",
+  "Hespori seed",
+  "Cactus seed",
+  "Potato cactus seed"
+]
+*/
+#define RAX_FARMING_SEEDS_SPECIAL_HIDE ["Cactus","Belladonna seed","Seaweed spore","Potato cactus","Mushroom spore","Grape seed","Cactus seed","Potato cactus seed"]
+
+apply (name:RAX_FARMING_SEEDS_SPECIAL_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Anima seeds to force hidden
+group: Farming seeds
+enum: [
+  "Kronos seed",
+  "Iasor seed",
+  "Attas seed"
+]
+*/
+#define RAX_FARMING_SEEDS_ANIMA_HIDE []
+
+apply (name:RAX_FARMING_SEEDS_ANIMA_HIDE) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Allotment seeds to force shown
+group: Farming seeds
+enum: [
+  "Potato seed",
+  "Onion seed",
+  "Cabbage seed",
+  "Tomato seed",
+  "Sweetcorn seed",
+  "Strawberry seed",
+  "Watermelon seed",
+  "Snape grass seed"
+]
+*/
+#define RAX_FARMING_SEEDS_ALLOTMENT_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_ALLOTMENT_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Flower seeds to force shown
+group: Farming seeds
+enum: [
+  "Marigold seed",
+  "Rosemary seed",
+  "Nasturtium seed",
+  "Woad seed",
+  "Limpwurt seed",
+  "White lily seed"
+]
+*/
+#define RAX_FARMING_SEEDS_FLOWER_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_FLOWER_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Herb seeds to force shown
+group: Farming seeds
+enum: [
+  "Guam seed",
+  "Marrentill seed",
+  "Tarromin seed",
+  "Harralander seed",
+  "Ranarr seed",
+  "Toadflax seed",
+  "Irit seed",
+  "Avantoe seed",
+  "Kwuarm seed",
+  "Snapdragon seed",
+  "Huasca seed",
+  "Cadantine seed",
+  "Lantadyme seed",
+  "Dwarf weed seed",
+  "Torstol seed"
+]
+*/
+#define RAX_FARMING_SEEDS_HERB_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_HERB_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Hops seeds to force shown
+group: Farming seeds
+enum: [
+  "Barley seed",
+  "Hammerstone seed",
+  "Asgarnian seed",
+  "Jute seed",
+  "Yanillian seed",
+  "Krandorian seed",
+  "Wildblood seed"
+]
+*/
+#define RAX_FARMING_SEEDS_HOPS_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_HOPS_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Bush seeds to force shown
+group: Farming seeds
+enum: [
+  "Redberry seed",
+  "Cadavaberry seed",
+  "Dwellberry seed",
+  "Jangerberry seed",
+  "Whiteberry seed",
+  "Poison ivy seed"
+]
+*/
+#define RAX_FARMING_SEEDS_BUSH_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_BUSH_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Tree seeds to force shown
+group: Farming seeds
+enum: [
+  "Acorn",
+  "Willow seed",
+  "Maple seed",
+  "Yew seed",
+  "Magic seed"
+]
+*/
+#define RAX_FARMING_SEEDS_TREE_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_TREE_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Fruit tree seeds to force shown
+group: Farming seeds
+enum: [
+  "Apple tree seed",
+  "Banana tree seed",
+  "Orange tree seed",
+  "Curry tree seed",
+  "Pineapple seed",
+  "Papaya tree seed",
+  "Palm tree seed",
+  "Dragonfruit tree seed"
+]
+*/
+#define RAX_FARMING_SEEDS_FRUIT_TREE_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_FRUIT_TREE_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Hardwood tree seeds to force shown
+group: Farming seeds
+enum: [
+  "Teak seed",
+  "Mahogany seed",
+  "Calquat tree seed",
+  "Crystal acorn",
+  "Spirit seed",
+  "Celastrus seed",
+  "Redwood tree seed"
+]
+*/
+#define RAX_FARMING_SEEDS_SPECIAL_TREE_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_SPECIAL_TREE_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Special seeds to force shown
+group: Farming seeds
+enum: [
+  "Seaweed spore",
+  "Grape seed",
+  "Mushroom spore",
+  "Belladonna seed",
+  "Hespori seed",
+  "Cactus seed",
+  "Potato cactus seed"
+]
+*/
+#define RAX_FARMING_SEEDS_SPECIAL_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_SPECIAL_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:floor
+type: enumlist
+label: Anima seeds to force shown
+group: Farming seeds
+enum: [
+  "Kronos seed",
+  "Iasor seed",
+  "Attas seed"
+]
+*/
+#define RAX_FARMING_SEEDS_ANIMA_SHOW []
+
+apply (name:RAX_FARMING_SEEDS_ANIMA_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Secondaries to force hidden
+group: Herblore secondaries
+enum: [
+  "Eye of newt",
+  "Unicorn horn dust",
+  "Limpwurt root",
+  "Volcanic ash",
+  "Red spiders' eggs",
+  "Chocolate dust",
+  "White berries",
+  "Toad's legs",
+  "Goat horn dust",
+  "Snape grass",
+  "Mort myre fungus",
+  "Kebbit teeth dust",
+  "Dragon scale dust",
+  "Nail beast nails",
+  "Yew roots",
+  "Wine of zamorak",
+  "Potato cactus",
+  "Jangerberries",
+  "Magic roots",
+  "Crushed nest",
+  "Poison ivy berries",
+  "Nihil dust",
+  "Lily of the sands",
+  "Aldarium",
+  "Araxyte venom sack"
+]
+*/
+#define RAX_SECONDARIES_HIDE ["Eye of newt","Volcanic ash","Chocolate dust"]
+
+/*@ define:input:floor
+type: enumlist
+label: Secondaries to force shown
+group: Herblore secondaries
+enum: [
+  "Eye of newt",
+  "Unicorn horn dust",
+  "Limpwurt root",
+  "Volcanic ash",
+  "Red spiders' eggs",
+  "Chocolate dust",
+  "White berries",
+  "Toad's legs",
+  "Goat horn dust",
+  "Snape grass",
+  "Mort myre fungus",
+  "Kebbit teeth dust",
+  "Dragon scale dust",
+  "Nail beast nails",
+  "Yew roots",
+  "Wine of zamorak",
+  "Potato cactus",
+  "Jangerberries",
+  "Magic roots",
+  "Crushed nest",
+  "Poison ivy berries",
+  "Nihil dust",
+  "Lily of the sands",
+  "Aldarium",
+  "Araxyte venom sack"
+]
+*/
+#define RAX_SECONDARIES_SHOW ["Crushed nest","Nihil dust","Lily of the sands","Aldarium","Araxyte venom sack"]
+
+/*@ define:input:floor
+type: number
+label: Minimum value to display secondaries at
+group: Herblore secondaries
+*/
+#define RAX_SECONDARIES_MINIMUM_VALUE 0
+
+apply (name:FACT_SECONDARIES_LIST && value:<RAX_SECONDARIES_MINIMUM_VALUE) {
+    hidden = true;
+}
+
+apply (name:RAX_SECONDARIES_HIDE) {
+    hidden = true;
+}
+
+apply (name:RAX_SECONDARIES_SHOW) {
+    hidden = false;
+}
+
+
+/*@ define:input:floor
+type: stringlist
+label: Currency to force hidden
+group: Currency
+*/
+#define RAX_CURRENCY_HIDE ["Archery ticket"]
+
+apply (name:RAX_CURRENCY_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Abyssal pearls minimum quantity
+group: Currency
+*/
+#define RAX_ABYSSAL_PEARLS_MIN_QUANTITY 0
+
+apply (name:"Archery ticket" && quantity:<RAX_ARCHERY_TICKET_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Agility arena ticket minimum quantity
+group: Currency
+*/
+#define RAX_AGILITY_ARENA_TICKET_MIN_QUANTITY 0
+
+apply (name:"Coins" && quantity:<RAX_COINS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Anima-infused bark minimum quantity
+group: Currency
+*/
+#define RAX_ANIMA_INFUSED_BARK_MIN_QUANTITY 0
+
+apply (name:"Mole claw" && quantity:<RAX_MOLE_CLAW_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Archery ticket minimum quantity
+group: Currency
+*/
+#define RAX_ARCHERY_TICKET_MIN_QUANTITY 0
+
+apply (name:"Mole skin" && quantity:<RAX_MOLE_SKIN_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Barronite shards minimum quantity
+group: Currency
+*/
+#define RAX_BARRONITE_SHARDS_MIN_QUANTITY 0
+
+apply (name:"Numulite" && quantity:<RAX_NUMULITE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Blood money minimum quantity
+group: Currency
+*/
+#define RAX_BLOOD_MONEY_MIN_QUANTITY 0
+
+apply (name:"Platinum token" && quantity:<RAX_PLATINUM_TOKEN_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Brimhaven voucher minimum quantity
+group: Currency
+*/
+#define RAX_BRIMHAVEN_VOUCHER_MIN_QUANTITY 0
+
+apply (name:"Trading sticks" && quantity:<RAX_TRADING_STICKS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Castle wars ticket minimum quantity
+group: Currency
+*/
+#define RAX_CASTLE_WARS_TICKET_MIN_QUANTITY 0
+
+apply (name:"Shantay pass" && quantity:<RAX_SHANTAY_PASS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Coins minimum quantity
+group: Currency
+*/
+#define RAX_COINS_MIN_QUANTITY 0
+
+apply (name:"Ship ticket" && quantity:<RAX_SHIP_TICKET_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Ecto-token minimum quantity
+group: Currency
+*/
+#define RAX_ECTO_TOKEN_MIN_QUANTITY 0
+
+apply (name:"Abyssal pearls" && quantity:<RAX_ABYSSAL_PEARLS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Frog token minimum quantity
+group: Currency
+*/
+#define RAX_FROG_TOKEN_MIN_QUANTITY 0
+
+apply (name:"Anima-infused bark" && quantity:<RAX_ANIMA_INFUSED_BARK_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Glistening tear minimum quantity
+group: Currency
+*/
+#define RAX_GLISTENING_TEAR_MIN_QUANTITY 0
+
+apply (name:"Agility arena ticket" && quantity:<RAX_AGILITY_ARENA_TICKET_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Golden nugget minimum quantity
+group: Currency
+*/
+#define RAX_GOLDEN_NUGGET_MIN_QUANTITY 0
+
+apply (name:"Barronite shards" && quantity:<RAX_BARRONITE_SHARDS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Hallowed mark minimum quantity
+group: Currency
+*/
+#define RAX_HALLOWED_MARK_MIN_QUANTITY 0
+
+apply (name:"Blood money" && quantity:<RAX_BLOOD_MONEY_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Intelligence minimum quantity
+group: Currency
+*/
+#define RAX_INTELLIGENCE_MIN_QUANTITY 0
+
+apply (name:"Brimhaven voucher" && quantity:<RAX_BRIMHAVEN_VOUCHER_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Mark of grace minimum quantity
+group: Currency
+*/
+#define RAX_MARK_OF_GRACE_MIN_QUANTITY 0
+
+apply (name:"Castle wars ticket" && quantity:<RAX_CASTLE_WARS_TICKET_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Mermaid's tear minimum quantity
+group: Currency
+*/
+#define RAX_MERMAIDS_TEAR_MIN_QUANTITY 0
+
+apply (name:"Ecto-token" && quantity:<RAX_ECTO_TOKEN_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Minnow minimum quantity
+group: Currency
+*/
+#define RAX_MINNOW_MIN_QUANTITY 0
+
+apply (name:"Frog token" && quantity:<RAX_FROG_TOKEN_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Molch pearl minimum quantity
+group: Currency
+*/
+#define RAX_MOLCH_PEARL_MIN_QUANTITY 0
+
+apply (name:"Golden nugget" && quantity:<RAX_GOLDEN_NUGGET_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Mole claw minimum quantity
+group: Currency
+*/
+#define RAX_MOLE_CLAW_MIN_QUANTITY 0
+
+apply (name:"Glistening tear" && quantity:<RAX_GLISTENING_TEAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Mole skin minimum quantity
+group: Currency
+*/
+#define RAX_MOLE_SKIN_MIN_QUANTITY 0
+
+apply (name:"Hallowed mark" && quantity:<RAX_HALLOWED_MARK_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Nuggets minimum quantity
+group: Currency
+*/
+#define RAX_NUGGETS_MIN_QUANTITY 0
+
+apply (name:"Intelligence" && quantity:<RAX_INTELLIGENCE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Numulite minimum quantity
+group: Currency
+*/
+#define RAX_NUMULITE_MIN_QUANTITY 0
+
+apply (name:"Mark of grace" && quantity:<RAX_MARK_OF_GRACE_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Paramaya ticket minimum quantity
+group: Currency
+*/
+#define RAX_PARAMAYA_TICKET_MIN_QUANTITY 0
+
+apply (name:"Mermaid's tear" && quantity:<RAX_MERMAIDS_TEAR_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Platinum token minimum quantity
+group: Currency
+*/
+#define RAX_PLATINUM_TOKEN_MIN_QUANTITY 0
+
+apply (name:"Minnow" && quantity:<RAX_MINNOW_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Rare creature parts minimum quantity
+group: Currency
+*/
+#define RAX_RARE_CREATURE_PARTS_MIN_QUANTITY 0
+
+apply (name:"Molch pearl" && quantity:<RAX_MOLCH_PEARL_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Reward token credits minimum quantity
+group: Currency
+*/
+#define RAX_REWARD_TOKEN_CREDITS_MIN_QUANTITY 0
+
+apply (name:"Nuggets" && quantity:<RAX_NUGGETS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Shantay pass minimum quantity
+group: Currency
+*/
+#define RAX_SHANTAY_PASS_MIN_QUANTITY 0
+
+apply (name:"Paramaya ticket" && quantity:<RAX_PARAMAYA_TICKET_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Ship ticket minimum quantity
+group: Currency
+*/
+#define RAX_SHIP_TICKET_MIN_QUANTITY 0
+
+apply (name:"Rare creature parts" && quantity:<RAX_RARE_CREATURE_PARTS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Stardust minimum quantity
+group: Currency
+*/
+#define RAX_STARDUST_MIN_QUANTITY 0
+
+apply (name:"Reward token credits" && quantity:<RAX_REWARD_TOKEN_CREDITS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Termites minimum quantity
+group: Currency
+*/
+#define RAX_TERMITES_MIN_QUANTITY 0
+
+apply (name:"Stardust" && quantity:<RAX_STARDUST_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Tokkul minimum quantity
+group: Currency
+*/
+#define RAX_TOKKUL_MIN_QUANTITY 0
+
+apply (name:"Tokkul" && quantity:<RAX_TOKKUL_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Trading sticks minimum quantity
+group: Currency
+*/
+#define RAX_TRADING_STICKS_MIN_QUANTITY 0
+
+apply (name:"Termites" && quantity:<RAX_TERMITES_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Unidentified minerals minimum quantity
+group: Currency
+*/
+#define RAX_UNIDENTIFIED_MINERALS_MIN_QUANTITY 0
+
+apply (name:"Unidentified minerals" && quantity:<RAX_UNIDENTIFIED_MINERALS_MIN_QUANTITY) {
+    hidden = true;
+}
+
+/*@ define:input:floor
+type: number
+label: Warrior guild token minimum quantity
+group: Currency
+*/
+#define RAX_WARRIOR_GUILD_TOKEN_MIN_QUANTITY 0
+
+apply (name:"Warrior guild token" && quantity:<RAX_WARRIOR_GUILD_TOKEN_MIN_QUANTITY) {
+    hidden = true;
+}
+
+
+/*@ define:input:floor
+type: enumlist
+label: Metal equipment to force hidden
+group: Metal Equipment
+enum: [
+  "Bronze*",
+  "Iron*",
+  "Steel*",
+  "Black*",
+  "Mithril*",
+  "Adamant*",
+  "Rune*",
+  "Dragon*"
+]
+*/
+#define RAX_METAL_EQUIPMENT_TIERS_HIDE ["Bronze*","Iron*","Steel*","Black*","Mithril*","Adamant*"]
+
+apply ((name:FACT_BRONZE_ONE_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_TWO_HANDED_MELEE_WEAPONS || name:FACT_BRONZE_RANGED_WEAPONS || name:FACT_BRONZE_AMMO || name:FACT_BRONZE_ARMOUR || name:FACT_BRONZE_OTHER) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_IRON_ONE_HANDED_MELEE_WEAPONS || name:FACT_IRON_TWO_HANDED_MELEE_WEAPONS || name:FACT_IRON_RANGED_WEAPONS || name:FACT_IRON_AMMO || name:FACT_IRON_ARMOUR || name:FACT_IRON_OTHER) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_STEEL_ONE_HANDED_MELEE_WEAPONS || name:FACT_STEEL_TWO_HANDED_MELEE_WEAPONS || name:FACT_STEEL_RANGED_WEAPONS || name:FACT_STEEL_AMMO || name:FACT_STEEL_ARMOUR || name:FACT_STEEL_OTHER) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_BLACK_ONE_HANDED_MELEE_WEAPONS || name:FACT_BLACK_TWO_HANDED_MELEE_WEAPONS || name:FACT_BLACK_RANGED_WEAPONS || name:FACT_BLACK_AMMO || name:FACT_BLACK_ARMOUR || name:FACT_BLACK_OTHER) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_MITHRIL_ONE_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_TWO_HANDED_MELEE_WEAPONS || name:FACT_MITHRIL_RANGED_WEAPONS || name:FACT_MITHRIL_AMMO || name:FACT_MITHRIL_ARMOUR || name:FACT_MITHRIL_OTHER) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_ADAMANT_ONE_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_TWO_HANDED_MELEE_WEAPONS || name:FACT_ADAMANT_RANGED_WEAPONS || name:FACT_ADAMANT_AMMO || name:FACT_ADAMANT_ARMOUR || name:FACT_ADAMANT_OTHER) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_RUNE_ONE_HANDED_MELEE_WEAPONS || name:FACT_RUNE_TWO_HANDED_MELEE_WEAPONS || name:FACT_RUNE_RANGED_WEAPONS || name:FACT_RUNE_AMMO || name:FACT_RUNE_ARMOUR) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}
+apply ((name:FACT_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_TWO_HANDED_MELEE_WEAPONS || name:FACT_DRAGON_RANGED_WEAPONS || name:FACT_DRAGON_AMMO || name:FACT_DRAGON_ARMOUR) && name:RAX_METAL_EQUIPMENT_TIERS_HIDE && !name:FACT_DEFENDERS_LIST) {
+    hidden = true;
+}

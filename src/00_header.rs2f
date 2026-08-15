@@ -1,0 +1,15 @@
+/*@ define:module:header
+hidden: true
+name: header
+*/
+
+/*
+  Raxor's Loot Filter
+  Pipeline: identity → pickup → floor → where → aisle → heat → always → kits → final
+  Heat wins over aisle. Always wins over heat. Alchs lock.
+*/
+
+meta {
+    name = "Raxor's Loot Filter";
+    description = "Heat over chips. Grocery aisle for role. Icons as a policy.";
+}
